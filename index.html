@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI Badsha — 200-day AI &amp; machine learning course</title>
+  <meta name="description" content="A 200-day AI course: notes, 2000 runnable Python examples, questions, answers and projects — with Python running in your browser." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <!-- Root entry for GitHub Pages -->
+  <link rel="stylesheet" href="hub/static/styles.css" />
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="top">
+    <a class="brand" href="#" id="brandHome">
+      <span class="brand-mark">AI</span>
+      <span class="brand-text">Badsha</span>
+    </a>
+    <form class="search" id="searchForm" role="search">
+      <input type="search" id="searchInput" placeholder="query:// gradient | attention | rag…" autocomplete="off" />
+      <button type="submit">Search</button>
+    </form>
+    <div class="top-meta">
+      <span id="gppStatus" class="pill">booting…</span>
+      <button type="button" class="ghost" id="btnContinue">Resume</button>
+    </div>
+  </header>
+
+  <section class="hero" id="hero">
+    <p class="eyebrow">AI training range // 200 days</p>
+    <h1>AI Badsha</h1>
+    <p class="lede">Python → maths → classical ML → deep learning → transformers → LLM engineering → production.
+      2000 runnable examples, 1000 questions, 20 projects. Run the code right here in the browser.</p>
+    <div class="hero-actions">
+      <button type="button" class="primary" id="btnStart">Init Day 01</button>
+      <button type="button" class="ghost" id="btnHelpHero">Glossary</button>
+    </div>
+  </section>
+
+  <main class="layout" id="workspace" hidden>
+    <aside class="sidebar">
+      <div class="sidebar-head">
+        <h2>Days</h2>
+        <input type="search" id="dayFilter" placeholder="Filter days…" />
+      </div>
+      <nav class="day-list" id="dayList" aria-label="Course days"></nav>
+    </aside>
+
+    <section class="panel">
+      <div class="panel-head">
+        <div>
+          <p class="day-kicker" id="dayKicker">Day</p>
+          <h2 id="dayTitle">Loading…</h2>
+        </div>
+        <div class="panel-actions">
+          <button type="button" class="ghost" id="btnPrev">Prev</button>
+          <button type="button" class="ghost" id="btnNext">Next</button>
+          <button type="button" class="primary" id="btnDone">Mark done</button>
+        </div>
+      </div>
+
+      <div class="tabs" role="tablist">
+        <button type="button" class="tab active" data-tab="learn" role="tab">Learn</button>
+        <button type="button" class="tab" data-tab="practice" role="tab">Practice</button>
+        <button type="button" class="tab" data-tab="quiz" role="tab">Quiz</button>
+        <button type="button" class="tab" data-tab="help" role="tab">Help</button>
+      </div>
+
+      <div class="tab-panels">
+        <article class="tab-panel active" id="tab-learn" data-panel="learn">
+          <div class="md" id="notesView"></div>
+        </article>
+
+        <article class="tab-panel" id="tab-practice" data-panel="practice">
+          <div class="practice-bar">
+            <label>
+              Example
+              <select id="exampleSelect"></select>
+            </label>
+            <button type="button" class="primary" id="btnRun">Run</button>
+          </div>
+          <textarea id="editor" spellcheck="false" aria-label="Python source"></textarea>
+          <pre class="output" id="output" aria-live="polite">Output appears here. First run downloads the Python runtime (~10MB), after that it is instant.</pre>
+        </article>
+
+        <article class="tab-panel" id="tab-quiz" data-panel="quiz">
+          <div class="md" id="questionsView"></div>
+          <button type="button" class="ghost" id="btnReveal">Reveal answers</button>
+          <div class="md answers-hidden" id="answersView"></div>
+        </article>
+
+        <article class="tab-panel" id="tab-help" data-panel="help">
+          <form class="help-form" id="helpForm">
+            <input type="search" id="helpInput" placeholder="Topic: gradient, overfitting, attention, rag…" />
+            <button type="submit" class="primary">Explain</button>
+          </form>
+          <div class="help-card" id="helpCard">
+            <h3>Stuck on a word?</h3>
+            <p>Try <button type="button" class="linkish" data-help="gradient">gradient</button>,
+              <button type="button" class="linkish" data-help="overfitting">overfitting</button>,
+              <button type="button" class="linkish" data-help="leakage">leakage</button>,
+              <button type="button" class="linkish" data-help="embedding">embedding</button>,
+              <button type="button" class="linkish" data-help="attention">attention</button>,
+              <button type="button" class="linkish" data-help="rag">RAG</button>,
+              <button type="button" class="linkish" data-help="token">token</button>,
+              <button type="button" class="linkish" data-help="hallucination">hallucination</button>.</p>
+          </div>
+          <div id="searchResults" class="search-results"></div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <span>AI BADSHA // 200 DAYS ONLINE</span>
+    <a href="https://github.com/lavprasad/ai_badsha" target="_blank" rel="noopener">src.git</a>
+  </footer>
+
+  <script src="hub/static/app.js"></script>
+</body>
+</html>

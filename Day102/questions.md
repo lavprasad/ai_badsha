@@ -1,0 +1,55 @@
+# Day 102 — 5 Questions
+
+> Answer these **before** opening `answers.md`. Write your answer down first —
+> a guess you committed to teaches you far more than one you kept vague.
+
+---
+
+### Q1. What goes wrong
+
+Someone writes code for **CPU vs GPU vs TPU** and hits a bug in production.
+
+Name the single most likely mistake they made, and say exactly what symptom it produces.
+
+---
+
+### Q2. Predict the output
+
+Read the example for **Batch size and utilisation** in `examples/` without running it.
+
+Write down what it prints. Then run it. If you were wrong, explain *why* you were wrong —
+that gap is the actual lesson.
+
+---
+
+### Q3. Why this rule
+
+For **Gradient checkpointing** the rule is:
+
+> A central difference `(f(x+h)-f(x-h))/2h` is the cheapest way to check a hand-written gradient.
+
+Explain *why* that rule exists. What specifically breaks if you ignore it?
+
+---
+
+### Q4. Design decision
+
+You are building a real system and **Data loading bottlenecks** is on the table.
+
+When would you use it, and what would you use instead if that condition is not met?
+Give one concrete scenario for each side.
+
+---
+
+### Q5. Debug it
+
+A colleague's code involving **Estimating training cost before you start** produces results that look plausible but are wrong.
+
+List the first three things you would check, in order, and say what each one would rule out.
+
+---
+
+### Build task
+
+Pick any two concepts from today and write **one** script that uses both together.
+Twenty lines is enough. It must run, and you must be able to explain every line.
