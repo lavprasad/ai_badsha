@@ -403,6 +403,51 @@ sys.stdout, sys.stderr = _stdout, _stderr
     $("#workspace").hidden = !show;
   }
 
+  function showAnswers(show) {
+    state.answersShown = show;
+    $("#answersView").classList.toggle("show", show);
+    $("#btnReveal").textContent = show ? "Hide answers" : "Reveal answers";
+  }
+
+  /** Select an example by filename and switch to Practice. */
+  function openExample(name) {
+    setTab("practice");
+    const examples = (state.dayData && state.dayData.examples) || [];
+    const i = examples.findIndex((ex) => ex.name === name);
+    if (i < 0) return;
+    $("#exampleSelect").value = String(i);
+    $("#editor").value = examples[i].source;
+  }
+
+  /* Inline `code` spans that name a file become clickable and jump to it. */
+  const CODE_LINKS = [
+    { re: /^examples\/([\w.\-]+\.py)$/, go: (m) => openExample(m[1]) },
+    { re: /^examples\/?$/, go: () => setTab("practice") },
+    { re: /^(notes|project)\.md$/, go: () => setTab("learn") },
+    { re: /^questions\.md$/, go: () => { setTab("quiz"); showAnswers(false); } },
+    { re: /^answers\.md$/, go: () => { setTab("quiz"); showAnswers(true); } },
+  ];
+
+  function linkifyCode(container) {
+    container.querySelectorAll("code").forEach((el) => {
+      const text = el.textContent.trim();
+      const hit = CODE_LINKS.find((l) => l.re.test(text));
+      if (!hit) return;
+      el.classList.add("code-link");
+      el.tabIndex = 0;
+      el.setAttribute("role", "link");
+      el.title = `Open ${text}`;
+      const go = () => hit.go(text.match(hit.re));
+      el.addEventListener("click", go);
+      el.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          go();
+        }
+      });
+    });
+  }
+
   function setTab(name) {
     $$(".tab").forEach((t) => t.classList.toggle("active", t.dataset.tab === name));
     $$(".tab-panel").forEach((p) =>
@@ -440,10 +485,8 @@ sys.stdout, sys.stderr = _stdout, _stderr
   async function openDay(n) {
     showWorkspace(true);
     state.current = n;
-    state.answersShown = false;
     localStorage.setItem(LAST_KEY, String(n));
-    $("#answersView").classList.remove("show");
-    $("#btnReveal").textContent = "Reveal answers";
+    showAnswers(false);
     renderDayList($("#dayFilter").value);
     $("#dayKicker").textContent = `Day ${String(n).padStart(2, "0")}`;
     $("#dayTitle").textContent = "Loading…";
@@ -455,6 +498,9 @@ sys.stdout, sys.stderr = _stdout, _stderr
     $("#notesView").innerHTML = mdToHtml(data.notes);
     $("#questionsView").innerHTML = mdToHtml(data.questions);
     $("#answersView").innerHTML = mdToHtml(data.answers);
+    ["#notesView", "#questionsView", "#answersView"].forEach((sel) =>
+      linkifyCode($(sel))
+    );
 
     const sel = $("#exampleSelect");
     sel.innerHTML = "";
@@ -586,13 +632,9 @@ sys.stdout, sys.stderr = _stdout, _stderr
       }
     });
     $("#btnRun").addEventListener("click", runCode);
-    $("#btnReveal").addEventListener("click", () => {
-      state.answersShown = !state.answersShown;
-      $("#answersView").classList.toggle("show", state.answersShown);
-      $("#btnReveal").textContent = state.answersShown
-        ? "Hide answers"
-        : "Reveal answers";
-    });
+    $("#btnReveal").addEventListener("click", () =>
+      showAnswers(!state.answersShown)
+    );
     $("#searchForm").addEventListener("submit", (e) => {
       e.preventDefault();
       doSearch($("#searchInput").value);

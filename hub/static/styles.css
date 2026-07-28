@@ -506,6 +506,19 @@ textarea:focus {
   border-radius: var(--radius);
   border: 1px solid rgba(57, 197, 255, 0.15);
 }
+.md code.code-link {
+  cursor: pointer;
+  color: var(--accent);
+  background: rgba(57, 197, 255, 0.14);
+  border-color: rgba(57, 197, 255, 0.45);
+  border-bottom-style: dashed;
+}
+.md code.code-link:hover,
+.md code.code-link:focus-visible {
+  background: rgba(57, 197, 255, 0.28);
+  border-color: var(--accent);
+  outline: none;
+}
 .md pre {
   background: #04070b;
   color: #c8f7df;
