@@ -39,6 +39,8 @@ print('false alarms cost      ', round(weighted_bce(y, misses_negative), 3))
 
 **Common mistake:** Optimising plain accuracy for a fraud model where a miss costs 10,000x a false alarm.
 
+Practice: open `examples/01_loss_as_the_objective_you_actually_optim.py`, predict the output, change one line, predict again.
+
 ## 2. Mean squared error
 
 The mean is pulled around by outliers; the median is not. Report both, plus a spread measure. When mean and median disagree sharply, the distribution is skewed and averages are lying to you.
@@ -60,6 +62,8 @@ print('outliers', salaries[(salaries < q1 - 1.5 * iqr) | (salaries > q3 + 1.5 * 
 
 **Common mistake:** Removing 'outliers' automatically when they are the exact events you were hired to predict.
 
+Practice: open `examples/02_mean_squared_error.py`, predict the output, change one line, predict again.
+
 ## 3. Mean absolute error and Huber
 
 The mean is pulled around by outliers; the median is not. Report both, plus a spread measure. When mean and median disagree sharply, the distribution is skewed and averages are lying to you.
@@ -80,6 +84,8 @@ print('outliers', salaries[(salaries < q1 - 1.5 * iqr) | (salaries > q3 + 1.5 * 
 **Remember:** Quote median + IQR for skewed data, mean + std only for roughly symmetric data.
 
 **Common mistake:** Removing 'outliers' automatically when they are the exact events you were hired to predict.
+
+Practice: open `examples/03_mean_absolute_error_and_huber.py`, predict the output, change one line, predict again.
 
 ## 4. Binary cross-entropy
 
@@ -104,6 +110,8 @@ print('perplexity    ', round(float(np.exp(cross_entropy(truth, unsure))), 3))
 
 **Common mistake:** Applying softmax twice (once in the model, once in the loss) and getting flat, untrainable gradients.
 
+Practice: open `examples/04_binary_cross_entropy.py`, predict the output, change one line, predict again.
+
 ## 5. Categorical cross-entropy
 
 Entropy measures surprise: a fair coin has 1 bit, a two-headed coin has 0. Cross-entropy measures how surprised your model is by the truth — which is why it is the loss for classifiers and language models. Perplexity is just exp(cross-entropy), read as 'effective number of choices'.
@@ -127,6 +135,8 @@ print('perplexity    ', round(float(np.exp(cross_entropy(truth, unsure))), 3))
 
 **Common mistake:** Applying softmax twice (once in the model, once in the loss) and getting flat, untrainable gradients.
 
+Practice: open `examples/05_categorical_cross_entropy.py`, predict the output, change one line, predict again.
+
 ## 6. Logits vs probabilities in loss functions
 
 The loss is the only thing the model actually optimises — everything else is decoration. Pass logits (not probabilities) to cross-entropy implementations that expect them. If a false negative costs ten times a false positive, encode that in the loss or the threshold, not in a slide.
@@ -148,6 +158,8 @@ print('false alarms cost      ', round(weighted_bce(y, misses_negative), 3))
 **Remember:** Encode the real cost of each error type in the loss or the threshold — the model cannot guess it.
 
 **Common mistake:** Optimising plain accuracy for a fraud model where a miss costs 10,000x a false alarm.
+
+Practice: open `examples/06_logits_vs_probabilities_in_loss_function.py`, predict the output, change one line, predict again.
 
 ## 7. Class weights inside the loss
 
@@ -172,6 +184,8 @@ print('recall balanced', round(recall_score(yte, weighted.predict(Xte)), 3))
 
 **Common mistake:** Applying SMOTE before the split so synthetic copies of test rows appear in training.
 
+Practice: open `examples/07_class_weights_inside_the_loss.py`, predict the output, change one line, predict again.
+
 ## 8. Label smoothing
 
 The loss is the only thing the model actually optimises — everything else is decoration. Pass logits (not probabilities) to cross-entropy implementations that expect them. If a false negative costs ten times a false positive, encode that in the loss or the threshold, not in a slide.
@@ -193,6 +207,8 @@ print('false alarms cost      ', round(weighted_bce(y, misses_negative), 3))
 **Remember:** Encode the real cost of each error type in the loss or the threshold — the model cannot guess it.
 
 **Common mistake:** Optimising plain accuracy for a fraud model where a miss costs 10,000x a false alarm.
+
+Practice: open `examples/08_label_smoothing.py`, predict the output, change one line, predict again.
 
 ## 9. Contrastive and triplet loss
 
@@ -216,6 +232,8 @@ print('false alarms cost      ', round(weighted_bce(y, misses_negative), 3))
 
 **Common mistake:** Optimising plain accuracy for a fraud model where a miss costs 10,000x a false alarm.
 
+Practice: open `examples/09_contrastive_and_triplet_loss.py`, predict the output, change one line, predict again.
+
 ## 10. Custom losses for business costs
 
 The loss is the only thing the model actually optimises — everything else is decoration. Pass logits (not probabilities) to cross-entropy implementations that expect them. If a false negative costs ten times a false positive, encode that in the loss or the threshold, not in a slide.
@@ -237,6 +255,8 @@ print('false alarms cost      ', round(weighted_bce(y, misses_negative), 3))
 **Remember:** Encode the real cost of each error type in the loss or the threshold — the model cannot guess it.
 
 **Common mistake:** Optimising plain accuracy for a fraud model where a miss costs 10,000x a false alarm.
+
+Practice: open `examples/10_custom_losses_for_business_costs.py`, predict the output, change one line, predict again.
 
 ---
 

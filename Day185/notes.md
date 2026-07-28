@@ -43,6 +43,8 @@ import shutil; shutil.rmtree(root)
 
 **Common mistake:** A pipeline that appends, so a retried job silently doubles yesterday's numbers.
 
+Practice: open `examples/01_batch_vs_streaming_ingestion.py`, predict the output, change one line, predict again.
+
 ## 2. ETL and ELT patterns
 
 Pipelines must be idempotent: re-running the same day must produce the same result, not duplicates. Partition output by date so backfills rewrite one partition instead of the whole table. Batch first — streaming doubles the operational cost and most teams do not need the latency.
@@ -69,6 +71,8 @@ import shutil; shutil.rmtree(root)
 
 **Common mistake:** A pipeline that appends, so a retried job silently doubles yesterday's numbers.
 
+Practice: open `examples/02_etl_and_elt_patterns.py`, predict the output, change one line, predict again.
+
 ## 3. Orchestration with Airflow or Prefect
 
 Pipelines must be idempotent: re-running the same day must produce the same result, not duplicates. Partition output by date so backfills rewrite one partition instead of the whole table. Batch first — streaming doubles the operational cost and most teams do not need the latency.
@@ -94,6 +98,8 @@ import shutil; shutil.rmtree(root)
 **Remember:** Idempotent + partitioned = safe backfills. Append-only pipelines make every rerun a data corruption event.
 
 **Common mistake:** A pipeline that appends, so a retried job silently doubles yesterday's numbers.
+
+Practice: open `examples/03_orchestration_with_airflow_or_prefect.py`, predict the output, change one line, predict again.
 
 ## 4. Idempotent pipeline design
 
@@ -122,6 +128,8 @@ print(model.predict(df))
 
 **Common mistake:** Preprocessing in a notebook and then forgetting one step when writing the serving code.
 
+Practice: open `examples/04_idempotent_pipeline_design.py`, predict the output, change one line, predict again.
+
 ## 5. Partitioning and file formats
 
 Pipelines must be idempotent: re-running the same day must produce the same result, not duplicates. Partition output by date so backfills rewrite one partition instead of the whole table. Batch first — streaming doubles the operational cost and most teams do not need the latency.
@@ -147,6 +155,8 @@ import shutil; shutil.rmtree(root)
 **Remember:** Idempotent + partitioned = safe backfills. Append-only pipelines make every rerun a data corruption event.
 
 **Common mistake:** A pipeline that appends, so a retried job silently doubles yesterday's numbers.
+
+Practice: open `examples/05_partitioning_and_file_formats.py`, predict the output, change one line, predict again.
 
 ## 6. Data lake vs warehouse
 
@@ -174,6 +184,8 @@ import shutil; shutil.rmtree(root)
 
 **Common mistake:** A pipeline that appends, so a retried job silently doubles yesterday's numbers.
 
+Practice: open `examples/06_data_lake_vs_warehouse.py`, predict the output, change one line, predict again.
+
 ## 7. Incremental processing
 
 Accuracy hides everything on imbalanced data. Precision asks 'of the ones I flagged, how many were real'; recall asks 'of the real ones, how many did I catch'. You trade one for the other with the threshold, and the business decides which error hurts more.
@@ -195,6 +207,8 @@ print('roc auc', round(roc_auc_score(yte, m.predict_proba(Xte)[:, 1]), 4))
 **Remember:** Tune the decision threshold on validation data; 0.5 is a default, not a decision.
 
 **Common mistake:** Optimising ROC-AUC on a heavily imbalanced problem where precision-recall AUC is the honest metric.
+
+Practice: open `examples/07_incremental_processing.py`, predict the output, change one line, predict again.
 
 ## 8. Backfills without breaking things
 
@@ -222,6 +236,8 @@ import shutil; shutil.rmtree(root)
 
 **Common mistake:** A pipeline that appends, so a retried job silently doubles yesterday's numbers.
 
+Practice: open `examples/08_backfills_without_breaking_things.py`, predict the output, change one line, predict again.
+
 ## 9. Data quality monitoring
 
 Models rot. The world moves, inputs shift (data drift) or the relationship itself changes (concept drift). Monitor input distributions and prediction distributions daily, because ground-truth labels usually arrive weeks late.
@@ -246,6 +262,8 @@ print('shifted    PSI', round(psi(baseline, rng.normal(0.6, 1.2, 5_000)), 4))
 **Remember:** PSI under 0.1 stable, 0.1-0.2 watch, above 0.2 investigate. Alert on the prediction distribution too.
 
 **Common mistake:** Only monitoring uptime, so a model that returns 200 OK while being badly wrong looks healthy.
+
+Practice: open `examples/09_data_quality_monitoring.py`, predict the output, change one line, predict again.
 
 ## 10. Cost of storage and compute
 
@@ -275,6 +293,8 @@ print('\\nReal pipeline: chunk 300-800 tokens with overlap -> embed -> ANN index
 **Remember:** Always show the source of each retrieved chunk in the answer so users can verify it.
 
 **Common mistake:** Chunking blindly at 1000 characters and cutting tables and code blocks in half.
+
+Practice: open `examples/10_cost_of_storage_and_compute.py`, predict the output, change one line, predict again.
 
 ---
 

@@ -42,6 +42,8 @@ print('vertical edge column found at x =', int(np.argmax(np.abs(edges).sum(axis=
 
 **Common mistake:** Feeding BGR from OpenCV into a model trained on RGB and losing accuracy for no visible reason.
 
+Practice: open `examples/01_images_as_arrays.py`, predict the output, change one line, predict again.
+
 ## 2. Colour spaces and channels
 
 An image is an array of shape (height, width, channels) with values 0-255 or 0-1. Everything else — filters, edges, resizing — is arithmetic on that array. Classical CV still wins when the scene is controlled: fixed camera, fixed lighting, known object.
@@ -67,6 +69,8 @@ print('vertical edge column found at x =', int(np.argmax(np.abs(edges).sum(axis=
 
 **Common mistake:** Feeding BGR from OpenCV into a model trained on RGB and losing accuracy for no visible reason.
 
+Practice: open `examples/02_colour_spaces_and_channels.py`, predict the output, change one line, predict again.
+
 ## 3. Resizing, cropping, normalising
 
 A vector is a list of numbers with a direction and length. The dot product measures alignment: large and positive when two vectors point the same way, zero when perpendicular. Cosine similarity is the dot product with length divided out, which is why it compares embeddings of different magnitudes fairly.
@@ -86,6 +90,8 @@ print('cosine', cos)   # 1.0 -> same direction
 **Remember:** Cosine similarity ignores magnitude; Euclidean distance does not. Pick the one that matches your question.
 
 **Common mistake:** Comparing raw embeddings with Euclidean distance when only direction carries meaning.
+
+Practice: open `examples/03_resizing_cropping_normalising.py`, predict the output, change one line, predict again.
 
 ## 4. Histogram features
 
@@ -108,6 +114,8 @@ print('wrote hist.png')
 **Remember:** Label the axes. An unlabelled plot is a decoration, not evidence.
 
 **Common mistake:** Judging a model by its accuracy number alone without ever looking at the data.
+
+Practice: open `examples/04_histogram_features.py`, predict the output, change one line, predict again.
 
 ## 5. Edge detection and filters
 
@@ -134,6 +142,8 @@ print('vertical edge column found at x =', int(np.argmax(np.abs(edges).sum(axis=
 
 **Common mistake:** Feeding BGR from OpenCV into a model trained on RGB and losing accuracy for no visible reason.
 
+Practice: open `examples/05_edge_detection_and_filters.py`, predict the output, change one line, predict again.
+
 ## 6. HOG and SIFT descriptors
 
 An image is an array of shape (height, width, channels) with values 0-255 or 0-1. Everything else — filters, edges, resizing — is arithmetic on that array. Classical CV still wins when the scene is controlled: fixed camera, fixed lighting, known object.
@@ -159,6 +169,8 @@ print('vertical edge column found at x =', int(np.argmax(np.abs(edges).sum(axis=
 
 **Common mistake:** Feeding BGR from OpenCV into a model trained on RGB and losing accuracy for no visible reason.
 
+Practice: open `examples/06_hog_and_sift_descriptors.py`, predict the output, change one line, predict again.
+
 ## 7. Classical image classification
 
 Almost nobody trains a vision model from scratch. Take a network pretrained on millions of images, replace the last layer, and either freeze the backbone (small data) or fine-tune it at a low learning rate (more data). This is the highest-leverage trick in applied vision.
@@ -178,6 +190,8 @@ print('Transfer learning: freeze backbone, replace head, train head, then unfree
 **Remember:** Use the exact normalisation statistics the pretrained model was trained with.
 
 **Common mistake:** Fine-tuning the whole network at 1e-3 and washing away everything ImageNet taught it.
+
+Practice: open `examples/07_classical_image_classification.py`, predict the output, change one line, predict again.
 
 ## 8. Data augmentation before deep learning
 
@@ -201,6 +215,8 @@ print(dropout(x, training=False))   # unchanged at inference
 **Remember:** Inverted dropout scales during training so inference needs no change at all.
 
 **Common mistake:** Leaving dropout active at inference and getting different predictions on every call.
+
+Practice: open `examples/08_data_augmentation_before_deep_learning.py`, predict the output, change one line, predict again.
 
 ## 9. When classical CV still wins
 
@@ -226,6 +242,8 @@ print('vertical edge column found at x =', int(np.argmax(np.abs(edges).sum(axis=
 **Remember:** Check the channel order (RGB vs BGR) and the value range (0-255 vs 0-1) before every model call.
 
 **Common mistake:** Feeding BGR from OpenCV into a model trained on RGB and losing accuracy for no visible reason.
+
+Practice: open `examples/09_when_classical_cv_still_wins.py`, predict the output, change one line, predict again.
 
 ## 10. Loading an image dataset efficiently
 
@@ -258,6 +276,8 @@ test_preprocess()
 **Remember:** Test the data contract, not just the function — bad data breaks more models than bad code.
 
 **Common mistake:** Testing only the happy path, so an all-null column silently trains a constant model.
+
+Practice: open `examples/10_loading_an_image_dataset_efficiently.py`, predict the output, change one line, predict again.
 
 ---
 

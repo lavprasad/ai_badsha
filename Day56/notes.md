@@ -45,6 +45,8 @@ for name, model in [
 
 **Common mistake:** Declaring a winner from a difference smaller than the standard error across folds.
 
+Practice: open `examples/01_comparing_models_fairly.py`, predict the output, change one line, predict again.
+
 ## 2. Cross-validation as the default
 
 Three splits, three jobs: train fits parameters, validation picks hyperparameters, test gives one honest final number. K-fold cross-validation reuses data by rotating the validation slice, which matters when you only have a few thousand rows.
@@ -64,6 +66,8 @@ print(f'mean {scores.mean():.3f} +/- {scores.std():.3f}')
 **Remember:** Report the spread across folds, not just the mean — high variance means you cannot trust the mean.
 
 **Common mistake:** Random K-fold on time-series or on grouped data (same patient in train and test) — both leak.
+
+Practice: open `examples/02_cross_validation_as_the_default.py`, predict the output, change one line, predict again.
 
 ## 3. Repeated and stratified CV
 
@@ -93,6 +97,8 @@ for name, model in [
 
 **Common mistake:** Declaring a winner from a difference smaller than the standard error across folds.
 
+Practice: open `examples/03_repeated_and_stratified_cv.py`, predict the output, change one line, predict again.
+
 ## 4. Standard error across folds
 
 Two models differing by 0.3% with a 2% fold-to-fold spread are the same model. Compare on identical folds, look at the spread, and when scores tie, take the simpler model — the one-standard-error rule. Nested CV is the honest way to report a score when you also tuned hyperparameters.
@@ -121,6 +127,8 @@ for name, model in [
 
 **Common mistake:** Declaring a winner from a difference smaller than the standard error across folds.
 
+Practice: open `examples/04_standard_error_across_folds.py`, predict the output, change one line, predict again.
+
 ## 5. Statistical comparison of two models
 
 Today's idea — **Statistical comparison of two models** — sits inside the theme of Model selection and validation strategy. Read it as a tool, not trivia: what job does it do, what does it assume about your data, and what breaks when that assumption is false?
@@ -136,6 +144,8 @@ print("practice: Statistical comparison of two models")
 **Remember:** State one assumption `Statistical comparison of two models` makes about your data before you use it.
 
 **Common mistake:** Copy-pasting `Statistical comparison of two models` from a tutorial without knowing what it assumes or when it fails.
+
+Practice: open `examples/05_statistical_comparison_of_two_models.py`, predict the output, change one line, predict again.
 
 ## 6. The one-standard-error rule
 
@@ -165,6 +175,8 @@ for name, model in [
 
 **Common mistake:** Declaring a winner from a difference smaller than the standard error across folds.
 
+Practice: open `examples/06_the_one_standard_error_rule.py`, predict the output, change one line, predict again.
+
 ## 7. Nested CV for honest estimates
 
 Two models differing by 0.3% with a 2% fold-to-fold spread are the same model. Compare on identical folds, look at the spread, and when scores tie, take the simpler model — the one-standard-error rule. Nested CV is the honest way to report a score when you also tuned hyperparameters.
@@ -192,6 +204,8 @@ for name, model in [
 **Remember:** Use the same `cv` object for every candidate, or you are comparing luck.
 
 **Common mistake:** Declaring a winner from a difference smaller than the standard error across folds.
+
+Practice: open `examples/07_nested_cv_for_honest_estimates.py`, predict the output, change one line, predict again.
 
 ## 8. Validation curves
 
@@ -221,6 +235,8 @@ for name, model in [
 
 **Common mistake:** Declaring a winner from a difference smaller than the standard error across folds.
 
+Practice: open `examples/08_validation_curves.py`, predict the output, change one line, predict again.
+
 ## 9. Learning curves and what they diagnose
 
 Underfitting is high bias: the model is too simple and is wrong everywhere, including on training data. Overfitting is high variance: it memorised the training set and falls apart on new data. The gap between train and validation score tells you which one you have.
@@ -242,6 +258,8 @@ for depth in (1, 3, 8, None):
 **Remember:** Train 1.00 / test 0.70 is overfitting. Train 0.70 / test 0.69 is underfitting. Fix the right one.
 
 **Common mistake:** Adding capacity to fix a gap that was caused by too little data or a leak, not by too little capacity.
+
+Practice: open `examples/09_learning_curves_and_what_they_diagnose.py`, predict the output, change one line, predict again.
 
 ## 10. Choosing simplest-that-works
 
@@ -270,6 +288,8 @@ for name, model in [
 **Remember:** Use the same `cv` object for every candidate, or you are comparing luck.
 
 **Common mistake:** Declaring a winner from a difference smaller than the standard error across folds.
+
+Practice: open `examples/10_choosing_simplest_that_works.py`, predict the output, change one line, predict again.
 
 ---
 

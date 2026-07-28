@@ -40,6 +40,8 @@ print('effective W = W + A@B, shape', (W + delta).shape)
 
 **Common mistake:** Setting rank far too high — you lose the efficiency and gain the overfitting.
 
+Practice: open `examples/01_first_five_questions_of_any_dataset.py`, predict the output, change one line, predict again.
+
 ## 2. Shape, dtypes, memory
 
 NumPy stores numbers in one contiguous typed block and runs loops in C. Vectorised code (whole-array operations) is often 50-100x faster than a Python `for` loop and reads closer to the maths. Broadcasting stretches smaller shapes to match without copying data.
@@ -61,6 +63,8 @@ print(a.sum(axis=1))             # row sums
 
 **Common mistake:** Looping over array elements in Python instead of using a vectorised operation.
 
+Practice: open `examples/02_shape_dtypes_memory.py`, predict the output, change one line, predict again.
+
 ## 3. Univariate distributions
 
 A distribution says which values are likely. Gaussian for measurement noise, Bernoulli for yes/no, Poisson for counts per interval. Choosing the right one is choosing your loss function: Gaussian likelihood gives MSE, Bernoulli gives cross-entropy.
@@ -79,6 +83,8 @@ print('coin heads rate ', coin.mean())
 **Remember:** Always seed your RNG (`default_rng(0)`) when you want a result someone else can reproduce.
 
 **Common mistake:** Assuming Gaussian for skewed, bounded, or count data and then being surprised by the residuals.
+
+Practice: open `examples/03_univariate_distributions.py`, predict the output, change one line, predict again.
 
 ## 4. Bivariate relationships with the target
 
@@ -103,6 +109,8 @@ print('effective W = W + A@B, shape', (W + delta).shape)
 
 **Common mistake:** Setting rank far too high — you lose the efficiency and gain the overfitting.
 
+Practice: open `examples/04_bivariate_relationships_with_the_target.py`, predict the output, change one line, predict again.
+
 ## 5. Correlation matrices and their limits
 
 LoRA freezes the base weights and trains two small low-rank matrices whose product is added to each target layer. You update ~0.1% of the parameters, the checkpoint is megabytes not gigabytes, and you can swap adapters per customer. QLoRA adds 4-bit base weights so a 7B model fits on one consumer GPU.
@@ -125,6 +133,8 @@ print('effective W = W + A@B, shape', (W + delta).shape)
 **Remember:** Initialise B to zeros so the adapted model starts exactly equal to the base model.
 
 **Common mistake:** Setting rank far too high — you lose the efficiency and gain the overfitting.
+
+Practice: open `examples/05_correlation_matrices_and_their_limits.py`, predict the output, change one line, predict again.
 
 ## 6. Segment analysis by group
 
@@ -149,6 +159,8 @@ print('effective W = W + A@B, shape', (W + delta).shape)
 
 **Common mistake:** Setting rank far too high — you lose the efficiency and gain the overfitting.
 
+Practice: open `examples/06_segment_analysis_by_group.py`, predict the output, change one line, predict again.
+
 ## 7. Time trends in the data
 
 LoRA freezes the base weights and trains two small low-rank matrices whose product is added to each target layer. You update ~0.1% of the parameters, the checkpoint is megabytes not gigabytes, and you can swap adapters per customer. QLoRA adds 4-bit base weights so a 7B model fits on one consumer GPU.
@@ -171,6 +183,8 @@ print('effective W = W + A@B, shape', (W + delta).shape)
 **Remember:** Initialise B to zeros so the adapted model starts exactly equal to the base model.
 
 **Common mistake:** Setting rank far too high — you lose the efficiency and gain the overfitting.
+
+Practice: open `examples/07_time_trends_in_the_data.py`, predict the output, change one line, predict again.
 
 ## 8. Finding data-entry errors
 
@@ -195,6 +209,8 @@ print('effective W = W + A@B, shape', (W + delta).shape)
 
 **Common mistake:** Setting rank far too high — you lose the efficiency and gain the overfitting.
 
+Practice: open `examples/08_finding_data_entry_errors.py`, predict the output, change one line, predict again.
+
 ## 9. Documenting surprises as you go
 
 LoRA freezes the base weights and trains two small low-rank matrices whose product is added to each target layer. You update ~0.1% of the parameters, the checkpoint is megabytes not gigabytes, and you can swap adapters per customer. QLoRA adds 4-bit base weights so a 7B model fits on one consumer GPU.
@@ -218,6 +234,8 @@ print('effective W = W + A@B, shape', (W + delta).shape)
 
 **Common mistake:** Setting rank far too high — you lose the efficiency and gain the overfitting.
 
+Practice: open `examples/09_documenting_surprises_as_you_go.py`, predict the output, change one line, predict again.
+
 ## 10. Turning EDA into modelling hypotheses
 
 LoRA freezes the base weights and trains two small low-rank matrices whose product is added to each target layer. You update ~0.1% of the parameters, the checkpoint is megabytes not gigabytes, and you can swap adapters per customer. QLoRA adds 4-bit base weights so a 7B model fits on one consumer GPU.
@@ -240,6 +258,8 @@ print('effective W = W + A@B, shape', (W + delta).shape)
 **Remember:** Initialise B to zeros so the adapted model starts exactly equal to the base model.
 
 **Common mistake:** Setting rank far too high — you lose the efficiency and gain the overfitting.
+
+Practice: open `examples/10_turning_eda_into_modelling_hypotheses.py`, predict the output, change one line, predict again.
 
 ---
 

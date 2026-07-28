@@ -40,6 +40,8 @@ print('residual mean (should be ~0):', round(float(resid.mean()), 6))
 
 **Common mistake:** Reporting R² on training data and calling it model performance.
 
+Practice: open `examples/01_mae_and_its_interpretation.py`, predict the output, change one line, predict again.
+
 ## 2. MSE and RMSE
 
 Linear regression fits a straight line by minimising squared error. It is the honest baseline for every regression problem: fast, interpretable, and the thing your fancy model must beat before it earns its complexity.
@@ -62,6 +64,8 @@ print('residual mean (should be ~0):', round(float(resid.mean()), 6))
 **Remember:** Plot residuals against predictions — any visible pattern means the linear form is wrong.
 
 **Common mistake:** Reporting R² on training data and calling it model performance.
+
+Practice: open `examples/02_mse_and_rmse.py`, predict the output, change one line, predict again.
 
 ## 3. R-squared and adjusted R-squared
 
@@ -86,6 +90,8 @@ print('residual mean (should be ~0):', round(float(resid.mean()), 6))
 
 **Common mistake:** Reporting R² on training data and calling it model performance.
 
+Practice: open `examples/03_r_squared_and_adjusted_r_squared.py`, predict the output, change one line, predict again.
+
 ## 4. MAPE and its zero problem
 
 Linear regression fits a straight line by minimising squared error. It is the honest baseline for every regression problem: fast, interpretable, and the thing your fancy model must beat before it earns its complexity.
@@ -108,6 +114,8 @@ print('residual mean (should be ~0):', round(float(resid.mean()), 6))
 **Remember:** Plot residuals against predictions — any visible pattern means the linear form is wrong.
 
 **Common mistake:** Reporting R² on training data and calling it model performance.
+
+Practice: open `examples/04_mape_and_its_zero_problem.py`, predict the output, change one line, predict again.
 
 ## 5. Choosing a metric from the cost of error
 
@@ -132,6 +140,8 @@ print('residual mean (should be ~0):', round(float(resid.mean()), 6))
 
 **Common mistake:** Reporting R² on training data and calling it model performance.
 
+Practice: open `examples/05_choosing_a_metric_from_the_cost_of_error.py`, predict the output, change one line, predict again.
+
 ## 6. Baseline: predicting the mean
 
 The mean is pulled around by outliers; the median is not. Report both, plus a spread measure. When mean and median disagree sharply, the distribution is skewed and averages are lying to you.
@@ -152,6 +162,8 @@ print('outliers', salaries[(salaries < q1 - 1.5 * iqr) | (salaries > q3 + 1.5 * 
 **Remember:** Quote median + IQR for skewed data, mean + std only for roughly symmetric data.
 
 **Common mistake:** Removing 'outliers' automatically when they are the exact events you were hired to predict.
+
+Practice: open `examples/06_baseline_predicting_the_mean.py`, predict the output, change one line, predict again.
 
 ## 7. Residual analysis
 
@@ -176,6 +188,8 @@ print('residual mean (should be ~0):', round(float(resid.mean()), 6))
 
 **Common mistake:** Reporting R² on training data and calling it model performance.
 
+Practice: open `examples/07_residual_analysis.py`, predict the output, change one line, predict again.
+
 ## 8. Error distribution by segment
 
 A distribution says which values are likely. Gaussian for measurement noise, Bernoulli for yes/no, Poisson for counts per interval. Choosing the right one is choosing your loss function: Gaussian likelihood gives MSE, Bernoulli gives cross-entropy.
@@ -194,6 +208,8 @@ print('coin heads rate ', coin.mean())
 **Remember:** Always seed your RNG (`default_rng(0)`) when you want a result someone else can reproduce.
 
 **Common mistake:** Assuming Gaussian for skewed, bounded, or count data and then being surprised by the residuals.
+
+Practice: open `examples/08_error_distribution_by_segment.py`, predict the output, change one line, predict again.
 
 ## 9. Prediction intervals
 
@@ -218,6 +234,8 @@ print('residual mean (should be ~0):', round(float(resid.mean()), 6))
 
 **Common mistake:** Reporting R² on training data and calling it model performance.
 
+Practice: open `examples/09_prediction_intervals.py`, predict the output, change one line, predict again.
+
 ## 10. Reporting results without overclaiming
 
 Linear regression fits a straight line by minimising squared error. It is the honest baseline for every regression problem: fast, interpretable, and the thing your fancy model must beat before it earns its complexity.
@@ -240,6 +258,8 @@ print('residual mean (should be ~0):', round(float(resid.mean()), 6))
 **Remember:** Plot residuals against predictions — any visible pattern means the linear form is wrong.
 
 **Common mistake:** Reporting R² on training data and calling it model performance.
+
+Practice: open `examples/10_reporting_results_without_overclaiming.py`, predict the output, change one line, predict again.
 
 ---
 

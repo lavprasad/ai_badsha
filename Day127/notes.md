@@ -44,6 +44,8 @@ print('output shape', (weights @ V).shape)
 
 **Common mistake:** Omitting the causal mask in a decoder, so the model trivially cheats by reading the next token.
 
+Practice: open `examples/01_why_attention_is_order_blind.py`, predict the output, change one line, predict again.
+
 ## 2. Sinusoidal positional encoding
 
 A transformer block is attention + feed-forward, each wrapped in a residual connection and a LayerNorm. Attention alone is order-blind, so positions are injected explicitly. Encoder-only (BERT) is for understanding, decoder-only (GPT) for generation, encoder-decoder (T5) for translation-shaped tasks.
@@ -68,6 +70,8 @@ print('shape', pe.shape)
 **Remember:** Block = LayerNorm -> Attention -> add residual -> LayerNorm -> MLP -> add residual. Memorise it.
 
 **Common mistake:** Assuming a bigger context window is free — attention cost grows with the square of sequence length.
+
+Practice: open `examples/02_sinusoidal_positional_encoding.py`, predict the output, change one line, predict again.
 
 ## 3. Learned positional embeddings
 
@@ -96,6 +100,8 @@ print('king - man + woman ~', best)
 
 **Common mistake:** Mixing vectors from two different embedding models in one index; the spaces are unrelated.
 
+Practice: open `examples/03_learned_positional_embeddings.py`, predict the output, change one line, predict again.
+
 ## 4. Relative position encodings
 
 Long context is not the same as long attention. Models reliably use the beginning and end of a long prompt and get vaguer in the middle. Put the instruction and the most important evidence at the edges, and do not assume a 200k window means 200k of usable attention.
@@ -116,6 +122,8 @@ print(arrange_prompt('Answer only from the context.', chunks, 'refund window?'))
 **Remember:** Order matters. Best evidence first and last; filler in the middle is where attention thins out.
 
 **Common mistake:** Stuffing 100 retrieved chunks in retrieval order and assuming the model reads them all equally.
+
+Practice: open `examples/04_relative_position_encodings.py`, predict the output, change one line, predict again.
 
 ## 5. RoPE rotary embeddings
 
@@ -144,6 +152,8 @@ print('king - man + woman ~', best)
 
 **Common mistake:** Mixing vectors from two different embedding models in one index; the spaces are unrelated.
 
+Practice: open `examples/05_rope_rotary_embeddings.py`, predict the output, change one line, predict again.
+
 ## 6. ALiBi
 
 Long context is not the same as long attention. Models reliably use the beginning and end of a long prompt and get vaguer in the middle. Put the instruction and the most important evidence at the edges, and do not assume a 200k window means 200k of usable attention.
@@ -164,6 +174,8 @@ print(arrange_prompt('Answer only from the context.', chunks, 'refund window?'))
 **Remember:** Order matters. Best evidence first and last; filler in the middle is where attention thins out.
 
 **Common mistake:** Stuffing 100 retrieved chunks in retrieval order and assuming the model reads them all equally.
+
+Practice: open `examples/06_alibi.py`, predict the output, change one line, predict again.
 
 ## 7. Context length extension methods
 
@@ -186,6 +198,8 @@ print(arrange_prompt('Answer only from the context.', chunks, 'refund window?'))
 
 **Common mistake:** Stuffing 100 retrieved chunks in retrieval order and assuming the model reads them all equally.
 
+Practice: open `examples/07_context_length_extension_methods.py`, predict the output, change one line, predict again.
+
 ## 8. Position and long-context failure
 
 Long context is not the same as long attention. Models reliably use the beginning and end of a long prompt and get vaguer in the middle. Put the instruction and the most important evidence at the edges, and do not assume a 200k window means 200k of usable attention.
@@ -206,6 +220,8 @@ print(arrange_prompt('Answer only from the context.', chunks, 'refund window?'))
 **Remember:** Order matters. Best evidence first and last; filler in the middle is where attention thins out.
 
 **Common mistake:** Stuffing 100 retrieved chunks in retrieval order and assuming the model reads them all equally.
+
+Practice: open `examples/08_position_and_long_context_failure.py`, predict the output, change one line, predict again.
 
 ## 9. Lost in the middle effect
 
@@ -228,6 +244,8 @@ print(arrange_prompt('Answer only from the context.', chunks, 'refund window?'))
 
 **Common mistake:** Stuffing 100 retrieved chunks in retrieval order and assuming the model reads them all equally.
 
+Practice: open `examples/09_lost_in_the_middle_effect.py`, predict the output, change one line, predict again.
+
 ## 10. Choosing an encoding scheme
 
 Long context is not the same as long attention. Models reliably use the beginning and end of a long prompt and get vaguer in the middle. Put the instruction and the most important evidence at the edges, and do not assume a 200k window means 200k of usable attention.
@@ -248,6 +266,8 @@ print(arrange_prompt('Answer only from the context.', chunks, 'refund window?'))
 **Remember:** Order matters. Best evidence first and last; filler in the middle is where attention thins out.
 
 **Common mistake:** Stuffing 100 retrieved chunks in retrieval order and assuming the model reads them all equally.
+
+Practice: open `examples/10_choosing_an_encoding_scheme.py`, predict the output, change one line, predict again.
 
 ---
 

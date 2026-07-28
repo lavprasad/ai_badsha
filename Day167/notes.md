@@ -37,6 +37,8 @@ print('          opt.step(); opt.zero_grad()')
 
 **Common mistake:** Scaling the learning rate wrongly when you scale the batch — a larger batch usually needs a larger LR.
 
+Practice: open `examples/01_perceived_vs_actual_latency.py`, predict the output, change one line, predict again.
+
 ## 2. Streaming first tokens
 
 Data parallelism replicates the model and splits the batch; model parallelism splits the model when it will not fit on one device. Scale only after profiling — most 'we need more GPUs' problems are actually a slow data loader.
@@ -56,6 +58,8 @@ print('          opt.step(); opt.zero_grad()')
 **Remember:** Profile first. GPU at 30% utilisation means the bottleneck is the data pipeline, not the GPU.
 
 **Common mistake:** Scaling the learning rate wrongly when you scale the batch — a larger batch usually needs a larger LR.
+
+Practice: open `examples/02_streaming_first_tokens.py`, predict the output, change one line, predict again.
 
 ## 3. Parallelising independent calls
 
@@ -77,6 +81,8 @@ print('          opt.step(); opt.zero_grad()')
 
 **Common mistake:** Scaling the learning rate wrongly when you scale the batch — a larger batch usually needs a larger LR.
 
+Practice: open `examples/03_parallelising_independent_calls.py`, predict the output, change one line, predict again.
+
 ## 4. Speculative prefetching
 
 Data parallelism replicates the model and splits the batch; model parallelism splits the model when it will not fit on one device. Scale only after profiling — most 'we need more GPUs' problems are actually a slow data loader.
@@ -96,6 +102,8 @@ print('          opt.step(); opt.zero_grad()')
 **Remember:** Profile first. GPU at 30% utilisation means the bottleneck is the data pipeline, not the GPU.
 
 **Common mistake:** Scaling the learning rate wrongly when you scale the batch — a larger batch usually needs a larger LR.
+
+Practice: open `examples/04_speculative_prefetching.py`, predict the output, change one line, predict again.
 
 ## 5. Reducing prompt size
 
@@ -129,6 +137,8 @@ test_preprocess()
 
 **Common mistake:** Testing only the happy path, so an all-null column silently trains a constant model.
 
+Practice: open `examples/05_reducing_prompt_size.py`, predict the output, change one line, predict again.
+
 ## 6. Choosing faster models for sub-tasks
 
 Data parallelism replicates the model and splits the batch; model parallelism splits the model when it will not fit on one device. Scale only after profiling — most 'we need more GPUs' problems are actually a slow data loader.
@@ -148,6 +158,8 @@ print('          opt.step(); opt.zero_grad()')
 **Remember:** Profile first. GPU at 30% utilisation means the bottleneck is the data pipeline, not the GPU.
 
 **Common mistake:** Scaling the learning rate wrongly when you scale the batch — a larger batch usually needs a larger LR.
+
+Practice: open `examples/06_choosing_faster_models_for_sub_tasks.py`, predict the output, change one line, predict again.
 
 ## 7. Caching retrieval results
 
@@ -177,6 +189,8 @@ assert hits == len(GOLDEN), 'regression: fix before shipping'
 
 **Common mistake:** Changing the prompt on Friday with no eval and finding out from customers on Monday.
 
+Practice: open `examples/07_caching_retrieval_results.py`, predict the output, change one line, predict again.
+
 ## 8. Timeouts and fallbacks
 
 Data parallelism replicates the model and splits the batch; model parallelism splits the model when it will not fit on one device. Scale only after profiling — most 'we need more GPUs' problems are actually a slow data loader.
@@ -196,6 +210,8 @@ print('          opt.step(); opt.zero_grad()')
 **Remember:** Profile first. GPU at 30% utilisation means the bottleneck is the data pipeline, not the GPU.
 
 **Common mistake:** Scaling the learning rate wrongly when you scale the batch — a larger batch usually needs a larger LR.
+
+Practice: open `examples/08_timeouts_and_fallbacks.py`, predict the output, change one line, predict again.
 
 ## 9. Measuring p50, p95, p99
 
@@ -217,6 +233,8 @@ print('          opt.step(); opt.zero_grad()')
 
 **Common mistake:** Scaling the learning rate wrongly when you scale the batch — a larger batch usually needs a larger LR.
 
+Practice: open `examples/09_measuring_p50_p95_p99.py`, predict the output, change one line, predict again.
+
 ## 10. Meeting a latency SLA
 
 Data parallelism replicates the model and splits the batch; model parallelism splits the model when it will not fit on one device. Scale only after profiling — most 'we need more GPUs' problems are actually a slow data loader.
@@ -236,6 +254,8 @@ print('          opt.step(); opt.zero_grad()')
 **Remember:** Profile first. GPU at 30% utilisation means the bottleneck is the data pipeline, not the GPU.
 
 **Common mistake:** Scaling the learning rate wrongly when you scale the batch — a larger batch usually needs a larger LR.
+
+Practice: open `examples/10_meeting_a_latency_sla.py`, predict the output, change one line, predict again.
 
 ---
 

@@ -37,6 +37,8 @@ print(f'{X.shape[1]} dims -> {pca.n_components_} dims, variance kept {pca.explai
 
 **Common mistake:** Running PCA before scaling, so one wide-range column becomes component 1 all by itself.
 
+Practice: open `examples/01_why_high_dimensions_hurt.py`, predict the output, change one line, predict again.
+
 ## 2. PCA step by step
 
 PCA rotates the data onto axes of maximum variance and lets you drop the rest. It is linear, fast, and reversible. t-SNE and UMAP are for visualisation only — distances between clusters in a t-SNE plot are not meaningful, so never feed t-SNE output into a model.
@@ -56,6 +58,8 @@ print(f'{X.shape[1]} dims -> {pca.n_components_} dims, variance kept {pca.explai
 **Remember:** `n_components=0.95` lets PCA pick the count for you by variance target.
 
 **Common mistake:** Running PCA before scaling, so one wide-range column becomes component 1 all by itself.
+
+Practice: open `examples/02_pca_step_by_step.py`, predict the output, change one line, predict again.
 
 ## 3. Explained variance and choosing components
 
@@ -77,6 +81,8 @@ print('outliers', salaries[(salaries < q1 - 1.5 * iqr) | (salaries > q3 + 1.5 * 
 **Remember:** Quote median + IQR for skewed data, mean + std only for roughly symmetric data.
 
 **Common mistake:** Removing 'outliers' automatically when they are the exact events you were hired to predict.
+
+Practice: open `examples/03_explained_variance_and_choosing_componen.py`, predict the output, change one line, predict again.
 
 ## 4. PCA for visualisation vs for modelling
 
@@ -100,6 +106,8 @@ print('wrote hist.png')
 
 **Common mistake:** Judging a model by its accuracy number alone without ever looking at the data.
 
+Practice: open `examples/04_pca_for_visualisation_vs_for_modelling.py`, predict the output, change one line, predict again.
+
 ## 5. Kernel PCA
 
 Notebooks keep state between cells, which is great for exploring and terrible for reproducibility. Treat the notebook as a scratchpad; once logic settles, move it into a `.py` module you can import and test.
@@ -115,6 +123,8 @@ df.head()
 **Remember:** 'Restart kernel and run all' is the only honest test that a notebook works.
 
 **Common mistake:** Shipping a notebook whose results depend on a deleted cell you ran ten minutes ago.
+
+Practice: open `examples/05_kernel_pca.py`, predict the output, change one line, predict again.
 
 ## 6. t-SNE and its pitfalls
 
@@ -136,6 +146,8 @@ print(f'{X.shape[1]} dims -> {pca.n_components_} dims, variance kept {pca.explai
 
 **Common mistake:** Running PCA before scaling, so one wide-range column becomes component 1 all by itself.
 
+Practice: open `examples/06_t_sne_and_its_pitfalls.py`, predict the output, change one line, predict again.
+
 ## 7. UMAP
 
 PCA rotates the data onto axes of maximum variance and lets you drop the rest. It is linear, fast, and reversible. t-SNE and UMAP are for visualisation only — distances between clusters in a t-SNE plot are not meaningful, so never feed t-SNE output into a model.
@@ -156,6 +168,8 @@ print(f'{X.shape[1]} dims -> {pca.n_components_} dims, variance kept {pca.explai
 
 **Common mistake:** Running PCA before scaling, so one wide-range column becomes component 1 all by itself.
 
+Practice: open `examples/07_umap.py`, predict the output, change one line, predict again.
+
 ## 8. Truncated SVD for sparse text
 
 Eigenvectors are the directions a matrix only stretches, never rotates; the eigenvalue is the stretch factor. SVD generalises this to any matrix and is the engine under PCA, low-rank compression, and LoRA adapters.
@@ -174,6 +188,8 @@ print('variance kept by first 2 dims:', round(float(energy[1]), 3))
 **Remember:** Singular values sorted descending tell you how many dimensions actually carry information.
 
 **Common mistake:** Running PCA/SVD on unscaled features so the largest-unit column dominates every component.
+
+Practice: open `examples/08_truncated_svd_for_sparse_text.py`, predict the output, change one line, predict again.
 
 ## 9. Feature selection vs feature extraction
 
@@ -197,6 +213,8 @@ print(df)
 
 **Common mistake:** Building a feature from a column that is only filled in AFTER the event you are predicting.
 
+Practice: open `examples/09_feature_selection_vs_feature_extraction.py`, predict the output, change one line, predict again.
+
 ## 10. Compressing a dataset without losing signal
 
 PCA rotates the data onto axes of maximum variance and lets you drop the rest. It is linear, fast, and reversible. t-SNE and UMAP are for visualisation only — distances between clusters in a t-SNE plot are not meaningful, so never feed t-SNE output into a model.
@@ -216,6 +234,8 @@ print(f'{X.shape[1]} dims -> {pca.n_components_} dims, variance kept {pca.explai
 **Remember:** `n_components=0.95` lets PCA pick the count for you by variance target.
 
 **Common mistake:** Running PCA before scaling, so one wide-range column becomes component 1 all by itself.
+
+Practice: open `examples/10_compressing_a_dataset_without_losing_sig.py`, predict the output, change one line, predict again.
 
 ---
 

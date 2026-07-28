@@ -37,6 +37,8 @@ print('          opt.step(); opt.zero_grad()')
 
 **Common mistake:** Scaling the learning rate wrongly when you scale the batch — a larger batch usually needs a larger LR.
 
+Practice: open `examples/01_latency_and_power_constraints.py`, predict the output, change one line, predict again.
+
 ## 2. Model choice for edge devices
 
 GPUs win by doing thousands of multiply-adds in parallel. Model and data must live on the same device or you get an error. Mixed precision (bf16/fp16) halves memory and roughly doubles throughput on modern cards with almost no accuracy cost.
@@ -59,6 +61,8 @@ if device == 'cuda':
 
 **Common mistake:** Keeping the full loss tensor in a list each step — it holds the whole graph and leaks memory.
 
+Practice: open `examples/02_model_choice_for_edge_devices.py`, predict the output, change one line, predict again.
+
 ## 3. Quantised inference
 
 On a device you trade accuracy for latency, memory and battery. Export to a portable runtime, quantise, and measure on the actual hardware — desktop benchmarks tell you almost nothing about a phone under thermal load.
@@ -80,6 +84,8 @@ for c in candidates:
 
 **Common mistake:** Validating latency on a desktop GPU and discovering the phone throttles after 40 seconds.
 
+Practice: open `examples/03_quantised_inference.py`, predict the output, change one line, predict again.
+
 ## 4. ONNX Runtime and TFLite
 
 Training cost is paid once; inference cost is paid on every request forever. Distillation trains a small student on the large teacher's outputs, quantisation stores weights in fewer bits, and ONNX gives you one artefact that runs across runtimes. Measure the accuracy you lose against the latency you gain.
@@ -96,6 +102,8 @@ print('\nPlus KV cache and activations at runtime — budget roughly 20-30% more
 **Remember:** Quantise, measure quality on your own eval set, then decide. Published benchmarks are not your task.
 
 **Common mistake:** Shipping an int4 model because it fits, without ever measuring what accuracy it cost you.
+
+Practice: open `examples/04_onnx_runtime_and_tflite.py`, predict the output, change one line, predict again.
 
 ## 5. Camera pipeline integration
 
@@ -124,6 +132,8 @@ print(model.predict(df))
 
 **Common mistake:** Preprocessing in a notebook and then forgetting one step when writing the serving code.
 
+Practice: open `examples/05_camera_pipeline_integration.py`, predict the output, change one line, predict again.
+
 ## 6. Batching vs streaming
 
 Most training runs are not compute-bound; they are waiting on data. Before buying a bigger GPU, check utilisation: if it sits at 30%, the fix is more data-loader workers or a faster storage format. Estimate cost before starting — hours x instance price is a number you can approve or refuse.
@@ -142,6 +152,8 @@ print('If GPU utilization < 60%, fix the data pipeline before scaling hardware.'
 
 **Common mistake:** Renting four GPUs to fix a bottleneck that was a single-threaded JPEG decode.
 
+Practice: open `examples/06_batching_vs_streaming.py`, predict the output, change one line, predict again.
+
 ## 7. Thermal throttling
 
 Most training runs are not compute-bound; they are waiting on data. Before buying a bigger GPU, check utilisation: if it sits at 30%, the fix is more data-loader workers or a faster storage format. Estimate cost before starting — hours x instance price is a number you can approve or refuse.
@@ -159,6 +171,8 @@ print('If GPU utilization < 60%, fix the data pipeline before scaling hardware.'
 **Remember:** Profile before you scale. A slow `__getitem__` wastes more money than a small GPU.
 
 **Common mistake:** Renting four GPUs to fix a bottleneck that was a single-threaded JPEG decode.
+
+Practice: open `examples/07_thermal_throttling.py`, predict the output, change one line, predict again.
 
 ## 8. On-device privacy advantages
 
@@ -182,6 +196,8 @@ if device == 'cuda':
 
 **Common mistake:** Keeping the full loss tensor in a list each step — it holds the whole graph and leaks memory.
 
+Practice: open `examples/08_on_device_privacy_advantages.py`, predict the output, change one line, predict again.
+
 ## 9. Measuring real device performance
 
 GPUs win by doing thousands of multiply-adds in parallel. Model and data must live on the same device or you get an error. Mixed precision (bf16/fp16) halves memory and roughly doubles throughput on modern cards with almost no accuracy cost.
@@ -204,6 +220,8 @@ if device == 'cuda':
 
 **Common mistake:** Keeping the full loss tensor in a list each step — it holds the whole graph and leaks memory.
 
+Practice: open `examples/09_measuring_real_device_performance.py`, predict the output, change one line, predict again.
+
 ## 10. Deploying a detector to a Raspberry Pi
 
 On a device you trade accuracy for latency, memory and battery. Export to a portable runtime, quantise, and measure on the actual hardware — desktop benchmarks tell you almost nothing about a phone under thermal load.
@@ -224,6 +242,8 @@ for c in candidates:
 **Remember:** Measure on the target device, warm and under load — not on your laptop, once, cold.
 
 **Common mistake:** Validating latency on a desktop GPU and discovering the phone throttles after 40 seconds.
+
+Practice: open `examples/10_deploying_a_detector_to_a_raspberry_pi.py`, predict the output, change one line, predict again.
 
 ---
 

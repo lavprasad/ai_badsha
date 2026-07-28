@@ -43,6 +43,8 @@ print(next(batches(range(10), 3)))
 
 **Common mistake:** Calling `len()` on a generator, or iterating it twice and getting nothing the second time.
 
+Practice: open `examples/01_generator_vs_discriminator.py`, predict the output, change one line, predict again.
+
 ## 2. The minimax objective
 
 A GAN pits a generator against a discriminator: one fakes data, the other spots fakes, and both improve. Training is famously unstable — mode collapse means the generator found one convincing output and stopped exploring. Diffusion has largely replaced GANs for images.
@@ -61,6 +63,8 @@ print('Balance is everything: if D wins outright, G gets no usable gradient.')
 **Remember:** Watch samples, not the loss curves — GAN losses are not a progress signal.
 
 **Common mistake:** Letting the discriminator get too strong too early, which starves the generator of gradient.
+
+Practice: open `examples/02_the_minimax_objective.py`, predict the output, change one line, predict again.
 
 ## 3. Training instability
 
@@ -81,6 +85,8 @@ print('Balance is everything: if D wins outright, G gets no usable gradient.')
 
 **Common mistake:** Letting the discriminator get too strong too early, which starves the generator of gradient.
 
+Practice: open `examples/03_training_instability.py`, predict the output, change one line, predict again.
+
 ## 4. Mode collapse
 
 A GAN pits a generator against a discriminator: one fakes data, the other spots fakes, and both improve. Training is famously unstable — mode collapse means the generator found one convincing output and stopped exploring. Diffusion has largely replaced GANs for images.
@@ -99,6 +105,8 @@ print('Balance is everything: if D wins outright, G gets no usable gradient.')
 **Remember:** Watch samples, not the loss curves — GAN losses are not a progress signal.
 
 **Common mistake:** Letting the discriminator get too strong too early, which starves the generator of gradient.
+
+Practice: open `examples/04_mode_collapse.py`, predict the output, change one line, predict again.
 
 ## 5. DCGAN architecture
 
@@ -125,6 +133,8 @@ print('shape', pe.shape)
 
 **Common mistake:** Assuming a bigger context window is free — attention cost grows with the square of sequence length.
 
+Practice: open `examples/05_dcgan_architecture.py`, predict the output, change one line, predict again.
+
 ## 6. Conditional GANs
 
 A GAN pits a generator against a discriminator: one fakes data, the other spots fakes, and both improve. Training is famously unstable — mode collapse means the generator found one convincing output and stopped exploring. Diffusion has largely replaced GANs for images.
@@ -144,6 +154,8 @@ print('Balance is everything: if D wins outright, G gets no usable gradient.')
 
 **Common mistake:** Letting the discriminator get too strong too early, which starves the generator of gradient.
 
+Practice: open `examples/06_conditional_gans.py`, predict the output, change one line, predict again.
+
 ## 7. CycleGAN and unpaired translation
 
 A GAN pits a generator against a discriminator: one fakes data, the other spots fakes, and both improve. Training is famously unstable — mode collapse means the generator found one convincing output and stopped exploring. Diffusion has largely replaced GANs for images.
@@ -162,6 +174,8 @@ print('Balance is everything: if D wins outright, G gets no usable gradient.')
 **Remember:** Watch samples, not the loss curves — GAN losses are not a progress signal.
 
 **Common mistake:** Letting the discriminator get too strong too early, which starves the generator of gradient.
+
+Practice: open `examples/07_cyclegan_and_unpaired_translation.py`, predict the output, change one line, predict again.
 
 ## 8. Evaluating generative models
 
@@ -191,6 +205,8 @@ assert hits == len(GOLDEN), 'regression: fix before shipping'
 
 **Common mistake:** Changing the prompt on Friday with no eval and finding out from customers on Monday.
 
+Practice: open `examples/08_evaluating_generative_models.py`, predict the output, change one line, predict again.
+
 ## 9. Why diffusion largely replaced GANs
 
 A GAN pits a generator against a discriminator: one fakes data, the other spots fakes, and both improve. Training is famously unstable — mode collapse means the generator found one convincing output and stopped exploring. Diffusion has largely replaced GANs for images.
@@ -210,6 +226,8 @@ print('Balance is everything: if D wins outright, G gets no usable gradient.')
 
 **Common mistake:** Letting the discriminator get too strong too early, which starves the generator of gradient.
 
+Practice: open `examples/09_why_diffusion_largely_replaced_gans.py`, predict the output, change one line, predict again.
+
 ## 10. Reading GAN samples, not GAN losses
 
 A GAN pits a generator against a discriminator: one fakes data, the other spots fakes, and both improve. Training is famously unstable — mode collapse means the generator found one convincing output and stopped exploring. Diffusion has largely replaced GANs for images.
@@ -228,6 +246,8 @@ print('Balance is everything: if D wins outright, G gets no usable gradient.')
 **Remember:** Watch samples, not the loss curves — GAN losses are not a progress signal.
 
 **Common mistake:** Letting the discriminator get too strong too early, which starves the generator of gradient.
+
+Practice: open `examples/10_reading_gan_samples_not_gan_losses.py`, predict the output, change one line, predict again.
 
 ---
 

@@ -43,6 +43,8 @@ print(' '.join(out))   # a 2-gram LM: same objective, 10 orders of magnitude sma
 
 **Common mistake:** Believing a base model will follow instructions; that behaviour comes from the tuning stages after.
 
+Practice: open `examples/01_the_next_token_objective_at_scale.py`, predict the output, change one line, predict again.
+
 ## 2. Data collection and filtering
 
 Pretraining is one absurdly simple objective at enormous scale: predict the next token. Everything else — grammar, facts, reasoning traces, style — falls out of doing that well over trillions of tokens. Scaling laws say loss falls predictably with model size, data and compute together.
@@ -69,6 +71,8 @@ print(' '.join(out))   # a 2-gram LM: same objective, 10 orders of magnitude sma
 
 **Common mistake:** Believing a base model will follow instructions; that behaviour comes from the tuning stages after.
 
+Practice: open `examples/02_data_collection_and_filtering.py`, predict the output, change one line, predict again.
+
 ## 3. Deduplication and quality scoring
 
 Pretraining is one absurdly simple objective at enormous scale: predict the next token. Everything else — grammar, facts, reasoning traces, style — falls out of doing that well over trillions of tokens. Scaling laws say loss falls predictably with model size, data and compute together.
@@ -94,6 +98,8 @@ print(' '.join(out))   # a 2-gram LM: same objective, 10 orders of magnitude sma
 **Remember:** A bigger model trained on too little data is a waste — compute, parameters and tokens scale together.
 
 **Common mistake:** Believing a base model will follow instructions; that behaviour comes from the tuning stages after.
+
+Practice: open `examples/03_deduplication_and_quality_scoring.py`, predict the output, change one line, predict again.
 
 ## 4. Tokeniser training
 
@@ -125,6 +131,8 @@ bpe_merges({'low': 5, 'lower': 2, 'newest': 6, 'widest': 3})
 
 **Common mistake:** Estimating cost or context usage in words instead of tokens and overflowing the window in production.
 
+Practice: open `examples/04_tokeniser_training.py`, predict the output, change one line, predict again.
+
 ## 5. Compute budget and scaling laws
 
 Pretraining is one absurdly simple objective at enormous scale: predict the next token. Everything else — grammar, facts, reasoning traces, style — falls out of doing that well over trillions of tokens. Scaling laws say loss falls predictably with model size, data and compute together.
@@ -150,6 +158,8 @@ print(' '.join(out))   # a 2-gram LM: same objective, 10 orders of magnitude sma
 **Remember:** A bigger model trained on too little data is a waste — compute, parameters and tokens scale together.
 
 **Common mistake:** Believing a base model will follow instructions; that behaviour comes from the tuning stages after.
+
+Practice: open `examples/05_compute_budget_and_scaling_laws.py`, predict the output, change one line, predict again.
 
 ## 6. Chinchilla-optimal data ratios
 
@@ -177,6 +187,8 @@ print(' '.join(out))   # a 2-gram LM: same objective, 10 orders of magnitude sma
 
 **Common mistake:** Believing a base model will follow instructions; that behaviour comes from the tuning stages after.
 
+Practice: open `examples/06_chinchilla_optimal_data_ratios.py`, predict the output, change one line, predict again.
+
 ## 7. Training instabilities
 
 Pretraining is one absurdly simple objective at enormous scale: predict the next token. Everything else — grammar, facts, reasoning traces, style — falls out of doing that well over trillions of tokens. Scaling laws say loss falls predictably with model size, data and compute together.
@@ -202,6 +214,8 @@ print(' '.join(out))   # a 2-gram LM: same objective, 10 orders of magnitude sma
 **Remember:** A bigger model trained on too little data is a waste — compute, parameters and tokens scale together.
 
 **Common mistake:** Believing a base model will follow instructions; that behaviour comes from the tuning stages after.
+
+Practice: open `examples/07_training_instabilities.py`, predict the output, change one line, predict again.
 
 ## 8. Evaluation during pretraining
 
@@ -229,6 +243,8 @@ print(' '.join(out))   # a 2-gram LM: same objective, 10 orders of magnitude sma
 
 **Common mistake:** Believing a base model will follow instructions; that behaviour comes from the tuning stages after.
 
+Practice: open `examples/08_evaluation_during_pretraining.py`, predict the output, change one line, predict again.
+
 ## 9. Cost realities
 
 Pretraining is one absurdly simple objective at enormous scale: predict the next token. Everything else — grammar, facts, reasoning traces, style — falls out of doing that well over trillions of tokens. Scaling laws say loss falls predictably with model size, data and compute together.
@@ -255,6 +271,8 @@ print(' '.join(out))   # a 2-gram LM: same objective, 10 orders of magnitude sma
 
 **Common mistake:** Believing a base model will follow instructions; that behaviour comes from the tuning stages after.
 
+Practice: open `examples/09_cost_realities.py`, predict the output, change one line, predict again.
+
 ## 10. Why almost nobody should pretrain
 
 Pretraining is one absurdly simple objective at enormous scale: predict the next token. Everything else — grammar, facts, reasoning traces, style — falls out of doing that well over trillions of tokens. Scaling laws say loss falls predictably with model size, data and compute together.
@@ -280,6 +298,8 @@ print(' '.join(out))   # a 2-gram LM: same objective, 10 orders of magnitude sma
 **Remember:** A bigger model trained on too little data is a waste — compute, parameters and tokens scale together.
 
 **Common mistake:** Believing a base model will follow instructions; that behaviour comes from the tuning stages after.
+
+Practice: open `examples/10_why_almost_nobody_should_pretrain.py`, predict the output, change one line, predict again.
 
 ---
 

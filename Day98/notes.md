@@ -40,6 +40,8 @@ print(H_next.round(3))
 
 **Common mistake:** Splitting graph data randomly so a node's own neighbours end up in both train and test.
 
+Practice: open `examples/01_data_that_is_naturally_a_graph.py`, predict the output, change one line, predict again.
+
 ## 2. Adjacency and node features
 
 A GNN passes messages along edges: each node updates itself from its neighbours, repeated k times so information travels k hops. Good for fraud rings, molecules and social graphs — anywhere the relationships carry more signal than the nodes.
@@ -63,6 +65,8 @@ print(H_next.round(3))
 
 **Common mistake:** Splitting graph data randomly so a node's own neighbours end up in both train and test.
 
+Practice: open `examples/02_adjacency_and_node_features.py`, predict the output, change one line, predict again.
+
 ## 3. Message passing
 
 A GNN passes messages along edges: each node updates itself from its neighbours, repeated k times so information travels k hops. Good for fraud rings, molecules and social graphs — anywhere the relationships carry more signal than the nodes.
@@ -85,6 +89,8 @@ print(H_next.round(3))
 **Remember:** Too many message-passing layers causes over-smoothing — every node converges to the same vector.
 
 **Common mistake:** Splitting graph data randomly so a node's own neighbours end up in both train and test.
+
+Practice: open `examples/03_message_passing.py`, predict the output, change one line, predict again.
 
 ## 4. Graph convolution
 
@@ -113,6 +119,8 @@ print(out)   # the edge column lights up
 
 **Common mistake:** Forgetting the channel dimension and feeding (H,W) where the layer expects (N,C,H,W).
 
+Practice: open `examples/04_graph_convolution.py`, predict the output, change one line, predict again.
+
 ## 5. GraphSAGE and sampling
 
 A distribution says which values are likely. Gaussian for measurement noise, Bernoulli for yes/no, Poisson for counts per interval. Choosing the right one is choosing your loss function: Gaussian likelihood gives MSE, Bernoulli gives cross-entropy.
@@ -131,6 +139,8 @@ print('coin heads rate ', coin.mean())
 **Remember:** Always seed your RNG (`default_rng(0)`) when you want a result someone else can reproduce.
 
 **Common mistake:** Assuming Gaussian for skewed, bounded, or count data and then being surprised by the residuals.
+
+Practice: open `examples/05_graphsage_and_sampling.py`, predict the output, change one line, predict again.
 
 ## 6. Graph attention networks
 
@@ -159,6 +169,8 @@ print('output shape', (weights @ V).shape)
 
 **Common mistake:** Omitting the causal mask in a decoder, so the model trivially cheats by reading the next token.
 
+Practice: open `examples/06_graph_attention_networks.py`, predict the output, change one line, predict again.
+
 ## 7. Node, edge and graph-level tasks
 
 A GNN passes messages along edges: each node updates itself from its neighbours, repeated k times so information travels k hops. Good for fraud rings, molecules and social graphs — anywhere the relationships carry more signal than the nodes.
@@ -181,6 +193,8 @@ print(H_next.round(3))
 **Remember:** Too many message-passing layers causes over-smoothing — every node converges to the same vector.
 
 **Common mistake:** Splitting graph data randomly so a node's own neighbours end up in both train and test.
+
+Practice: open `examples/07_node_edge_and_graph_level_tasks.py`, predict the output, change one line, predict again.
 
 ## 8. Over-smoothing
 
@@ -205,6 +219,8 @@ print(H_next.round(3))
 
 **Common mistake:** Splitting graph data randomly so a node's own neighbours end up in both train and test.
 
+Practice: open `examples/08_over_smoothing.py`, predict the output, change one line, predict again.
+
 ## 9. Splitting graph data without leakage
 
 Leakage is information in training that will not exist at prediction time. It produces impossible validation scores and a model that collapses in production. If your accuracy jumps suspiciously, hunt for a leak before you celebrate.
@@ -225,6 +241,8 @@ print(train['ts'].max(), '<', test['ts'].min())
 **Remember:** 0.999 AUC on a hard business problem is a bug report, not a result.
 
 **Common mistake:** Shipping a leaked model and discovering the real accuracy from angry users.
+
+Practice: open `examples/09_splitting_graph_data_without_leakage.py`, predict the output, change one line, predict again.
 
 ## 10. Fraud rings as a GNN problem
 
@@ -248,6 +266,8 @@ print(H_next.round(3))
 **Remember:** Too many message-passing layers causes over-smoothing — every node converges to the same vector.
 
 **Common mistake:** Splitting graph data randomly so a node's own neighbours end up in both train and test.
+
+Practice: open `examples/10_fraud_rings_as_a_gnn_problem.py`, predict the output, change one line, predict again.
 
 ---
 

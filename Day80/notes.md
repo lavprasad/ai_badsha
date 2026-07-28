@@ -43,6 +43,8 @@ print('learned', np.round(w, 3), 'target', true_w)
 
 **Common mistake:** Leaving the learning rate fixed forever instead of decaying it once the loss plateaus.
 
+Practice: open `examples/01_batch_stochastic_and_mini_batch_descent.py`, predict the output, change one line, predict again.
+
 ## 2. Learning rate: the master knob
 
 Gradient descent repeatedly steps against the gradient. Full-batch is stable but slow; stochastic is noisy but escapes shallow traps; mini-batch is the practical middle. The learning rate is the single most important knob you will ever turn.
@@ -69,6 +71,8 @@ print('learned', np.round(w, 3), 'target', true_w)
 
 **Common mistake:** Leaving the learning rate fixed forever instead of decaying it once the loss plateaus.
 
+Practice: open `examples/02_learning_rate_the_master_knob.py`, predict the output, change one line, predict again.
+
 ## 3. Momentum
 
 SGD with momentum smooths the path downhill. Adam adapts a per-parameter step size and is the safe default. AdamW decouples weight decay from the adaptive step, which is why every modern transformer uses it. A warmup then cosine decay schedule is the standard recipe.
@@ -93,6 +97,8 @@ print(f'w = {w:.4f} (target 3.0)')
 
 **Common mistake:** Using the same learning rate for pretraining and fine-tuning and destroying the pretrained weights.
 
+Practice: open `examples/03_momentum.py`, predict the output, change one line, predict again.
+
 ## 4. Nesterov accelerated gradient
 
 The derivative answers: if I nudge this input a little, how much does the output move? The gradient is that answer for every input at once, so it points uphill. Training walks downhill by stepping against the gradient. The chain rule is what lets you propagate that answer through a stack of layers.
@@ -114,6 +120,8 @@ print('analytic ', 2 * x + 3)   # should match to ~1e-6
 **Remember:** A central difference `(f(x+h)-f(x-h))/2h` is the cheapest way to check a hand-written gradient.
 
 **Common mistake:** Trusting a derivation you never gradient-checked; a sign error trains slowly instead of failing loudly.
+
+Practice: open `examples/04_nesterov_accelerated_gradient.py`, predict the output, change one line, predict again.
 
 ## 5. AdaGrad and RMSProp
 
@@ -139,6 +147,8 @@ print(f'w = {w:.4f} (target 3.0)')
 
 **Common mistake:** Using the same learning rate for pretraining and fine-tuning and destroying the pretrained weights.
 
+Practice: open `examples/05_adagrad_and_rmsprop.py`, predict the output, change one line, predict again.
+
 ## 6. Adam
 
 SGD with momentum smooths the path downhill. Adam adapts a per-parameter step size and is the safe default. AdamW decouples weight decay from the adaptive step, which is why every modern transformer uses it. A warmup then cosine decay schedule is the standard recipe.
@@ -163,6 +173,8 @@ print(f'w = {w:.4f} (target 3.0)')
 
 **Common mistake:** Using the same learning rate for pretraining and fine-tuning and destroying the pretrained weights.
 
+Practice: open `examples/06_adam.py`, predict the output, change one line, predict again.
+
 ## 7. AdamW and decoupled weight decay
 
 Regularisation penalises large weights so the model prefers simpler explanations. L2 (ridge) shrinks everything smoothly; L1 (lasso) drives some weights exactly to zero and thereby selects features. Elastic net mixes both.
@@ -183,6 +195,8 @@ print('lasso non-zero coefs', int(np.sum(np.abs(lasso.coef_) > 1e-6)))
 **Remember:** Scale features before regularising, or the penalty punishes whichever column happens to use small units.
 
 **Common mistake:** Tuning `alpha` on the test set — pick it with cross-validation on train only.
+
+Practice: open `examples/07_adamw_and_decoupled_weight_decay.py`, predict the output, change one line, predict again.
 
 ## 8. Choosing an optimiser in practice
 
@@ -208,6 +222,8 @@ print(f'w = {w:.4f} (target 3.0)')
 
 **Common mistake:** Using the same learning rate for pretraining and fine-tuning and destroying the pretrained weights.
 
+Practice: open `examples/08_choosing_an_optimiser_in_practice.py`, predict the output, change one line, predict again.
+
 ## 9. Optimiser state and memory cost
 
 SGD with momentum smooths the path downhill. Adam adapts a per-parameter step size and is the safe default. AdamW decouples weight decay from the adaptive step, which is why every modern transformer uses it. A warmup then cosine decay schedule is the standard recipe.
@@ -232,6 +248,8 @@ print(f'w = {w:.4f} (target 3.0)')
 
 **Common mistake:** Using the same learning rate for pretraining and fine-tuning and destroying the pretrained weights.
 
+Practice: open `examples/09_optimiser_state_and_memory_cost.py`, predict the output, change one line, predict again.
+
 ## 10. Implementing Adam from scratch
 
 SGD with momentum smooths the path downhill. Adam adapts a per-parameter step size and is the safe default. AdamW decouples weight decay from the adaptive step, which is why every modern transformer uses it. A warmup then cosine decay schedule is the standard recipe.
@@ -255,6 +273,8 @@ print(f'w = {w:.4f} (target 3.0)')
 **Remember:** Adam's default lr 1e-3 is a good start for scratch training; 1e-5 to 5e-5 for fine-tuning.
 
 **Common mistake:** Using the same learning rate for pretraining and fine-tuning and destroying the pretrained weights.
+
+Practice: open `examples/10_implementing_adam_from_scratch.py`, predict the output, change one line, predict again.
 
 ---
 

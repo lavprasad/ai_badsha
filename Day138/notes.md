@@ -41,6 +41,8 @@ print('Structure: role -> task -> allowed outputs -> format -> examples -> input
 
 **Common mistake:** Writing a vague prompt, getting vague output, and blaming the model.
 
+Practice: open `examples/01_turns_roles_and_system_prompts.py`, predict the output, change one line, predict again.
+
 ## 2. Conversation state and memory
 
 Context is not memory. Context is what fits in this request; memory is what you deliberately store and retrieve. Design the schema explicitly — what is stored, how it expires, how conflicts resolve — or you get an assistant that confidently repeats something the user corrected last month.
@@ -70,6 +72,8 @@ print(m.recall(now=30 * 86400 + 200))          # expired
 
 **Common mistake:** Appending every stated fact to a vector store forever, so stale and corrected facts compete at retrieval.
 
+Practice: open `examples/02_conversation_state_and_memory.py`, predict the output, change one line, predict again.
+
 ## 3. Context window management
 
 Temperature 0 is near-deterministic and right for extraction; higher values add diversity for creative work. Top-p keeps the smallest set of tokens covering p of the probability mass. Cost is per token in and out, so trimming the prompt is the cheapest optimisation there is.
@@ -94,6 +98,8 @@ print('creative  (T=1.5):', sample(logits, temperature=1.5, seed=3))
 **Remember:** Use temperature 0 for anything you will parse; save randomness for prose.
 
 **Common mistake:** Running extraction at temperature 1 and debugging 'random' JSON failures for a week.
+
+Practice: open `examples/03_context_window_management.py`, predict the output, change one line, predict again.
 
 ## 4. Summarising older turns
 
@@ -124,6 +130,8 @@ print(m.recall(now=30 * 86400 + 200))          # expired
 
 **Common mistake:** Appending every stated fact to a vector store forever, so stale and corrected facts compete at retrieval.
 
+Practice: open `examples/04_summarising_older_turns.py`, predict the output, change one line, predict again.
+
 ## 5. Persona and tone control
 
 Context is not memory. Context is what fits in this request; memory is what you deliberately store and retrieve. Design the schema explicitly — what is stored, how it expires, how conflicts resolve — or you get an assistant that confidently repeats something the user corrected last month.
@@ -153,6 +161,8 @@ print(m.recall(now=30 * 86400 + 200))          # expired
 
 **Common mistake:** Appending every stated fact to a vector store forever, so stale and corrected facts compete at retrieval.
 
+Practice: open `examples/05_persona_and_tone_control.py`, predict the output, change one line, predict again.
+
 ## 6. Handling out-of-scope requests
 
 Default arguments are evaluated once, at function definition time. A mutable default (list, dict, set) is therefore shared by every call — a bug that shows up as 'my function remembers the last call'. Use `None` and build the real default inside.
@@ -175,6 +185,8 @@ print(good(1), good(2))   # [1] [2]     <- correct
 **Remember:** Default arguments must be immutable. `None` plus a check is the standard fix.
 
 **Common mistake:** A `def f(x, cache={})` that silently accumulates state across every call in the process.
+
+Practice: open `examples/06_handling_out_of_scope_requests.py`, predict the output, change one line, predict again.
 
 ## 7. Escalation to a human
 
@@ -205,6 +217,8 @@ print(m.recall(now=30 * 86400 + 200))          # expired
 
 **Common mistake:** Appending every stated fact to a vector store forever, so stale and corrected facts compete at retrieval.
 
+Practice: open `examples/07_escalation_to_a_human.py`, predict the output, change one line, predict again.
+
 ## 8. Multi-turn evaluation
 
 Vibes do not survive a prompt change. Build a small golden set of real inputs with expected outputs, run it on every change, and track the score. Use an LLM judge for open-ended quality, but calibrate the judge against human ratings first.
@@ -233,6 +247,8 @@ assert hits == len(GOLDEN), 'regression: fix before shipping'
 
 **Common mistake:** Changing the prompt on Friday with no eval and finding out from customers on Monday.
 
+Practice: open `examples/08_multi_turn_evaluation.py`, predict the output, change one line, predict again.
+
 ## 9. Latency perception and streaming
 
 Data parallelism replicates the model and splits the batch; model parallelism splits the model when it will not fit on one device. Scale only after profiling — most 'we need more GPUs' problems are actually a slow data loader.
@@ -252,6 +268,8 @@ print('          opt.step(); opt.zero_grad()')
 **Remember:** Profile first. GPU at 30% utilisation means the bottleneck is the data pipeline, not the GPU.
 
 **Common mistake:** Scaling the learning rate wrongly when you scale the batch — a larger batch usually needs a larger LR.
+
+Practice: open `examples/09_latency_perception_and_streaming.py`, predict the output, change one line, predict again.
 
 ## 10. Building a grounded support bot
 
@@ -274,6 +292,8 @@ for s in STEPS:
 **Remember:** Spend an hour looking at wrong predictions before you spend a day tuning hyperparameters.
 
 **Common mistake:** Six weeks of feature engineering with no baseline to prove any of it helped.
+
+Practice: open `examples/10_building_a_grounded_support_bot.py`, predict the output, change one line, predict again.
 
 ---
 

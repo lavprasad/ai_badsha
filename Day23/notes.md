@@ -38,6 +38,8 @@ print('outliers', salaries[(salaries < q1 - 1.5 * iqr) | (salaries > q3 + 1.5 * 
 
 **Common mistake:** Removing 'outliers' automatically when they are the exact events you were hired to predict.
 
+Practice: open `examples/01_mean_median_and_mode.py`, predict the output, change one line, predict again.
+
 ## 2. Variance and standard deviation
 
 The mean is pulled around by outliers; the median is not. Report both, plus a spread measure. When mean and median disagree sharply, the distribution is skewed and averages are lying to you.
@@ -58,6 +60,8 @@ print('outliers', salaries[(salaries < q1 - 1.5 * iqr) | (salaries > q3 + 1.5 * 
 **Remember:** Quote median + IQR for skewed data, mean + std only for roughly symmetric data.
 
 **Common mistake:** Removing 'outliers' automatically when they are the exact events you were hired to predict.
+
+Practice: open `examples/02_variance_and_standard_deviation.py`, predict the output, change one line, predict again.
 
 ## 3. Quantiles, percentiles and IQR
 
@@ -80,6 +84,8 @@ print('outliers', salaries[(salaries < q1 - 1.5 * iqr) | (salaries > q3 + 1.5 * 
 
 **Common mistake:** Removing 'outliers' automatically when they are the exact events you were hired to predict.
 
+Practice: open `examples/03_quantiles_percentiles_and_iqr.py`, predict the output, change one line, predict again.
+
 ## 4. Skewness and kurtosis
 
 The mean is pulled around by outliers; the median is not. Report both, plus a spread measure. When mean and median disagree sharply, the distribution is skewed and averages are lying to you.
@@ -100,6 +106,8 @@ print('outliers', salaries[(salaries < q1 - 1.5 * iqr) | (salaries > q3 + 1.5 * 
 **Remember:** Quote median + IQR for skewed data, mean + std only for roughly symmetric data.
 
 **Common mistake:** Removing 'outliers' automatically when they are the exact events you were hired to predict.
+
+Practice: open `examples/04_skewness_and_kurtosis.py`, predict the output, change one line, predict again.
 
 ## 5. Covariance and correlation
 
@@ -122,6 +130,8 @@ print('outliers', salaries[(salaries < q1 - 1.5 * iqr) | (salaries > q3 + 1.5 * 
 
 **Common mistake:** Removing 'outliers' automatically when they are the exact events you were hired to predict.
 
+Practice: open `examples/05_covariance_and_correlation.py`, predict the output, change one line, predict again.
+
 ## 6. Correlation is not causation
 
 The mean is pulled around by outliers; the median is not. Report both, plus a spread measure. When mean and median disagree sharply, the distribution is skewed and averages are lying to you.
@@ -142,6 +152,8 @@ print('outliers', salaries[(salaries < q1 - 1.5 * iqr) | (salaries > q3 + 1.5 * 
 **Remember:** Quote median + IQR for skewed data, mean + std only for roughly symmetric data.
 
 **Common mistake:** Removing 'outliers' automatically when they are the exact events you were hired to predict.
+
+Practice: open `examples/06_correlation_is_not_causation.py`, predict the output, change one line, predict again.
 
 ## 7. Robust statistics and outliers
 
@@ -164,6 +176,8 @@ print('outliers', salaries[(salaries < q1 - 1.5 * iqr) | (salaries > q3 + 1.5 * 
 
 **Common mistake:** Removing 'outliers' automatically when they are the exact events you were hired to predict.
 
+Practice: open `examples/07_robust_statistics_and_outliers.py`, predict the output, change one line, predict again.
+
 ## 8. Standardisation and z-scores
 
 The mean is pulled around by outliers; the median is not. Report both, plus a spread measure. When mean and median disagree sharply, the distribution is skewed and averages are lying to you.
@@ -184,6 +198,8 @@ print('outliers', salaries[(salaries < q1 - 1.5 * iqr) | (salaries > q3 + 1.5 * 
 **Remember:** Quote median + IQR for skewed data, mean + std only for roughly symmetric data.
 
 **Common mistake:** Removing 'outliers' automatically when they are the exact events you were hired to predict.
+
+Practice: open `examples/08_standardisation_and_z_scores.py`, predict the output, change one line, predict again.
 
 ## 9. Simpson's paradox
 
@@ -206,6 +222,8 @@ print('outliers', salaries[(salaries < q1 - 1.5 * iqr) | (salaries > q3 + 1.5 * 
 
 **Common mistake:** Removing 'outliers' automatically when they are the exact events you were hired to predict.
 
+Practice: open `examples/09_simpson_s_paradox.py`, predict the output, change one line, predict again.
+
 ## 10. Summarising a dataset honestly
 
 The mean is pulled around by outliers; the median is not. Report both, plus a spread measure. When mean and median disagree sharply, the distribution is skewed and averages are lying to you.
@@ -226,6 +244,8 @@ print('outliers', salaries[(salaries < q1 - 1.5 * iqr) | (salaries > q3 + 1.5 * 
 **Remember:** Quote median + IQR for skewed data, mean + std only for roughly symmetric data.
 
 **Common mistake:** Removing 'outliers' automatically when they are the exact events you were hired to predict.
+
+Practice: open `examples/10_summarising_a_dataset_honestly.py`, predict the output, change one line, predict again.
 
 ---
 

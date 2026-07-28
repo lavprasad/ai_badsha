@@ -42,6 +42,8 @@ print('shifted    PSI', round(psi(baseline, rng.normal(0.6, 1.2, 5_000)), 4))
 
 **Common mistake:** Only monitoring uptime, so a model that returns 200 OK while being badly wrong looks healthy.
 
+Practice: open `examples/01_what_to_log_for_every_call.py`, predict the output, change one line, predict again.
+
 ## 2. Prompt and response capture with privacy
 
 Models learn the bias in their training data and then apply it at scale with a veneer of objectivity. Measure error rates per group, not just overall. Fairness definitions genuinely conflict with each other — you must choose one explicitly and document why.
@@ -65,6 +67,8 @@ print('Large gaps here are the finding — investigate before shipping.')
 **Remember:** Dropping the sensitive attribute does not remove bias; proxies (pincode, name) carry it right back in.
 
 **Common mistake:** Auditing fairness once at launch and never again as the data drifts.
+
+Practice: open `examples/02_prompt_and_response_capture_with_privacy.py`, predict the output, change one line, predict again.
 
 ## 3. Token and cost accounting
 
@@ -91,6 +95,8 @@ print('shifted    PSI', round(psi(baseline, rng.normal(0.6, 1.2, 5_000)), 4))
 
 **Common mistake:** Only monitoring uptime, so a model that returns 200 OK while being badly wrong looks healthy.
 
+Practice: open `examples/03_token_and_cost_accounting.py`, predict the output, change one line, predict again.
+
 ## 4. Latency percentiles
 
 Models rot. The world moves, inputs shift (data drift) or the relationship itself changes (concept drift). Monitor input distributions and prediction distributions daily, because ground-truth labels usually arrive weeks late.
@@ -115,6 +121,8 @@ print('shifted    PSI', round(psi(baseline, rng.normal(0.6, 1.2, 5_000)), 4))
 **Remember:** PSI under 0.1 stable, 0.1-0.2 watch, above 0.2 investigate. Alert on the prediction distribution too.
 
 **Common mistake:** Only monitoring uptime, so a model that returns 200 OK while being badly wrong looks healthy.
+
+Practice: open `examples/04_latency_percentiles.py`, predict the output, change one line, predict again.
 
 ## 5. Tracing multi-step chains
 
@@ -141,6 +149,8 @@ print('shifted    PSI', round(psi(baseline, rng.normal(0.6, 1.2, 5_000)), 4))
 
 **Common mistake:** Only monitoring uptime, so a model that returns 200 OK while being badly wrong looks healthy.
 
+Practice: open `examples/05_tracing_multi_step_chains.py`, predict the output, change one line, predict again.
+
 ## 6. Error taxonomies
 
 Models rot. The world moves, inputs shift (data drift) or the relationship itself changes (concept drift). Monitor input distributions and prediction distributions daily, because ground-truth labels usually arrive weeks late.
@@ -166,6 +176,8 @@ print('shifted    PSI', round(psi(baseline, rng.normal(0.6, 1.2, 5_000)), 4))
 
 **Common mistake:** Only monitoring uptime, so a model that returns 200 OK while being badly wrong looks healthy.
 
+Practice: open `examples/06_error_taxonomies.py`, predict the output, change one line, predict again.
+
 ## 7. Sampling and retention policies
 
 A distribution says which values are likely. Gaussian for measurement noise, Bernoulli for yes/no, Poisson for counts per interval. Choosing the right one is choosing your loss function: Gaussian likelihood gives MSE, Bernoulli gives cross-entropy.
@@ -184,6 +196,8 @@ print('coin heads rate ', coin.mean())
 **Remember:** Always seed your RNG (`default_rng(0)`) when you want a result someone else can reproduce.
 
 **Common mistake:** Assuming Gaussian for skewed, bounded, or count data and then being surprised by the residuals.
+
+Practice: open `examples/07_sampling_and_retention_policies.py`, predict the output, change one line, predict again.
 
 ## 8. Dashboards that surface regressions
 
@@ -210,6 +224,8 @@ print('shifted    PSI', round(psi(baseline, rng.normal(0.6, 1.2, 5_000)), 4))
 
 **Common mistake:** Only monitoring uptime, so a model that returns 200 OK while being badly wrong looks healthy.
 
+Practice: open `examples/08_dashboards_that_surface_regressions.py`, predict the output, change one line, predict again.
+
 ## 9. Alerting on quality, not just uptime
 
 Models rot. The world moves, inputs shift (data drift) or the relationship itself changes (concept drift). Monitor input distributions and prediction distributions daily, because ground-truth labels usually arrive weeks late.
@@ -235,6 +251,8 @@ print('shifted    PSI', round(psi(baseline, rng.normal(0.6, 1.2, 5_000)), 4))
 
 **Common mistake:** Only monitoring uptime, so a model that returns 200 OK while being badly wrong looks healthy.
 
+Practice: open `examples/09_alerting_on_quality_not_just_uptime.py`, predict the output, change one line, predict again.
+
 ## 10. Building a minimal trace viewer
 
 Models rot. The world moves, inputs shift (data drift) or the relationship itself changes (concept drift). Monitor input distributions and prediction distributions daily, because ground-truth labels usually arrive weeks late.
@@ -259,6 +277,8 @@ print('shifted    PSI', round(psi(baseline, rng.normal(0.6, 1.2, 5_000)), 4))
 **Remember:** PSI under 0.1 stable, 0.1-0.2 watch, above 0.2 investigate. Alert on the prediction distribution too.
 
 **Common mistake:** Only monitoring uptime, so a model that returns 200 OK while being badly wrong looks healthy.
+
+Practice: open `examples/10_building_a_minimal_trace_viewer.py`, predict the output, change one line, predict again.
 
 ---
 

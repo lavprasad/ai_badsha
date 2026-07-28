@@ -44,6 +44,8 @@ print(search.best_params_, round(search.best_score_, 4))
 
 **Common mistake:** Tuning 40 hyperparameters on 400 rows — you are now fitting the validation set.
 
+Practice: open `examples/01_why_rag_instead_of_fine_tuning.py`, predict the output, change one line, predict again.
+
 ## 2. The RAG pipeline end to end
 
 A Pipeline chains preprocessing and the model into one object that fits and predicts as a unit. This is the single best defence against leakage, and it means deployment ships one artefact instead of six loose steps you must remember to repeat.
@@ -70,6 +72,8 @@ print(model.predict(df))
 **Remember:** `handle_unknown='ignore'` stops production crashing on a category you never saw in training.
 
 **Common mistake:** Preprocessing in a notebook and then forgetting one step when writing the serving code.
+
+Practice: open `examples/02_the_rag_pipeline_end_to_end.py`, predict the output, change one line, predict again.
 
 ## 3. Document loading and parsing
 
@@ -100,6 +104,8 @@ print('\\nReal pipeline: chunk 300-800 tokens with overlap -> embed -> ANN index
 
 **Common mistake:** Chunking blindly at 1000 characters and cutting tables and code blocks in half.
 
+Practice: open `examples/03_document_loading_and_parsing.py`, predict the output, change one line, predict again.
+
 ## 4. Chunking strategies
 
 RAG grounds answers in your documents: chunk, embed, store, retrieve the top-k for the question, and put them in the prompt. Retrieval quality is the whole ballgame — a perfect model answering from the wrong three chunks is still wrong.
@@ -128,6 +134,8 @@ print('\\nReal pipeline: chunk 300-800 tokens with overlap -> embed -> ANN index
 **Remember:** Always show the source of each retrieved chunk in the answer so users can verify it.
 
 **Common mistake:** Chunking blindly at 1000 characters and cutting tables and code blocks in half.
+
+Practice: open `examples/04_chunking_strategies.py`, predict the output, change one line, predict again.
 
 ## 5. Chunk size and overlap trade-offs
 
@@ -158,6 +166,8 @@ print('\\nReal pipeline: chunk 300-800 tokens with overlap -> embed -> ANN index
 
 **Common mistake:** Chunking blindly at 1000 characters and cutting tables and code blocks in half.
 
+Practice: open `examples/05_chunk_size_and_overlap_trade_offs.py`, predict the output, change one line, predict again.
+
 ## 6. Embedding the chunks
 
 An embedding maps text to a dense vector where nearby means similar in meaning. Unlike keyword search, 'car trouble' matches 'engine won't start'. Every RAG system is embeddings plus nearest-neighbour lookup.
@@ -185,6 +195,8 @@ print('king - man + woman ~', best)
 
 **Common mistake:** Mixing vectors from two different embedding models in one index; the spaces are unrelated.
 
+Practice: open `examples/06_embedding_the_chunks.py`, predict the output, change one line, predict again.
+
 ## 7. Storing vectors with metadata
 
 A vector is a list of numbers with a direction and length. The dot product measures alignment: large and positive when two vectors point the same way, zero when perpendicular. Cosine similarity is the dot product with length divided out, which is why it compares embeddings of different magnitudes fairly.
@@ -204,6 +216,8 @@ print('cosine', cos)   # 1.0 -> same direction
 **Remember:** Cosine similarity ignores magnitude; Euclidean distance does not. Pick the one that matches your question.
 
 **Common mistake:** Comparing raw embeddings with Euclidean distance when only direction carries meaning.
+
+Practice: open `examples/07_storing_vectors_with_metadata.py`, predict the output, change one line, predict again.
 
 ## 8. Retrieving top-k for a query
 
@@ -234,6 +248,8 @@ print('\\nReal pipeline: chunk 300-800 tokens with overlap -> embed -> ANN index
 
 **Common mistake:** Chunking blindly at 1000 characters and cutting tables and code blocks in half.
 
+Practice: open `examples/08_retrieving_top_k_for_a_query.py`, predict the output, change one line, predict again.
+
 ## 9. Assembling the prompt
 
 RAG grounds answers in your documents: chunk, embed, store, retrieve the top-k for the question, and put them in the prompt. Retrieval quality is the whole ballgame — a perfect model answering from the wrong three chunks is still wrong.
@@ -263,6 +279,8 @@ print('\\nReal pipeline: chunk 300-800 tokens with overlap -> embed -> ANN index
 
 **Common mistake:** Chunking blindly at 1000 characters and cutting tables and code blocks in half.
 
+Practice: open `examples/09_assembling_the_prompt.py`, predict the output, change one line, predict again.
+
 ## 10. A minimal RAG in 50 lines
 
 RAG grounds answers in your documents: chunk, embed, store, retrieve the top-k for the question, and put them in the prompt. Retrieval quality is the whole ballgame — a perfect model answering from the wrong three chunks is still wrong.
@@ -291,6 +309,8 @@ print('\\nReal pipeline: chunk 300-800 tokens with overlap -> embed -> ANN index
 **Remember:** Always show the source of each retrieved chunk in the answer so users can verify it.
 
 **Common mistake:** Chunking blindly at 1000 characters and cutting tables and code blocks in half.
+
+Practice: open `examples/10_a_minimal_rag_in_50_lines.py`, predict the output, change one line, predict again.
 
 ---
 

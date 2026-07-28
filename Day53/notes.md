@@ -39,6 +39,8 @@ print('top features', [(n, round(v, 3)) for n, v in top])
 
 **Common mistake:** Using impurity-based importances for business decisions instead of permutation importance.
 
+Practice: open `examples/01_wisdom_of_uncorrelated_errors.py`, predict the output, change one line, predict again.
+
 ## 2. Bootstrap sampling
 
 A distribution says which values are likely. Gaussian for measurement noise, Bernoulli for yes/no, Poisson for counts per interval. Choosing the right one is choosing your loss function: Gaussian likelihood gives MSE, Bernoulli gives cross-entropy.
@@ -57,6 +59,8 @@ print('coin heads rate ', coin.mean())
 **Remember:** Always seed your RNG (`default_rng(0)`) when you want a result someone else can reproduce.
 
 **Common mistake:** Assuming Gaussian for skewed, bounded, or count data and then being surprised by the residuals.
+
+Practice: open `examples/02_bootstrap_sampling.py`, predict the output, change one line, predict again.
 
 ## 3. Bagging
 
@@ -80,6 +84,8 @@ print('top features', [(n, round(v, 3)) for n, v in top])
 
 **Common mistake:** Using impurity-based importances for business decisions instead of permutation importance.
 
+Practice: open `examples/03_bagging.py`, predict the output, change one line, predict again.
+
 ## 4. Random feature subsets
 
 Bagging trains many trees on bootstrap samples with random feature subsets, then averages. Averaging cancels the variance that makes single trees erratic. Random forests are the best default for tabular data when you want something that works with almost no tuning.
@@ -101,6 +107,8 @@ print('top features', [(n, round(v, 3)) for n, v in top])
 **Remember:** More trees never overfit — they only cost time. Depth and leaf size are the knobs that control fit.
 
 **Common mistake:** Using impurity-based importances for business decisions instead of permutation importance.
+
+Practice: open `examples/04_random_feature_subsets.py`, predict the output, change one line, predict again.
 
 ## 5. Out-of-bag error estimation
 
@@ -124,6 +132,8 @@ print('top features', [(n, round(v, 3)) for n, v in top])
 
 **Common mistake:** Using impurity-based importances for business decisions instead of permutation importance.
 
+Practice: open `examples/05_out_of_bag_error_estimation.py`, predict the output, change one line, predict again.
+
 ## 6. Tuning a random forest
 
 Bagging trains many trees on bootstrap samples with random feature subsets, then averages. Averaging cancels the variance that makes single trees erratic. Random forests are the best default for tabular data when you want something that works with almost no tuning.
@@ -145,6 +155,8 @@ print('top features', [(n, round(v, 3)) for n, v in top])
 **Remember:** More trees never overfit — they only cost time. Depth and leaf size are the knobs that control fit.
 
 **Common mistake:** Using impurity-based importances for business decisions instead of permutation importance.
+
+Practice: open `examples/06_tuning_a_random_forest.py`, predict the output, change one line, predict again.
 
 ## 7. Feature importance and its bias
 
@@ -168,6 +180,8 @@ print('top features', [(n, round(v, 3)) for n, v in top])
 
 **Common mistake:** Using impurity-based importances for business decisions instead of permutation importance.
 
+Practice: open `examples/07_feature_importance_and_its_bias.py`, predict the output, change one line, predict again.
+
 ## 8. Permutation importance
 
 Bagging trains many trees on bootstrap samples with random feature subsets, then averages. Averaging cancels the variance that makes single trees erratic. Random forests are the best default for tabular data when you want something that works with almost no tuning.
@@ -189,6 +203,8 @@ print('top features', [(n, round(v, 3)) for n, v in top])
 **Remember:** More trees never overfit — they only cost time. Depth and leaf size are the knobs that control fit.
 
 **Common mistake:** Using impurity-based importances for business decisions instead of permutation importance.
+
+Practice: open `examples/08_permutation_importance.py`, predict the output, change one line, predict again.
 
 ## 9. Extremely randomised trees
 
@@ -212,6 +228,8 @@ print('top features', [(n, round(v, 3)) for n, v in top])
 
 **Common mistake:** Using impurity-based importances for business decisions instead of permutation importance.
 
+Practice: open `examples/09_extremely_randomised_trees.py`, predict the output, change one line, predict again.
+
 ## 10. Random forest as the tabular default
 
 Bagging trains many trees on bootstrap samples with random feature subsets, then averages. Averaging cancels the variance that makes single trees erratic. Random forests are the best default for tabular data when you want something that works with almost no tuning.
@@ -233,6 +251,8 @@ print('top features', [(n, round(v, 3)) for n, v in top])
 **Remember:** More trees never overfit — they only cost time. Depth and leaf size are the knobs that control fit.
 
 **Common mistake:** Using impurity-based importances for business decisions instead of permutation importance.
+
+Practice: open `examples/10_random_forest_as_the_tabular_default.py`, predict the output, change one line, predict again.
 
 ---
 

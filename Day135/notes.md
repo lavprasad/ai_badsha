@@ -44,6 +44,8 @@ print('king - man + woman ~', best)
 
 **Common mistake:** Mixing vectors from two different embedding models in one index; the spaces are unrelated.
 
+Practice: open `examples/01_embedding_models_today.py`, predict the output, change one line, predict again.
+
 ## 2. Symmetric vs asymmetric search
 
 An embedding maps text to a dense vector where nearby means similar in meaning. Unlike keyword search, 'car trouble' matches 'engine won't start'. Every RAG system is embeddings plus nearest-neighbour lookup.
@@ -71,6 +73,8 @@ print('king - man + woman ~', best)
 
 **Common mistake:** Mixing vectors from two different embedding models in one index; the spaces are unrelated.
 
+Practice: open `examples/02_symmetric_vs_asymmetric_search.py`, predict the output, change one line, predict again.
+
 ## 3. Normalisation and cosine similarity
 
 A vector is a list of numbers with a direction and length. The dot product measures alignment: large and positive when two vectors point the same way, zero when perpendicular. Cosine similarity is the dot product with length divided out, which is why it compares embeddings of different magnitudes fairly.
@@ -90,6 +94,8 @@ print('cosine', cos)   # 1.0 -> same direction
 **Remember:** Cosine similarity ignores magnitude; Euclidean distance does not. Pick the one that matches your question.
 
 **Common mistake:** Comparing raw embeddings with Euclidean distance when only direction carries meaning.
+
+Practice: open `examples/03_normalisation_and_cosine_similarity.py`, predict the output, change one line, predict again.
 
 ## 4. Approximate nearest neighbour algorithms
 
@@ -113,6 +119,8 @@ print('predicted', knn_predict(X, y, np.array([1.5, 0.0])), 'expected 1')
 **Remember:** Scale your features first — kNN is pure distance, so units decide the answer.
 
 **Common mistake:** Using kNN on high-dimensional data where every point is roughly equidistant from every other.
+
+Practice: open `examples/04_approximate_nearest_neighbour_algorithms.py`, predict the output, change one line, predict again.
 
 ## 5. HNSW indexes
 
@@ -141,6 +149,8 @@ print('king - man + woman ~', best)
 
 **Common mistake:** Mixing vectors from two different embedding models in one index; the spaces are unrelated.
 
+Practice: open `examples/05_hnsw_indexes.py`, predict the output, change one line, predict again.
+
 ## 6. Vector databases compared
 
 A vector is a list of numbers with a direction and length. The dot product measures alignment: large and positive when two vectors point the same way, zero when perpendicular. Cosine similarity is the dot product with length divided out, which is why it compares embeddings of different magnitudes fairly.
@@ -160,6 +170,8 @@ print('cosine', cos)   # 1.0 -> same direction
 **Remember:** Cosine similarity ignores magnitude; Euclidean distance does not. Pick the one that matches your question.
 
 **Common mistake:** Comparing raw embeddings with Euclidean distance when only direction carries meaning.
+
+Practice: open `examples/06_vector_databases_compared.py`, predict the output, change one line, predict again.
 
 ## 7. Metadata filtering
 
@@ -188,6 +200,8 @@ print('king - man + woman ~', best)
 
 **Common mistake:** Mixing vectors from two different embedding models in one index; the spaces are unrelated.
 
+Practice: open `examples/07_metadata_filtering.py`, predict the output, change one line, predict again.
+
 ## 8. Hybrid search with BM25
 
 An embedding maps text to a dense vector where nearby means similar in meaning. Unlike keyword search, 'car trouble' matches 'engine won't start'. Every RAG system is embeddings plus nearest-neighbour lookup.
@@ -214,6 +228,8 @@ print('king - man + woman ~', best)
 **Remember:** Normalise embeddings, then cosine similarity is just a dot product — much faster at scale.
 
 **Common mistake:** Mixing vectors from two different embedding models in one index; the spaces are unrelated.
+
+Practice: open `examples/08_hybrid_search_with_bm25.py`, predict the output, change one line, predict again.
 
 ## 9. Evaluating retrieval quality
 
@@ -242,6 +258,8 @@ print('king - man + woman ~', best)
 
 **Common mistake:** Mixing vectors from two different embedding models in one index; the spaces are unrelated.
 
+Practice: open `examples/09_evaluating_retrieval_quality.py`, predict the output, change one line, predict again.
+
 ## 10. Building a semantic search over your notes
 
 An embedding maps text to a dense vector where nearby means similar in meaning. Unlike keyword search, 'car trouble' matches 'engine won't start'. Every RAG system is embeddings plus nearest-neighbour lookup.
@@ -268,6 +286,8 @@ print('king - man + woman ~', best)
 **Remember:** Normalise embeddings, then cosine similarity is just a dot product — much faster at scale.
 
 **Common mistake:** Mixing vectors from two different embedding models in one index; the spaces are unrelated.
+
+Practice: open `examples/10_building_a_semantic_search_over_your_not.py`, predict the output, change one line, predict again.
 
 ---
 

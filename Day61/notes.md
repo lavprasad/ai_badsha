@@ -41,6 +41,8 @@ print('the two planted outliers were rows', len(normal), 'and', len(normal) + 1)
 
 **Common mistake:** Setting contamination to a guess and drowning the on-call rota in false alarms.
 
+Practice: open `examples/01_framing_rare_unlabelled_costly.py`, predict the output, change one line, predict again.
+
 ## 2. Statistical thresholds and z-scores
 
 Anomaly detection is classification without labels for the interesting class. Isolation Forest works because anomalies are easier to isolate with random splits. Whatever method you pick, the hard part is the threshold: too sensitive and nobody reads the alerts.
@@ -64,6 +66,8 @@ print('the two planted outliers were rows', len(normal), 'and', len(normal) + 1)
 **Remember:** Tune the threshold against how many alerts a human can actually review per day.
 
 **Common mistake:** Setting contamination to a guess and drowning the on-call rota in false alarms.
+
+Practice: open `examples/02_statistical_thresholds_and_z_scores.py`, predict the output, change one line, predict again.
 
 ## 3. Isolation Forest
 
@@ -89,6 +93,8 @@ print('the two planted outliers were rows', len(normal), 'and', len(normal) + 1)
 
 **Common mistake:** Setting contamination to a guess and drowning the on-call rota in false alarms.
 
+Practice: open `examples/03_isolation_forest.py`, predict the output, change one line, predict again.
+
 ## 4. One-class SVM
 
 An SVM finds the boundary with the widest margin between classes. The kernel trick lets it draw curved boundaries by computing inner products in a higher-dimensional space without ever building that space. Strong on small, clean, high-dimensional datasets like text.
@@ -111,6 +117,8 @@ print('rbf   ', cross_val_score(rbf, X, y, cv=5).mean().round(3))
 
 **Common mistake:** Skipping feature scaling, which silently wrecks the RBF kernel.
 
+Practice: open `examples/04_one_class_svm.py`, predict the output, change one line, predict again.
+
 ## 5. Local Outlier Factor
 
 The mean is pulled around by outliers; the median is not. Report both, plus a spread measure. When mean and median disagree sharply, the distribution is skewed and averages are lying to you.
@@ -131,6 +139,8 @@ print('outliers', salaries[(salaries < q1 - 1.5 * iqr) | (salaries > q3 + 1.5 * 
 **Remember:** Quote median + IQR for skewed data, mean + std only for roughly symmetric data.
 
 **Common mistake:** Removing 'outliers' automatically when they are the exact events you were hired to predict.
+
+Practice: open `examples/05_local_outlier_factor.py`, predict the output, change one line, predict again.
 
 ## 6. Reconstruction error methods
 
@@ -156,6 +166,8 @@ print('the two planted outliers were rows', len(normal), 'and', len(normal) + 1)
 
 **Common mistake:** Setting contamination to a guess and drowning the on-call rota in false alarms.
 
+Practice: open `examples/06_reconstruction_error_methods.py`, predict the output, change one line, predict again.
+
 ## 7. Time-series anomaly detection
 
 A DataFrame is a table with labelled columns and an index. Most real ML work is 80% reshaping tables: load, clean, group, join, aggregate. Learn `groupby` and `merge` well and you can answer most data questions without writing loops.
@@ -176,6 +188,8 @@ print(df.merge(lookup, on='city', how='left'))
 **Remember:** Always check `df.shape` before and after a merge — a silent row explosion means duplicate keys.
 
 **Common mistake:** Chained assignment (`df[df.a > 1]['b'] = 0`) that writes to a copy and changes nothing.
+
+Practice: open `examples/07_time_series_anomaly_detection.py`, predict the output, change one line, predict again.
 
 ## 8. Evaluating with few or no labels
 
@@ -205,6 +219,8 @@ assert hits == len(GOLDEN), 'regression: fix before shipping'
 
 **Common mistake:** Changing the prompt on Friday with no eval and finding out from customers on Monday.
 
+Practice: open `examples/08_evaluating_with_few_or_no_labels.py`, predict the output, change one line, predict again.
+
 ## 9. Alert fatigue and precision
 
 Accuracy hides everything on imbalanced data. Precision asks 'of the ones I flagged, how many were real'; recall asks 'of the real ones, how many did I catch'. You trade one for the other with the threshold, and the business decides which error hurts more.
@@ -226,6 +242,8 @@ print('roc auc', round(roc_auc_score(yte, m.predict_proba(Xte)[:, 1]), 4))
 **Remember:** Tune the decision threshold on validation data; 0.5 is a default, not a decision.
 
 **Common mistake:** Optimising ROC-AUC on a heavily imbalanced problem where precision-recall AUC is the honest metric.
+
+Practice: open `examples/09_alert_fatigue_and_precision.py`, predict the output, change one line, predict again.
 
 ## 10. A server-metrics anomaly detector
 
@@ -250,6 +268,8 @@ print('the two planted outliers were rows', len(normal), 'and', len(normal) + 1)
 **Remember:** Tune the threshold against how many alerts a human can actually review per day.
 
 **Common mistake:** Setting contamination to a guess and drowning the on-call rota in false alarms.
+
+Practice: open `examples/10_a_server_metrics_anomaly_detector.py`, predict the output, change one line, predict again.
 
 ---
 

@@ -39,6 +39,8 @@ print('roc auc', round(roc_auc_score(yte, m.predict_proba(Xte)[:, 1]), 4))
 
 **Common mistake:** Optimising ROC-AUC on a heavily imbalanced problem where precision-recall AUC is the honest metric.
 
+Practice: open `examples/01_requirements_accuracy_latency_cost.py`, predict the output, change one line, predict again.
+
 ## 2. Data collection plan
 
 A system design document forces the questions that kill projects late: where does the data come from, what happens when the model is unsure, who reviews it, what does one inference cost, and what happens when the service is down. Write it before the first training run.
@@ -61,6 +63,8 @@ for k, v in DESIGN.items():
 **Remember:** The fallback path must handle 100% of traffic. If it cannot, you have built a single point of failure.
 
 **Common mistake:** Designing for the happy path and discovering at 3am there is no route for low-confidence cases.
+
+Practice: open `examples/02_data_collection_plan.py`, predict the output, change one line, predict again.
 
 ## 3. Annotation strategy and quality control
 
@@ -85,6 +89,8 @@ for k, v in DESIGN.items():
 
 **Common mistake:** Designing for the happy path and discovering at 3am there is no route for low-confidence cases.
 
+Practice: open `examples/03_annotation_strategy_and_quality_control.py`, predict the output, change one line, predict again.
+
 ## 4. Choosing the model family
 
 A system design document forces the questions that kill projects late: where does the data come from, what happens when the model is unsure, who reviews it, what does one inference cost, and what happens when the service is down. Write it before the first training run.
@@ -108,6 +114,8 @@ for k, v in DESIGN.items():
 
 **Common mistake:** Designing for the happy path and discovering at 3am there is no route for low-confidence cases.
 
+Practice: open `examples/04_choosing_the_model_family.py`, predict the output, change one line, predict again.
+
 ## 5. Handling class imbalance in vision
 
 Today's idea — **Handling class imbalance in vision** — sits inside the theme of Vision system design. Read it as a tool, not trivia: what job does it do, what does it assume about your data, and what breaks when that assumption is false?
@@ -123,6 +131,8 @@ print("practice: Handling class imbalance in vision")
 **Remember:** State one assumption `Handling class imbalance in vision` makes about your data before you use it.
 
 **Common mistake:** Copy-pasting `Handling class imbalance in vision` from a tutorial without knowing what it assumes or when it fails.
+
+Practice: open `examples/05_handling_class_imbalance_in_vision.py`, predict the output, change one line, predict again.
 
 ## 6. Monitoring in production
 
@@ -149,6 +159,8 @@ print('shifted    PSI', round(psi(baseline, rng.normal(0.6, 1.2, 5_000)), 4))
 
 **Common mistake:** Only monitoring uptime, so a model that returns 200 OK while being badly wrong looks healthy.
 
+Practice: open `examples/06_monitoring_in_production.py`, predict the output, change one line, predict again.
+
 ## 7. Human-in-the-loop review
 
 A system design document forces the questions that kill projects late: where does the data come from, what happens when the model is unsure, who reviews it, what does one inference cost, and what happens when the service is down. Write it before the first training run.
@@ -171,6 +183,8 @@ for k, v in DESIGN.items():
 **Remember:** The fallback path must handle 100% of traffic. If it cannot, you have built a single point of failure.
 
 **Common mistake:** Designing for the happy path and discovering at 3am there is no route for low-confidence cases.
+
+Practice: open `examples/07_human_in_the_loop_review.py`, predict the output, change one line, predict again.
 
 ## 8. Failure modes and fallbacks
 
@@ -195,6 +209,8 @@ for k, v in DESIGN.items():
 
 **Common mistake:** Designing for the happy path and discovering at 3am there is no route for low-confidence cases.
 
+Practice: open `examples/08_failure_modes_and_fallbacks.py`, predict the output, change one line, predict again.
+
 ## 9. Cost per inference
 
 A system design document forces the questions that kill projects late: where does the data come from, what happens when the model is unsure, who reviews it, what does one inference cost, and what happens when the service is down. Write it before the first training run.
@@ -218,6 +234,8 @@ for k, v in DESIGN.items():
 
 **Common mistake:** Designing for the happy path and discovering at 3am there is no route for low-confidence cases.
 
+Practice: open `examples/09_cost_per_inference.py`, predict the output, change one line, predict again.
+
 ## 10. Writing the system design document
 
 A system design document forces the questions that kill projects late: where does the data come from, what happens when the model is unsure, who reviews it, what does one inference cost, and what happens when the service is down. Write it before the first training run.
@@ -240,6 +258,8 @@ for k, v in DESIGN.items():
 **Remember:** The fallback path must handle 100% of traffic. If it cannot, you have built a single point of failure.
 
 **Common mistake:** Designing for the happy path and discovering at 3am there is no route for low-confidence cases.
+
+Practice: open `examples/10_writing_the_system_design_document.py`, predict the output, change one line, predict again.
 
 ---
 

@@ -46,6 +46,8 @@ print('\\nReal pipeline: chunk 300-800 tokens with overlap -> embed -> ANN index
 
 **Common mistake:** Chunking blindly at 1000 characters and cutting tables and code blocks in half.
 
+Practice: open `examples/01_structure_aware_chunking.py`, predict the output, change one line, predict again.
+
 ## 2. Heading hierarchy as context
 
 RAG grounds answers in your documents: chunk, embed, store, retrieve the top-k for the question, and put them in the prompt. Retrieval quality is the whole ballgame — a perfect model answering from the wrong three chunks is still wrong.
@@ -74,6 +76,8 @@ print('\\nReal pipeline: chunk 300-800 tokens with overlap -> embed -> ANN index
 **Remember:** Always show the source of each retrieved chunk in the answer so users can verify it.
 
 **Common mistake:** Chunking blindly at 1000 characters and cutting tables and code blocks in half.
+
+Practice: open `examples/02_heading_hierarchy_as_context.py`, predict the output, change one line, predict again.
 
 ## 3. PDF parsing pitfalls
 
@@ -104,6 +108,8 @@ print('\\nReal pipeline: chunk 300-800 tokens with overlap -> embed -> ANN index
 
 **Common mistake:** Chunking blindly at 1000 characters and cutting tables and code blocks in half.
 
+Practice: open `examples/03_pdf_parsing_pitfalls.py`, predict the output, change one line, predict again.
+
 ## 4. Tables, figures and captions
 
 RAG grounds answers in your documents: chunk, embed, store, retrieve the top-k for the question, and put them in the prompt. Retrieval quality is the whole ballgame — a perfect model answering from the wrong three chunks is still wrong.
@@ -132,6 +138,8 @@ print('\\nReal pipeline: chunk 300-800 tokens with overlap -> embed -> ANN index
 **Remember:** Always show the source of each retrieved chunk in the answer so users can verify it.
 
 **Common mistake:** Chunking blindly at 1000 characters and cutting tables and code blocks in half.
+
+Practice: open `examples/04_tables_figures_and_captions.py`, predict the output, change one line, predict again.
 
 ## 5. Code and config files
 
@@ -162,6 +170,8 @@ print('\\nReal pipeline: chunk 300-800 tokens with overlap -> embed -> ANN index
 
 **Common mistake:** Chunking blindly at 1000 characters and cutting tables and code blocks in half.
 
+Practice: open `examples/05_code_and_config_files.py`, predict the output, change one line, predict again.
+
 ## 6. Contextual chunk headers
 
 RAG grounds answers in your documents: chunk, embed, store, retrieve the top-k for the question, and put them in the prompt. Retrieval quality is the whole ballgame — a perfect model answering from the wrong three chunks is still wrong.
@@ -190,6 +200,8 @@ print('\\nReal pipeline: chunk 300-800 tokens with overlap -> embed -> ANN index
 **Remember:** Always show the source of each retrieved chunk in the answer so users can verify it.
 
 **Common mistake:** Chunking blindly at 1000 characters and cutting tables and code blocks in half.
+
+Practice: open `examples/06_contextual_chunk_headers.py`, predict the output, change one line, predict again.
 
 ## 7. Parent-document retrieval
 
@@ -220,6 +232,8 @@ print('\\nReal pipeline: chunk 300-800 tokens with overlap -> embed -> ANN index
 
 **Common mistake:** Chunking blindly at 1000 characters and cutting tables and code blocks in half.
 
+Practice: open `examples/07_parent_document_retrieval.py`, predict the output, change one line, predict again.
+
 ## 8. Deduplication in the index
 
 RAG grounds answers in your documents: chunk, embed, store, retrieve the top-k for the question, and put them in the prompt. Retrieval quality is the whole ballgame — a perfect model answering from the wrong three chunks is still wrong.
@@ -248,6 +262,8 @@ print('\\nReal pipeline: chunk 300-800 tokens with overlap -> embed -> ANN index
 **Remember:** Always show the source of each retrieved chunk in the answer so users can verify it.
 
 **Common mistake:** Chunking blindly at 1000 characters and cutting tables and code blocks in half.
+
+Practice: open `examples/08_deduplication_in_the_index.py`, predict the output, change one line, predict again.
 
 ## 9. Incremental index updates
 
@@ -278,6 +294,8 @@ print('\\nReal pipeline: chunk 300-800 tokens with overlap -> embed -> ANN index
 
 **Common mistake:** Chunking blindly at 1000 characters and cutting tables and code blocks in half.
 
+Practice: open `examples/09_incremental_index_updates.py`, predict the output, change one line, predict again.
+
 ## 10. Choosing chunk size empirically
 
 RAG grounds answers in your documents: chunk, embed, store, retrieve the top-k for the question, and put them in the prompt. Retrieval quality is the whole ballgame — a perfect model answering from the wrong three chunks is still wrong.
@@ -306,6 +324,8 @@ print('\\nReal pipeline: chunk 300-800 tokens with overlap -> embed -> ANN index
 **Remember:** Always show the source of each retrieved chunk in the answer so users can verify it.
 
 **Common mistake:** Chunking blindly at 1000 characters and cutting tables and code blocks in half.
+
+Practice: open `examples/10_choosing_chunk_size_empirically.py`, predict the output, change one line, predict again.
 
 ---
 

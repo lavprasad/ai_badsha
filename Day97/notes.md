@@ -44,6 +44,8 @@ print('king - man + woman ~', best)
 
 **Common mistake:** Mixing vectors from two different embedding models in one index; the spaces are unrelated.
 
+Practice: open `examples/01_what_an_embedding_space_is.py`, predict the output, change one line, predict again.
+
 ## 2. Learned vs engineered features
 
 An embedding maps text to a dense vector where nearby means similar in meaning. Unlike keyword search, 'car trouble' matches 'engine won't start'. Every RAG system is embeddings plus nearest-neighbour lookup.
@@ -70,6 +72,8 @@ print('king - man + woman ~', best)
 **Remember:** Normalise embeddings, then cosine similarity is just a dot product — much faster at scale.
 
 **Common mistake:** Mixing vectors from two different embedding models in one index; the spaces are unrelated.
+
+Practice: open `examples/02_learned_vs_engineered_features.py`, predict the output, change one line, predict again.
 
 ## 3. Word2vec: skip-gram and CBOW
 
@@ -98,6 +102,8 @@ print('king - man + woman ~', best)
 
 **Common mistake:** Mixing vectors from two different embedding models in one index; the spaces are unrelated.
 
+Practice: open `examples/03_word2vec_skip_gram_and_cbow.py`, predict the output, change one line, predict again.
+
 ## 4. Negative sampling
 
 A distribution says which values are likely. Gaussian for measurement noise, Bernoulli for yes/no, Poisson for counts per interval. Choosing the right one is choosing your loss function: Gaussian likelihood gives MSE, Bernoulli gives cross-entropy.
@@ -116,6 +122,8 @@ print('coin heads rate ', coin.mean())
 **Remember:** Always seed your RNG (`default_rng(0)`) when you want a result someone else can reproduce.
 
 **Common mistake:** Assuming Gaussian for skewed, bounded, or count data and then being surprised by the residuals.
+
+Practice: open `examples/04_negative_sampling.py`, predict the output, change one line, predict again.
 
 ## 5. Sentence and document embeddings
 
@@ -144,6 +152,8 @@ print('king - man + woman ~', best)
 
 **Common mistake:** Mixing vectors from two different embedding models in one index; the spaces are unrelated.
 
+Practice: open `examples/05_sentence_and_document_embeddings.py`, predict the output, change one line, predict again.
+
 ## 6. Image embeddings
 
 An embedding maps text to a dense vector where nearby means similar in meaning. Unlike keyword search, 'car trouble' matches 'engine won't start'. Every RAG system is embeddings plus nearest-neighbour lookup.
@@ -170,6 +180,8 @@ print('king - man + woman ~', best)
 **Remember:** Normalise embeddings, then cosine similarity is just a dot product — much faster at scale.
 
 **Common mistake:** Mixing vectors from two different embedding models in one index; the spaces are unrelated.
+
+Practice: open `examples/06_image_embeddings.py`, predict the output, change one line, predict again.
 
 ## 7. Contrastive learning
 
@@ -198,6 +210,8 @@ print('king - man + woman ~', best)
 
 **Common mistake:** Mixing vectors from two different embedding models in one index; the spaces are unrelated.
 
+Practice: open `examples/07_contrastive_learning.py`, predict the output, change one line, predict again.
+
 ## 8. Self-supervised pretext tasks
 
 An embedding maps text to a dense vector where nearby means similar in meaning. Unlike keyword search, 'car trouble' matches 'engine won't start'. Every RAG system is embeddings plus nearest-neighbour lookup.
@@ -224,6 +238,8 @@ print('king - man + woman ~', best)
 **Remember:** Normalise embeddings, then cosine similarity is just a dot product — much faster at scale.
 
 **Common mistake:** Mixing vectors from two different embedding models in one index; the spaces are unrelated.
+
+Practice: open `examples/08_self_supervised_pretext_tasks.py`, predict the output, change one line, predict again.
 
 ## 9. Evaluating an embedding space
 
@@ -252,6 +268,8 @@ print('king - man + woman ~', best)
 
 **Common mistake:** Mixing vectors from two different embedding models in one index; the spaces are unrelated.
 
+Practice: open `examples/09_evaluating_an_embedding_space.py`, predict the output, change one line, predict again.
+
 ## 10. Embeddings as the interface between models
 
 An embedding maps text to a dense vector where nearby means similar in meaning. Unlike keyword search, 'car trouble' matches 'engine won't start'. Every RAG system is embeddings plus nearest-neighbour lookup.
@@ -278,6 +296,8 @@ print('king - man + woman ~', best)
 **Remember:** Normalise embeddings, then cosine similarity is just a dot product — much faster at scale.
 
 **Common mistake:** Mixing vectors from two different embedding models in one index; the spaces are unrelated.
+
+Practice: open `examples/10_embeddings_as_the_interface_between_mode.py`, predict the output, change one line, predict again.
 
 ---
 

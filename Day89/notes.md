@@ -44,6 +44,8 @@ print(out)   # the edge column lights up
 
 **Common mistake:** Forgetting the channel dimension and feeding (H,W) where the layer expects (N,C,H,W).
 
+Practice: open `examples/01_lenet_and_alexnet.py`, predict the output, change one line, predict again.
+
 ## 2. VGG and stacked small kernels
 
 Notebooks keep state between cells, which is great for exploring and terrible for reproducibility. Treat the notebook as a scratchpad; once logic settles, move it into a `.py` module you can import and test.
@@ -59,6 +61,8 @@ df.head()
 **Remember:** 'Restart kernel and run all' is the only honest test that a notebook works.
 
 **Common mistake:** Shipping a notebook whose results depend on a deleted cell you ran ten minutes ago.
+
+Practice: open `examples/02_vgg_and_stacked_small_kernels.py`, predict the output, change one line, predict again.
 
 ## 3. Inception and multi-scale
 
@@ -87,6 +91,8 @@ print(out)   # the edge column lights up
 
 **Common mistake:** Forgetting the channel dimension and feeding (H,W) where the layer expects (N,C,H,W).
 
+Practice: open `examples/03_inception_and_multi_scale.py`, predict the output, change one line, predict again.
+
 ## 4. ResNet and residual connections
 
 Linear regression fits a straight line by minimising squared error. It is the honest baseline for every regression problem: fast, interpretable, and the thing your fancy model must beat before it earns its complexity.
@@ -109,6 +115,8 @@ print('residual mean (should be ~0):', round(float(resid.mean()), 6))
 **Remember:** Plot residuals against predictions — any visible pattern means the linear form is wrong.
 
 **Common mistake:** Reporting R² on training data and calling it model performance.
+
+Practice: open `examples/04_resnet_and_residual_connections.py`, predict the output, change one line, predict again.
 
 ## 5. DenseNet
 
@@ -137,6 +145,8 @@ print(out)   # the edge column lights up
 
 **Common mistake:** Forgetting the channel dimension and feeding (H,W) where the layer expects (N,C,H,W).
 
+Practice: open `examples/05_densenet.py`, predict the output, change one line, predict again.
+
 ## 6. MobileNet and depthwise separable convolutions
 
 A convolution slides a small learned filter over the image, so the same edge detector works anywhere in the frame. That weight sharing is why a CNN needs far fewer parameters than a dense net. Pooling shrinks the map and adds a little translation tolerance.
@@ -163,6 +173,8 @@ print(out)   # the edge column lights up
 **Remember:** Output size = (in - kernel + 2*pad)/stride + 1. Print shapes when a layer refuses to connect.
 
 **Common mistake:** Forgetting the channel dimension and feeding (H,W) where the layer expects (N,C,H,W).
+
+Practice: open `examples/06_mobilenet_and_depthwise_separable_convol.py`, predict the output, change one line, predict again.
 
 ## 7. EfficientNet and compound scaling
 
@@ -191,6 +203,8 @@ print(out)   # the edge column lights up
 
 **Common mistake:** Forgetting the channel dimension and feeding (H,W) where the layer expects (N,C,H,W).
 
+Practice: open `examples/07_efficientnet_and_compound_scaling.py`, predict the output, change one line, predict again.
+
 ## 8. Vision transformers as the alternative
 
 A convolution slides a small learned filter over the image, so the same edge detector works anywhere in the frame. That weight sharing is why a CNN needs far fewer parameters than a dense net. Pooling shrinks the map and adds a little translation tolerance.
@@ -217,6 +231,8 @@ print(out)   # the edge column lights up
 **Remember:** Output size = (in - kernel + 2*pad)/stride + 1. Print shapes when a layer refuses to connect.
 
 **Common mistake:** Forgetting the channel dimension and feeding (H,W) where the layer expects (N,C,H,W).
+
+Practice: open `examples/08_vision_transformers_as_the_alternative.py`, predict the output, change one line, predict again.
 
 ## 9. Choosing an architecture for your constraints
 
@@ -245,6 +261,8 @@ print(out)   # the edge column lights up
 
 **Common mistake:** Forgetting the channel dimension and feeding (H,W) where the layer expects (N,C,H,W).
 
+Practice: open `examples/09_choosing_an_architecture_for_your_constr.py`, predict the output, change one line, predict again.
+
 ## 10. Reading an architecture diagram
 
 A convolution slides a small learned filter over the image, so the same edge detector works anywhere in the frame. That weight sharing is why a CNN needs far fewer parameters than a dense net. Pooling shrinks the map and adds a little translation tolerance.
@@ -271,6 +289,8 @@ print(out)   # the edge column lights up
 **Remember:** Output size = (in - kernel + 2*pad)/stride + 1. Print shapes when a layer refuses to connect.
 
 **Common mistake:** Forgetting the channel dimension and feeding (H,W) where the layer expects (N,C,H,W).
+
+Practice: open `examples/10_reading_an_architecture_diagram.py`, predict the output, change one line, predict again.
 
 ---
 

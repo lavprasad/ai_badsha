@@ -41,6 +41,8 @@ print('Structure: role -> task -> allowed outputs -> format -> examples -> input
 
 **Common mistake:** Writing a vague prompt, getting vague output, and blaming the model.
 
+Practice: open `examples/01_chain_of_thought_prompting.py`, predict the output, change one line, predict again.
+
 ## 2. Self-consistency
 
 Reasoning modes trade tokens for accuracy. They help on multi-step problems with a verifiable answer, and waste money on lookup or formatting tasks. Self-consistency — sample several answers and take the majority — is a cheap accuracy boost when answers are comparable.
@@ -68,6 +70,8 @@ for task, use in USE_REASONING.items():
 **Remember:** A reasoning trace is not proof. The stated reasoning can be wrong while the answer is right, and vice versa.
 
 **Common mistake:** Enabling extended thinking globally and tripling cost on tasks that never needed a single reasoning token.
+
+Practice: open `examples/02_self_consistency.py`, predict the output, change one line, predict again.
 
 ## 3. Extended thinking modes
 
@@ -97,6 +101,8 @@ for task, use in USE_REASONING.items():
 
 **Common mistake:** Enabling extended thinking globally and tripling cost on tasks that never needed a single reasoning token.
 
+Practice: open `examples/03_extended_thinking_modes.py`, predict the output, change one line, predict again.
+
 ## 4. Tree and graph of thought
 
 Reasoning modes trade tokens for accuracy. They help on multi-step problems with a verifiable answer, and waste money on lookup or formatting tasks. Self-consistency — sample several answers and take the majority — is a cheap accuracy boost when answers are comparable.
@@ -124,6 +130,8 @@ for task, use in USE_REASONING.items():
 **Remember:** A reasoning trace is not proof. The stated reasoning can be wrong while the answer is right, and vice versa.
 
 **Common mistake:** Enabling extended thinking globally and tripling cost on tasks that never needed a single reasoning token.
+
+Practice: open `examples/04_tree_and_graph_of_thought.py`, predict the output, change one line, predict again.
 
 ## 5. Tool use as reasoning support
 
@@ -155,6 +163,8 @@ except (json.JSONDecodeError, AssertionError) as e:
 
 **Common mistake:** Passing model output straight into `eval`, a shell command, or an SQL string.
 
+Practice: open `examples/05_tool_use_as_reasoning_support.py`, predict the output, change one line, predict again.
+
 ## 6. Verification and self-critique
 
 Reasoning modes trade tokens for accuracy. They help on multi-step problems with a verifiable answer, and waste money on lookup or formatting tasks. Self-consistency — sample several answers and take the majority — is a cheap accuracy boost when answers are comparable.
@@ -182,6 +192,8 @@ for task, use in USE_REASONING.items():
 **Remember:** A reasoning trace is not proof. The stated reasoning can be wrong while the answer is right, and vice versa.
 
 **Common mistake:** Enabling extended thinking globally and tripling cost on tasks that never needed a single reasoning token.
+
+Practice: open `examples/06_verification_and_self_critique.py`, predict the output, change one line, predict again.
 
 ## 7. Where reasoning helps and where it wastes tokens
 
@@ -211,6 +223,8 @@ for task, use in USE_REASONING.items():
 
 **Common mistake:** Enabling extended thinking globally and tripling cost on tasks that never needed a single reasoning token.
 
+Practice: open `examples/07_where_reasoning_helps_and_where_it_waste.py`, predict the output, change one line, predict again.
+
 ## 8. Reasoning token cost
 
 Reasoning modes trade tokens for accuracy. They help on multi-step problems with a verifiable answer, and waste money on lookup or formatting tasks. Self-consistency — sample several answers and take the majority — is a cheap accuracy boost when answers are comparable.
@@ -238,6 +252,8 @@ for task, use in USE_REASONING.items():
 **Remember:** A reasoning trace is not proof. The stated reasoning can be wrong while the answer is right, and vice versa.
 
 **Common mistake:** Enabling extended thinking globally and tripling cost on tasks that never needed a single reasoning token.
+
+Practice: open `examples/08_reasoning_token_cost.py`, predict the output, change one line, predict again.
 
 ## 9. Reading a reasoning trace critically
 
@@ -267,6 +283,8 @@ for task, use in USE_REASONING.items():
 
 **Common mistake:** Enabling extended thinking globally and tripling cost on tasks that never needed a single reasoning token.
 
+Practice: open `examples/09_reading_a_reasoning_trace_critically.py`, predict the output, change one line, predict again.
+
 ## 10. Choosing a reasoning budget
 
 Reasoning modes trade tokens for accuracy. They help on multi-step problems with a verifiable answer, and waste money on lookup or formatting tasks. Self-consistency — sample several answers and take the majority — is a cheap accuracy boost when answers are comparable.
@@ -294,6 +312,8 @@ for task, use in USE_REASONING.items():
 **Remember:** A reasoning trace is not proof. The stated reasoning can be wrong while the answer is right, and vice versa.
 
 **Common mistake:** Enabling extended thinking globally and tripling cost on tasks that never needed a single reasoning token.
+
+Practice: open `examples/10_choosing_a_reasoning_budget.py`, predict the output, change one line, predict again.
 
 ---
 

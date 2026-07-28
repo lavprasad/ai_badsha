@@ -39,6 +39,8 @@ print('\n(escalation to a human costed at 2.00)')
 
 **Common mistake:** Switching to the cheapest model, watching token spend drop, and never noticing support load doubled.
 
+Practice: open `examples/01_token_economics.py`, predict the output, change one line, predict again.
+
 ## 2. Prompt compression
 
 Cost per token is the wrong metric; cost per resolved task is the right one. A cheap model that fails half the time and escalates costs more than the expensive model. Route by difficulty, cache aggressively, and measure end-to-end.
@@ -60,6 +62,8 @@ print('\n(escalation to a human costed at 2.00)')
 **Remember:** Always price the failure path. Human escalation usually dominates every model cost in the table.
 
 **Common mistake:** Switching to the cheapest model, watching token spend drop, and never noticing support load doubled.
+
+Practice: open `examples/02_prompt_compression.py`, predict the output, change one line, predict again.
 
 ## 3. Prompt caching
 
@@ -84,6 +88,8 @@ print('Stable prefix first + cache_control -> cheaper, faster repeat calls.')
 
 **Common mistake:** Rebuilding the prompt in a different order each call, so nothing ever hits the cache.
 
+Practice: open `examples/03_prompt_caching.py`, predict the output, change one line, predict again.
+
 ## 4. Model routing by difficulty
 
 Cost per token is the wrong metric; cost per resolved task is the right one. A cheap model that fails half the time and escalates costs more than the expensive model. Route by difficulty, cache aggressively, and measure end-to-end.
@@ -105,6 +111,8 @@ print('\n(escalation to a human costed at 2.00)')
 **Remember:** Always price the failure path. Human escalation usually dominates every model cost in the table.
 
 **Common mistake:** Switching to the cheapest model, watching token spend drop, and never noticing support load doubled.
+
+Practice: open `examples/04_model_routing_by_difficulty.py`, predict the output, change one line, predict again.
 
 ## 5. Small model first, escalate on failure
 
@@ -128,6 +136,8 @@ print('\n(escalation to a human costed at 2.00)')
 
 **Common mistake:** Switching to the cheapest model, watching token spend drop, and never noticing support load doubled.
 
+Practice: open `examples/05_small_model_first_escalate_on_failure.py`, predict the output, change one line, predict again.
+
 ## 6. Batch processing for offline jobs
 
 Accuracy hides everything on imbalanced data. Precision asks 'of the ones I flagged, how many were real'; recall asks 'of the real ones, how many did I catch'. You trade one for the other with the threshold, and the business decides which error hurts more.
@@ -149,6 +159,8 @@ print('roc auc', round(roc_auc_score(yte, m.predict_proba(Xte)[:, 1]), 4))
 **Remember:** Tune the decision threshold on validation data; 0.5 is a default, not a decision.
 
 **Common mistake:** Optimising ROC-AUC on a heavily imbalanced problem where precision-recall AUC is the honest metric.
+
+Practice: open `examples/06_batch_processing_for_offline_jobs.py`, predict the output, change one line, predict again.
 
 ## 7. Caching identical requests
 
@@ -172,6 +184,8 @@ print('\n(escalation to a human costed at 2.00)')
 
 **Common mistake:** Switching to the cheapest model, watching token spend drop, and never noticing support load doubled.
 
+Practice: open `examples/07_caching_identical_requests.py`, predict the output, change one line, predict again.
+
 ## 8. Truncating context intelligently
 
 Cost per token is the wrong metric; cost per resolved task is the right one. A cheap model that fails half the time and escalates costs more than the expensive model. Route by difficulty, cache aggressively, and measure end-to-end.
@@ -193,6 +207,8 @@ print('\n(escalation to a human costed at 2.00)')
 **Remember:** Always price the failure path. Human escalation usually dominates every model cost in the table.
 
 **Common mistake:** Switching to the cheapest model, watching token spend drop, and never noticing support load doubled.
+
+Practice: open `examples/08_truncating_context_intelligently.py`, predict the output, change one line, predict again.
 
 ## 9. Measuring cost per resolved task
 
@@ -216,6 +232,8 @@ print('\n(escalation to a human costed at 2.00)')
 
 **Common mistake:** Switching to the cheapest model, watching token spend drop, and never noticing support load doubled.
 
+Practice: open `examples/09_measuring_cost_per_resolved_task.py`, predict the output, change one line, predict again.
+
 ## 10. A cost dashboard for your app
 
 Cost per token is the wrong metric; cost per resolved task is the right one. A cheap model that fails half the time and escalates costs more than the expensive model. Route by difficulty, cache aggressively, and measure end-to-end.
@@ -237,6 +255,8 @@ print('\n(escalation to a human costed at 2.00)')
 **Remember:** Always price the failure path. Human escalation usually dominates every model cost in the table.
 
 **Common mistake:** Switching to the cheapest model, watching token spend drop, and never noticing support load doubled.
+
+Practice: open `examples/10_a_cost_dashboard_for_your_app.py`, predict the output, change one line, predict again.
 
 ---
 

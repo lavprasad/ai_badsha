@@ -38,6 +38,8 @@ print(f'converged to w={w:.4f}, loss={loss(w):.4f}')
 
 **Common mistake:** Blaming the model architecture for what is really a learning rate ten times too large.
 
+Practice: open `examples/01_objective_functions_and_minima.py`, predict the output, change one line, predict again.
+
 ## 2. Convex vs non-convex landscapes
 
 A convex loss has one bottom, so any downhill path finds it. Neural network losses are not convex — they have valleys, plateaus and saddle points. In high dimensions saddles are far more common than true local minima, which is why momentum-based optimisers help so much.
@@ -59,6 +61,8 @@ print(f'converged to w={w:.4f}, loss={loss(w):.4f}')
 
 **Common mistake:** Blaming the model architecture for what is really a learning rate ten times too large.
 
+Practice: open `examples/02_convex_vs_non_convex_landscapes.py`, predict the output, change one line, predict again.
+
 ## 3. Local minima, saddle points, plateaus
 
 A convex loss has one bottom, so any downhill path finds it. Neural network losses are not convex — they have valleys, plateaus and saddle points. In high dimensions saddles are far more common than true local minima, which is why momentum-based optimisers help so much.
@@ -79,6 +83,8 @@ print(f'converged to w={w:.4f}, loss={loss(w):.4f}')
 **Remember:** If the loss oscillates or explodes, halve the learning rate before changing anything else.
 
 **Common mistake:** Blaming the model architecture for what is really a learning rate ten times too large.
+
+Practice: open `examples/03_local_minima_saddle_points_plateaus.py`, predict the output, change one line, predict again.
 
 ## 4. Gradient descent in one dimension
 
@@ -102,6 +108,8 @@ print('analytic ', 2 * x + 3)   # should match to ~1e-6
 
 **Common mistake:** Trusting a derivation you never gradient-checked; a sign error trains slowly instead of failing loudly.
 
+Practice: open `examples/04_gradient_descent_in_one_dimension.py`, predict the output, change one line, predict again.
+
 ## 5. The learning rate trade-off
 
 A convex loss has one bottom, so any downhill path finds it. Neural network losses are not convex — they have valleys, plateaus and saddle points. In high dimensions saddles are far more common than true local minima, which is why momentum-based optimisers help so much.
@@ -122,6 +130,8 @@ print(f'converged to w={w:.4f}, loss={loss(w):.4f}')
 **Remember:** If the loss oscillates or explodes, halve the learning rate before changing anything else.
 
 **Common mistake:** Blaming the model architecture for what is really a learning rate ten times too large.
+
+Practice: open `examples/05_the_learning_rate_trade_off.py`, predict the output, change one line, predict again.
 
 ## 6. Momentum intuition
 
@@ -144,6 +154,8 @@ print(f'converged to w={w:.4f}, loss={loss(w):.4f}')
 
 **Common mistake:** Blaming the model architecture for what is really a learning rate ten times too large.
 
+Practice: open `examples/06_momentum_intuition.py`, predict the output, change one line, predict again.
+
 ## 7. Newton's method and why we rarely use it
 
 A convex loss has one bottom, so any downhill path finds it. Neural network losses are not convex — they have valleys, plateaus and saddle points. In high dimensions saddles are far more common than true local minima, which is why momentum-based optimisers help so much.
@@ -164,6 +176,8 @@ print(f'converged to w={w:.4f}, loss={loss(w):.4f}')
 **Remember:** If the loss oscillates or explodes, halve the learning rate before changing anything else.
 
 **Common mistake:** Blaming the model architecture for what is really a learning rate ten times too large.
+
+Practice: open `examples/07_newton_s_method_and_why_we_rarely_use_it.py`, predict the output, change one line, predict again.
 
 ## 8. Constrained optimisation and Lagrange multipliers
 
@@ -186,6 +200,8 @@ print(f'converged to w={w:.4f}, loss={loss(w):.4f}')
 
 **Common mistake:** Blaming the model architecture for what is really a learning rate ten times too large.
 
+Practice: open `examples/08_constrained_optimisation_and_lagrange_mu.py`, predict the output, change one line, predict again.
+
 ## 9. Stopping criteria
 
 A convex loss has one bottom, so any downhill path finds it. Neural network losses are not convex — they have valleys, plateaus and saddle points. In high dimensions saddles are far more common than true local minima, which is why momentum-based optimisers help so much.
@@ -207,6 +223,8 @@ print(f'converged to w={w:.4f}, loss={loss(w):.4f}')
 
 **Common mistake:** Blaming the model architecture for what is really a learning rate ten times too large.
 
+Practice: open `examples/09_stopping_criteria.py`, predict the output, change one line, predict again.
+
 ## 10. Implementing descent from scratch
 
 A convex loss has one bottom, so any downhill path finds it. Neural network losses are not convex — they have valleys, plateaus and saddle points. In high dimensions saddles are far more common than true local minima, which is why momentum-based optimisers help so much.
@@ -227,6 +245,8 @@ print(f'converged to w={w:.4f}, loss={loss(w):.4f}')
 **Remember:** If the loss oscillates or explodes, halve the learning rate before changing anything else.
 
 **Common mistake:** Blaming the model architecture for what is really a learning rate ten times too large.
+
+Practice: open `examples/10_implementing_descent_from_scratch.py`, predict the output, change one line, predict again.
 
 ---
 

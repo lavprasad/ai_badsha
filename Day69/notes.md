@@ -39,6 +39,8 @@ print('roc auc', round(roc_auc_score(yte, m.predict_proba(Xte)[:, 1]), 4))
 
 **Common mistake:** Optimising ROC-AUC on a heavily imbalanced problem where precision-recall AUC is the honest metric.
 
+Practice: open `examples/01_text_preprocessing_pipeline.py`, predict the output, change one line, predict again.
+
 ## 2. Tokenisation basics
 
 Models see token IDs, not text. Byte-pair encoding merges frequent character pairs so common words are one token and rare words split into pieces. Tokens are why you are billed per token, why context limits are in tokens, and why models are bad at counting letters.
@@ -69,6 +71,8 @@ bpe_merges({'low': 5, 'lower': 2, 'newest': 6, 'widest': 3})
 
 **Common mistake:** Estimating cost or context usage in words instead of tokens and overflowing the window in production.
 
+Practice: open `examples/02_tokenisation_basics.py`, predict the output, change one line, predict again.
+
 ## 3. Stopwords, stemming, lemmatisation
 
 Before embeddings, text became numbers by counting. TF-IDF weights a word by how often it appears here and how rare it is overall, so 'the' scores near zero. It is still an excellent, near-free baseline for classification and keyword search.
@@ -90,6 +94,8 @@ print(X.toarray().round(2))
 **Remember:** TF-IDF + logistic regression is the baseline every LLM text classifier must beat to be worth its cost.
 
 **Common mistake:** Reaching for a 7B model to classify support tickets that TF-IDF handles at 94% for free.
+
+Practice: open `examples/03_stopwords_stemming_lemmatisation.py`, predict the output, change one line, predict again.
 
 ## 4. Bag of words
 
@@ -113,6 +119,8 @@ print(X.toarray().round(2))
 
 **Common mistake:** Reaching for a 7B model to classify support tickets that TF-IDF handles at 94% for free.
 
+Practice: open `examples/04_bag_of_words.py`, predict the output, change one line, predict again.
+
 ## 5. TF-IDF
 
 Before embeddings, text became numbers by counting. TF-IDF weights a word by how often it appears here and how rare it is overall, so 'the' scores near zero. It is still an excellent, near-free baseline for classification and keyword search.
@@ -134,6 +142,8 @@ print(X.toarray().round(2))
 **Remember:** TF-IDF + logistic regression is the baseline every LLM text classifier must beat to be worth its cost.
 
 **Common mistake:** Reaching for a 7B model to classify support tickets that TF-IDF handles at 94% for free.
+
+Practice: open `examples/05_tf_idf.py`, predict the output, change one line, predict again.
 
 ## 6. N-grams
 
@@ -157,6 +167,8 @@ print(X.toarray().round(2))
 
 **Common mistake:** Reaching for a 7B model to classify support tickets that TF-IDF handles at 94% for free.
 
+Practice: open `examples/06_n_grams.py`, predict the output, change one line, predict again.
+
 ## 7. Character n-grams for noisy text
 
 Before embeddings, text became numbers by counting. TF-IDF weights a word by how often it appears here and how rare it is overall, so 'the' scores near zero. It is still an excellent, near-free baseline for classification and keyword search.
@@ -179,6 +191,8 @@ print(X.toarray().round(2))
 
 **Common mistake:** Reaching for a 7B model to classify support tickets that TF-IDF handles at 94% for free.
 
+Practice: open `examples/07_character_n_grams_for_noisy_text.py`, predict the output, change one line, predict again.
+
 ## 8. Text classification with linear models
 
 Today's idea — **Text classification with linear models** — sits inside the theme of Working with text, classically. Read it as a tool, not trivia: what job does it do, what does it assume about your data, and what breaks when that assumption is false?
@@ -194,6 +208,8 @@ print("practice: Text classification with linear models")
 **Remember:** State one assumption `Text classification with linear models` makes about your data before you use it.
 
 **Common mistake:** Copy-pasting `Text classification with linear models` from a tutorial without knowing what it assumes or when it fails.
+
+Practice: open `examples/08_text_classification_with_linear_models.py`, predict the output, change one line, predict again.
 
 ## 9. Topic modelling with LDA
 
@@ -211,6 +227,8 @@ print("practice: Topic modelling with LDA")
 
 **Common mistake:** Copy-pasting `Topic modelling with LDA` from a tutorial without knowing what it assumes or when it fails.
 
+Practice: open `examples/09_topic_modelling_with_lda.py`, predict the output, change one line, predict again.
+
 ## 10. The baseline every LLM must beat
 
 Today's idea — **The baseline every LLM must beat** — sits inside the theme of Working with text, classically. Read it as a tool, not trivia: what job does it do, what does it assume about your data, and what breaks when that assumption is false?
@@ -226,6 +244,8 @@ print("practice: The baseline every LLM must beat")
 **Remember:** State one assumption `The baseline every LLM must beat` makes about your data before you use it.
 
 **Common mistake:** Copy-pasting `The baseline every LLM must beat` from a tutorial without knowing what it assumes or when it fails.
+
+Practice: open `examples/10_the_baseline_every_llm_must_beat.py`, predict the output, change one line, predict again.
 
 ---
 

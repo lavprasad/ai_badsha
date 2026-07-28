@@ -47,6 +47,8 @@ bpe_merges({'low': 5, 'lower': 2, 'newest': 6, 'widest': 3})
 
 **Common mistake:** Estimating cost or context usage in words instead of tokens and overflowing the window in production.
 
+Practice: open `examples/01_why_models_need_tokens_not_words.py`, predict the output, change one line, predict again.
+
 ## 2. Word-level tokenisation and OOV
 
 Models see token IDs, not text. Byte-pair encoding merges frequent character pairs so common words are one token and rare words split into pieces. Tokens are why you are billed per token, why context limits are in tokens, and why models are bad at counting letters.
@@ -76,6 +78,8 @@ bpe_merges({'low': 5, 'lower': 2, 'newest': 6, 'widest': 3})
 **Remember:** Roughly 1 token ~ 4 characters of English; other languages cost far more tokens per word.
 
 **Common mistake:** Estimating cost or context usage in words instead of tokens and overflowing the window in production.
+
+Practice: open `examples/02_word_level_tokenisation_and_oov.py`, predict the output, change one line, predict again.
 
 ## 3. Character-level trade-offs
 
@@ -107,6 +111,8 @@ bpe_merges({'low': 5, 'lower': 2, 'newest': 6, 'widest': 3})
 
 **Common mistake:** Estimating cost or context usage in words instead of tokens and overflowing the window in production.
 
+Practice: open `examples/03_character_level_trade_offs.py`, predict the output, change one line, predict again.
+
 ## 4. Byte-pair encoding
 
 Models see token IDs, not text. Byte-pair encoding merges frequent character pairs so common words are one token and rare words split into pieces. Tokens are why you are billed per token, why context limits are in tokens, and why models are bad at counting letters.
@@ -136,6 +142,8 @@ bpe_merges({'low': 5, 'lower': 2, 'newest': 6, 'widest': 3})
 **Remember:** Roughly 1 token ~ 4 characters of English; other languages cost far more tokens per word.
 
 **Common mistake:** Estimating cost or context usage in words instead of tokens and overflowing the window in production.
+
+Practice: open `examples/04_byte_pair_encoding.py`, predict the output, change one line, predict again.
 
 ## 5. WordPiece and SentencePiece
 
@@ -167,6 +175,8 @@ bpe_merges({'low': 5, 'lower': 2, 'newest': 6, 'widest': 3})
 
 **Common mistake:** Estimating cost or context usage in words instead of tokens and overflowing the window in production.
 
+Practice: open `examples/05_wordpiece_and_sentencepiece.py`, predict the output, change one line, predict again.
+
 ## 6. Vocabulary size decisions
 
 Models see token IDs, not text. Byte-pair encoding merges frequent character pairs so common words are one token and rare words split into pieces. Tokens are why you are billed per token, why context limits are in tokens, and why models are bad at counting letters.
@@ -196,6 +206,8 @@ bpe_merges({'low': 5, 'lower': 2, 'newest': 6, 'widest': 3})
 **Remember:** Roughly 1 token ~ 4 characters of English; other languages cost far more tokens per word.
 
 **Common mistake:** Estimating cost or context usage in words instead of tokens and overflowing the window in production.
+
+Practice: open `examples/06_vocabulary_size_decisions.py`, predict the output, change one line, predict again.
 
 ## 7. Special tokens: BOS, EOS, PAD, UNK
 
@@ -227,6 +239,8 @@ bpe_merges({'low': 5, 'lower': 2, 'newest': 6, 'widest': 3})
 
 **Common mistake:** Estimating cost or context usage in words instead of tokens and overflowing the window in production.
 
+Practice: open `examples/07_special_tokens_bos_eos_pad_unk.py`, predict the output, change one line, predict again.
+
 ## 8. Token counts and cost estimation
 
 Models see token IDs, not text. Byte-pair encoding merges frequent character pairs so common words are one token and rare words split into pieces. Tokens are why you are billed per token, why context limits are in tokens, and why models are bad at counting letters.
@@ -256,6 +270,8 @@ bpe_merges({'low': 5, 'lower': 2, 'newest': 6, 'widest': 3})
 **Remember:** Roughly 1 token ~ 4 characters of English; other languages cost far more tokens per word.
 
 **Common mistake:** Estimating cost or context usage in words instead of tokens and overflowing the window in production.
+
+Practice: open `examples/08_token_counts_and_cost_estimation.py`, predict the output, change one line, predict again.
 
 ## 9. Tokenisation across languages
 
@@ -287,6 +303,8 @@ bpe_merges({'low': 5, 'lower': 2, 'newest': 6, 'widest': 3})
 
 **Common mistake:** Estimating cost or context usage in words instead of tokens and overflowing the window in production.
 
+Practice: open `examples/09_tokenisation_across_languages.py`, predict the output, change one line, predict again.
+
 ## 10. Implementing BPE merges by hand
 
 A DataFrame is a table with labelled columns and an index. Most real ML work is 80% reshaping tables: load, clean, group, join, aggregate. Learn `groupby` and `merge` well and you can answer most data questions without writing loops.
@@ -307,6 +325,8 @@ print(df.merge(lookup, on='city', how='left'))
 **Remember:** Always check `df.shape` before and after a merge — a silent row explosion means duplicate keys.
 
 **Common mistake:** Chained assignment (`df[df.a > 1]['b'] = 0`) that writes to a copy and changes nothing.
+
+Practice: open `examples/10_implementing_bpe_merges_by_hand.py`, predict the output, change one line, predict again.
 
 ---
 

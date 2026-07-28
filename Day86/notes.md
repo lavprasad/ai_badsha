@@ -45,6 +45,8 @@ print('final loss', round(loss.item(), 4))
 
 **Common mistake:** Calling `loss.backward()` twice without `retain_graph` and getting a confusing runtime error.
 
+Practice: open `examples/01_train_and_validation_phases.py`, predict the output, change one line, predict again.
+
 ## 2. model.train() vs model.eval()
 
 PyTorch is NumPy with gradients and a GPU. The training loop is always the same five lines: zero grads, forward, loss, backward, step. Write it out by hand once — every framework wrapper is just hiding these five.
@@ -72,6 +74,8 @@ print('final loss', round(loss.item(), 4))
 **Remember:** `opt.zero_grad()` first, every step. PyTorch accumulates gradients by design.
 
 **Common mistake:** Calling `loss.backward()` twice without `retain_graph` and getting a confusing runtime error.
+
+Practice: open `examples/02_model_train_vs_model_eval.py`, predict the output, change one line, predict again.
 
 ## 3. torch.no_grad() for inference
 
@@ -101,6 +105,8 @@ print('final loss', round(loss.item(), 4))
 
 **Common mistake:** Calling `loss.backward()` twice without `retain_graph` and getting a confusing runtime error.
 
+Practice: open `examples/03_torch_no_grad_for_inference.py`, predict the output, change one line, predict again.
+
 ## 4. Tracking metrics per epoch
 
 Gradient descent repeatedly steps against the gradient. Full-batch is stable but slow; stochastic is noisy but escapes shallow traps; mini-batch is the practical middle. The learning rate is the single most important knob you will ever turn.
@@ -126,6 +132,8 @@ print('learned', np.round(w, 3), 'target', true_w)
 **Remember:** Shuffle every epoch, otherwise the model learns the order of your file.
 
 **Common mistake:** Leaving the learning rate fixed forever instead of decaying it once the loss plateaus.
+
+Practice: open `examples/04_tracking_metrics_per_epoch.py`, predict the output, change one line, predict again.
 
 ## 5. Checkpointing and resuming
 
@@ -155,6 +163,8 @@ print('final loss', round(loss.item(), 4))
 
 **Common mistake:** Calling `loss.backward()` twice without `retain_graph` and getting a confusing runtime error.
 
+Practice: open `examples/05_checkpointing_and_resuming.py`, predict the output, change one line, predict again.
+
 ## 6. Saving the best model by validation score
 
 PyTorch is NumPy with gradients and a GPU. The training loop is always the same five lines: zero grads, forward, loss, backward, step. Write it out by hand once — every framework wrapper is just hiding these five.
@@ -183,6 +193,8 @@ print('final loss', round(loss.item(), 4))
 
 **Common mistake:** Calling `loss.backward()` twice without `retain_graph` and getting a confusing runtime error.
 
+Practice: open `examples/06_saving_the_best_model_by_validation_scor.py`, predict the output, change one line, predict again.
+
 ## 7. Gradient clipping
 
 The derivative answers: if I nudge this input a little, how much does the output move? The gradient is that answer for every input at once, so it points uphill. Training walks downhill by stepping against the gradient. The chain rule is what lets you propagate that answer through a stack of layers.
@@ -204,6 +216,8 @@ print('analytic ', 2 * x + 3)   # should match to ~1e-6
 **Remember:** A central difference `(f(x+h)-f(x-h))/2h` is the cheapest way to check a hand-written gradient.
 
 **Common mistake:** Trusting a derivation you never gradient-checked; a sign error trains slowly instead of failing loudly.
+
+Practice: open `examples/07_gradient_clipping.py`, predict the output, change one line, predict again.
 
 ## 8. Gradient accumulation
 
@@ -227,6 +241,8 @@ print('analytic ', 2 * x + 3)   # should match to ~1e-6
 
 **Common mistake:** Trusting a derivation you never gradient-checked; a sign error trains slowly instead of failing loudly.
 
+Practice: open `examples/08_gradient_accumulation.py`, predict the output, change one line, predict again.
+
 ## 9. Mixed precision training
 
 Accuracy hides everything on imbalanced data. Precision asks 'of the ones I flagged, how many were real'; recall asks 'of the real ones, how many did I catch'. You trade one for the other with the threshold, and the business decides which error hurts more.
@@ -248,6 +264,8 @@ print('roc auc', round(roc_auc_score(yte, m.predict_proba(Xte)[:, 1]), 4))
 **Remember:** Tune the decision threshold on validation data; 0.5 is a default, not a decision.
 
 **Common mistake:** Optimising ROC-AUC on a heavily imbalanced problem where precision-recall AUC is the honest metric.
+
+Practice: open `examples/09_mixed_precision_training.py`, predict the output, change one line, predict again.
 
 ## 10. A reusable Trainer you actually own
 
@@ -276,6 +294,8 @@ print('final loss', round(loss.item(), 4))
 **Remember:** `opt.zero_grad()` first, every step. PyTorch accumulates gradients by design.
 
 **Common mistake:** Calling `loss.backward()` twice without `retain_graph` and getting a confusing runtime error.
+
+Practice: open `examples/10_a_reusable_trainer_you_actually_own.py`, predict the output, change one line, predict again.
 
 ---
 

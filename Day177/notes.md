@@ -47,6 +47,8 @@ print('Load once at startup; validate with a schema; expose /health for the load
 
 **Common mistake:** Reloading the model per request and wondering why p99 latency is four seconds.
 
+Practice: open `examples/01_batch_vs_online_inference.py`, predict the output, change one line, predict again.
+
 ## 2. REST APIs with FastAPI
 
 Serving a model means loading it once at startup and answering HTTP requests. Validate the input schema, return errors as structured JSON, add a health endpoint, and never load the model inside the request handler.
@@ -76,6 +78,8 @@ print('Load once at startup; validate with a schema; expose /health for the load
 **Remember:** Batch requests where latency allows — GPU throughput collapses on batch size 1.
 
 **Common mistake:** Reloading the model per request and wondering why p99 latency is four seconds.
+
+Practice: open `examples/02_rest_apis_with_fastapi.py`, predict the output, change one line, predict again.
 
 ## 3. Input validation with Pydantic
 
@@ -107,6 +111,8 @@ print('Load once at startup; validate with a schema; expose /health for the load
 
 **Common mistake:** Reloading the model per request and wondering why p99 latency is four seconds.
 
+Practice: open `examples/03_input_validation_with_pydantic.py`, predict the output, change one line, predict again.
+
 ## 4. Loading models at startup
 
 Serving a model means loading it once at startup and answering HTTP requests. Validate the input schema, return errors as structured JSON, add a health endpoint, and never load the model inside the request handler.
@@ -137,6 +143,8 @@ print('Load once at startup; validate with a schema; expose /health for the load
 
 **Common mistake:** Reloading the model per request and wondering why p99 latency is four seconds.
 
+Practice: open `examples/04_loading_models_at_startup.py`, predict the output, change one line, predict again.
+
 ## 5. Concurrency and worker processes
 
 Accuracy hides everything on imbalanced data. Precision asks 'of the ones I flagged, how many were real'; recall asks 'of the real ones, how many did I catch'. You trade one for the other with the threshold, and the business decides which error hurts more.
@@ -158,6 +166,8 @@ print('roc auc', round(roc_auc_score(yte, m.predict_proba(Xte)[:, 1]), 4))
 **Remember:** Tune the decision threshold on validation data; 0.5 is a default, not a decision.
 
 **Common mistake:** Optimising ROC-AUC on a heavily imbalanced problem where precision-recall AUC is the honest metric.
+
+Practice: open `examples/05_concurrency_and_worker_processes.py`, predict the output, change one line, predict again.
 
 ## 6. Request batching for GPUs
 
@@ -189,6 +199,8 @@ print('Load once at startup; validate with a schema; expose /health for the load
 
 **Common mistake:** Reloading the model per request and wondering why p99 latency is four seconds.
 
+Practice: open `examples/06_request_batching_for_gpus.py`, predict the output, change one line, predict again.
+
 ## 7. Health and readiness endpoints
 
 After supervised tuning, models are aligned to human preference. RLHF trains a reward model on human comparisons, then optimises against it with PPO. DPO skips the reward model and optimises preference pairs directly — simpler, cheaper, and now the common choice.
@@ -211,6 +223,8 @@ print(f'margin {margin:.4f}  dpo loss {loss:.4f}')
 
 **Common mistake:** Over-optimising the reward model until outputs are sycophantic and useless — classic reward hacking.
 
+Practice: open `examples/07_health_and_readiness_endpoints.py`, predict the output, change one line, predict again.
+
 ## 8. Versioned endpoints
 
 After supervised tuning, models are aligned to human preference. RLHF trains a reward model on human comparisons, then optimises against it with PPO. DPO skips the reward model and optimises preference pairs directly — simpler, cheaper, and now the common choice.
@@ -232,6 +246,8 @@ print(f'margin {margin:.4f}  dpo loss {loss:.4f}')
 **Remember:** Alignment optimises a proxy for what humans want; the proxy can always be gamed.
 
 **Common mistake:** Over-optimising the reward model until outputs are sycophantic and useless — classic reward hacking.
+
+Practice: open `examples/08_versioned_endpoints.py`, predict the output, change one line, predict again.
 
 ## 9. Graceful shutdown
 
@@ -263,6 +279,8 @@ print('Load once at startup; validate with a schema; expose /health for the load
 
 **Common mistake:** Reloading the model per request and wondering why p99 latency is four seconds.
 
+Practice: open `examples/09_graceful_shutdown.py`, predict the output, change one line, predict again.
+
 ## 10. Load testing your endpoint
 
 After supervised tuning, models are aligned to human preference. RLHF trains a reward model on human comparisons, then optimises against it with PPO. DPO skips the reward model and optimises preference pairs directly — simpler, cheaper, and now the common choice.
@@ -284,6 +302,8 @@ print(f'margin {margin:.4f}  dpo loss {loss:.4f}')
 **Remember:** Alignment optimises a proxy for what humans want; the proxy can always be gamed.
 
 **Common mistake:** Over-optimising the reward model until outputs are sycophantic and useless — classic reward hacking.
+
+Practice: open `examples/10_load_testing_your_endpoint.py`, predict the output, change one line, predict again.
 
 ---
 

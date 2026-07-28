@@ -55,6 +55,9 @@ def notes_md(n: int, theme: str, concepts: list[str], lessons: list[dict]) -> st
         out.append("")
         out.append(f"**Common mistake:** {lesson['mistake']}")
         out.append("")
+        out.append(f"Practice: open `examples/{i:02d}_{slug(concept)}.py`, predict the output, "
+                   "change one line, predict again.")
+        out.append("")
 
     out.append("---")
     out.append("")

@@ -49,6 +49,8 @@ test_preprocess()
 
 **Common mistake:** Testing only the happy path, so an all-null column silently trains a constant model.
 
+Practice: open `examples/01_research_scientist_vs_ml_engineer_vs_dat.py`, predict the output, change one line, predict again.
+
 ## 2. AI engineer and the LLM application role
 
 The roles differ less in algorithms than in where they spend their day: research on experiments, ML engineering on pipelines and serving, AI engineering on prompts, retrieval and evals, data engineering on the plumbing everything else depends on. Pick by which day you want, not by which title sounds best.
@@ -68,6 +70,8 @@ for role, day in ROLES.items():
 **Remember:** One project you can defend end to end beats ten tutorials on your CV.
 
 **Common mistake:** Chasing the title with the highest salary into work you find tedious every single day.
+
+Practice: open `examples/02_ai_engineer_and_the_llm_application_role.py`, predict the output, change one line, predict again.
 
 ## 3. Data engineer and platform roles
 
@@ -89,6 +93,8 @@ for role, day in ROLES.items():
 
 **Common mistake:** Chasing the title with the highest salary into work you find tedious every single day.
 
+Practice: open `examples/03_data_engineer_and_platform_roles.py`, predict the output, change one line, predict again.
+
 ## 4. What each role actually does daily
 
 The roles differ less in algorithms than in where they spend their day: research on experiments, ML engineering on pipelines and serving, AI engineering on prompts, retrieval and evals, data engineering on the plumbing everything else depends on. Pick by which day you want, not by which title sounds best.
@@ -109,6 +115,8 @@ for role, day in ROLES.items():
 
 **Common mistake:** Chasing the title with the highest salary into work you find tedious every single day.
 
+Practice: open `examples/04_what_each_role_actually_does_daily.py`, predict the output, change one line, predict again.
+
 ## 5. Skills that transfer between them
 
 The roles differ less in algorithms than in where they spend their day: research on experiments, ML engineering on pipelines and serving, AI engineering on prompts, retrieval and evals, data engineering on the plumbing everything else depends on. Pick by which day you want, not by which title sounds best.
@@ -128,6 +136,8 @@ for role, day in ROLES.items():
 **Remember:** One project you can defend end to end beats ten tutorials on your CV.
 
 **Common mistake:** Chasing the title with the highest salary into work you find tedious every single day.
+
+Practice: open `examples/05_skills_that_transfer_between_them.py`, predict the output, change one line, predict again.
 
 ## 6. Domain specialisation as leverage
 
@@ -158,6 +168,8 @@ print('\\nReal pipeline: chunk 300-800 tokens with overlap -> embed -> ANN index
 
 **Common mistake:** Chunking blindly at 1000 characters and cutting tables and code blocks in half.
 
+Practice: open `examples/06_domain_specialisation_as_leverage.py`, predict the output, change one line, predict again.
+
 ## 7. Startup vs enterprise trade-offs
 
 The roles differ less in algorithms than in where they spend their day: research on experiments, ML engineering on pipelines and serving, AI engineering on prompts, retrieval and evals, data engineering on the plumbing everything else depends on. Pick by which day you want, not by which title sounds best.
@@ -177,6 +189,8 @@ for role, day in ROLES.items():
 **Remember:** One project you can defend end to end beats ten tutorials on your CV.
 
 **Common mistake:** Chasing the title with the highest salary into work you find tedious every single day.
+
+Practice: open `examples/07_startup_vs_enterprise_trade_offs.py`, predict the output, change one line, predict again.
 
 ## 8. Building a portfolio for a target role
 
@@ -200,6 +214,8 @@ for s in STEPS:
 
 **Common mistake:** Six weeks of feature engineering with no baseline to prove any of it helped.
 
+Practice: open `examples/08_building_a_portfolio_for_a_target_role.py`, predict the output, change one line, predict again.
+
 ## 9. Open source contributions
 
 The roles differ less in algorithms than in where they spend their day: research on experiments, ML engineering on pipelines and serving, AI engineering on prompts, retrieval and evals, data engineering on the plumbing everything else depends on. Pick by which day you want, not by which title sounds best.
@@ -220,6 +236,8 @@ for role, day in ROLES.items():
 
 **Common mistake:** Chasing the title with the highest salary into work you find tedious every single day.
 
+Practice: open `examples/09_open_source_contributions.py`, predict the output, change one line, predict again.
+
 ## 10. Choosing your next two years
 
 The roles differ less in algorithms than in where they spend their day: research on experiments, ML engineering on pipelines and serving, AI engineering on prompts, retrieval and evals, data engineering on the plumbing everything else depends on. Pick by which day you want, not by which title sounds best.
@@ -239,6 +257,8 @@ for role, day in ROLES.items():
 **Remember:** One project you can defend end to end beats ten tutorials on your CV.
 
 **Common mistake:** Chasing the title with the highest salary into work you find tedious every single day.
+
+Practice: open `examples/10_choosing_your_next_two_years.py`, predict the output, change one line, predict again.
 
 ---
 

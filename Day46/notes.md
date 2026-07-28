@@ -40,6 +40,8 @@ print('residual mean (should be ~0):', round(float(resid.mean()), 6))
 
 **Common mistake:** Reporting R² on training data and calling it model performance.
 
+Practice: open `examples/01_when_a_straight_line_is_the_right_model.py`, predict the output, change one line, predict again.
+
 ## 2. Fitting with scikit-learn
 
 Linear regression fits a straight line by minimising squared error. It is the honest baseline for every regression problem: fast, interpretable, and the thing your fancy model must beat before it earns its complexity.
@@ -62,6 +64,8 @@ print('residual mean (should be ~0):', round(float(resid.mean()), 6))
 **Remember:** Plot residuals against predictions — any visible pattern means the linear form is wrong.
 
 **Common mistake:** Reporting R² on training data and calling it model performance.
+
+Practice: open `examples/02_fitting_with_scikit_learn.py`, predict the output, change one line, predict again.
 
 ## 3. Interpreting coefficients and units
 
@@ -86,6 +90,8 @@ print('residual mean (should be ~0):', round(float(resid.mean()), 6))
 
 **Common mistake:** Reporting R² on training data and calling it model performance.
 
+Practice: open `examples/03_interpreting_coefficients_and_units.py`, predict the output, change one line, predict again.
+
 ## 4. Residual plots and what they reveal
 
 Plot before you model. A histogram exposes skew and outliers, a scatter exposes non-linearity, and a line of residuals exposes a model that is systematically wrong. Five minutes of plotting saves hours of confused tuning.
@@ -107,6 +113,8 @@ print('wrote hist.png')
 **Remember:** Label the axes. An unlabelled plot is a decoration, not evidence.
 
 **Common mistake:** Judging a model by its accuracy number alone without ever looking at the data.
+
+Practice: open `examples/04_residual_plots_and_what_they_reveal.py`, predict the output, change one line, predict again.
 
 ## 5. Heteroscedasticity
 
@@ -131,6 +139,8 @@ print('residual mean (should be ~0):', round(float(resid.mean()), 6))
 
 **Common mistake:** Reporting R² on training data and calling it model performance.
 
+Practice: open `examples/05_heteroscedasticity.py`, predict the output, change one line, predict again.
+
 ## 6. Polynomial regression
 
 Linear regression fits a straight line by minimising squared error. It is the honest baseline for every regression problem: fast, interpretable, and the thing your fancy model must beat before it earns its complexity.
@@ -153,6 +163,8 @@ print('residual mean (should be ~0):', round(float(resid.mean()), 6))
 **Remember:** Plot residuals against predictions — any visible pattern means the linear form is wrong.
 
 **Common mistake:** Reporting R² on training data and calling it model performance.
+
+Practice: open `examples/06_polynomial_regression.py`, predict the output, change one line, predict again.
 
 ## 7. Multicollinearity in real data
 
@@ -177,6 +189,8 @@ print('residual mean (should be ~0):', round(float(resid.mean()), 6))
 
 **Common mistake:** Reporting R² on training data and calling it model performance.
 
+Practice: open `examples/07_multicollinearity_in_real_data.py`, predict the output, change one line, predict again.
+
 ## 8. Robust regression for outliers
 
 The mean is pulled around by outliers; the median is not. Report both, plus a spread measure. When mean and median disagree sharply, the distribution is skewed and averages are lying to you.
@@ -198,6 +212,8 @@ print('outliers', salaries[(salaries < q1 - 1.5 * iqr) | (salaries > q3 + 1.5 * 
 
 **Common mistake:** Removing 'outliers' automatically when they are the exact events you were hired to predict.
 
+Practice: open `examples/08_robust_regression_for_outliers.py`, predict the output, change one line, predict again.
+
 ## 9. Predicting with confidence intervals
 
 A p-value is P(data this extreme | nothing is going on). It is not the probability your idea is right. A confidence interval is more useful because it shows effect size and uncertainty together — a 'significant' 0.1% lift may not be worth shipping.
@@ -217,6 +233,8 @@ print(f'lift {diff:.3f}  95% CI [{diff - 1.96 * se:.3f}, {diff + 1.96 * se:.3f}]
 **Remember:** Decide the sample size and the metric BEFORE looking at the data.
 
 **Common mistake:** Peeking daily and stopping the test the moment p < 0.05 — that inflates false positives badly.
+
+Practice: open `examples/09_predicting_with_confidence_intervals.py`, predict the output, change one line, predict again.
 
 ## 10. House-price regression walkthrough
 
@@ -240,6 +258,8 @@ print('residual mean (should be ~0):', round(float(resid.mean()), 6))
 **Remember:** Plot residuals against predictions — any visible pattern means the linear form is wrong.
 
 **Common mistake:** Reporting R² on training data and calling it model performance.
+
+Practice: open `examples/10_house_price_regression_walkthrough.py`, predict the output, change one line, predict again.
 
 ---
 

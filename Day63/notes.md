@@ -35,6 +35,8 @@ print(f'P(sick | positive) = {posterior:.4f}')   # ~0.0098
 
 **Common mistake:** Reporting accuracy on an imbalanced problem where predicting 'no' always scores 99%.
 
+Practice: open `examples/01_what_a_calibrated_probability_means.py`, predict the output, change one line, predict again.
+
 ## 2. Reliability diagrams
 
 Bayes' rule updates a belief with evidence: posterior = likelihood x prior / evidence. The most common mistake in applied ML is ignoring the prior — a 99%-accurate test for a 1-in-10000 disease still gives mostly false positives.
@@ -52,6 +54,8 @@ print(f'P(sick | positive) = {posterior:.4f}')   # ~0.0098
 **Remember:** Rare events make precision collapse no matter how good the classifier looks on accuracy.
 
 **Common mistake:** Reporting accuracy on an imbalanced problem where predicting 'no' always scores 99%.
+
+Practice: open `examples/02_reliability_diagrams.py`, predict the output, change one line, predict again.
 
 ## 3. Brier score
 
@@ -71,6 +75,8 @@ print(f'P(sick | positive) = {posterior:.4f}')   # ~0.0098
 
 **Common mistake:** Reporting accuracy on an imbalanced problem where predicting 'no' always scores 99%.
 
+Practice: open `examples/03_brier_score.py`, predict the output, change one line, predict again.
+
 ## 4. Platt scaling
 
 Bayes' rule updates a belief with evidence: posterior = likelihood x prior / evidence. The most common mistake in applied ML is ignoring the prior — a 99%-accurate test for a 1-in-10000 disease still gives mostly false positives.
@@ -88,6 +94,8 @@ print(f'P(sick | positive) = {posterior:.4f}')   # ~0.0098
 **Remember:** Rare events make precision collapse no matter how good the classifier looks on accuracy.
 
 **Common mistake:** Reporting accuracy on an imbalanced problem where predicting 'no' always scores 99%.
+
+Practice: open `examples/04_platt_scaling.py`, predict the output, change one line, predict again.
 
 ## 5. Isotonic regression
 
@@ -107,6 +115,8 @@ print(f'P(sick | positive) = {posterior:.4f}')   # ~0.0098
 
 **Common mistake:** Reporting accuracy on an imbalanced problem where predicting 'no' always scores 99%.
 
+Practice: open `examples/05_isotonic_regression.py`, predict the output, change one line, predict again.
+
 ## 6. Why boosted trees are miscalibrated
 
 Bayes' rule updates a belief with evidence: posterior = likelihood x prior / evidence. The most common mistake in applied ML is ignoring the prior — a 99%-accurate test for a 1-in-10000 disease still gives mostly false positives.
@@ -124,6 +134,8 @@ print(f'P(sick | positive) = {posterior:.4f}')   # ~0.0098
 **Remember:** Rare events make precision collapse no matter how good the classifier looks on accuracy.
 
 **Common mistake:** Reporting accuracy on an imbalanced problem where predicting 'no' always scores 99%.
+
+Practice: open `examples/06_why_boosted_trees_are_miscalibrated.py`, predict the output, change one line, predict again.
 
 ## 7. Calibration under class imbalance
 
@@ -143,6 +155,8 @@ print(f'P(sick | positive) = {posterior:.4f}')   # ~0.0098
 
 **Common mistake:** Reporting accuracy on an imbalanced problem where predicting 'no' always scores 99%.
 
+Practice: open `examples/07_calibration_under_class_imbalance.py`, predict the output, change one line, predict again.
+
 ## 8. Calibrating on a held-out set
 
 Bayes' rule updates a belief with evidence: posterior = likelihood x prior / evidence. The most common mistake in applied ML is ignoring the prior — a 99%-accurate test for a 1-in-10000 disease still gives mostly false positives.
@@ -160,6 +174,8 @@ print(f'P(sick | positive) = {posterior:.4f}')   # ~0.0098
 **Remember:** Rare events make precision collapse no matter how good the classifier looks on accuracy.
 
 **Common mistake:** Reporting accuracy on an imbalanced problem where predicting 'no' always scores 99%.
+
+Practice: open `examples/08_calibrating_on_a_held_out_set.py`, predict the output, change one line, predict again.
 
 ## 9. Decision thresholds from calibrated scores
 
@@ -179,6 +195,8 @@ print(f'P(sick | positive) = {posterior:.4f}')   # ~0.0098
 
 **Common mistake:** Reporting accuracy on an imbalanced problem where predicting 'no' always scores 99%.
 
+Practice: open `examples/09_decision_thresholds_from_calibrated_scor.py`, predict the output, change one line, predict again.
+
 ## 10. Expected value of a decision
 
 Bayes' rule updates a belief with evidence: posterior = likelihood x prior / evidence. The most common mistake in applied ML is ignoring the prior — a 99%-accurate test for a 1-in-10000 disease still gives mostly false positives.
@@ -196,6 +214,8 @@ print(f'P(sick | positive) = {posterior:.4f}')   # ~0.0098
 **Remember:** Rare events make precision collapse no matter how good the classifier looks on accuracy.
 
 **Common mistake:** Reporting accuracy on an imbalanced problem where predicting 'no' always scores 99%.
+
+Practice: open `examples/10_expected_value_of_a_decision.py`, predict the output, change one line, predict again.
 
 ---
 

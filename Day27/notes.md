@@ -36,6 +36,8 @@ print(np.eye(3) @ A is not A, np.allclose(np.eye(3) @ A, A))
 
 **Common mistake:** Reaching for `np.linalg.inv` to solve `Ax=b` instead of the numerically safer `np.linalg.solve`.
 
+Practice: open `examples/01_representing_a_dataset_as_a_matrix.py`, predict the output, change one line, predict again.
+
 ## 2. Feature scaling as a linear map
 
 Distance and gradient-based models care about units: a salary column in rupees will dominate an age column purely by magnitude. Standardise (mean 0, std 1) for most models; min-max scale when you need a bounded [0,1] range. Tree models do not care.
@@ -57,6 +59,8 @@ print('cv accuracy', cross_val_score(pipe, X, y, cv=5).mean().round(4))
 
 **Common mistake:** Calling `fit_transform` on the full dataset before splitting — classic, silent, score-inflating leak.
 
+Practice: open `examples/02_feature_scaling_as_a_linear_map.py`, predict the output, change one line, predict again.
+
 ## 3. Normal equations for least squares
 
 A vector is a list of numbers with a direction and length. The dot product measures alignment: large and positive when two vectors point the same way, zero when perpendicular. Cosine similarity is the dot product with length divided out, which is why it compares embeddings of different magnitudes fairly.
@@ -76,6 +80,8 @@ print('cosine', cos)   # 1.0 -> same direction
 **Remember:** Cosine similarity ignores magnitude; Euclidean distance does not. Pick the one that matches your question.
 
 **Common mistake:** Comparing raw embeddings with Euclidean distance when only direction carries meaning.
+
+Practice: open `examples/03_normal_equations_for_least_squares.py`, predict the output, change one line, predict again.
 
 ## 4. Numerical stability in practice
 
@@ -98,6 +104,8 @@ print('float64 bytes', A.nbytes, '| float32 bytes', small.nbytes)
 
 **Common mistake:** Mixing float32 and float64 accidentally and silently doubling memory across a pipeline.
 
+Practice: open `examples/04_numerical_stability_in_practice.py`, predict the output, change one line, predict again.
+
 ## 5. float32 vs float64 trade-offs
 
 `einsum` writes tensor contractions as index notation — clearer than a chain of transposes and reshapes. float32 halves memory and is standard for training; float64 is for scientific work where accumulation error matters. Row-major layout means iterating along the last axis is cache-friendly and much faster.
@@ -118,6 +126,8 @@ print('float64 bytes', A.nbytes, '| float32 bytes', small.nbytes)
 **Remember:** Train in float32 (or bf16); reserve float64 for numerically delicate accumulations.
 
 **Common mistake:** Mixing float32 and float64 accidentally and silently doubling memory across a pipeline.
+
+Practice: open `examples/05_float32_vs_float64_trade_offs.py`, predict the output, change one line, predict again.
 
 ## 6. Broadcasting pitfalls in real code
 
@@ -140,6 +150,8 @@ print(a.sum(axis=1))             # row sums
 
 **Common mistake:** Looping over array elements in Python instead of using a vectorised operation.
 
+Practice: open `examples/06_broadcasting_pitfalls_in_real_code.py`, predict the output, change one line, predict again.
+
 ## 7. Einstein summation with einsum
 
 `einsum` writes tensor contractions as index notation — clearer than a chain of transposes and reshapes. float32 halves memory and is standard for training; float64 is for scientific work where accumulation error matters. Row-major layout means iterating along the last axis is cache-friendly and much faster.
@@ -160,6 +172,8 @@ print('float64 bytes', A.nbytes, '| float32 bytes', small.nbytes)
 **Remember:** Train in float32 (or bf16); reserve float64 for numerically delicate accumulations.
 
 **Common mistake:** Mixing float32 and float64 accidentally and silently doubling memory across a pipeline.
+
+Practice: open `examples/07_einstein_summation_with_einsum.py`, predict the output, change one line, predict again.
 
 ## 8. Memory layout and cache effects
 
@@ -182,6 +196,8 @@ print('float64 bytes', A.nbytes, '| float32 bytes', small.nbytes)
 
 **Common mistake:** Mixing float32 and float64 accidentally and silently doubling memory across a pipeline.
 
+Practice: open `examples/08_memory_layout_and_cache_effects.py`, predict the output, change one line, predict again.
+
 ## 9. Benchmarking matrix operations
 
 A matrix is a linear transformation. Multiplying matrices composes transformations, which is exactly what stacking neural network layers does. Shapes must line up: (m,k) @ (k,n) -> (m,n); the inner dimensions must match and they vanish.
@@ -200,6 +216,8 @@ print(np.eye(3) @ A is not A, np.allclose(np.eye(3) @ A, A))
 **Remember:** Read every shape error as 'the inner dimensions did not match' and print the shapes.
 
 **Common mistake:** Reaching for `np.linalg.inv` to solve `Ax=b` instead of the numerically safer `np.linalg.solve`.
+
+Practice: open `examples/09_benchmarking_matrix_operations.py`, predict the output, change one line, predict again.
 
 ## 10. Reading shapes in a model summary
 
@@ -225,6 +243,8 @@ for i in np.argsort(-imp.importances_mean)[:5]:
 **Remember:** Permutation importance on the TEST set answers 'what does this model rely on to generalise'.
 
 **Common mistake:** Presenting importance as causation — the model found correlation, nothing more.
+
+Practice: open `examples/10_reading_shapes_in_a_model_summary.py`, predict the output, change one line, predict again.
 
 ---
 

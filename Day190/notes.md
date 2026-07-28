@@ -42,6 +42,8 @@ print('shifted    PSI', round(psi(baseline, rng.normal(0.6, 1.2, 5_000)), 4))
 
 **Common mistake:** Only monitoring uptime, so a model that returns 200 OK while being badly wrong looks healthy.
 
+Practice: open `examples/01_goal_a_model_running_in_production_with_.py`, predict the output, change one line, predict again.
+
 ## 2. Packaging the trained pipeline
 
 A Pipeline chains preprocessing and the model into one object that fits and predicts as a unit. This is the single best defence against leakage, and it means deployment ships one artefact instead of six loose steps you must remember to repeat.
@@ -68,6 +70,8 @@ print(model.predict(df))
 **Remember:** `handle_unknown='ignore'` stops production crashing on a category you never saw in training.
 
 **Common mistake:** Preprocessing in a notebook and then forgetting one step when writing the serving code.
+
+Practice: open `examples/02_packaging_the_trained_pipeline.py`, predict the output, change one line, predict again.
 
 ## 3. FastAPI service with validation
 
@@ -99,6 +103,8 @@ print('Load once at startup; validate with a schema; expose /health for the load
 
 **Common mistake:** Reloading the model per request and wondering why p99 latency is four seconds.
 
+Practice: open `examples/03_fastapi_service_with_validation.py`, predict the output, change one line, predict again.
+
 ## 4. Dockerfile and local stack
 
 A container packages code, dependencies and the interpreter so it runs identically everywhere. Pin your versions, use a slim base, and keep model weights out of the image layer if they are large — mount or download them instead.
@@ -120,6 +126,8 @@ print('Copy requirements first so the pip layer caches across code changes.')
 **Remember:** `--no-cache-dir` and a slim base keep images small; small images deploy fast.
 
 **Common mistake:** `COPY . .` before `pip install`, which busts the dependency cache on every code edit.
+
+Practice: open `examples/04_dockerfile_and_local_stack.py`, predict the output, change one line, predict again.
 
 ## 5. CI with tests and an eval gate
 
@@ -149,6 +157,8 @@ assert hits == len(GOLDEN), 'regression: fix before shipping'
 
 **Common mistake:** Changing the prompt on Friday with no eval and finding out from customers on Monday.
 
+Practice: open `examples/05_ci_with_tests_and_an_eval_gate.py`, predict the output, change one line, predict again.
+
 ## 6. Deployment to a host
 
 A container packages code, dependencies and the interpreter so it runs identically everywhere. Pin your versions, use a slim base, and keep model weights out of the image layer if they are large — mount or download them instead.
@@ -171,6 +181,8 @@ print('Copy requirements first so the pip layer caches across code changes.')
 
 **Common mistake:** `COPY . .` before `pip install`, which busts the dependency cache on every code edit.
 
+Practice: open `examples/06_deployment_to_a_host.py`, predict the output, change one line, predict again.
+
 ## 7. Structured request/response logging
 
 Projects are where the learning sticks. Build a thin end-to-end slice first — load data, train something dumb, evaluate, serve one prediction — then improve one layer at a time. A working baseline on day one beats a perfect model that never ships.
@@ -192,6 +204,8 @@ for s in STEPS:
 **Remember:** Spend an hour looking at wrong predictions before you spend a day tuning hyperparameters.
 
 **Common mistake:** Six weeks of feature engineering with no baseline to prove any of it helped.
+
+Practice: open `examples/07_structured_request_response_logging.py`, predict the output, change one line, predict again.
 
 ## 8. Drift monitoring job
 
@@ -218,6 +232,8 @@ print('shifted    PSI', round(psi(baseline, rng.normal(0.6, 1.2, 5_000)), 4))
 
 **Common mistake:** Only monitoring uptime, so a model that returns 200 OK while being badly wrong looks healthy.
 
+Practice: open `examples/08_drift_monitoring_job.py`, predict the output, change one line, predict again.
+
 ## 9. Alerting and a runbook
 
 Projects are where the learning sticks. Build a thin end-to-end slice first — load data, train something dumb, evaluate, serve one prediction — then improve one layer at a time. A working baseline on day one beats a perfect model that never ships.
@@ -240,6 +256,8 @@ for s in STEPS:
 
 **Common mistake:** Six weeks of feature engineering with no baseline to prove any of it helped.
 
+Practice: open `examples/09_alerting_and_a_runbook.py`, predict the output, change one line, predict again.
+
 ## 10. Load test and cost report
 
 Projects are where the learning sticks. Build a thin end-to-end slice first — load data, train something dumb, evaluate, serve one prediction — then improve one layer at a time. A working baseline on day one beats a perfect model that never ships.
@@ -261,6 +279,8 @@ for s in STEPS:
 **Remember:** Spend an hour looking at wrong predictions before you spend a day tuning hyperparameters.
 
 **Common mistake:** Six weeks of feature engineering with no baseline to prove any of it helped.
+
+Practice: open `examples/10_load_test_and_cost_report.py`, predict the output, change one line, predict again.
 
 ---
 

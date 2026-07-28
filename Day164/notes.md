@@ -45,6 +45,8 @@ assert hits == len(GOLDEN), 'regression: fix before shipping'
 
 **Common mistake:** Changing the prompt on Friday with no eval and finding out from customers on Monday.
 
+Practice: open `examples/01_defining_success_for_a_fuzzy_task.py`, predict the output, change one line, predict again.
+
 ## 2. Golden datasets from real traffic
 
 Vibes do not survive a prompt change. Build a small golden set of real inputs with expected outputs, run it on every change, and track the score. Use an LLM judge for open-ended quality, but calibrate the judge against human ratings first.
@@ -72,6 +74,8 @@ assert hits == len(GOLDEN), 'regression: fix before shipping'
 **Remember:** 50 real examples you curated beat 5000 synthetic ones nobody checked.
 
 **Common mistake:** Changing the prompt on Friday with no eval and finding out from customers on Monday.
+
+Practice: open `examples/02_golden_datasets_from_real_traffic.py`, predict the output, change one line, predict again.
 
 ## 3. Deterministic checks first
 
@@ -101,6 +105,8 @@ assert hits == len(GOLDEN), 'regression: fix before shipping'
 
 **Common mistake:** Changing the prompt on Friday with no eval and finding out from customers on Monday.
 
+Practice: open `examples/03_deterministic_checks_first.py`, predict the output, change one line, predict again.
+
 ## 4. LLM judges with rubrics
 
 Vibes do not survive a prompt change. Build a small golden set of real inputs with expected outputs, run it on every change, and track the score. Use an LLM judge for open-ended quality, but calibrate the judge against human ratings first.
@@ -129,6 +135,8 @@ assert hits == len(GOLDEN), 'regression: fix before shipping'
 
 **Common mistake:** Changing the prompt on Friday with no eval and finding out from customers on Monday.
 
+Practice: open `examples/04_llm_judges_with_rubrics.py`, predict the output, change one line, predict again.
+
 ## 5. Pairwise preference evaluation
 
 After supervised tuning, models are aligned to human preference. RLHF trains a reward model on human comparisons, then optimises against it with PPO. DPO skips the reward model and optimises preference pairs directly — simpler, cheaper, and now the common choice.
@@ -150,6 +158,8 @@ print(f'margin {margin:.4f}  dpo loss {loss:.4f}')
 **Remember:** Alignment optimises a proxy for what humans want; the proxy can always be gamed.
 
 **Common mistake:** Over-optimising the reward model until outputs are sycophantic and useless — classic reward hacking.
+
+Practice: open `examples/05_pairwise_preference_evaluation.py`, predict the output, change one line, predict again.
 
 ## 6. Inter-rater agreement
 
@@ -179,6 +189,8 @@ assert hits == len(GOLDEN), 'regression: fix before shipping'
 
 **Common mistake:** Changing the prompt on Friday with no eval and finding out from customers on Monday.
 
+Practice: open `examples/06_inter_rater_agreement.py`, predict the output, change one line, predict again.
+
 ## 7. Regression suites in CI
 
 Vibes do not survive a prompt change. Build a small golden set of real inputs with expected outputs, run it on every change, and track the score. Use an LLM judge for open-ended quality, but calibrate the judge against human ratings first.
@@ -206,6 +218,8 @@ assert hits == len(GOLDEN), 'regression: fix before shipping'
 **Remember:** 50 real examples you curated beat 5000 synthetic ones nobody checked.
 
 **Common mistake:** Changing the prompt on Friday with no eval and finding out from customers on Monday.
+
+Practice: open `examples/07_regression_suites_in_ci.py`, predict the output, change one line, predict again.
 
 ## 8. Online metrics: thumbs, escalation rate
 
@@ -235,6 +249,8 @@ assert hits == len(GOLDEN), 'regression: fix before shipping'
 
 **Common mistake:** Changing the prompt on Friday with no eval and finding out from customers on Monday.
 
+Practice: open `examples/08_online_metrics_thumbs_escalation_rate.py`, predict the output, change one line, predict again.
+
 ## 9. Sampling production traffic for review
 
 A distribution says which values are likely. Gaussian for measurement noise, Bernoulli for yes/no, Poisson for counts per interval. Choosing the right one is choosing your loss function: Gaussian likelihood gives MSE, Bernoulli gives cross-entropy.
@@ -253,6 +269,8 @@ print('coin heads rate ', coin.mean())
 **Remember:** Always seed your RNG (`default_rng(0)`) when you want a result someone else can reproduce.
 
 **Common mistake:** Assuming Gaussian for skewed, bounded, or count data and then being surprised by the residuals.
+
+Practice: open `examples/09_sampling_production_traffic_for_review.py`, predict the output, change one line, predict again.
 
 ## 10. Closing the loop from eval to fix
 
@@ -281,6 +299,8 @@ assert hits == len(GOLDEN), 'regression: fix before shipping'
 **Remember:** 50 real examples you curated beat 5000 synthetic ones nobody checked.
 
 **Common mistake:** Changing the prompt on Friday with no eval and finding out from customers on Monday.
+
+Practice: open `examples/10_closing_the_loop_from_eval_to_fix.py`, predict the output, change one line, predict again.
 
 ---
 

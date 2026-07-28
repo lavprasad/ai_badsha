@@ -41,6 +41,8 @@ print(build_prompt('You answer from context only.',
 
 **Common mistake:** Letting a model-chosen tool call run with the caller's full privileges and no allowlist.
 
+Practice: open `examples/01_categories_of_harmful_content.py`, predict the output, change one line, predict again.
+
 ## 2. Input and output moderation
 
 Retrieved documents, web pages and user files are untrusted input. If your prompt concatenates them, an attacker can write 'ignore previous instructions' in a PDF and steer your agent. Treat model output as untrusted too, and put permission checks in code, not in the prompt.
@@ -64,6 +66,8 @@ print(build_prompt('You answer from context only.',
 **Remember:** Delimit untrusted content and enforce authorisation in code — a prompt is not a security boundary.
 
 **Common mistake:** Letting a model-chosen tool call run with the caller's full privileges and no allowlist.
+
+Practice: open `examples/02_input_and_output_moderation.py`, predict the output, change one line, predict again.
 
 ## 3. Refusal design that stays useful
 
@@ -89,6 +93,8 @@ print(build_prompt('You answer from context only.',
 
 **Common mistake:** Letting a model-chosen tool call run with the caller's full privileges and no allowlist.
 
+Practice: open `examples/03_refusal_design_that_stays_useful.py`, predict the output, change one line, predict again.
+
 ## 4. Over-refusal as a real failure
 
 Retrieved documents, web pages and user files are untrusted input. If your prompt concatenates them, an attacker can write 'ignore previous instructions' in a PDF and steer your agent. Treat model output as untrusted too, and put permission checks in code, not in the prompt.
@@ -112,6 +118,8 @@ print(build_prompt('You answer from context only.',
 **Remember:** Delimit untrusted content and enforce authorisation in code — a prompt is not a security boundary.
 
 **Common mistake:** Letting a model-chosen tool call run with the caller's full privileges and no allowlist.
+
+Practice: open `examples/04_over_refusal_as_a_real_failure.py`, predict the output, change one line, predict again.
 
 ## 5. Age and jurisdiction constraints
 
@@ -137,6 +145,8 @@ print(build_prompt('You answer from context only.',
 
 **Common mistake:** Letting a model-chosen tool call run with the caller's full privileges and no allowlist.
 
+Practice: open `examples/05_age_and_jurisdiction_constraints.py`, predict the output, change one line, predict again.
+
 ## 6. Escalation paths
 
 Retrieved documents, web pages and user files are untrusted input. If your prompt concatenates them, an attacker can write 'ignore previous instructions' in a PDF and steer your agent. Treat model output as untrusted too, and put permission checks in code, not in the prompt.
@@ -160,6 +170,8 @@ print(build_prompt('You answer from context only.',
 **Remember:** Delimit untrusted content and enforce authorisation in code — a prompt is not a security boundary.
 
 **Common mistake:** Letting a model-chosen tool call run with the caller's full privileges and no allowlist.
+
+Practice: open `examples/06_escalation_paths.py`, predict the output, change one line, predict again.
 
 ## 7. Red-teaming your own app
 
@@ -185,6 +197,8 @@ print(build_prompt('You answer from context only.',
 
 **Common mistake:** Letting a model-chosen tool call run with the caller's full privileges and no allowlist.
 
+Practice: open `examples/07_red_teaming_your_own_app.py`, predict the output, change one line, predict again.
+
 ## 8. Logging and incident response
 
 Retrieved documents, web pages and user files are untrusted input. If your prompt concatenates them, an attacker can write 'ignore previous instructions' in a PDF and steer your agent. Treat model output as untrusted too, and put permission checks in code, not in the prompt.
@@ -208,6 +222,8 @@ print(build_prompt('You answer from context only.',
 **Remember:** Delimit untrusted content and enforce authorisation in code — a prompt is not a security boundary.
 
 **Common mistake:** Letting a model-chosen tool call run with the caller's full privileges and no allowlist.
+
+Practice: open `examples/08_logging_and_incident_response.py`, predict the output, change one line, predict again.
 
 ## 9. Documenting known limitations
 
@@ -233,6 +249,8 @@ print(build_prompt('You answer from context only.',
 
 **Common mistake:** Letting a model-chosen tool call run with the caller's full privileges and no allowlist.
 
+Practice: open `examples/09_documenting_known_limitations.py`, predict the output, change one line, predict again.
+
 ## 10. Balancing safety and usefulness
 
 Retrieved documents, web pages and user files are untrusted input. If your prompt concatenates them, an attacker can write 'ignore previous instructions' in a PDF and steer your agent. Treat model output as untrusted too, and put permission checks in code, not in the prompt.
@@ -256,6 +274,8 @@ print(build_prompt('You answer from context only.',
 **Remember:** Delimit untrusted content and enforce authorisation in code — a prompt is not a security boundary.
 
 **Common mistake:** Letting a model-chosen tool call run with the caller's full privileges and no allowlist.
+
+Practice: open `examples/10_balancing_safety_and_usefulness.py`, predict the output, change one line, predict again.
 
 ---
 

@@ -35,6 +35,8 @@ print('\nStop after pass 1 for 90% of papers. That is not laziness, that is tria
 
 **Common mistake:** Reading twenty papers and implementing none — understanding without building fades in a week.
 
+Practice: open `examples/01_where_papers_appear_arxiv_and_conference.py`, predict the output, change one line, predict again.
+
 ## 2. The three-pass reading method
 
 Read in three passes: title/abstract/figures (5 minutes, decide if it matters), method and results (30 minutes, understand the idea), then full detail only if you will implement it. The limitations section is usually the most honest paragraph in the paper — read it early.
@@ -52,6 +54,8 @@ print('\nStop after pass 1 for 90% of papers. That is not laziness, that is tria
 **Remember:** Check which baselines they compared against. A weak baseline makes any method look strong.
 
 **Common mistake:** Reading twenty papers and implementing none — understanding without building fades in a week.
+
+Practice: open `examples/02_the_three_pass_reading_method.py`, predict the output, change one line, predict again.
 
 ## 3. Distinguishing contribution from packaging
 
@@ -71,6 +75,8 @@ print('\nStop after pass 1 for 90% of papers. That is not laziness, that is tria
 
 **Common mistake:** Reading twenty papers and implementing none — understanding without building fades in a week.
 
+Practice: open `examples/03_distinguishing_contribution_from_packagi.py`, predict the output, change one line, predict again.
+
 ## 4. Reading the limitations section first
 
 Read in three passes: title/abstract/figures (5 minutes, decide if it matters), method and results (30 minutes, understand the idea), then full detail only if you will implement it. The limitations section is usually the most honest paragraph in the paper — read it early.
@@ -88,6 +94,8 @@ print('\nStop after pass 1 for 90% of papers. That is not laziness, that is tria
 **Remember:** Check which baselines they compared against. A weak baseline makes any method look strong.
 
 **Common mistake:** Reading twenty papers and implementing none — understanding without building fades in a week.
+
+Practice: open `examples/04_reading_the_limitations_section_first.py`, predict the output, change one line, predict again.
 
 ## 5. Checking baselines for fairness
 
@@ -112,6 +120,8 @@ print('Large gaps here are the finding — investigate before shipping.')
 **Remember:** Dropping the sensitive attribute does not remove bias; proxies (pincode, name) carry it right back in.
 
 **Common mistake:** Auditing fairness once at launch and never again as the data drifts.
+
+Practice: open `examples/05_checking_baselines_for_fairness.py`, predict the output, change one line, predict again.
 
 ## 6. Reproducibility red flags
 
@@ -139,6 +149,8 @@ print(json.dumps(run_record({'lr': 0.01, 'depth': 6}, {'auc': 0.912}, 'data/trai
 
 **Common mistake:** Naming files `model_final_v2_REAL_use_this.pkl` instead of using a registry.
 
+Practice: open `examples/06_reproducibility_red_flags.py`, predict the output, change one line, predict again.
+
 ## 7. Following citation trails
 
 A language model predicts plausible tokens, not true ones. Fluent and wrong is its default failure mode. Reduce it by grounding answers in retrieved sources, requiring citations, allowing 'I don't know', and verifying claims that carry cost.
@@ -158,6 +170,8 @@ print(answer_with_guard('CEO home address?', [{'id': 'policy.pdf#3', 'text': 'Re
 
 **Common mistake:** Shipping a chatbot with no abstain path, so it invents a policy under pressure.
 
+Practice: open `examples/07_following_citation_trails.py`, predict the output, change one line, predict again.
+
 ## 8. Keeping a paper notebook
 
 Notebooks keep state between cells, which is great for exploring and terrible for reproducibility. Treat the notebook as a scratchpad; once logic settles, move it into a `.py` module you can import and test.
@@ -173,6 +187,8 @@ df.head()
 **Remember:** 'Restart kernel and run all' is the only honest test that a notebook works.
 
 **Common mistake:** Shipping a notebook whose results depend on a deleted cell you ran ten minutes ago.
+
+Practice: open `examples/08_keeping_a_paper_notebook.py`, predict the output, change one line, predict again.
 
 ## 9. Implementing one idea per month
 
@@ -191,6 +207,8 @@ print('\nStop after pass 1 for 90% of papers. That is not laziness, that is tria
 **Remember:** Check which baselines they compared against. A weak baseline makes any method look strong.
 
 **Common mistake:** Reading twenty papers and implementing none — understanding without building fades in a week.
+
+Practice: open `examples/09_implementing_one_idea_per_month.py`, predict the output, change one line, predict again.
 
 ## 10. Staying current without drowning
 
@@ -211,6 +229,8 @@ for q in PAPER_CHECKLIST:
 **Remember:** If you cannot explain why your validation split is honest, you do not own the project yet.
 
 **Common mistake:** Listing twenty frameworks on a CV and being unable to debug a shape error in any of them.
+
+Practice: open `examples/10_staying_current_without_drowning.py`, predict the output, change one line, predict again.
 
 ---
 

@@ -42,6 +42,8 @@ print('shape', pe.shape)
 
 **Common mistake:** Assuming a bigger context window is free — attention cost grows with the square of sequence length.
 
+Practice: open `examples/01_images_as_patch_sequences.py`, predict the output, change one line, predict again.
+
 ## 2. Patch embedding
 
 An embedding maps text to a dense vector where nearby means similar in meaning. Unlike keyword search, 'car trouble' matches 'engine won't start'. Every RAG system is embeddings plus nearest-neighbour lookup.
@@ -68,6 +70,8 @@ print('king - man + woman ~', best)
 **Remember:** Normalise embeddings, then cosine similarity is just a dot product — much faster at scale.
 
 **Common mistake:** Mixing vectors from two different embedding models in one index; the spaces are unrelated.
+
+Practice: open `examples/02_patch_embedding.py`, predict the output, change one line, predict again.
 
 ## 3. Positional embeddings for images
 
@@ -96,6 +100,8 @@ print('king - man + woman ~', best)
 
 **Common mistake:** Mixing vectors from two different embedding models in one index; the spaces are unrelated.
 
+Practice: open `examples/03_positional_embeddings_for_images.py`, predict the output, change one line, predict again.
+
 ## 4. ViT architecture
 
 A transformer block is attention + feed-forward, each wrapped in a residual connection and a LayerNorm. Attention alone is order-blind, so positions are injected explicitly. Encoder-only (BERT) is for understanding, decoder-only (GPT) for generation, encoder-decoder (T5) for translation-shaped tasks.
@@ -120,6 +126,8 @@ print('shape', pe.shape)
 **Remember:** Block = LayerNorm -> Attention -> add residual -> LayerNorm -> MLP -> add residual. Memorise it.
 
 **Common mistake:** Assuming a bigger context window is free — attention cost grows with the square of sequence length.
+
+Practice: open `examples/04_vit_architecture.py`, predict the output, change one line, predict again.
 
 ## 5. Data hunger of ViTs
 
@@ -146,6 +154,8 @@ print('shape', pe.shape)
 
 **Common mistake:** Assuming a bigger context window is free — attention cost grows with the square of sequence length.
 
+Practice: open `examples/05_data_hunger_of_vits.py`, predict the output, change one line, predict again.
+
 ## 6. DeiT and distillation
 
 A transformer block is attention + feed-forward, each wrapped in a residual connection and a LayerNorm. Attention alone is order-blind, so positions are injected explicitly. Encoder-only (BERT) is for understanding, decoder-only (GPT) for generation, encoder-decoder (T5) for translation-shaped tasks.
@@ -171,6 +181,8 @@ print('shape', pe.shape)
 
 **Common mistake:** Assuming a bigger context window is free — attention cost grows with the square of sequence length.
 
+Practice: open `examples/06_deit_and_distillation.py`, predict the output, change one line, predict again.
+
 ## 7. Swin and hierarchical attention
 
 Clustering groups points with no labels. K-means needs you to pick k and assumes round, similar-sized blobs. DBSCAN finds arbitrary shapes and marks noise but needs a density radius. Always validate clusters against something you understand — clustering will happily invent structure in noise.
@@ -190,6 +202,8 @@ for k in range(2, 7):
 **Remember:** Silhouette near 1 means tight, well-separated clusters; near 0 means the boundaries are arbitrary.
 
 **Common mistake:** Reading cluster IDs as meaningful labels — they are arbitrary and change between runs.
+
+Practice: open `examples/07_swin_and_hierarchical_attention.py`, predict the output, change one line, predict again.
 
 ## 8. ViT vs CNN trade-offs
 
@@ -218,6 +232,8 @@ print(out)   # the edge column lights up
 
 **Common mistake:** Forgetting the channel dimension and feeding (H,W) where the layer expects (N,C,H,W).
 
+Practice: open `examples/08_vit_vs_cnn_trade_offs.py`, predict the output, change one line, predict again.
+
 ## 9. Fine-tuning a ViT
 
 Hyperparameters are the settings you choose, not learn. Grid search is exhaustive and wasteful; random search finds good regions faster in high dimensions; Bayesian search learns from previous trials. Always search inside cross-validation.
@@ -245,6 +261,8 @@ print(search.best_params_, round(search.best_score_, 4))
 
 **Common mistake:** Tuning 40 hyperparameters on 400 rows — you are now fitting the validation set.
 
+Practice: open `examples/09_fine_tuning_a_vit.py`, predict the output, change one line, predict again.
+
 ## 10. Attention maps as explanation
 
 Attention lets every token look at every other token and decide what matters. Each token emits a query, a key and a value; the query-key dot products become weights over the values. Multiple heads let the model attend to several relationships at once.
@@ -271,6 +289,8 @@ print('output shape', (weights @ V).shape)
 **Remember:** The 1/sqrt(d) scale is not cosmetic — without it softmax saturates and gradients die.
 
 **Common mistake:** Omitting the causal mask in a decoder, so the model trivially cheats by reading the next token.
+
+Practice: open `examples/10_attention_maps_as_explanation.py`, predict the output, change one line, predict again.
 
 ---
 

@@ -39,6 +39,8 @@ for depth in (1, 3, 8, None):
 
 **Common mistake:** Adding capacity to fix a gap that was caused by too little data or a leak, not by too little capacity.
 
+Practice: open `examples/01_overfitting_in_high_capacity_models.py`, predict the output, change one line, predict again.
+
 ## 2. Weight decay
 
 Regularisation penalises large weights so the model prefers simpler explanations. L2 (ridge) shrinks everything smoothly; L1 (lasso) drives some weights exactly to zero and thereby selects features. Elastic net mixes both.
@@ -59,6 +61,8 @@ print('lasso non-zero coefs', int(np.sum(np.abs(lasso.coef_) > 1e-6)))
 **Remember:** Scale features before regularising, or the penalty punishes whichever column happens to use small units.
 
 **Common mistake:** Tuning `alpha` on the test set — pick it with cross-validation on train only.
+
+Practice: open `examples/02_weight_decay.py`, predict the output, change one line, predict again.
 
 ## 3. Dropout
 
@@ -81,6 +85,8 @@ print('lasso non-zero coefs', int(np.sum(np.abs(lasso.coef_) > 1e-6)))
 
 **Common mistake:** Tuning `alpha` on the test set — pick it with cross-validation on train only.
 
+Practice: open `examples/03_dropout.py`, predict the output, change one line, predict again.
+
 ## 4. Inverted dropout at inference
 
 Regularisation penalises large weights so the model prefers simpler explanations. L2 (ridge) shrinks everything smoothly; L1 (lasso) drives some weights exactly to zero and thereby selects features. Elastic net mixes both.
@@ -101,6 +107,8 @@ print('lasso non-zero coefs', int(np.sum(np.abs(lasso.coef_) > 1e-6)))
 **Remember:** Scale features before regularising, or the penalty punishes whichever column happens to use small units.
 
 **Common mistake:** Tuning `alpha` on the test set — pick it with cross-validation on train only.
+
+Practice: open `examples/04_inverted_dropout_at_inference.py`, predict the output, change one line, predict again.
 
 ## 5. Early stopping
 
@@ -123,6 +131,8 @@ print('lasso non-zero coefs', int(np.sum(np.abs(lasso.coef_) > 1e-6)))
 
 **Common mistake:** Tuning `alpha` on the test set — pick it with cross-validation on train only.
 
+Practice: open `examples/05_early_stopping.py`, predict the output, change one line, predict again.
+
 ## 6. Data augmentation as regularisation
 
 Regularisation penalises large weights so the model prefers simpler explanations. L2 (ridge) shrinks everything smoothly; L1 (lasso) drives some weights exactly to zero and thereby selects features. Elastic net mixes both.
@@ -143,6 +153,8 @@ print('lasso non-zero coefs', int(np.sum(np.abs(lasso.coef_) > 1e-6)))
 **Remember:** Scale features before regularising, or the penalty punishes whichever column happens to use small units.
 
 **Common mistake:** Tuning `alpha` on the test set — pick it with cross-validation on train only.
+
+Practice: open `examples/06_data_augmentation_as_regularisation.py`, predict the output, change one line, predict again.
 
 ## 7. Label smoothing
 
@@ -165,6 +177,8 @@ print('lasso non-zero coefs', int(np.sum(np.abs(lasso.coef_) > 1e-6)))
 
 **Common mistake:** Tuning `alpha` on the test set — pick it with cross-validation on train only.
 
+Practice: open `examples/07_label_smoothing.py`, predict the output, change one line, predict again.
+
 ## 8. Mixup and CutMix
 
 Regularisation penalises large weights so the model prefers simpler explanations. L2 (ridge) shrinks everything smoothly; L1 (lasso) drives some weights exactly to zero and thereby selects features. Elastic net mixes both.
@@ -185,6 +199,8 @@ print('lasso non-zero coefs', int(np.sum(np.abs(lasso.coef_) > 1e-6)))
 **Remember:** Scale features before regularising, or the penalty punishes whichever column happens to use small units.
 
 **Common mistake:** Tuning `alpha` on the test set — pick it with cross-validation on train only.
+
+Practice: open `examples/08_mixup_and_cutmix.py`, predict the output, change one line, predict again.
 
 ## 9. Ensembling and snapshot ensembles
 
@@ -207,6 +223,8 @@ print('lasso non-zero coefs', int(np.sum(np.abs(lasso.coef_) > 1e-6)))
 
 **Common mistake:** Tuning `alpha` on the test set — pick it with cross-validation on train only.
 
+Practice: open `examples/09_ensembling_and_snapshot_ensembles.py`, predict the output, change one line, predict again.
+
 ## 10. Choosing regularisation by symptom
 
 Regularisation penalises large weights so the model prefers simpler explanations. L2 (ridge) shrinks everything smoothly; L1 (lasso) drives some weights exactly to zero and thereby selects features. Elastic net mixes both.
@@ -227,6 +245,8 @@ print('lasso non-zero coefs', int(np.sum(np.abs(lasso.coef_) > 1e-6)))
 **Remember:** Scale features before regularising, or the penalty punishes whichever column happens to use small units.
 
 **Common mistake:** Tuning `alpha` on the test set — pick it with cross-validation on train only.
+
+Practice: open `examples/10_choosing_regularisation_by_symptom.py`, predict the output, change one line, predict again.
 
 ---
 

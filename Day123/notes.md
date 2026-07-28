@@ -36,6 +36,8 @@ print('coin heads rate ', coin.mean())
 
 **Common mistake:** Assuming Gaussian for skewed, bounded, or count data and then being surprised by the residuals.
 
+Practice: open `examples/01_distributional_semantics.py`, predict the output, change one line, predict again.
+
 ## 2. Word2vec skip-gram
 
 An embedding maps text to a dense vector where nearby means similar in meaning. Unlike keyword search, 'car trouble' matches 'engine won't start'. Every RAG system is embeddings plus nearest-neighbour lookup.
@@ -62,6 +64,8 @@ print('king - man + woman ~', best)
 **Remember:** Normalise embeddings, then cosine similarity is just a dot product — much faster at scale.
 
 **Common mistake:** Mixing vectors from two different embedding models in one index; the spaces are unrelated.
+
+Practice: open `examples/02_word2vec_skip_gram.py`, predict the output, change one line, predict again.
 
 ## 3. CBOW
 
@@ -90,6 +94,8 @@ print('king - man + woman ~', best)
 
 **Common mistake:** Mixing vectors from two different embedding models in one index; the spaces are unrelated.
 
+Practice: open `examples/03_cbow.py`, predict the output, change one line, predict again.
+
 ## 4. Negative sampling
 
 A distribution says which values are likely. Gaussian for measurement noise, Bernoulli for yes/no, Poisson for counts per interval. Choosing the right one is choosing your loss function: Gaussian likelihood gives MSE, Bernoulli gives cross-entropy.
@@ -108,6 +114,8 @@ print('coin heads rate ', coin.mean())
 **Remember:** Always seed your RNG (`default_rng(0)`) when you want a result someone else can reproduce.
 
 **Common mistake:** Assuming Gaussian for skewed, bounded, or count data and then being surprised by the residuals.
+
+Practice: open `examples/04_negative_sampling.py`, predict the output, change one line, predict again.
 
 ## 5. GloVe
 
@@ -136,6 +144,8 @@ print('king - man + woman ~', best)
 
 **Common mistake:** Mixing vectors from two different embedding models in one index; the spaces are unrelated.
 
+Practice: open `examples/05_glove.py`, predict the output, change one line, predict again.
+
 ## 6. FastText and subword vectors
 
 A vector is a list of numbers with a direction and length. The dot product measures alignment: large and positive when two vectors point the same way, zero when perpendicular. Cosine similarity is the dot product with length divided out, which is why it compares embeddings of different magnitudes fairly.
@@ -155,6 +165,8 @@ print('cosine', cos)   # 1.0 -> same direction
 **Remember:** Cosine similarity ignores magnitude; Euclidean distance does not. Pick the one that matches your question.
 
 **Common mistake:** Comparing raw embeddings with Euclidean distance when only direction carries meaning.
+
+Practice: open `examples/06_fasttext_and_subword_vectors.py`, predict the output, change one line, predict again.
 
 ## 7. Embedding arithmetic and analogies
 
@@ -183,6 +195,8 @@ print('king - man + woman ~', best)
 
 **Common mistake:** Mixing vectors from two different embedding models in one index; the spaces are unrelated.
 
+Practice: open `examples/07_embedding_arithmetic_and_analogies.py`, predict the output, change one line, predict again.
+
 ## 8. Bias encoded in embeddings
 
 An embedding maps text to a dense vector where nearby means similar in meaning. Unlike keyword search, 'car trouble' matches 'engine won't start'. Every RAG system is embeddings plus nearest-neighbour lookup.
@@ -209,6 +223,8 @@ print('king - man + woman ~', best)
 **Remember:** Normalise embeddings, then cosine similarity is just a dot product — much faster at scale.
 
 **Common mistake:** Mixing vectors from two different embedding models in one index; the spaces are unrelated.
+
+Practice: open `examples/08_bias_encoded_in_embeddings.py`, predict the output, change one line, predict again.
 
 ## 9. Static vs contextual embeddings
 
@@ -237,6 +253,8 @@ print('king - man + woman ~', best)
 
 **Common mistake:** Mixing vectors from two different embedding models in one index; the spaces are unrelated.
 
+Practice: open `examples/09_static_vs_contextual_embeddings.py`, predict the output, change one line, predict again.
+
 ## 10. Training embeddings on your own corpus
 
 An embedding maps text to a dense vector where nearby means similar in meaning. Unlike keyword search, 'car trouble' matches 'engine won't start'. Every RAG system is embeddings plus nearest-neighbour lookup.
@@ -263,6 +281,8 @@ print('king - man + woman ~', best)
 **Remember:** Normalise embeddings, then cosine similarity is just a dot product — much faster at scale.
 
 **Common mistake:** Mixing vectors from two different embedding models in one index; the spaces are unrelated.
+
+Practice: open `examples/10_training_embeddings_on_your_own_corpus.py`, predict the output, change one line, predict again.
 
 ---
 

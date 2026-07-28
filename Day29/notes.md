@@ -43,6 +43,8 @@ print(safe_ratio(1.0, 0.0))
 
 **Common mistake:** Getting `nan` deep in training and only then discovering an `exp()` overflowed twelve steps earlier.
 
+Practice: open `examples/01_floating_point_representation.py`, predict the output, change one line, predict again.
+
 ## 2. Catastrophic cancellation
 
 Floats are approximations. Subtracting two nearly equal numbers destroys precision; exponentiating large numbers overflows to inf; dividing by a tiny number explodes. The log-sum-exp trick and a small epsilon in denominators are the two fixes you will use constantly.
@@ -68,6 +70,8 @@ print(safe_ratio(1.0, 0.0))
 **Remember:** Compare floats with a tolerance (`np.isclose`), never with `==`.
 
 **Common mistake:** Getting `nan` deep in training and only then discovering an `exp()` overflowed twelve steps earlier.
+
+Practice: open `examples/02_catastrophic_cancellation.py`, predict the output, change one line, predict again.
 
 ## 3. Overflow and underflow
 
@@ -95,6 +99,8 @@ print(safe_ratio(1.0, 0.0))
 
 **Common mistake:** Getting `nan` deep in training and only then discovering an `exp()` overflowed twelve steps earlier.
 
+Practice: open `examples/03_overflow_and_underflow.py`, predict the output, change one line, predict again.
+
 ## 4. The log-sum-exp trick
 
 Floats are approximations. Subtracting two nearly equal numbers destroys precision; exponentiating large numbers overflows to inf; dividing by a tiny number explodes. The log-sum-exp trick and a small epsilon in denominators are the two fixes you will use constantly.
@@ -120,6 +126,8 @@ print(safe_ratio(1.0, 0.0))
 **Remember:** Compare floats with a tolerance (`np.isclose`), never with `==`.
 
 **Common mistake:** Getting `nan` deep in training and only then discovering an `exp()` overflowed twelve steps earlier.
+
+Practice: open `examples/04_the_log_sum_exp_trick.py`, predict the output, change one line, predict again.
 
 ## 5. Epsilon in denominators
 
@@ -147,6 +155,8 @@ print(safe_ratio(1.0, 0.0))
 
 **Common mistake:** Getting `nan` deep in training and only then discovering an `exp()` overflowed twelve steps earlier.
 
+Practice: open `examples/05_epsilon_in_denominators.py`, predict the output, change one line, predict again.
+
 ## 6. NaN propagation and how to find the source
 
 Missing data is information, not just noise. Before filling anything, ask *why* it is missing: a sensor that fails only under load is not missing at random. Then choose: drop rows, drop the column, fill with a statistic, or add an explicit 'was missing' indicator column.
@@ -166,6 +176,8 @@ print(df)
 **Remember:** Compute the fill statistic on the TRAIN split only, then apply it to test.
 
 **Common mistake:** Filling with the mean computed over the full dataset — that leaks test information into training.
+
+Practice: open `examples/06_nan_propagation_and_how_to_find_the_sour.py`, predict the output, change one line, predict again.
 
 ## 7. Deterministic seeds vs true randomness
 
@@ -193,6 +205,8 @@ print(safe_ratio(1.0, 0.0))
 
 **Common mistake:** Getting `nan` deep in training and only then discovering an `exp()` overflowed twelve steps earlier.
 
+Practice: open `examples/07_deterministic_seeds_vs_true_randomness.py`, predict the output, change one line, predict again.
+
 ## 8. Reproducibility across hardware
 
 An experiment you cannot reproduce is an anecdote. Track for every run: code commit, data version, hyperparameters, metrics and the artefact. Six months later, 'which run produced the model in production' must have an answer.
@@ -219,6 +233,8 @@ print(json.dumps(run_record({'lr': 0.01, 'depth': 6}, {'auc': 0.912}, 'data/trai
 
 **Common mistake:** Naming files `model_final_v2_REAL_use_this.pkl` instead of using a registry.
 
+Practice: open `examples/08_reproducibility_across_hardware.py`, predict the output, change one line, predict again.
+
 ## 9. Numerical gradient checking
 
 The derivative answers: if I nudge this input a little, how much does the output move? The gradient is that answer for every input at once, so it points uphill. Training walks downhill by stepping against the gradient. The chain rule is what lets you propagate that answer through a stack of layers.
@@ -240,6 +256,8 @@ print('analytic ', 2 * x + 3)   # should match to ~1e-6
 **Remember:** A central difference `(f(x+h)-f(x-h))/2h` is the cheapest way to check a hand-written gradient.
 
 **Common mistake:** Trusting a derivation you never gradient-checked; a sign error trains slowly instead of failing loudly.
+
+Practice: open `examples/09_numerical_gradient_checking.py`, predict the output, change one line, predict again.
 
 ## 10. Debugging a silently wrong computation
 
@@ -266,6 +284,8 @@ print(safe_ratio(1.0, 0.0))
 **Remember:** Compare floats with a tolerance (`np.isclose`), never with `==`.
 
 **Common mistake:** Getting `nan` deep in training and only then discovering an `exp()` overflowed twelve steps earlier.
+
+Practice: open `examples/10_debugging_a_silently_wrong_computation.py`, predict the output, change one line, predict again.
 
 ---
 

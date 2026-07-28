@@ -42,6 +42,8 @@ print('states shape', states.shape)
 
 **Common mistake:** Feeding unsorted variable-length sequences without padding masks, so padding tokens pollute the state.
 
+Practice: open `examples/01_rnns_for_text.py`, predict the output, change one line, predict again.
+
 ## 2. LSTM for sequence labelling
 
 An RNN carries a hidden state along the sequence, so order matters. Plain RNNs forget quickly because gradients vanish over long spans; LSTM and GRU add gates that let information flow unchanged across many steps. Transformers have largely replaced them, but the intuition about state and memory still matters.
@@ -66,6 +68,8 @@ print('states shape', states.shape)
 **Remember:** RNNs are inherently sequential — they cannot parallelise across time, which is why transformers won.
 
 **Common mistake:** Feeding unsorted variable-length sequences without padding masks, so padding tokens pollute the state.
+
+Practice: open `examples/02_lstm_for_sequence_labelling.py`, predict the output, change one line, predict again.
 
 ## 3. Bidirectional context
 
@@ -92,6 +96,8 @@ print('states shape', states.shape)
 
 **Common mistake:** Feeding unsorted variable-length sequences without padding masks, so padding tokens pollute the state.
 
+Practice: open `examples/03_bidirectional_context.py`, predict the output, change one line, predict again.
+
 ## 4. Sequence-to-sequence translation
 
 An RNN carries a hidden state along the sequence, so order matters. Plain RNNs forget quickly because gradients vanish over long spans; LSTM and GRU add gates that let information flow unchanged across many steps. Transformers have largely replaced them, but the intuition about state and memory still matters.
@@ -116,6 +122,8 @@ print('states shape', states.shape)
 **Remember:** RNNs are inherently sequential — they cannot parallelise across time, which is why transformers won.
 
 **Common mistake:** Feeding unsorted variable-length sequences without padding masks, so padding tokens pollute the state.
+
+Practice: open `examples/04_sequence_to_sequence_translation.py`, predict the output, change one line, predict again.
 
 ## 5. Teacher forcing
 
@@ -142,6 +150,8 @@ print('states shape', states.shape)
 
 **Common mistake:** Feeding unsorted variable-length sequences without padding masks, so padding tokens pollute the state.
 
+Practice: open `examples/05_teacher_forcing.py`, predict the output, change one line, predict again.
+
 ## 6. Beam search decoding
 
 An RNN carries a hidden state along the sequence, so order matters. Plain RNNs forget quickly because gradients vanish over long spans; LSTM and GRU add gates that let information flow unchanged across many steps. Transformers have largely replaced them, but the intuition about state and memory still matters.
@@ -166,6 +176,8 @@ print('states shape', states.shape)
 **Remember:** RNNs are inherently sequential — they cannot parallelise across time, which is why transformers won.
 
 **Common mistake:** Feeding unsorted variable-length sequences without padding masks, so padding tokens pollute the state.
+
+Practice: open `examples/06_beam_search_decoding.py`, predict the output, change one line, predict again.
 
 ## 7. The context bottleneck
 
@@ -192,6 +204,8 @@ print('states shape', states.shape)
 
 **Common mistake:** Feeding unsorted variable-length sequences without padding masks, so padding tokens pollute the state.
 
+Practice: open `examples/07_the_context_bottleneck.py`, predict the output, change one line, predict again.
+
 ## 8. Attention added to seq2seq
 
 An RNN carries a hidden state along the sequence, so order matters. Plain RNNs forget quickly because gradients vanish over long spans; LSTM and GRU add gates that let information flow unchanged across many steps. Transformers have largely replaced them, but the intuition about state and memory still matters.
@@ -216,6 +230,8 @@ print('states shape', states.shape)
 **Remember:** RNNs are inherently sequential — they cannot parallelise across time, which is why transformers won.
 
 **Common mistake:** Feeding unsorted variable-length sequences without padding masks, so padding tokens pollute the state.
+
+Practice: open `examples/08_attention_added_to_seq2seq.py`, predict the output, change one line, predict again.
 
 ## 9. Why this architecture ended
 
@@ -242,6 +258,8 @@ print('states shape', states.shape)
 
 **Common mistake:** Feeding unsorted variable-length sequences without padding masks, so padding tokens pollute the state.
 
+Practice: open `examples/09_why_this_architecture_ended.py`, predict the output, change one line, predict again.
+
 ## 10. What still carries over
 
 An RNN carries a hidden state along the sequence, so order matters. Plain RNNs forget quickly because gradients vanish over long spans; LSTM and GRU add gates that let information flow unchanged across many steps. Transformers have largely replaced them, but the intuition about state and memory still matters.
@@ -266,6 +284,8 @@ print('states shape', states.shape)
 **Remember:** RNNs are inherently sequential — they cannot parallelise across time, which is why transformers won.
 
 **Common mistake:** Feeding unsorted variable-length sequences without padding masks, so padding tokens pollute the state.
+
+Practice: open `examples/10_what_still_carries_over.py`, predict the output, change one line, predict again.
 
 ---
 

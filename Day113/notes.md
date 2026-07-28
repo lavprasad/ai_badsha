@@ -38,6 +38,8 @@ print(df.merge(lookup, on='city', how='left'))
 
 **Common mistake:** Chained assignment (`df[df.a > 1]['b'] = 0`) that writes to a copy and changes nothing.
 
+Practice: open `examples/01_joint_image_text_embedding_space.py`, predict the output, change one line, predict again.
+
 ## 2. Contrastive pretraining at scale
 
 Pretraining is one absurdly simple objective at enormous scale: predict the next token. Everything else — grammar, facts, reasoning traces, style — falls out of doing that well over trillions of tokens. Scaling laws say loss falls predictably with model size, data and compute together.
@@ -64,6 +66,8 @@ print(' '.join(out))   # a 2-gram LM: same objective, 10 orders of magnitude sma
 
 **Common mistake:** Believing a base model will follow instructions; that behaviour comes from the tuning stages after.
 
+Practice: open `examples/02_contrastive_pretraining_at_scale.py`, predict the output, change one line, predict again.
+
 ## 3. Zero-shot classification
 
 A prompt is a program written in English. Be specific about role, task, format and constraints. Few-shot examples teach format better than any description. Asking for reasoning steps helps on multi-step problems and wastes tokens on simple lookups.
@@ -87,6 +91,8 @@ print('Structure: role -> task -> allowed outputs -> format -> examples -> input
 **Remember:** Put the output format last and show it as an example — models copy the nearest pattern.
 
 **Common mistake:** Writing a vague prompt, getting vague output, and blaming the model.
+
+Practice: open `examples/03_zero_shot_classification.py`, predict the output, change one line, predict again.
 
 ## 4. Prompt templates for CLIP
 
@@ -112,6 +118,8 @@ print('zero-shot pick:', labels[int(np.argmax(scores))], scores.round(3))
 
 **Common mistake:** Feeding an image at the wrong resolution or normalisation and getting silent quality loss.
 
+Practice: open `examples/04_prompt_templates_for_clip.py`, predict the output, change one line, predict again.
+
 ## 5. Image search by description
 
 Multimodal models put images and text in one shared embedding space, so a picture of a dog lands near the words 'a dog'. That single trick gives you zero-shot classification, image search by description, and captioning — with no task-specific training.
@@ -135,6 +143,8 @@ print('zero-shot pick:', labels[int(np.argmax(scores))], scores.round(3))
 **Remember:** Zero-shot quality depends heavily on prompt wording — 'a photo of a {}' beats a bare noun.
 
 **Common mistake:** Feeding an image at the wrong resolution or normalisation and getting silent quality loss.
+
+Practice: open `examples/05_image_search_by_description.py`, predict the output, change one line, predict again.
 
 ## 6. Image captioning
 
@@ -160,6 +170,8 @@ print('zero-shot pick:', labels[int(np.argmax(scores))], scores.round(3))
 
 **Common mistake:** Feeding an image at the wrong resolution or normalisation and getting silent quality loss.
 
+Practice: open `examples/06_image_captioning.py`, predict the output, change one line, predict again.
+
 ## 7. Visual question answering
 
 Multimodal models put images and text in one shared embedding space, so a picture of a dog lands near the words 'a dog'. That single trick gives you zero-shot classification, image search by description, and captioning — with no task-specific training.
@@ -183,6 +195,8 @@ print('zero-shot pick:', labels[int(np.argmax(scores))], scores.round(3))
 **Remember:** Zero-shot quality depends heavily on prompt wording — 'a photo of a {}' beats a bare noun.
 
 **Common mistake:** Feeding an image at the wrong resolution or normalisation and getting silent quality loss.
+
+Practice: open `examples/07_visual_question_answering.py`, predict the output, change one line, predict again.
 
 ## 8. Vision-language models today
 
@@ -208,6 +222,8 @@ print('zero-shot pick:', labels[int(np.argmax(scores))], scores.round(3))
 
 **Common mistake:** Feeding an image at the wrong resolution or normalisation and getting silent quality loss.
 
+Practice: open `examples/08_vision_language_models_today.py`, predict the output, change one line, predict again.
+
 ## 9. Failure modes of zero-shot
 
 A prompt is a program written in English. Be specific about role, task, format and constraints. Few-shot examples teach format better than any description. Asking for reasoning steps helps on multi-step problems and wastes tokens on simple lookups.
@@ -232,6 +248,8 @@ print('Structure: role -> task -> allowed outputs -> format -> examples -> input
 
 **Common mistake:** Writing a vague prompt, getting vague output, and blaming the model.
 
+Practice: open `examples/09_failure_modes_of_zero_shot.py`, predict the output, change one line, predict again.
+
 ## 10. Building a semantic image search
 
 Multimodal models put images and text in one shared embedding space, so a picture of a dog lands near the words 'a dog'. That single trick gives you zero-shot classification, image search by description, and captioning — with no task-specific training.
@@ -255,6 +273,8 @@ print('zero-shot pick:', labels[int(np.argmax(scores))], scores.round(3))
 **Remember:** Zero-shot quality depends heavily on prompt wording — 'a photo of a {}' beats a bare noun.
 
 **Common mistake:** Feeding an image at the wrong resolution or normalisation and getting silent quality loss.
+
+Practice: open `examples/10_building_a_semantic_image_search.py`, predict the output, change one line, predict again.
 
 ---
 

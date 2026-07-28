@@ -49,6 +49,8 @@ test_preprocess()
 
 **Common mistake:** Testing only the happy path, so an all-null column silently trains a constant model.
 
+Practice: open `examples/01_continuous_integration_basics.py`, predict the output, change one line, predict again.
+
 ## 2. Linting and formatting gates
 
 ML code needs the same tests as any code, plus data tests: schema, ranges, null rates, class balance. Add one behavioural test per known failure mode — a test that would have caught last quarter's outage is worth more than 90% coverage.
@@ -80,6 +82,8 @@ test_preprocess()
 **Remember:** Test the data contract, not just the function — bad data breaks more models than bad code.
 
 **Common mistake:** Testing only the happy path, so an all-null column silently trains a constant model.
+
+Practice: open `examples/02_linting_and_formatting_gates.py`, predict the output, change one line, predict again.
 
 ## 3. Running tests on every push
 
@@ -113,6 +117,8 @@ test_preprocess()
 
 **Common mistake:** Testing only the happy path, so an all-null column silently trains a constant model.
 
+Practice: open `examples/03_running_tests_on_every_push.py`, predict the output, change one line, predict again.
+
 ## 4. Training in CI: when it makes sense
 
 ML code needs the same tests as any code, plus data tests: schema, ranges, null rates, class balance. Add one behavioural test per known failure mode — a test that would have caught last quarter's outage is worth more than 90% coverage.
@@ -145,6 +151,8 @@ test_preprocess()
 
 **Common mistake:** Testing only the happy path, so an all-null column silently trains a constant model.
 
+Practice: open `examples/04_training_in_ci_when_it_makes_sense.py`, predict the output, change one line, predict again.
+
 ## 5. Evaluation gates before deploy
 
 Vibes do not survive a prompt change. Build a small golden set of real inputs with expected outputs, run it on every change, and track the score. Use an LLM judge for open-ended quality, but calibrate the judge against human ratings first.
@@ -173,6 +181,8 @@ assert hits == len(GOLDEN), 'regression: fix before shipping'
 
 **Common mistake:** Changing the prompt on Friday with no eval and finding out from customers on Monday.
 
+Practice: open `examples/05_evaluation_gates_before_deploy.py`, predict the output, change one line, predict again.
+
 ## 6. Model registry promotion
 
 An experiment you cannot reproduce is an anecdote. Track for every run: code commit, data version, hyperparameters, metrics and the artefact. Six months later, 'which run produced the model in production' must have an answer.
@@ -198,6 +208,8 @@ print(json.dumps(run_record({'lr': 0.01, 'depth': 6}, {'auc': 0.912}, 'data/trai
 **Remember:** Log the data version alongside the code version — data changes silently, code changes loudly.
 
 **Common mistake:** Naming files `model_final_v2_REAL_use_this.pkl` instead of using a registry.
+
+Practice: open `examples/06_model_registry_promotion.py`, predict the output, change one line, predict again.
 
 ## 7. Blue-green and canary deploys
 
@@ -231,6 +243,8 @@ test_preprocess()
 
 **Common mistake:** Testing only the happy path, so an all-null column silently trains a constant model.
 
+Practice: open `examples/07_blue_green_and_canary_deploys.py`, predict the output, change one line, predict again.
+
 ## 8. Rollback plans
 
 ML code needs the same tests as any code, plus data tests: schema, ranges, null rates, class balance. Add one behavioural test per known failure mode — a test that would have caught last quarter's outage is worth more than 90% coverage.
@@ -262,6 +276,8 @@ test_preprocess()
 **Remember:** Test the data contract, not just the function — bad data breaks more models than bad code.
 
 **Common mistake:** Testing only the happy path, so an all-null column silently trains a constant model.
+
+Practice: open `examples/08_rollback_plans.py`, predict the output, change one line, predict again.
 
 ## 9. GitHub Actions workflows
 
@@ -295,6 +311,8 @@ test_preprocess()
 
 **Common mistake:** Testing only the happy path, so an all-null column silently trains a constant model.
 
+Practice: open `examples/09_github_actions_workflows.py`, predict the output, change one line, predict again.
+
 ## 10. A pipeline that blocks bad models
 
 A Pipeline chains preprocessing and the model into one object that fits and predicts as a unit. This is the single best defence against leakage, and it means deployment ships one artefact instead of six loose steps you must remember to repeat.
@@ -321,6 +339,8 @@ print(model.predict(df))
 **Remember:** `handle_unknown='ignore'` stops production crashing on a category you never saw in training.
 
 **Common mistake:** Preprocessing in a notebook and then forgetting one step when writing the serving code.
+
+Practice: open `examples/10_a_pipeline_that_blocks_bad_models.py`, predict the output, change one line, predict again.
 
 ---
 

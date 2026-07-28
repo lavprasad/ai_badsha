@@ -44,6 +44,8 @@ print(out)   # the edge column lights up
 
 **Common mistake:** Forgetting the channel dimension and feeding (H,W) where the layer expects (N,C,H,W).
 
+Practice: open `examples/01_why_dense_layers_fail_on_images.py`, predict the output, change one line, predict again.
+
 ## 2. The convolution operation
 
 A convolution slides a small learned filter over the image, so the same edge detector works anywhere in the frame. That weight sharing is why a CNN needs far fewer parameters than a dense net. Pooling shrinks the map and adds a little translation tolerance.
@@ -71,6 +73,8 @@ print(out)   # the edge column lights up
 
 **Common mistake:** Forgetting the channel dimension and feeding (H,W) where the layer expects (N,C,H,W).
 
+Practice: open `examples/02_the_convolution_operation.py`, predict the output, change one line, predict again.
+
 ## 3. Kernels, stride and padding
 
 Notebooks keep state between cells, which is great for exploring and terrible for reproducibility. Treat the notebook as a scratchpad; once logic settles, move it into a `.py` module you can import and test.
@@ -86,6 +90,8 @@ df.head()
 **Remember:** 'Restart kernel and run all' is the only honest test that a notebook works.
 
 **Common mistake:** Shipping a notebook whose results depend on a deleted cell you ran ten minutes ago.
+
+Practice: open `examples/03_kernels_stride_and_padding.py`, predict the output, change one line, predict again.
 
 ## 4. Feature maps and channels
 
@@ -114,6 +120,8 @@ print(out)   # the edge column lights up
 
 **Common mistake:** Forgetting the channel dimension and feeding (H,W) where the layer expects (N,C,H,W).
 
+Practice: open `examples/04_feature_maps_and_channels.py`, predict the output, change one line, predict again.
+
 ## 5. Receptive field
 
 A convolution slides a small learned filter over the image, so the same edge detector works anywhere in the frame. That weight sharing is why a CNN needs far fewer parameters than a dense net. Pooling shrinks the map and adds a little translation tolerance.
@@ -140,6 +148,8 @@ print(out)   # the edge column lights up
 **Remember:** Output size = (in - kernel + 2*pad)/stride + 1. Print shapes when a layer refuses to connect.
 
 **Common mistake:** Forgetting the channel dimension and feeding (H,W) where the layer expects (N,C,H,W).
+
+Practice: open `examples/05_receptive_field.py`, predict the output, change one line, predict again.
 
 ## 6. Pooling layers
 
@@ -168,6 +178,8 @@ print(out)   # the edge column lights up
 
 **Common mistake:** Forgetting the channel dimension and feeding (H,W) where the layer expects (N,C,H,W).
 
+Practice: open `examples/06_pooling_layers.py`, predict the output, change one line, predict again.
+
 ## 7. Parameter sharing and translation equivariance
 
 The mean is pulled around by outliers; the median is not. Report both, plus a spread measure. When mean and median disagree sharply, the distribution is skewed and averages are lying to you.
@@ -188,6 +200,8 @@ print('outliers', salaries[(salaries < q1 - 1.5 * iqr) | (salaries > q3 + 1.5 * 
 **Remember:** Quote median + IQR for skewed data, mean + std only for roughly symmetric data.
 
 **Common mistake:** Removing 'outliers' automatically when they are the exact events you were hired to predict.
+
+Practice: open `examples/07_parameter_sharing_and_translation_equiva.py`, predict the output, change one line, predict again.
 
 ## 8. A classic CNN architecture
 
@@ -216,6 +230,8 @@ print(out)   # the edge column lights up
 
 **Common mistake:** Forgetting the channel dimension and feeding (H,W) where the layer expects (N,C,H,W).
 
+Practice: open `examples/08_a_classic_cnn_architecture.py`, predict the output, change one line, predict again.
+
 ## 9. Computing output shapes
 
 A convolution slides a small learned filter over the image, so the same edge detector works anywhere in the frame. That weight sharing is why a CNN needs far fewer parameters than a dense net. Pooling shrinks the map and adds a little translation tolerance.
@@ -243,6 +259,8 @@ print(out)   # the edge column lights up
 
 **Common mistake:** Forgetting the channel dimension and feeding (H,W) where the layer expects (N,C,H,W).
 
+Practice: open `examples/09_computing_output_shapes.py`, predict the output, change one line, predict again.
+
 ## 10. Implementing a conv by hand
 
 A convolution slides a small learned filter over the image, so the same edge detector works anywhere in the frame. That weight sharing is why a CNN needs far fewer parameters than a dense net. Pooling shrinks the map and adds a little translation tolerance.
@@ -269,6 +287,8 @@ print(out)   # the edge column lights up
 **Remember:** Output size = (in - kernel + 2*pad)/stride + 1. Print shapes when a layer refuses to connect.
 
 **Common mistake:** Forgetting the channel dimension and feeding (H,W) where the layer expects (N,C,H,W).
+
+Practice: open `examples/10_implementing_a_conv_by_hand.py`, predict the output, change one line, predict again.
 
 ---
 

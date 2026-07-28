@@ -37,6 +37,8 @@ print(df)
 
 **Common mistake:** Filling with the mean computed over the full dataset — that leaks test information into training.
 
+Practice: open `examples/01_missing_values_why_before_how.py`, predict the output, change one line, predict again.
+
 ## 2. Deletion strategies
 
 Missing data is information, not just noise. Before filling anything, ask *why* it is missing: a sensor that fails only under load is not missing at random. Then choose: drop rows, drop the column, fill with a statistic, or add an explicit 'was missing' indicator column.
@@ -56,6 +58,8 @@ print(df)
 **Remember:** Compute the fill statistic on the TRAIN split only, then apply it to test.
 
 **Common mistake:** Filling with the mean computed over the full dataset — that leaks test information into training.
+
+Practice: open `examples/02_deletion_strategies.py`, predict the output, change one line, predict again.
 
 ## 3. Simple imputation: mean, median, mode
 
@@ -77,6 +81,8 @@ print(df)
 
 **Common mistake:** Filling with the mean computed over the full dataset — that leaks test information into training.
 
+Practice: open `examples/03_simple_imputation_mean_median_mode.py`, predict the output, change one line, predict again.
+
 ## 4. Model-based imputation
 
 Missing data is information, not just noise. Before filling anything, ask *why* it is missing: a sensor that fails only under load is not missing at random. Then choose: drop rows, drop the column, fill with a statistic, or add an explicit 'was missing' indicator column.
@@ -96,6 +102,8 @@ print(df)
 **Remember:** Compute the fill statistic on the TRAIN split only, then apply it to test.
 
 **Common mistake:** Filling with the mean computed over the full dataset — that leaks test information into training.
+
+Practice: open `examples/04_model_based_imputation.py`, predict the output, change one line, predict again.
 
 ## 5. Missingness indicator columns
 
@@ -117,6 +125,8 @@ print(df)
 
 **Common mistake:** Filling with the mean computed over the full dataset — that leaks test information into training.
 
+Practice: open `examples/05_missingness_indicator_columns.py`, predict the output, change one line, predict again.
+
 ## 6. Outlier detection methods
 
 Missing data is information, not just noise. Before filling anything, ask *why* it is missing: a sensor that fails only under load is not missing at random. Then choose: drop rows, drop the column, fill with a statistic, or add an explicit 'was missing' indicator column.
@@ -136,6 +146,8 @@ print(df)
 **Remember:** Compute the fill statistic on the TRAIN split only, then apply it to test.
 
 **Common mistake:** Filling with the mean computed over the full dataset — that leaks test information into training.
+
+Practice: open `examples/06_outlier_detection_methods.py`, predict the output, change one line, predict again.
 
 ## 7. Winsorising vs removing
 
@@ -157,6 +169,8 @@ print(df)
 
 **Common mistake:** Filling with the mean computed over the full dataset — that leaks test information into training.
 
+Practice: open `examples/07_winsorising_vs_removing.py`, predict the output, change one line, predict again.
+
 ## 8. Fixing inconsistent categories
 
 Missing data is information, not just noise. Before filling anything, ask *why* it is missing: a sensor that fails only under load is not missing at random. Then choose: drop rows, drop the column, fill with a statistic, or add an explicit 'was missing' indicator column.
@@ -176,6 +190,8 @@ print(df)
 **Remember:** Compute the fill statistic on the TRAIN split only, then apply it to test.
 
 **Common mistake:** Filling with the mean computed over the full dataset — that leaks test information into training.
+
+Practice: open `examples/08_fixing_inconsistent_categories.py`, predict the output, change one line, predict again.
 
 ## 9. Deduplication strategies
 
@@ -197,6 +213,8 @@ print(df)
 
 **Common mistake:** Filling with the mean computed over the full dataset — that leaks test information into training.
 
+Practice: open `examples/09_deduplication_strategies.py`, predict the output, change one line, predict again.
+
 ## 10. A reusable cleaning function
 
 Missing data is information, not just noise. Before filling anything, ask *why* it is missing: a sensor that fails only under load is not missing at random. Then choose: drop rows, drop the column, fill with a statistic, or add an explicit 'was missing' indicator column.
@@ -216,6 +234,8 @@ print(df)
 **Remember:** Compute the fill statistic on the TRAIN split only, then apply it to test.
 
 **Common mistake:** Filling with the mean computed over the full dataset — that leaks test information into training.
+
+Practice: open `examples/10_a_reusable_cleaning_function.py`, predict the output, change one line, predict again.
 
 ---
 

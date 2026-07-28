@@ -42,6 +42,8 @@ for i in np.argsort(-imp.importances_mean)[:5]:
 
 **Common mistake:** Presenting importance as causation — the model found correlation, nothing more.
 
+Practice: open `examples/01_global_vs_local_explanation.py`, predict the output, change one line, predict again.
+
 ## 2. Coefficients in linear models
 
 If you cannot explain a decision, you cannot defend it — and in credit, hiring and healthcare you are legally required to. Permutation importance is model-agnostic and honest. SHAP gives per-prediction attributions with a solid theoretical basis but costs real compute.
@@ -66,6 +68,8 @@ for i in np.argsort(-imp.importances_mean)[:5]:
 **Remember:** Permutation importance on the TEST set answers 'what does this model rely on to generalise'.
 
 **Common mistake:** Presenting importance as causation — the model found correlation, nothing more.
+
+Practice: open `examples/02_coefficients_in_linear_models.py`, predict the output, change one line, predict again.
 
 ## 3. Impurity importance and its bias
 
@@ -92,6 +96,8 @@ for i in np.argsort(-imp.importances_mean)[:5]:
 
 **Common mistake:** Presenting importance as causation — the model found correlation, nothing more.
 
+Practice: open `examples/03_impurity_importance_and_its_bias.py`, predict the output, change one line, predict again.
+
 ## 4. Permutation importance
 
 If you cannot explain a decision, you cannot defend it — and in credit, hiring and healthcare you are legally required to. Permutation importance is model-agnostic and honest. SHAP gives per-prediction attributions with a solid theoretical basis but costs real compute.
@@ -117,6 +123,8 @@ for i in np.argsort(-imp.importances_mean)[:5]:
 
 **Common mistake:** Presenting importance as causation — the model found correlation, nothing more.
 
+Practice: open `examples/04_permutation_importance.py`, predict the output, change one line, predict again.
+
 ## 5. Partial dependence plots
 
 Plot before you model. A histogram exposes skew and outliers, a scatter exposes non-linearity, and a line of residuals exposes a model that is systematically wrong. Five minutes of plotting saves hours of confused tuning.
@@ -138,6 +146,8 @@ print('wrote hist.png')
 **Remember:** Label the axes. An unlabelled plot is a decoration, not evidence.
 
 **Common mistake:** Judging a model by its accuracy number alone without ever looking at the data.
+
+Practice: open `examples/05_partial_dependence_plots.py`, predict the output, change one line, predict again.
 
 ## 6. Individual conditional expectation
 
@@ -164,6 +174,8 @@ for i in np.argsort(-imp.importances_mean)[:5]:
 
 **Common mistake:** Presenting importance as causation — the model found correlation, nothing more.
 
+Practice: open `examples/06_individual_conditional_expectation.py`, predict the output, change one line, predict again.
+
 ## 7. SHAP values
 
 If you cannot explain a decision, you cannot defend it — and in credit, hiring and healthcare you are legally required to. Permutation importance is model-agnostic and honest. SHAP gives per-prediction attributions with a solid theoretical basis but costs real compute.
@@ -188,6 +200,8 @@ for i in np.argsort(-imp.importances_mean)[:5]:
 **Remember:** Permutation importance on the TEST set answers 'what does this model rely on to generalise'.
 
 **Common mistake:** Presenting importance as causation — the model found correlation, nothing more.
+
+Practice: open `examples/07_shap_values.py`, predict the output, change one line, predict again.
 
 ## 8. LIME
 
@@ -214,6 +228,8 @@ for i in np.argsort(-imp.importances_mean)[:5]:
 
 **Common mistake:** Presenting importance as causation — the model found correlation, nothing more.
 
+Practice: open `examples/08_lime.py`, predict the output, change one line, predict again.
+
 ## 9. Explaining to a non-technical stakeholder
 
 If you cannot explain a decision, you cannot defend it — and in credit, hiring and healthcare you are legally required to. Permutation importance is model-agnostic and honest. SHAP gives per-prediction attributions with a solid theoretical basis but costs real compute.
@@ -239,6 +255,8 @@ for i in np.argsort(-imp.importances_mean)[:5]:
 
 **Common mistake:** Presenting importance as causation — the model found correlation, nothing more.
 
+Practice: open `examples/09_explaining_to_a_non_technical_stakeholde.py`, predict the output, change one line, predict again.
+
 ## 10. Explanation is not causation
 
 If you cannot explain a decision, you cannot defend it — and in credit, hiring and healthcare you are legally required to. Permutation importance is model-agnostic and honest. SHAP gives per-prediction attributions with a solid theoretical basis but costs real compute.
@@ -263,6 +281,8 @@ for i in np.argsort(-imp.importances_mean)[:5]:
 **Remember:** Permutation importance on the TEST set answers 'what does this model rely on to generalise'.
 
 **Common mistake:** Presenting importance as causation — the model found correlation, nothing more.
+
+Practice: open `examples/10_explanation_is_not_causation.py`, predict the output, change one line, predict again.
 
 ---
 

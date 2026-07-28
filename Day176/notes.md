@@ -49,6 +49,8 @@ test_preprocess()
 
 **Common mistake:** Testing only the happy path, so an all-null column silently trains a constant model.
 
+Practice: open `examples/01_unit_tests_for_transforms.py`, predict the output, change one line, predict again.
+
 ## 2. Data schema tests
 
 ML tests come in layers: unit tests on transforms, contract tests on data, metamorphic tests on behaviour (adding an irrelevant feature must not change the prediction), and a tiny end-to-end run on a fixture dataset. Keep the whole suite under a minute or nobody will run it.
@@ -80,6 +82,8 @@ print('all tests passed')
 
 **Common mistake:** A test suite so slow that CI skips it and bugs reach production anyway.
 
+Practice: open `examples/02_data_schema_tests.py`, predict the output, change one line, predict again.
+
 ## 3. Model contract tests: shape and range
 
 If you cannot explain a decision, you cannot defend it — and in credit, hiring and healthcare you are legally required to. Permutation importance is model-agnostic and honest. SHAP gives per-prediction attributions with a solid theoretical basis but costs real compute.
@@ -105,6 +109,8 @@ for i in np.argsort(-imp.importances_mean)[:5]:
 
 **Common mistake:** Presenting importance as causation — the model found correlation, nothing more.
 
+Practice: open `examples/03_model_contract_tests_shape_and_range.py`, predict the output, change one line, predict again.
+
 ## 4. Behavioural tests for known cases
 
 Classification says what; detection says what and where. Boxes are scored by IoU (intersection over union) and duplicates are removed with non-maximum suppression. Segmentation goes further and labels every pixel.
@@ -125,6 +131,8 @@ print(round(iou((0, 0, 10, 10), (5, 5, 15, 15)), 4))   # 0.1429
 **Remember:** IoU >= 0.5 is the usual 'correct detection' threshold; report mAP, not accuracy.
 
 **Common mistake:** Mixing box formats (xywh vs xyxy) between the model and the evaluation code.
+
+Practice: open `examples/04_behavioural_tests_for_known_cases.py`, predict the output, change one line, predict again.
 
 ## 5. Metamorphic testing
 
@@ -157,6 +165,8 @@ print('all tests passed')
 
 **Common mistake:** A test suite so slow that CI skips it and bugs reach production anyway.
 
+Practice: open `examples/05_metamorphic_testing.py`, predict the output, change one line, predict again.
+
 ## 6. Fixture datasets
 
 ML tests come in layers: unit tests on transforms, contract tests on data, metamorphic tests on behaviour (adding an irrelevant feature must not change the prediction), and a tiny end-to-end run on a fixture dataset. Keep the whole suite under a minute or nobody will run it.
@@ -187,6 +197,8 @@ print('all tests passed')
 **Remember:** Every test that touches randomness must pass an explicit seed. Global seeding is not enough under parallelism.
 
 **Common mistake:** A test suite so slow that CI skips it and bugs reach production anyway.
+
+Practice: open `examples/06_fixture_datasets.py`, predict the output, change one line, predict again.
 
 ## 7. Testing training runs cheaply
 
@@ -219,6 +231,8 @@ print('all tests passed')
 
 **Common mistake:** A test suite so slow that CI skips it and bugs reach production anyway.
 
+Practice: open `examples/07_testing_training_runs_cheaply.py`, predict the output, change one line, predict again.
+
 ## 8. Golden-file tests for prompts
 
 ML tests come in layers: unit tests on transforms, contract tests on data, metamorphic tests on behaviour (adding an irrelevant feature must not change the prediction), and a tiny end-to-end run on a fixture dataset. Keep the whole suite under a minute or nobody will run it.
@@ -249,6 +263,8 @@ print('all tests passed')
 **Remember:** Every test that touches randomness must pass an explicit seed. Global seeding is not enough under parallelism.
 
 **Common mistake:** A test suite so slow that CI skips it and bugs reach production anyway.
+
+Practice: open `examples/08_golden_file_tests_for_prompts.py`, predict the output, change one line, predict again.
 
 ## 9. Flaky tests from randomness
 
@@ -281,6 +297,8 @@ print('all tests passed')
 
 **Common mistake:** A test suite so slow that CI skips it and bugs reach production anyway.
 
+Practice: open `examples/09_flaky_tests_from_randomness.py`, predict the output, change one line, predict again.
+
 ## 10. A test suite you actually run
 
 ML tests come in layers: unit tests on transforms, contract tests on data, metamorphic tests on behaviour (adding an irrelevant feature must not change the prediction), and a tiny end-to-end run on a fixture dataset. Keep the whole suite under a minute or nobody will run it.
@@ -311,6 +329,8 @@ print('all tests passed')
 **Remember:** Every test that touches randomness must pass an explicit seed. Global seeding is not enough under parallelism.
 
 **Common mistake:** A test suite so slow that CI skips it and bugs reach production anyway.
+
+Practice: open `examples/10_a_test_suite_you_actually_run.py`, predict the output, change one line, predict again.
 
 ---
 

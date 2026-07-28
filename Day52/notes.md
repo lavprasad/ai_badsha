@@ -34,6 +34,8 @@ print(export_text(tree, feature_names=load_iris().feature_names))
 
 **Common mistake:** Trusting a deep tree's feature importances; they are unstable and biased toward high-cardinality columns.
 
+Practice: open `examples/01_splitting_to_increase_purity.py`, predict the output, change one line, predict again.
+
 ## 2. Gini impurity vs entropy
 
 Entropy measures surprise: a fair coin has 1 bit, a two-headed coin has 0. Cross-entropy measures how surprised your model is by the truth — which is why it is the loss for classifiers and language models. Perplexity is just exp(cross-entropy), read as 'effective number of choices'.
@@ -57,6 +59,8 @@ print('perplexity    ', round(float(np.exp(cross_entropy(truth, unsure))), 3))
 
 **Common mistake:** Applying softmax twice (once in the model, once in the loss) and getting flat, untrainable gradients.
 
+Practice: open `examples/02_gini_impurity_vs_entropy.py`, predict the output, change one line, predict again.
+
 ## 3. Information gain
 
 A tree asks yes/no questions, splitting to make each side purer. It needs no scaling, handles mixed types, and reads like a flowchart. Left unconstrained it memorises the training set perfectly, so depth and leaf-size limits are mandatory.
@@ -73,6 +77,8 @@ print(export_text(tree, feature_names=load_iris().feature_names))
 **Remember:** A single unpruned tree is almost always worse than a small forest — but it is readable, which sometimes wins.
 
 **Common mistake:** Trusting a deep tree's feature importances; they are unstable and biased toward high-cardinality columns.
+
+Practice: open `examples/03_information_gain.py`, predict the output, change one line, predict again.
 
 ## 4. Recursive partitioning
 
@@ -91,6 +97,8 @@ print(export_text(tree, feature_names=load_iris().feature_names))
 
 **Common mistake:** Trusting a deep tree's feature importances; they are unstable and biased toward high-cardinality columns.
 
+Practice: open `examples/04_recursive_partitioning.py`, predict the output, change one line, predict again.
+
 ## 5. Depth, leaf size and pruning
 
 A tree asks yes/no questions, splitting to make each side purer. It needs no scaling, handles mixed types, and reads like a flowchart. Left unconstrained it memorises the training set perfectly, so depth and leaf-size limits are mandatory.
@@ -107,6 +115,8 @@ print(export_text(tree, feature_names=load_iris().feature_names))
 **Remember:** A single unpruned tree is almost always worse than a small forest — but it is readable, which sometimes wins.
 
 **Common mistake:** Trusting a deep tree's feature importances; they are unstable and biased toward high-cardinality columns.
+
+Practice: open `examples/05_depth_leaf_size_and_pruning.py`, predict the output, change one line, predict again.
 
 ## 6. Handling categorical and missing values
 
@@ -128,6 +138,8 @@ print(df)
 
 **Common mistake:** Filling with the mean computed over the full dataset — that leaks test information into training.
 
+Practice: open `examples/06_handling_categorical_and_missing_values.py`, predict the output, change one line, predict again.
+
 ## 7. Regression trees
 
 A tree asks yes/no questions, splitting to make each side purer. It needs no scaling, handles mixed types, and reads like a flowchart. Left unconstrained it memorises the training set perfectly, so depth and leaf-size limits are mandatory.
@@ -144,6 +156,8 @@ print(export_text(tree, feature_names=load_iris().feature_names))
 **Remember:** A single unpruned tree is almost always worse than a small forest — but it is readable, which sometimes wins.
 
 **Common mistake:** Trusting a deep tree's feature importances; they are unstable and biased toward high-cardinality columns.
+
+Practice: open `examples/07_regression_trees.py`, predict the output, change one line, predict again.
 
 ## 8. Reading a tree as rules
 
@@ -162,6 +176,8 @@ print(export_text(tree, feature_names=load_iris().feature_names))
 
 **Common mistake:** Trusting a deep tree's feature importances; they are unstable and biased toward high-cardinality columns.
 
+Practice: open `examples/08_reading_a_tree_as_rules.py`, predict the output, change one line, predict again.
+
 ## 9. Instability of single trees
 
 A tree asks yes/no questions, splitting to make each side purer. It needs no scaling, handles mixed types, and reads like a flowchart. Left unconstrained it memorises the training set perfectly, so depth and leaf-size limits are mandatory.
@@ -179,6 +195,8 @@ print(export_text(tree, feature_names=load_iris().feature_names))
 
 **Common mistake:** Trusting a deep tree's feature importances; they are unstable and biased toward high-cardinality columns.
 
+Practice: open `examples/09_instability_of_single_trees.py`, predict the output, change one line, predict again.
+
 ## 10. Visualising and exporting a tree
 
 A tree asks yes/no questions, splitting to make each side purer. It needs no scaling, handles mixed types, and reads like a flowchart. Left unconstrained it memorises the training set perfectly, so depth and leaf-size limits are mandatory.
@@ -195,6 +213,8 @@ print(export_text(tree, feature_names=load_iris().feature_names))
 **Remember:** A single unpruned tree is almost always worse than a small forest — but it is readable, which sometimes wins.
 
 **Common mistake:** Trusting a deep tree's feature importances; they are unstable and biased toward high-cardinality columns.
+
+Practice: open `examples/10_visualising_and_exporting_a_tree.py`, predict the output, change one line, predict again.
 
 ---
 

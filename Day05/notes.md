@@ -41,6 +41,8 @@ print(cfg)
 
 **Common mistake:** Building a five-level inheritance hierarchy for what a dict and two functions would have solved.
 
+Practice: open `examples/01_classes_and_instances.py`, predict the output, change one line, predict again.
+
 ## 2. __init__, attributes and methods
 
 A class bundles data with the operations that keep it valid. For plain config or record objects, `@dataclass` gives you `__init__`, `__repr__` and `__eq__` for free. Prefer composition over inheritance: deep class trees are hard to change and easy to break.
@@ -64,6 +66,8 @@ print(cfg)
 **Remember:** In a dataclass, mutable defaults need `field(default_factory=...)`, not a literal.
 
 **Common mistake:** Building a five-level inheritance hierarchy for what a dict and two functions would have solved.
+
+Practice: open `examples/02_init_attributes_and_methods.py`, predict the output, change one line, predict again.
 
 ## 3. Dunder methods: __repr__, __len__
 
@@ -89,6 +93,8 @@ print(cfg)
 
 **Common mistake:** Building a five-level inheritance hierarchy for what a dict and two functions would have solved.
 
+Practice: open `examples/03_dunder_methods_repr_len.py`, predict the output, change one line, predict again.
+
 ## 4. Dataclasses for config objects
 
 A class bundles data with the operations that keep it valid. For plain config or record objects, `@dataclass` gives you `__init__`, `__repr__` and `__eq__` for free. Prefer composition over inheritance: deep class trees are hard to change and easy to break.
@@ -112,6 +118,8 @@ print(cfg)
 **Remember:** In a dataclass, mutable defaults need `field(default_factory=...)`, not a literal.
 
 **Common mistake:** Building a five-level inheritance hierarchy for what a dict and two functions would have solved.
+
+Practice: open `examples/04_dataclasses_for_config_objects.py`, predict the output, change one line, predict again.
 
 ## 5. Inheritance vs composition
 
@@ -137,6 +145,8 @@ print(cfg)
 
 **Common mistake:** Building a five-level inheritance hierarchy for what a dict and two functions would have solved.
 
+Practice: open `examples/05_inheritance_vs_composition.py`, predict the output, change one line, predict again.
+
 ## 6. Exceptions: raise, try, except
 
 A class bundles data with the operations that keep it valid. For plain config or record objects, `@dataclass` gives you `__init__`, `__repr__` and `__eq__` for free. Prefer composition over inheritance: deep class trees are hard to change and easy to break.
@@ -161,6 +171,8 @@ print(cfg)
 
 **Common mistake:** Building a five-level inheritance hierarchy for what a dict and two functions would have solved.
 
+Practice: open `examples/06_exceptions_raise_try_except.py`, predict the output, change one line, predict again.
+
 ## 7. Custom exception classes
 
 A class bundles data with the operations that keep it valid. For plain config or record objects, `@dataclass` gives you `__init__`, `__repr__` and `__eq__` for free. Prefer composition over inheritance: deep class trees are hard to change and easy to break.
@@ -184,6 +196,8 @@ print(cfg)
 **Remember:** In a dataclass, mutable defaults need `field(default_factory=...)`, not a literal.
 
 **Common mistake:** Building a five-level inheritance hierarchy for what a dict and two functions would have solved.
+
+Practice: open `examples/07_custom_exception_classes.py`, predict the output, change one line, predict again.
 
 ## 8. assert for invariants
 
@@ -217,6 +231,8 @@ test_preprocess()
 
 **Common mistake:** Testing only the happy path, so an all-null column silently trains a constant model.
 
+Practice: open `examples/08_assert_for_invariants.py`, predict the output, change one line, predict again.
+
 ## 9. Type hints and why they help
 
 A class bundles data with the operations that keep it valid. For plain config or record objects, `@dataclass` gives you `__init__`, `__repr__` and `__eq__` for free. Prefer composition over inheritance: deep class trees are hard to change and easy to break.
@@ -241,6 +257,8 @@ print(cfg)
 
 **Common mistake:** Building a five-level inheritance hierarchy for what a dict and two functions would have solved.
 
+Practice: open `examples/09_type_hints_and_why_they_help.py`, predict the output, change one line, predict again.
+
 ## 10. Writing code your future self can read
 
 A class bundles data with the operations that keep it valid. For plain config or record objects, `@dataclass` gives you `__init__`, `__repr__` and `__eq__` for free. Prefer composition over inheritance: deep class trees are hard to change and easy to break.
@@ -264,6 +282,8 @@ print(cfg)
 **Remember:** In a dataclass, mutable defaults need `field(default_factory=...)`, not a literal.
 
 **Common mistake:** Building a five-level inheritance hierarchy for what a dict and two functions would have solved.
+
+Practice: open `examples/10_writing_code_your_future_self_can_read.py`, predict the output, change one line, predict again.
 
 ---
 

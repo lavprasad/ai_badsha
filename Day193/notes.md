@@ -39,6 +39,8 @@ for s in STEPS:
 
 **Common mistake:** Six weeks of feature engineering with no baseline to prove any of it helped.
 
+Practice: open `examples/01_choosing_a_task_llms_genuinely_help_with.py`, predict the output, change one line, predict again.
+
 ## 2. Prompt design and versioning
 
 An experiment you cannot reproduce is an anecdote. Track for every run: code commit, data version, hyperparameters, metrics and the artefact. Six months later, 'which run produced the model in production' must have an answer.
@@ -64,6 +66,8 @@ print(json.dumps(run_record({'lr': 0.01, 'depth': 6}, {'auc': 0.912}, 'data/trai
 **Remember:** Log the data version alongside the code version — data changes silently, code changes loudly.
 
 **Common mistake:** Naming files `model_final_v2_REAL_use_this.pkl` instead of using a registry.
+
+Practice: open `examples/02_prompt_design_and_versioning.py`, predict the output, change one line, predict again.
 
 ## 3. Retrieval or tools as needed
 
@@ -92,6 +96,8 @@ assert hits == len(GOLDEN), 'regression: fix before shipping'
 **Remember:** 50 real examples you curated beat 5000 synthetic ones nobody checked.
 
 **Common mistake:** Changing the prompt on Friday with no eval and finding out from customers on Monday.
+
+Practice: open `examples/03_retrieval_or_tools_as_needed.py`, predict the output, change one line, predict again.
 
 ## 4. Structured output and validation
 
@@ -123,6 +129,8 @@ except (json.JSONDecodeError, AssertionError) as e:
 
 **Common mistake:** Passing model output straight into `eval`, a shell command, or an SQL string.
 
+Practice: open `examples/04_structured_output_and_validation.py`, predict the output, change one line, predict again.
+
 ## 5. Golden eval set from real inputs
 
 Vibes do not survive a prompt change. Build a small golden set of real inputs with expected outputs, run it on every change, and track the score. Use an LLM judge for open-ended quality, but calibrate the judge against human ratings first.
@@ -151,6 +159,8 @@ assert hits == len(GOLDEN), 'regression: fix before shipping'
 
 **Common mistake:** Changing the prompt on Friday with no eval and finding out from customers on Monday.
 
+Practice: open `examples/05_golden_eval_set_from_real_inputs.py`, predict the output, change one line, predict again.
+
 ## 6. Cost and latency budget
 
 Data parallelism replicates the model and splits the batch; model parallelism splits the model when it will not fit on one device. Scale only after profiling — most 'we need more GPUs' problems are actually a slow data loader.
@@ -170,6 +180,8 @@ print('          opt.step(); opt.zero_grad()')
 **Remember:** Profile first. GPU at 30% utilisation means the bottleneck is the data pipeline, not the GPU.
 
 **Common mistake:** Scaling the learning rate wrongly when you scale the batch — a larger batch usually needs a larger LR.
+
+Practice: open `examples/06_cost_and_latency_budget.py`, predict the output, change one line, predict again.
 
 ## 7. Prompt injection hardening
 
@@ -195,6 +207,8 @@ print(build_prompt('You answer from context only.',
 
 **Common mistake:** Letting a model-chosen tool call run with the caller's full privileges and no allowlist.
 
+Practice: open `examples/07_prompt_injection_hardening.py`, predict the output, change one line, predict again.
+
 ## 8. User interface for uncertainty
 
 Projects are where the learning sticks. Build a thin end-to-end slice first — load data, train something dumb, evaluate, serve one prediction — then improve one layer at a time. A working baseline on day one beats a perfect model that never ships.
@@ -216,6 +230,8 @@ for s in STEPS:
 **Remember:** Spend an hour looking at wrong predictions before you spend a day tuning hyperparameters.
 
 **Common mistake:** Six weeks of feature engineering with no baseline to prove any of it helped.
+
+Practice: open `examples/08_user_interface_for_uncertainty.py`, predict the output, change one line, predict again.
 
 ## 9. Deployment and observability
 
@@ -239,6 +255,8 @@ print('Copy requirements first so the pip layer caches across code changes.')
 
 **Common mistake:** `COPY . .` before `pip install`, which busts the dependency cache on every code edit.
 
+Practice: open `examples/09_deployment_and_observability.py`, predict the output, change one line, predict again.
+
 ## 10. Demo video and documentation
 
 Projects are where the learning sticks. Build a thin end-to-end slice first — load data, train something dumb, evaluate, serve one prediction — then improve one layer at a time. A working baseline on day one beats a perfect model that never ships.
@@ -260,6 +278,8 @@ for s in STEPS:
 **Remember:** Spend an hour looking at wrong predictions before you spend a day tuning hyperparameters.
 
 **Common mistake:** Six weeks of feature engineering with no baseline to prove any of it helped.
+
+Practice: open `examples/10_demo_video_and_documentation.py`, predict the output, change one line, predict again.
 
 ---
 

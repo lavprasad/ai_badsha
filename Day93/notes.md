@@ -44,6 +44,8 @@ print('output shape', (weights @ V).shape)
 
 **Common mistake:** Omitting the causal mask in a decoder, so the model trivially cheats by reading the next token.
 
+Practice: open `examples/01_the_bottleneck_problem_in_seq2seq.py`, predict the output, change one line, predict again.
+
 ## 2. Attention as weighted lookup
 
 Attention lets every token look at every other token and decide what matters. Each token emits a query, a key and a value; the query-key dot products become weights over the values. Multiple heads let the model attend to several relationships at once.
@@ -70,6 +72,8 @@ print('output shape', (weights @ V).shape)
 **Remember:** The 1/sqrt(d) scale is not cosmetic — without it softmax saturates and gradients die.
 
 **Common mistake:** Omitting the causal mask in a decoder, so the model trivially cheats by reading the next token.
+
+Practice: open `examples/02_attention_as_weighted_lookup.py`, predict the output, change one line, predict again.
 
 ## 3. Query, key and value
 
@@ -98,6 +102,8 @@ print('output shape', (weights @ V).shape)
 
 **Common mistake:** Omitting the causal mask in a decoder, so the model trivially cheats by reading the next token.
 
+Practice: open `examples/03_query_key_and_value.py`, predict the output, change one line, predict again.
+
 ## 4. Scaled dot-product attention
 
 Attention lets every token look at every other token and decide what matters. Each token emits a query, a key and a value; the query-key dot products become weights over the values. Multiple heads let the model attend to several relationships at once.
@@ -124,6 +130,8 @@ print('output shape', (weights @ V).shape)
 **Remember:** The 1/sqrt(d) scale is not cosmetic — without it softmax saturates and gradients die.
 
 **Common mistake:** Omitting the causal mask in a decoder, so the model trivially cheats by reading the next token.
+
+Practice: open `examples/04_scaled_dot_product_attention.py`, predict the output, change one line, predict again.
 
 ## 5. The scaling factor and why it matters
 
@@ -152,6 +160,8 @@ print('output shape', (weights @ V).shape)
 
 **Common mistake:** Omitting the causal mask in a decoder, so the model trivially cheats by reading the next token.
 
+Practice: open `examples/05_the_scaling_factor_and_why_it_matters.py`, predict the output, change one line, predict again.
+
 ## 6. Attention masks
 
 Attention lets every token look at every other token and decide what matters. Each token emits a query, a key and a value; the query-key dot products become weights over the values. Multiple heads let the model attend to several relationships at once.
@@ -178,6 +188,8 @@ print('output shape', (weights @ V).shape)
 **Remember:** The 1/sqrt(d) scale is not cosmetic — without it softmax saturates and gradients die.
 
 **Common mistake:** Omitting the causal mask in a decoder, so the model trivially cheats by reading the next token.
+
+Practice: open `examples/06_attention_masks.py`, predict the output, change one line, predict again.
 
 ## 7. Self-attention vs cross-attention
 
@@ -206,6 +218,8 @@ print('output shape', (weights @ V).shape)
 
 **Common mistake:** Omitting the causal mask in a decoder, so the model trivially cheats by reading the next token.
 
+Practice: open `examples/07_self_attention_vs_cross_attention.py`, predict the output, change one line, predict again.
+
 ## 8. Multi-head attention
 
 Attention lets every token look at every other token and decide what matters. Each token emits a query, a key and a value; the query-key dot products become weights over the values. Multiple heads let the model attend to several relationships at once.
@@ -233,6 +247,8 @@ print('output shape', (weights @ V).shape)
 
 **Common mistake:** Omitting the causal mask in a decoder, so the model trivially cheats by reading the next token.
 
+Practice: open `examples/08_multi_head_attention.py`, predict the output, change one line, predict again.
+
 ## 9. Attention weight visualisation
 
 Plot before you model. A histogram exposes skew and outliers, a scatter exposes non-linearity, and a line of residuals exposes a model that is systematically wrong. Five minutes of plotting saves hours of confused tuning.
@@ -254,6 +270,8 @@ print('wrote hist.png')
 **Remember:** Label the axes. An unlabelled plot is a decoration, not evidence.
 
 **Common mistake:** Judging a model by its accuracy number alone without ever looking at the data.
+
+Practice: open `examples/09_attention_weight_visualisation.py`, predict the output, change one line, predict again.
 
 ## 10. Implementing attention in NumPy
 
@@ -281,6 +299,8 @@ print('output shape', (weights @ V).shape)
 **Remember:** The 1/sqrt(d) scale is not cosmetic — without it softmax saturates and gradients die.
 
 **Common mistake:** Omitting the causal mask in a decoder, so the model trivially cheats by reading the next token.
+
+Practice: open `examples/10_implementing_attention_in_numpy.py`, predict the output, change one line, predict again.
 
 ---
 

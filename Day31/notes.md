@@ -33,6 +33,8 @@ print("practice: The linear model equation")
 
 **Common mistake:** Copy-pasting `The linear model equation` from a tutorial without knowing what it assumes or when it fails.
 
+Practice: open `examples/01_the_linear_model_equation.py`, predict the output, change one line, predict again.
+
 ## 2. Least squares as a projection
 
 Linear regression fits a straight line by minimising squared error. It is the honest baseline for every regression problem: fast, interpretable, and the thing your fancy model must beat before it earns its complexity.
@@ -56,6 +58,8 @@ print('residual mean (should be ~0):', round(float(resid.mean()), 6))
 
 **Common mistake:** Reporting R² on training data and calling it model performance.
 
+Practice: open `examples/02_least_squares_as_a_projection.py`, predict the output, change one line, predict again.
+
 ## 3. Deriving the normal equations
 
 A vector is a list of numbers with a direction and length. The dot product measures alignment: large and positive when two vectors point the same way, zero when perpendicular. Cosine similarity is the dot product with length divided out, which is why it compares embeddings of different magnitudes fairly.
@@ -75,6 +79,8 @@ print('cosine', cos)   # 1.0 -> same direction
 **Remember:** Cosine similarity ignores magnitude; Euclidean distance does not. Pick the one that matches your question.
 
 **Common mistake:** Comparing raw embeddings with Euclidean distance when only direction carries meaning.
+
+Practice: open `examples/03_deriving_the_normal_equations.py`, predict the output, change one line, predict again.
 
 ## 4. Gradient descent solution
 
@@ -97,6 +103,8 @@ print('analytic ', 2 * x + 3)   # should match to ~1e-6
 **Remember:** A central difference `(f(x+h)-f(x-h))/2h` is the cheapest way to check a hand-written gradient.
 
 **Common mistake:** Trusting a derivation you never gradient-checked; a sign error trains slowly instead of failing loudly.
+
+Practice: open `examples/04_gradient_descent_solution.py`, predict the output, change one line, predict again.
 
 ## 5. Adding a bias term correctly
 
@@ -122,6 +130,8 @@ print('Large gaps here are the finding — investigate before shipping.')
 
 **Common mistake:** Auditing fairness once at launch and never again as the data drifts.
 
+Practice: open `examples/05_adding_a_bias_term_correctly.py`, predict the output, change one line, predict again.
+
 ## 6. Polynomial features
 
 Today's idea — **Polynomial features** — sits inside the theme of Linear models, mathematically. Read it as a tool, not trivia: what job does it do, what does it assume about your data, and what breaks when that assumption is false?
@@ -138,6 +148,8 @@ print("practice: Polynomial features")
 
 **Common mistake:** Copy-pasting `Polynomial features` from a tutorial without knowing what it assumes or when it fails.
 
+Practice: open `examples/06_polynomial_features.py`, predict the output, change one line, predict again.
+
 ## 7. Multicollinearity and its symptoms
 
 Today's idea — **Multicollinearity and its symptoms** — sits inside the theme of Linear models, mathematically. Read it as a tool, not trivia: what job does it do, what does it assume about your data, and what breaks when that assumption is false?
@@ -153,6 +165,8 @@ print("practice: Multicollinearity and its symptoms")
 **Remember:** State one assumption `Multicollinearity and its symptoms` makes about your data before you use it.
 
 **Common mistake:** Copy-pasting `Multicollinearity and its symptoms` from a tutorial without knowing what it assumes or when it fails.
+
+Practice: open `examples/07_multicollinearity_and_its_symptoms.py`, predict the output, change one line, predict again.
 
 ## 8. Ridge as constrained least squares
 
@@ -177,6 +191,8 @@ print('residual mean (should be ~0):', round(float(resid.mean()), 6))
 
 **Common mistake:** Reporting R² on training data and calling it model performance.
 
+Practice: open `examples/08_ridge_as_constrained_least_squares.py`, predict the output, change one line, predict again.
+
 ## 9. Lasso and sparsity geometry
 
 Regularisation penalises large weights so the model prefers simpler explanations. L2 (ridge) shrinks everything smoothly; L1 (lasso) drives some weights exactly to zero and thereby selects features. Elastic net mixes both.
@@ -197,6 +213,8 @@ print('lasso non-zero coefs', int(np.sum(np.abs(lasso.coef_) > 1e-6)))
 **Remember:** Scale features before regularising, or the penalty punishes whichever column happens to use small units.
 
 **Common mistake:** Tuning `alpha` on the test set — pick it with cross-validation on train only.
+
+Practice: open `examples/09_lasso_and_sparsity_geometry.py`, predict the output, change one line, predict again.
 
 ## 10. Interpreting coefficients honestly
 
@@ -229,6 +247,8 @@ test_preprocess()
 **Remember:** Test the data contract, not just the function — bad data breaks more models than bad code.
 
 **Common mistake:** Testing only the happy path, so an all-null column silently trains a constant model.
+
+Practice: open `examples/10_interpreting_coefficients_honestly.py`, predict the output, change one line, predict again.
 
 ---
 

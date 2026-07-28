@@ -41,6 +41,8 @@ print('zero-shot pick:', labels[int(np.argmax(scores))], scores.round(3))
 
 **Common mistake:** Feeding an image at the wrong resolution or normalisation and getting silent quality loss.
 
+Practice: open `examples/01_text_plus_image_inputs.py`, predict the output, change one line, predict again.
+
 ## 2. How images become tokens
 
 Multimodal models put images and text in one shared embedding space, so a picture of a dog lands near the words 'a dog'. That single trick gives you zero-shot classification, image search by description, and captioning — with no task-specific training.
@@ -65,6 +67,8 @@ print('zero-shot pick:', labels[int(np.argmax(scores))], scores.round(3))
 
 **Common mistake:** Feeding an image at the wrong resolution or normalisation and getting silent quality loss.
 
+Practice: open `examples/02_how_images_become_tokens.py`, predict the output, change one line, predict again.
+
 ## 3. Document and chart understanding
 
 Plot before you model. A histogram exposes skew and outliers, a scatter exposes non-linearity, and a line of residuals exposes a model that is systematically wrong. Five minutes of plotting saves hours of confused tuning.
@@ -86,6 +90,8 @@ print('wrote hist.png')
 **Remember:** Label the axes. An unlabelled plot is a decoration, not evidence.
 
 **Common mistake:** Judging a model by its accuracy number alone without ever looking at the data.
+
+Practice: open `examples/03_document_and_chart_understanding.py`, predict the output, change one line, predict again.
 
 ## 4. Video understanding with LLMs
 
@@ -111,6 +117,8 @@ print('zero-shot pick:', labels[int(np.argmax(scores))], scores.round(3))
 
 **Common mistake:** Feeding an image at the wrong resolution or normalisation and getting silent quality loss.
 
+Practice: open `examples/04_video_understanding_with_llms.py`, predict the output, change one line, predict again.
+
 ## 5. Audio-native models
 
 Audio becomes a spectrogram — time on one axis, frequency on the other — and from there it is an image problem. ASR transcribes speech to text; TTS goes the other way. Watch for accent and background-noise bias in the training data.
@@ -131,6 +139,8 @@ print('dominant frequencies (Hz):', np.sort(peaks))   # ~440 and ~880
 **Remember:** Resample everything to the model's expected sample rate before inference.
 
 **Common mistake:** Evaluating ASR only on clean studio audio, then deploying to a noisy call centre.
+
+Practice: open `examples/05_audio_native_models.py`, predict the output, change one line, predict again.
 
 ## 6. Multimodal prompting patterns
 
@@ -156,6 +166,8 @@ print('Structure: role -> task -> allowed outputs -> format -> examples -> input
 
 **Common mistake:** Writing a vague prompt, getting vague output, and blaming the model.
 
+Practice: open `examples/06_multimodal_prompting_patterns.py`, predict the output, change one line, predict again.
+
 ## 7. Failure modes on fine detail
 
 Multimodal models put images and text in one shared embedding space, so a picture of a dog lands near the words 'a dog'. That single trick gives you zero-shot classification, image search by description, and captioning — with no task-specific training.
@@ -179,6 +191,8 @@ print('zero-shot pick:', labels[int(np.argmax(scores))], scores.round(3))
 **Remember:** Zero-shot quality depends heavily on prompt wording — 'a photo of a {}' beats a bare noun.
 
 **Common mistake:** Feeding an image at the wrong resolution or normalisation and getting silent quality loss.
+
+Practice: open `examples/07_failure_modes_on_fine_detail.py`, predict the output, change one line, predict again.
 
 ## 8. Cost of image tokens
 
@@ -204,6 +218,8 @@ print('zero-shot pick:', labels[int(np.argmax(scores))], scores.round(3))
 
 **Common mistake:** Feeding an image at the wrong resolution or normalisation and getting silent quality loss.
 
+Practice: open `examples/08_cost_of_image_tokens.py`, predict the output, change one line, predict again.
+
 ## 9. Choosing OCR vs a vision model
 
 Multimodal models put images and text in one shared embedding space, so a picture of a dog lands near the words 'a dog'. That single trick gives you zero-shot classification, image search by description, and captioning — with no task-specific training.
@@ -227,6 +243,8 @@ print('zero-shot pick:', labels[int(np.argmax(scores))], scores.round(3))
 **Remember:** Zero-shot quality depends heavily on prompt wording — 'a photo of a {}' beats a bare noun.
 
 **Common mistake:** Feeding an image at the wrong resolution or normalisation and getting silent quality loss.
+
+Practice: open `examples/09_choosing_ocr_vs_a_vision_model.py`, predict the output, change one line, predict again.
 
 ## 10. A screenshot-to-data pipeline
 
@@ -254,6 +272,8 @@ print(model.predict(df))
 **Remember:** `handle_unknown='ignore'` stops production crashing on a category you never saw in training.
 
 **Common mistake:** Preprocessing in a notebook and then forgetting one step when writing the serving code.
+
+Practice: open `examples/10_a_screenshot_to_data_pipeline.py`, predict the output, change one line, predict again.
 
 ---
 

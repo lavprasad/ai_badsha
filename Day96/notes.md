@@ -39,6 +39,8 @@ print('roc auc', round(roc_auc_score(yte, m.predict_proba(Xte)[:, 1]), 4))
 
 **Common mistake:** Optimising ROC-AUC on a heavily imbalanced problem where precision-recall AUC is the honest metric.
 
+Practice: open `examples/01_the_forward_noising_process.py`, predict the output, change one line, predict again.
+
 ## 2. Learning to denoise
 
 Diffusion learns to reverse noise: add Gaussian noise to images in small steps, then train a network to undo one step. At generation you start from pure noise and denoise repeatedly, steered by a text embedding. It is more stable than GAN training and now the default for images.
@@ -60,6 +62,8 @@ print('Reverse process = a network predicting the noise added at each step.')
 **Remember:** More sampling steps means better quality and linearly more compute — that is the whole trade.
 
 **Common mistake:** Assuming generated images are free of copyright or bias concerns because 'the model made them'.
+
+Practice: open `examples/02_learning_to_denoise.py`, predict the output, change one line, predict again.
 
 ## 3. The noise schedule
 
@@ -83,6 +87,8 @@ print('Reverse process = a network predicting the noise added at each step.')
 
 **Common mistake:** Assuming generated images are free of copyright or bias concerns because 'the model made them'.
 
+Practice: open `examples/03_the_noise_schedule.py`, predict the output, change one line, predict again.
+
 ## 4. U-Net as the denoiser
 
 Diffusion learns to reverse noise: add Gaussian noise to images in small steps, then train a network to undo one step. At generation you start from pure noise and denoise repeatedly, steered by a text embedding. It is more stable than GAN training and now the default for images.
@@ -105,6 +111,8 @@ print('Reverse process = a network predicting the noise added at each step.')
 
 **Common mistake:** Assuming generated images are free of copyright or bias concerns because 'the model made them'.
 
+Practice: open `examples/04_u_net_as_the_denoiser.py`, predict the output, change one line, predict again.
+
 ## 5. Sampling steps and quality trade-off
 
 A distribution says which values are likely. Gaussian for measurement noise, Bernoulli for yes/no, Poisson for counts per interval. Choosing the right one is choosing your loss function: Gaussian likelihood gives MSE, Bernoulli gives cross-entropy.
@@ -123,6 +131,8 @@ print('coin heads rate ', coin.mean())
 **Remember:** Always seed your RNG (`default_rng(0)`) when you want a result someone else can reproduce.
 
 **Common mistake:** Assuming Gaussian for skewed, bounded, or count data and then being surprised by the residuals.
+
+Practice: open `examples/05_sampling_steps_and_quality_trade_off.py`, predict the output, change one line, predict again.
 
 ## 6. Classifier-free guidance
 
@@ -146,6 +156,8 @@ print('Reverse process = a network predicting the noise added at each step.')
 
 **Common mistake:** Assuming generated images are free of copyright or bias concerns because 'the model made them'.
 
+Practice: open `examples/06_classifier_free_guidance.py`, predict the output, change one line, predict again.
+
 ## 7. Latent diffusion
 
 Diffusion learns to reverse noise: add Gaussian noise to images in small steps, then train a network to undo one step. At generation you start from pure noise and denoise repeatedly, steered by a text embedding. It is more stable than GAN training and now the default for images.
@@ -167,6 +179,8 @@ print('Reverse process = a network predicting the noise added at each step.')
 **Remember:** More sampling steps means better quality and linearly more compute — that is the whole trade.
 
 **Common mistake:** Assuming generated images are free of copyright or bias concerns because 'the model made them'.
+
+Practice: open `examples/07_latent_diffusion.py`, predict the output, change one line, predict again.
 
 ## 8. Text conditioning
 
@@ -190,6 +204,8 @@ print('Reverse process = a network predicting the noise added at each step.')
 
 **Common mistake:** Assuming generated images are free of copyright or bias concerns because 'the model made them'.
 
+Practice: open `examples/08_text_conditioning.py`, predict the output, change one line, predict again.
+
 ## 9. ControlNet and structural conditioning
 
 Diffusion learns to reverse noise: add Gaussian noise to images in small steps, then train a network to undo one step. At generation you start from pure noise and denoise repeatedly, steered by a text embedding. It is more stable than GAN training and now the default for images.
@@ -212,6 +228,8 @@ print('Reverse process = a network predicting the noise added at each step.')
 
 **Common mistake:** Assuming generated images are free of copyright or bias concerns because 'the model made them'.
 
+Practice: open `examples/09_controlnet_and_structural_conditioning.py`, predict the output, change one line, predict again.
+
 ## 10. Compute cost of generation
 
 Diffusion learns to reverse noise: add Gaussian noise to images in small steps, then train a network to undo one step. At generation you start from pure noise and denoise repeatedly, steered by a text embedding. It is more stable than GAN training and now the default for images.
@@ -233,6 +251,8 @@ print('Reverse process = a network predicting the noise added at each step.')
 **Remember:** More sampling steps means better quality and linearly more compute — that is the whole trade.
 
 **Common mistake:** Assuming generated images are free of copyright or bias concerns because 'the model made them'.
+
+Practice: open `examples/10_compute_cost_of_generation.py`, predict the output, change one line, predict again.
 
 ---
 

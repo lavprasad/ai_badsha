@@ -43,6 +43,8 @@ print(json.dumps(run_record({'lr': 0.01, 'depth': 6}, {'auc': 0.912}, 'data/trai
 
 **Common mistake:** Naming files `model_final_v2_REAL_use_this.pkl` instead of using a registry.
 
+Practice: open `examples/01_why_every_experiment_needs_a_commit.py`, predict the output, change one line, predict again.
+
 ## 2. git init, add, commit, log
 
 An experiment you cannot reproduce is an anecdote. Track for every run: code commit, data version, hyperparameters, metrics and the artefact. Six months later, 'which run produced the model in production' must have an answer.
@@ -68,6 +70,8 @@ print(json.dumps(run_record({'lr': 0.01, 'depth': 6}, {'auc': 0.912}, 'data/trai
 **Remember:** Log the data version alongside the code version — data changes silently, code changes loudly.
 
 **Common mistake:** Naming files `model_final_v2_REAL_use_this.pkl` instead of using a registry.
+
+Practice: open `examples/02_git_init_add_commit_log.py`, predict the output, change one line, predict again.
 
 ## 3. Branching and merging
 
@@ -95,6 +99,8 @@ print(json.dumps(run_record({'lr': 0.01, 'depth': 6}, {'auc': 0.912}, 'data/trai
 
 **Common mistake:** Naming files `model_final_v2_REAL_use_this.pkl` instead of using a registry.
 
+Practice: open `examples/03_branching_and_merging.py`, predict the output, change one line, predict again.
+
 ## 4. Writing a useful .gitignore for ML
 
 An experiment you cannot reproduce is an anecdote. Track for every run: code commit, data version, hyperparameters, metrics and the artefact. Six months later, 'which run produced the model in production' must have an answer.
@@ -120,6 +126,8 @@ print(json.dumps(run_record({'lr': 0.01, 'depth': 6}, {'auc': 0.912}, 'data/trai
 **Remember:** Log the data version alongside the code version — data changes silently, code changes loudly.
 
 **Common mistake:** Naming files `model_final_v2_REAL_use_this.pkl` instead of using a registry.
+
+Practice: open `examples/04_writing_a_useful_gitignore_for_ml.py`, predict the output, change one line, predict again.
 
 ## 5. Never commit data or secrets
 
@@ -147,6 +155,8 @@ print(json.dumps(run_record({'lr': 0.01, 'depth': 6}, {'auc': 0.912}, 'data/trai
 
 **Common mistake:** Naming files `model_final_v2_REAL_use_this.pkl` instead of using a registry.
 
+Practice: open `examples/05_never_commit_data_or_secrets.py`, predict the output, change one line, predict again.
+
 ## 6. Pinning versions in requirements.txt
 
 An experiment you cannot reproduce is an anecdote. Track for every run: code commit, data version, hyperparameters, metrics and the artefact. Six months later, 'which run produced the model in production' must have an answer.
@@ -172,6 +182,8 @@ print(json.dumps(run_record({'lr': 0.01, 'depth': 6}, {'auc': 0.912}, 'data/trai
 **Remember:** Log the data version alongside the code version — data changes silently, code changes loudly.
 
 **Common mistake:** Naming files `model_final_v2_REAL_use_this.pkl` instead of using a registry.
+
+Practice: open `examples/06_pinning_versions_in_requirements_txt.py`, predict the output, change one line, predict again.
 
 ## 7. Seeding every random source
 
@@ -199,6 +211,8 @@ print(json.dumps(run_record({'lr': 0.01, 'depth': 6}, {'auc': 0.912}, 'data/trai
 
 **Common mistake:** Naming files `model_final_v2_REAL_use_this.pkl` instead of using a registry.
 
+Practice: open `examples/07_seeding_every_random_source.py`, predict the output, change one line, predict again.
+
 ## 8. Recording the data version
 
 An experiment you cannot reproduce is an anecdote. Track for every run: code commit, data version, hyperparameters, metrics and the artefact. Six months later, 'which run produced the model in production' must have an answer.
@@ -224,6 +238,8 @@ print(json.dumps(run_record({'lr': 0.01, 'depth': 6}, {'auc': 0.912}, 'data/trai
 **Remember:** Log the data version alongside the code version — data changes silently, code changes loudly.
 
 **Common mistake:** Naming files `model_final_v2_REAL_use_this.pkl` instead of using a registry.
+
+Practice: open `examples/08_recording_the_data_version.py`, predict the output, change one line, predict again.
 
 ## 9. A reproducible experiment checklist
 
@@ -251,6 +267,8 @@ print(json.dumps(run_record({'lr': 0.01, 'depth': 6}, {'auc': 0.912}, 'data/trai
 
 **Common mistake:** Naming files `model_final_v2_REAL_use_this.pkl` instead of using a registry.
 
+Practice: open `examples/09_a_reproducible_experiment_checklist.py`, predict the output, change one line, predict again.
+
 ## 10. Publishing a project to GitHub
 
 An experiment you cannot reproduce is an anecdote. Track for every run: code commit, data version, hyperparameters, metrics and the artefact. Six months later, 'which run produced the model in production' must have an answer.
@@ -276,6 +294,8 @@ print(json.dumps(run_record({'lr': 0.01, 'depth': 6}, {'auc': 0.912}, 'data/trai
 **Remember:** Log the data version alongside the code version — data changes silently, code changes loudly.
 
 **Common mistake:** Naming files `model_final_v2_REAL_use_this.pkl` instead of using a registry.
+
+Practice: open `examples/10_publishing_a_project_to_github.py`, predict the output, change one line, predict again.
 
 ---
 

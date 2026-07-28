@@ -46,6 +46,8 @@ print(m.recall(now=30 * 86400 + 200))          # expired
 
 **Common mistake:** Appending every stated fact to a vector store forever, so stale and corrected facts compete at retrieval.
 
+Practice: open `examples/01_short_term_context_vs_long_term_memory.py`, predict the output, change one line, predict again.
+
 ## 2. Conversation summarisation
 
 For documents larger than the context window, summarise in a tree: chunk, summarise each, then summarise the summaries. Detail is lost at every level, so keep the things that must survive (numbers, names, decisions) as structured extraction alongside the prose.
@@ -69,6 +71,8 @@ print(f'{len(docs)} chunks -> {rounds} rounds -> {summary!r}')
 **Remember:** Extract facts structurally and summarise prose separately — summarisation loses numbers first.
 
 **Common mistake:** Judging summary quality by ROUGE, which rewards word overlap and ignores whether it is true.
+
+Practice: open `examples/02_conversation_summarisation.py`, predict the output, change one line, predict again.
 
 ## 3. Fact extraction and storage
 
@@ -99,6 +103,8 @@ print('\\nReal pipeline: chunk 300-800 tokens with overlap -> embed -> ANN index
 
 **Common mistake:** Chunking blindly at 1000 characters and cutting tables and code blocks in half.
 
+Practice: open `examples/03_fact_extraction_and_storage.py`, predict the output, change one line, predict again.
+
 ## 4. Vector memory and its failure modes
 
 A vector is a list of numbers with a direction and length. The dot product measures alignment: large and positive when two vectors point the same way, zero when perpendicular. Cosine similarity is the dot product with length divided out, which is why it compares embeddings of different magnitudes fairly.
@@ -119,6 +125,8 @@ print('cosine', cos)   # 1.0 -> same direction
 
 **Common mistake:** Comparing raw embeddings with Euclidean distance when only direction carries meaning.
 
+Practice: open `examples/04_vector_memory_and_its_failure_modes.py`, predict the output, change one line, predict again.
+
 ## 5. Structured memory in a database
 
 Today's idea — **Structured memory in a database** — sits inside the theme of Memory for AI applications. Read it as a tool, not trivia: what job does it do, what does it assume about your data, and what breaks when that assumption is false?
@@ -134,6 +142,8 @@ print("practice: Structured memory in a database")
 **Remember:** State one assumption `Structured memory in a database` makes about your data before you use it.
 
 **Common mistake:** Copy-pasting `Structured memory in a database` from a tutorial without knowing what it assumes or when it fails.
+
+Practice: open `examples/05_structured_memory_in_a_database.py`, predict the output, change one line, predict again.
 
 ## 6. Recency, relevance and importance scoring
 
@@ -164,6 +174,8 @@ print(m.recall(now=30 * 86400 + 200))          # expired
 
 **Common mistake:** Appending every stated fact to a vector store forever, so stale and corrected facts compete at retrieval.
 
+Practice: open `examples/06_recency_relevance_and_importance_scoring.py`, predict the output, change one line, predict again.
+
 ## 7. Forgetting and expiry
 
 Context is not memory. Context is what fits in this request; memory is what you deliberately store and retrieve. Design the schema explicitly — what is stored, how it expires, how conflicts resolve — or you get an assistant that confidently repeats something the user corrected last month.
@@ -193,6 +205,8 @@ print(m.recall(now=30 * 86400 + 200))          # expired
 
 **Common mistake:** Appending every stated fact to a vector store forever, so stale and corrected facts compete at retrieval.
 
+Practice: open `examples/07_forgetting_and_expiry.py`, predict the output, change one line, predict again.
+
 ## 8. Privacy and user control over memory
 
 Models learn the bias in their training data and then apply it at scale with a veneer of objectivity. Measure error rates per group, not just overall. Fairness definitions genuinely conflict with each other — you must choose one explicitly and document why.
@@ -216,6 +230,8 @@ print('Large gaps here are the finding — investigate before shipping.')
 **Remember:** Dropping the sensitive attribute does not remove bias; proxies (pincode, name) carry it right back in.
 
 **Common mistake:** Auditing fairness once at launch and never again as the data drifts.
+
+Practice: open `examples/08_privacy_and_user_control_over_memory.py`, predict the output, change one line, predict again.
 
 ## 9. Memory conflicts and contradictions
 
@@ -246,6 +262,8 @@ print(m.recall(now=30 * 86400 + 200))          # expired
 
 **Common mistake:** Appending every stated fact to a vector store forever, so stale and corrected facts compete at retrieval.
 
+Practice: open `examples/09_memory_conflicts_and_contradictions.py`, predict the output, change one line, predict again.
+
 ## 10. Designing a memory schema
 
 Context is not memory. Context is what fits in this request; memory is what you deliberately store and retrieve. Design the schema explicitly — what is stored, how it expires, how conflicts resolve — or you get an assistant that confidently repeats something the user corrected last month.
@@ -274,6 +292,8 @@ print(m.recall(now=30 * 86400 + 200))          # expired
 **Remember:** A correction must overwrite, not coexist. Two contradictory memories will both get retrieved.
 
 **Common mistake:** Appending every stated fact to a vector store forever, so stale and corrected facts compete at retrieval.
+
+Practice: open `examples/10_designing_a_memory_schema.py`, predict the output, change one line, predict again.
 
 ---
 

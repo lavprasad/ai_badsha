@@ -38,6 +38,8 @@ print(round(iou((0, 0, 10, 10), (5, 5, 15, 15)), 4))   # 0.1429
 
 **Common mistake:** Mixing box formats (xywh vs xyxy) between the model and the evaluation code.
 
+Practice: open `examples/01_semantic_vs_instance_vs_panoptic.py`, predict the output, change one line, predict again.
+
 ## 2. Per-pixel classification
 
 Classification says what; detection says what and where. Boxes are scored by IoU (intersection over union) and duplicates are removed with non-maximum suppression. Segmentation goes further and labels every pixel.
@@ -59,6 +61,8 @@ print(round(iou((0, 0, 10, 10), (5, 5, 15, 15)), 4))   # 0.1429
 
 **Common mistake:** Mixing box formats (xywh vs xyxy) between the model and the evaluation code.
 
+Practice: open `examples/02_per_pixel_classification.py`, predict the output, change one line, predict again.
+
 ## 3. U-Net architecture
 
 Classification says what; detection says what and where. Boxes are scored by IoU (intersection over union) and duplicates are removed with non-maximum suppression. Segmentation goes further and labels every pixel.
@@ -79,6 +83,8 @@ print(round(iou((0, 0, 10, 10), (5, 5, 15, 15)), 4))   # 0.1429
 **Remember:** IoU >= 0.5 is the usual 'correct detection' threshold; report mAP, not accuracy.
 
 **Common mistake:** Mixing box formats (xywh vs xyxy) between the model and the evaluation code.
+
+Practice: open `examples/03_u_net_architecture.py`, predict the output, change one line, predict again.
 
 ## 4. Encoder-decoder with skip connections
 
@@ -104,6 +110,8 @@ print('norm after ', round(float(np.sqrt(sum((g ** 2).sum() for g in clipped))),
 
 **Common mistake:** Chasing an architecture change when a `clip_grad_norm_(1.0)` would have fixed the instability.
 
+Practice: open `examples/04_encoder_decoder_with_skip_connections.py`, predict the output, change one line, predict again.
+
 ## 5. Dice and IoU losses
 
 Classification says what; detection says what and where. Boxes are scored by IoU (intersection over union) and duplicates are removed with non-maximum suppression. Segmentation goes further and labels every pixel.
@@ -124,6 +132,8 @@ print(round(iou((0, 0, 10, 10), (5, 5, 15, 15)), 4))   # 0.1429
 **Remember:** IoU >= 0.5 is the usual 'correct detection' threshold; report mAP, not accuracy.
 
 **Common mistake:** Mixing box formats (xywh vs xyxy) between the model and the evaluation code.
+
+Practice: open `examples/05_dice_and_iou_losses.py`, predict the output, change one line, predict again.
 
 ## 6. Mask R-CNN
 
@@ -152,6 +162,8 @@ print(out)   # the edge column lights up
 
 **Common mistake:** Forgetting the channel dimension and feeding (H,W) where the layer expects (N,C,H,W).
 
+Practice: open `examples/06_mask_r_cnn.py`, predict the output, change one line, predict again.
+
 ## 7. Segment Anything and promptable segmentation
 
 Classification says what; detection says what and where. Boxes are scored by IoU (intersection over union) and duplicates are removed with non-maximum suppression. Segmentation goes further and labels every pixel.
@@ -172,6 +184,8 @@ print(round(iou((0, 0, 10, 10), (5, 5, 15, 15)), 4))   # 0.1429
 **Remember:** IoU >= 0.5 is the usual 'correct detection' threshold; report mAP, not accuracy.
 
 **Common mistake:** Mixing box formats (xywh vs xyxy) between the model and the evaluation code.
+
+Practice: open `examples/07_segment_anything_and_promptable_segmenta.py`, predict the output, change one line, predict again.
 
 ## 8. Medical imaging considerations
 
@@ -194,6 +208,8 @@ print(round(iou((0, 0, 10, 10), (5, 5, 15, 15)), 4))   # 0.1429
 
 **Common mistake:** Mixing box formats (xywh vs xyxy) between the model and the evaluation code.
 
+Practice: open `examples/08_medical_imaging_considerations.py`, predict the output, change one line, predict again.
+
 ## 9. Annotation cost and weak supervision
 
 Classification says what; detection says what and where. Boxes are scored by IoU (intersection over union) and duplicates are removed with non-maximum suppression. Segmentation goes further and labels every pixel.
@@ -215,6 +231,8 @@ print(round(iou((0, 0, 10, 10), (5, 5, 15, 15)), 4))   # 0.1429
 
 **Common mistake:** Mixing box formats (xywh vs xyxy) between the model and the evaluation code.
 
+Practice: open `examples/09_annotation_cost_and_weak_supervision.py`, predict the output, change one line, predict again.
+
 ## 10. Evaluating segmentation quality
 
 Classification says what; detection says what and where. Boxes are scored by IoU (intersection over union) and duplicates are removed with non-maximum suppression. Segmentation goes further and labels every pixel.
@@ -235,6 +253,8 @@ print(round(iou((0, 0, 10, 10), (5, 5, 15, 15)), 4))   # 0.1429
 **Remember:** IoU >= 0.5 is the usual 'correct detection' threshold; report mAP, not accuracy.
 
 **Common mistake:** Mixing box formats (xywh vs xyxy) between the model and the evaluation code.
+
+Practice: open `examples/10_evaluating_segmentation_quality.py`, predict the output, change one line, predict again.
 
 ---
 

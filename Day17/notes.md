@@ -36,6 +36,8 @@ print(np.eye(3) @ A is not A, np.allclose(np.eye(3) @ A, A))
 
 **Common mistake:** Reaching for `np.linalg.inv` to solve `Ax=b` instead of the numerically safer `np.linalg.solve`.
 
+Practice: open `examples/01_a_matrix_as_a_transformation.py`, predict the output, change one line, predict again.
+
 ## 2. Matrix multiplication rules and shapes
 
 A matrix is a linear transformation. Multiplying matrices composes transformations, which is exactly what stacking neural network layers does. Shapes must line up: (m,k) @ (k,n) -> (m,n); the inner dimensions must match and they vanish.
@@ -54,6 +56,8 @@ print(np.eye(3) @ A is not A, np.allclose(np.eye(3) @ A, A))
 **Remember:** Read every shape error as 'the inner dimensions did not match' and print the shapes.
 
 **Common mistake:** Reaching for `np.linalg.inv` to solve `Ax=b` instead of the numerically safer `np.linalg.solve`.
+
+Practice: open `examples/02_matrix_multiplication_rules_and_shapes.py`, predict the output, change one line, predict again.
 
 ## 3. Identity and inverse matrices
 
@@ -74,6 +78,8 @@ print(np.eye(3) @ A is not A, np.allclose(np.eye(3) @ A, A))
 
 **Common mistake:** Reaching for `np.linalg.inv` to solve `Ax=b` instead of the numerically safer `np.linalg.solve`.
 
+Practice: open `examples/03_identity_and_inverse_matrices.py`, predict the output, change one line, predict again.
+
 ## 4. Transpose and symmetric matrices
 
 A matrix is a linear transformation. Multiplying matrices composes transformations, which is exactly what stacking neural network layers does. Shapes must line up: (m,k) @ (k,n) -> (m,n); the inner dimensions must match and they vanish.
@@ -92,6 +98,8 @@ print(np.eye(3) @ A is not A, np.allclose(np.eye(3) @ A, A))
 **Remember:** Read every shape error as 'the inner dimensions did not match' and print the shapes.
 
 **Common mistake:** Reaching for `np.linalg.inv` to solve `Ax=b` instead of the numerically safer `np.linalg.solve`.
+
+Practice: open `examples/04_transpose_and_symmetric_matrices.py`, predict the output, change one line, predict again.
 
 ## 5. Determinant and what zero means
 
@@ -112,6 +120,8 @@ print(df)
 **Remember:** Compute the fill statistic on the TRAIN split only, then apply it to test.
 
 **Common mistake:** Filling with the mean computed over the full dataset — that leaks test information into training.
+
+Practice: open `examples/05_determinant_and_what_zero_means.py`, predict the output, change one line, predict again.
 
 ## 6. Rank and rank deficiency
 
@@ -145,6 +155,8 @@ test_preprocess()
 
 **Common mistake:** Testing only the happy path, so an all-null column silently trains a constant model.
 
+Practice: open `examples/06_rank_and_rank_deficiency.py`, predict the output, change one line, predict again.
+
 ## 7. Solving linear systems with solve
 
 To solve `Ax = b`, use a solver, not an inverse. Computing `inv(A) @ b` is slower and numerically worse. Sparse matrices (mostly zeros — text features, graphs) need sparse storage or you will allocate gigabytes of zeros.
@@ -166,6 +178,8 @@ print('residual inv  :', float(np.linalg.norm(A @ x_inv - b)))
 **Remember:** `np.linalg.solve(A, b)` over `inv(A) @ b`, always.
 
 **Common mistake:** Densifying a sparse TF-IDF matrix with `.toarray()` and exhausting memory.
+
+Practice: open `examples/07_solving_linear_systems_with_solve.py`, predict the output, change one line, predict again.
 
 ## 8. Why inv() is the wrong tool
 
@@ -189,6 +203,8 @@ print('residual inv  :', float(np.linalg.norm(A @ x_inv - b)))
 
 **Common mistake:** Densifying a sparse TF-IDF matrix with `.toarray()` and exhausting memory.
 
+Practice: open `examples/08_why_inv_is_the_wrong_tool.py`, predict the output, change one line, predict again.
+
 ## 9. Sparse matrices and when they matter
 
 To solve `Ax = b`, use a solver, not an inverse. Computing `inv(A) @ b` is slower and numerically worse. Sparse matrices (mostly zeros — text features, graphs) need sparse storage or you will allocate gigabytes of zeros.
@@ -211,6 +227,8 @@ print('residual inv  :', float(np.linalg.norm(A @ x_inv - b)))
 
 **Common mistake:** Densifying a sparse TF-IDF matrix with `.toarray()` and exhausting memory.
 
+Practice: open `examples/09_sparse_matrices_and_when_they_matter.py`, predict the output, change one line, predict again.
+
 ## 10. Batched matrix operations
 
 A matrix is a linear transformation. Multiplying matrices composes transformations, which is exactly what stacking neural network layers does. Shapes must line up: (m,k) @ (k,n) -> (m,n); the inner dimensions must match and they vanish.
@@ -229,6 +247,8 @@ print(np.eye(3) @ A is not A, np.allclose(np.eye(3) @ A, A))
 **Remember:** Read every shape error as 'the inner dimensions did not match' and print the shapes.
 
 **Common mistake:** Reaching for `np.linalg.inv` to solve `Ax=b` instead of the numerically safer `np.linalg.solve`.
+
+Practice: open `examples/10_batched_matrix_operations.py`, predict the output, change one line, predict again.
 
 ---
 

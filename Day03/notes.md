@@ -43,6 +43,8 @@ print(next(batches(range(10), 3)))
 
 **Common mistake:** Calling `len()` on a generator, or iterating it twice and getting nothing the second time.
 
+Practice: open `examples/01_list_comprehensions.py`, predict the output, change one line, predict again.
+
 ## 2. Dict and set comprehensions
 
 These are the tools that replace hand-written loops with one readable line. `Counter` counts, `defaultdict` removes the 'if key not in dict' dance, `sorted(key=...)` sorts by anything, and `zip` walks two sequences together. Reaching for them is the difference between Python that reads like Python and Python that reads like translated Java.
@@ -72,6 +74,8 @@ for i, (w, s) in enumerate(zip(scores, scores.values()), 1):
 
 **Common mistake:** Building frequency counts with `if k in d: d[k] += 1 else: d[k] = 1` in every script forever.
 
+Practice: open `examples/02_dict_and_set_comprehensions.py`, predict the output, change one line, predict again.
+
 ## 3. Generators and yield
 
 A comprehension builds a list eagerly; a generator produces items one at a time and never holds the whole sequence in memory. For datasets larger than RAM, generators are the difference between working and crashing.
@@ -97,6 +101,8 @@ print(next(batches(range(10), 3)))
 **Remember:** A generator can only be consumed once — re-create it if you need a second pass.
 
 **Common mistake:** Calling `len()` on a generator, or iterating it twice and getting nothing the second time.
+
+Practice: open `examples/03_generators_and_yield.py`, predict the output, change one line, predict again.
 
 ## 4. enumerate, zip and unpacking
 
@@ -127,6 +133,8 @@ for i, (w, s) in enumerate(zip(scores, scores.values()), 1):
 
 **Common mistake:** Building frequency counts with `if k in d: d[k] += 1 else: d[k] = 1` in every script forever.
 
+Practice: open `examples/04_enumerate_zip_and_unpacking.py`, predict the output, change one line, predict again.
+
 ## 5. map, filter and lambda
 
 These are the tools that replace hand-written loops with one readable line. `Counter` counts, `defaultdict` removes the 'if key not in dict' dance, `sorted(key=...)` sorts by anything, and `zip` walks two sequences together. Reaching for them is the difference between Python that reads like Python and Python that reads like translated Java.
@@ -155,6 +163,8 @@ for i, (w, s) in enumerate(zip(scores, scores.values()), 1):
 **Remember:** `Counter` and `defaultdict` remove most of the bookkeeping code people write by hand.
 
 **Common mistake:** Building frequency counts with `if k in d: d[k] += 1 else: d[k] = 1` in every script forever.
+
+Practice: open `examples/05_map_filter_and_lambda.py`, predict the output, change one line, predict again.
 
 ## 6. sorted with key functions
 
@@ -185,6 +195,8 @@ for i, (w, s) in enumerate(zip(scores, scores.values()), 1):
 
 **Common mistake:** Building frequency counts with `if k in d: d[k] += 1 else: d[k] = 1` in every script forever.
 
+Practice: open `examples/06_sorted_with_key_functions.py`, predict the output, change one line, predict again.
+
 ## 7. collections: Counter, defaultdict
 
 These are the tools that replace hand-written loops with one readable line. `Counter` counts, `defaultdict` removes the 'if key not in dict' dance, `sorted(key=...)` sorts by anything, and `zip` walks two sequences together. Reaching for them is the difference between Python that reads like Python and Python that reads like translated Java.
@@ -213,6 +225,8 @@ for i, (w, s) in enumerate(zip(scores, scores.values()), 1):
 **Remember:** `Counter` and `defaultdict` remove most of the bookkeeping code people write by hand.
 
 **Common mistake:** Building frequency counts with `if k in d: d[k] += 1 else: d[k] = 1` in every script forever.
+
+Practice: open `examples/07_collections_counter_defaultdict.py`, predict the output, change one line, predict again.
 
 ## 8. itertools for combinatorics
 
@@ -243,6 +257,8 @@ for i, (w, s) in enumerate(zip(scores, scores.values()), 1):
 
 **Common mistake:** Building frequency counts with `if k in d: d[k] += 1 else: d[k] = 1` in every script forever.
 
+Practice: open `examples/08_itertools_for_combinatorics.py`, predict the output, change one line, predict again.
+
 ## 9. Lazy evaluation for big data
 
 A comprehension builds a list eagerly; a generator produces items one at a time and never holds the whole sequence in memory. For datasets larger than RAM, generators are the difference between working and crashing.
@@ -269,6 +285,8 @@ print(next(batches(range(10), 3)))
 
 **Common mistake:** Calling `len()` on a generator, or iterating it twice and getting nothing the second time.
 
+Practice: open `examples/09_lazy_evaluation_for_big_data.py`, predict the output, change one line, predict again.
+
 ## 10. Choosing the right container
 
 A container packages code, dependencies and the interpreter so it runs identically everywhere. Pin your versions, use a slim base, and keep model weights out of the image layer if they are large — mount or download them instead.
@@ -290,6 +308,8 @@ print('Copy requirements first so the pip layer caches across code changes.')
 **Remember:** `--no-cache-dir` and a slim base keep images small; small images deploy fast.
 
 **Common mistake:** `COPY . .` before `pip install`, which busts the dependency cache on every code edit.
+
+Practice: open `examples/10_choosing_the_right_container.py`, predict the output, change one line, predict again.
 
 ---
 

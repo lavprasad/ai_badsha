@@ -41,6 +41,8 @@ print('\n50 uncertain labels beat 5000 random ones.')
 
 **Common mistake:** Shipping without logging, then having no data to improve on after three months of traffic.
 
+Practice: open `examples/01_capturing_user_feedback.py`, predict the output, change one line, predict again.
+
 ## 2. Implicit signals: edits, retries, abandonment
 
 ML code needs the same tests as any code, plus data tests: schema, ranges, null rates, class balance. Add one behavioural test per known failure mode — a test that would have caught last quarter's outage is worth more than 90% coverage.
@@ -73,6 +75,8 @@ test_preprocess()
 
 **Common mistake:** Testing only the happy path, so an all-null column silently trains a constant model.
 
+Practice: open `examples/02_implicit_signals_edits_retries_abandonme.py`, predict the output, change one line, predict again.
+
 ## 3. Building a labelling loop
 
 Projects are where the learning sticks. Build a thin end-to-end slice first — load data, train something dumb, evaluate, serve one prediction — then improve one layer at a time. A working baseline on day one beats a perfect model that never ships.
@@ -94,6 +98,8 @@ for s in STEPS:
 **Remember:** Spend an hour looking at wrong predictions before you spend a day tuning hyperparameters.
 
 **Common mistake:** Six weeks of feature engineering with no baseline to prove any of it helped.
+
+Practice: open `examples/03_building_a_labelling_loop.py`, predict the output, change one line, predict again.
 
 ## 4. Active learning: label what is uncertain
 
@@ -118,6 +124,8 @@ print('\n50 uncertain labels beat 5000 random ones.')
 **Remember:** Capture the correction, not just the thumbs-down. 'What should it have said' is the training signal.
 
 **Common mistake:** Shipping without logging, then having no data to improve on after three months of traffic.
+
+Practice: open `examples/04_active_learning_label_what_is_uncertain.py`, predict the output, change one line, predict again.
 
 ## 5. Turning corrections into eval cases
 
@@ -147,6 +155,8 @@ assert hits == len(GOLDEN), 'regression: fix before shipping'
 
 **Common mistake:** Changing the prompt on Friday with no eval and finding out from customers on Monday.
 
+Practice: open `examples/05_turning_corrections_into_eval_cases.py`, predict the output, change one line, predict again.
+
 ## 6. Retraining and re-prompting cadence
 
 A prompt is a program written in English. Be specific about role, task, format and constraints. Few-shot examples teach format better than any description. Asking for reasoning steps helps on multi-step problems and wastes tokens on simple lookups.
@@ -170,6 +180,8 @@ print('Structure: role -> task -> allowed outputs -> format -> examples -> input
 **Remember:** Put the output format last and show it as an example — models copy the nearest pattern.
 
 **Common mistake:** Writing a vague prompt, getting vague output, and blaming the model.
+
+Practice: open `examples/06_retraining_and_re_prompting_cadence.py`, predict the output, change one line, predict again.
 
 ## 7. Avoiding feedback loop bias
 
@@ -195,6 +207,8 @@ print('Large gaps here are the finding — investigate before shipping.')
 
 **Common mistake:** Auditing fairness once at launch and never again as the data drifts.
 
+Practice: open `examples/07_avoiding_feedback_loop_bias.py`, predict the output, change one line, predict again.
+
 ## 8. Privacy constraints on user data
 
 Models learn the bias in their training data and then apply it at scale with a veneer of objectivity. Measure error rates per group, not just overall. Fairness definitions genuinely conflict with each other — you must choose one explicitly and document why.
@@ -218,6 +232,8 @@ print('Large gaps here are the finding — investigate before shipping.')
 **Remember:** Dropping the sensitive attribute does not remove bias; proxies (pincode, name) carry it right back in.
 
 **Common mistake:** Auditing fairness once at launch and never again as the data drifts.
+
+Practice: open `examples/08_privacy_constraints_on_user_data.py`, predict the output, change one line, predict again.
 
 ## 9. Measuring flywheel velocity
 
@@ -251,6 +267,8 @@ test_preprocess()
 
 **Common mistake:** Testing only the happy path, so an all-null column silently trains a constant model.
 
+Practice: open `examples/09_measuring_flywheel_velocity.py`, predict the output, change one line, predict again.
+
 ## 10. Designing the loop from day one
 
 The examples your model gets wrong are the most valuable training data you will ever have, and they are free — if you capture them. Log inputs, outputs and corrections from day one; retrofitting a feedback loop after launch means starting from zero.
@@ -274,6 +292,8 @@ print('\n50 uncertain labels beat 5000 random ones.')
 **Remember:** Capture the correction, not just the thumbs-down. 'What should it have said' is the training signal.
 
 **Common mistake:** Shipping without logging, then having no data to improve on after three months of traffic.
+
+Practice: open `examples/10_designing_the_loop_from_day_one.py`, predict the output, change one line, predict again.
 
 ---
 

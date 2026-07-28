@@ -37,6 +37,8 @@ for q, a in DECISION:
 
 **Common mistake:** Building face recognition because the API was easy, without a lawful basis or a retention policy.
 
+Practice: open `examples/01_face_detection_vs_recognition.py`, predict the output, change one line, predict again.
+
 ## 2. Face embeddings and verification
 
 An embedding maps text to a dense vector where nearby means similar in meaning. Unlike keyword search, 'car trouble' matches 'engine won't start'. Every RAG system is embeddings plus nearest-neighbour lookup.
@@ -64,6 +66,8 @@ print('king - man + woman ~', best)
 
 **Common mistake:** Mixing vectors from two different embedding models in one index; the spaces are unrelated.
 
+Practice: open `examples/02_face_embeddings_and_verification.py`, predict the output, change one line, predict again.
+
 ## 3. Landmark detection
 
 Face technology is technically routine and legally and ethically loaded. Detection (is there a face) is far less sensitive than recognition (whose face). Many jurisdictions restrict biometric processing outright. Ask whether a non-biometric signal — a badge scan, a session token — answers the same business question.
@@ -83,6 +87,8 @@ for q, a in DECISION:
 **Remember:** Biometric data usually cannot be revoked. Treat it as the most sensitive category you handle.
 
 **Common mistake:** Building face recognition because the API was easy, without a lawful basis or a retention policy.
+
+Practice: open `examples/03_landmark_detection.py`, predict the output, change one line, predict again.
 
 ## 4. Pose estimation
 
@@ -104,6 +110,8 @@ for q, a in DECISION:
 
 **Common mistake:** Building face recognition because the API was easy, without a lawful basis or a retention policy.
 
+Practice: open `examples/04_pose_estimation.py`, predict the output, change one line, predict again.
+
 ## 5. Person re-identification
 
 Face technology is technically routine and legally and ethically loaded. Detection (is there a face) is far less sensitive than recognition (whose face). Many jurisdictions restrict biometric processing outright. Ask whether a non-biometric signal — a badge scan, a session token — answers the same business question.
@@ -123,6 +131,8 @@ for q, a in DECISION:
 **Remember:** Biometric data usually cannot be revoked. Treat it as the most sensitive category you handle.
 
 **Common mistake:** Building face recognition because the API was easy, without a lawful basis or a retention policy.
+
+Practice: open `examples/05_person_re_identification.py`, predict the output, change one line, predict again.
 
 ## 6. Bias in face datasets
 
@@ -148,6 +158,8 @@ print('Large gaps here are the finding — investigate before shipping.')
 
 **Common mistake:** Auditing fairness once at launch and never again as the data drifts.
 
+Practice: open `examples/06_bias_in_face_datasets.py`, predict the output, change one line, predict again.
+
 ## 7. Privacy and consent
 
 Models learn the bias in their training data and then apply it at scale with a veneer of objectivity. Measure error rates per group, not just overall. Fairness definitions genuinely conflict with each other — you must choose one explicitly and document why.
@@ -172,6 +184,8 @@ print('Large gaps here are the finding — investigate before shipping.')
 
 **Common mistake:** Auditing fairness once at launch and never again as the data drifts.
 
+Practice: open `examples/07_privacy_and_consent.py`, predict the output, change one line, predict again.
+
 ## 8. Legal restrictions by jurisdiction
 
 Face technology is technically routine and legally and ethically loaded. Detection (is there a face) is far less sensitive than recognition (whose face). Many jurisdictions restrict biometric processing outright. Ask whether a non-biometric signal — a badge scan, a session token — answers the same business question.
@@ -191,6 +205,8 @@ for q, a in DECISION:
 **Remember:** Biometric data usually cannot be revoked. Treat it as the most sensitive category you handle.
 
 **Common mistake:** Building face recognition because the API was easy, without a lawful basis or a retention policy.
+
+Practice: open `examples/08_legal_restrictions_by_jurisdiction.py`, predict the output, change one line, predict again.
 
 ## 9. When to refuse to build it
 
@@ -214,6 +230,8 @@ for s in STEPS:
 
 **Common mistake:** Six weeks of feature engineering with no baseline to prove any of it helped.
 
+Practice: open `examples/09_when_to_refuse_to_build_it.py`, predict the output, change one line, predict again.
+
 ## 10. Safer alternatives to face recognition
 
 Face technology is technically routine and legally and ethically loaded. Detection (is there a face) is far less sensitive than recognition (whose face). Many jurisdictions restrict biometric processing outright. Ask whether a non-biometric signal — a badge scan, a session token — answers the same business question.
@@ -233,6 +251,8 @@ for q, a in DECISION:
 **Remember:** Biometric data usually cannot be revoked. Treat it as the most sensitive category you handle.
 
 **Common mistake:** Building face recognition because the API was easy, without a lawful basis or a retention policy.
+
+Practice: open `examples/10_safer_alternatives_to_face_recognition.py`, predict the output, change one line, predict again.
 
 ---
 

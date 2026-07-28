@@ -42,6 +42,8 @@ print('vertical edge column found at x =', int(np.argmax(np.abs(edges).sum(axis=
 
 **Common mistake:** Feeding BGR from OpenCV into a model trained on RGB and losing accuracy for no visible reason.
 
+Practice: open `examples/01_pixels_channels_and_bit_depth.py`, predict the output, change one line, predict again.
+
 ## 2. Colour spaces: RGB, HSV, grayscale
 
 An image is an array of shape (height, width, channels) with values 0-255 or 0-1. Everything else — filters, edges, resizing — is arithmetic on that array. Classical CV still wins when the scene is controlled: fixed camera, fixed lighting, known object.
@@ -67,6 +69,8 @@ print('vertical edge column found at x =', int(np.argmax(np.abs(edges).sum(axis=
 
 **Common mistake:** Feeding BGR from OpenCV into a model trained on RGB and losing accuracy for no visible reason.
 
+Practice: open `examples/02_colour_spaces_rgb_hsv_grayscale.py`, predict the output, change one line, predict again.
+
 ## 3. Image file formats and compression
 
 Today's idea — **Image file formats and compression** — sits inside the theme of Image fundamentals. Read it as a tool, not trivia: what job does it do, what does it assume about your data, and what breaks when that assumption is false?
@@ -82,6 +86,8 @@ print("practice: Image file formats and compression")
 **Remember:** State one assumption `Image file formats and compression` makes about your data before you use it.
 
 **Common mistake:** Copy-pasting `Image file formats and compression` from a tutorial without knowing what it assumes or when it fails.
+
+Practice: open `examples/03_image_file_formats_and_compression.py`, predict the output, change one line, predict again.
 
 ## 4. Loading images with PIL and OpenCV
 
@@ -108,6 +114,8 @@ print('vertical edge column found at x =', int(np.argmax(np.abs(edges).sum(axis=
 
 **Common mistake:** Feeding BGR from OpenCV into a model trained on RGB and losing accuracy for no visible reason.
 
+Practice: open `examples/04_loading_images_with_pil_and_opencv.py`, predict the output, change one line, predict again.
+
 ## 5. Resizing and interpolation methods
 
 An image is an array of shape (height, width, channels) with values 0-255 or 0-1. Everything else — filters, edges, resizing — is arithmetic on that array. Classical CV still wins when the scene is controlled: fixed camera, fixed lighting, known object.
@@ -133,6 +141,8 @@ print('vertical edge column found at x =', int(np.argmax(np.abs(edges).sum(axis=
 
 **Common mistake:** Feeding BGR from OpenCV into a model trained on RGB and losing accuracy for no visible reason.
 
+Practice: open `examples/05_resizing_and_interpolation_methods.py`, predict the output, change one line, predict again.
+
 ## 6. Aspect ratio and letterboxing
 
 Today's idea — **Aspect ratio and letterboxing** — sits inside the theme of Image fundamentals. Read it as a tool, not trivia: what job does it do, what does it assume about your data, and what breaks when that assumption is false?
@@ -148,6 +158,8 @@ print("practice: Aspect ratio and letterboxing")
 **Remember:** State one assumption `Aspect ratio and letterboxing` makes about your data before you use it.
 
 **Common mistake:** Copy-pasting `Aspect ratio and letterboxing` from a tutorial without knowing what it assumes or when it fails.
+
+Practice: open `examples/06_aspect_ratio_and_letterboxing.py`, predict the output, change one line, predict again.
 
 ## 7. Normalisation for pretrained models
 
@@ -168,6 +180,8 @@ print('cosine', cos)   # 1.0 -> same direction
 **Remember:** Cosine similarity ignores magnitude; Euclidean distance does not. Pick the one that matches your question.
 
 **Common mistake:** Comparing raw embeddings with Euclidean distance when only direction carries meaning.
+
+Practice: open `examples/07_normalisation_for_pretrained_models.py`, predict the output, change one line, predict again.
 
 ## 8. Batching images efficiently
 
@@ -201,6 +215,8 @@ test_preprocess()
 
 **Common mistake:** Testing only the happy path, so an all-null column silently trains a constant model.
 
+Practice: open `examples/08_batching_images_efficiently.py`, predict the output, change one line, predict again.
+
 ## 9. EXIF orientation gotchas
 
 An image is an array of shape (height, width, channels) with values 0-255 or 0-1. Everything else — filters, edges, resizing — is arithmetic on that array. Classical CV still wins when the scene is controlled: fixed camera, fixed lighting, known object.
@@ -226,6 +242,8 @@ print('vertical edge column found at x =', int(np.argmax(np.abs(edges).sum(axis=
 
 **Common mistake:** Feeding BGR from OpenCV into a model trained on RGB and losing accuracy for no visible reason.
 
+Practice: open `examples/09_exif_orientation_gotchas.py`, predict the output, change one line, predict again.
+
 ## 10. Building an image loading utility
 
 Projects are where the learning sticks. Build a thin end-to-end slice first — load data, train something dumb, evaluate, serve one prediction — then improve one layer at a time. A working baseline on day one beats a perfect model that never ships.
@@ -247,6 +265,8 @@ for s in STEPS:
 **Remember:** Spend an hour looking at wrong predictions before you spend a day tuning hyperparameters.
 
 **Common mistake:** Six weeks of feature engineering with no baseline to prove any of it helped.
+
+Practice: open `examples/10_building_an_image_loading_utility.py`, predict the output, change one line, predict again.
 
 ---
 

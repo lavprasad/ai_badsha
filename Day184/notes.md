@@ -37,6 +37,8 @@ print('          opt.step(); opt.zero_grad()')
 
 **Common mistake:** Scaling the learning rate wrongly when you scale the batch — a larger batch usually needs a larger LR.
 
+Practice: open `examples/01_when_single_gpu_stops_working.py`, predict the output, change one line, predict again.
+
 ## 2. Data parallelism
 
 Data parallelism replicates the model and splits the batch; model parallelism splits the model when it will not fit on one device. Scale only after profiling — most 'we need more GPUs' problems are actually a slow data loader.
@@ -57,6 +59,8 @@ print('          opt.step(); opt.zero_grad()')
 
 **Common mistake:** Scaling the learning rate wrongly when you scale the batch — a larger batch usually needs a larger LR.
 
+Practice: open `examples/02_data_parallelism.py`, predict the output, change one line, predict again.
+
 ## 3. Distributed data parallel
 
 Data parallelism replicates the model and splits the batch; model parallelism splits the model when it will not fit on one device. Scale only after profiling — most 'we need more GPUs' problems are actually a slow data loader.
@@ -76,6 +80,8 @@ print('          opt.step(); opt.zero_grad()')
 **Remember:** Profile first. GPU at 30% utilisation means the bottleneck is the data pipeline, not the GPU.
 
 **Common mistake:** Scaling the learning rate wrongly when you scale the batch — a larger batch usually needs a larger LR.
+
+Practice: open `examples/03_distributed_data_parallel.py`, predict the output, change one line, predict again.
 
 ## 4. Gradient accumulation
 
@@ -99,6 +105,8 @@ print('analytic ', 2 * x + 3)   # should match to ~1e-6
 
 **Common mistake:** Trusting a derivation you never gradient-checked; a sign error trains slowly instead of failing loudly.
 
+Practice: open `examples/04_gradient_accumulation.py`, predict the output, change one line, predict again.
+
 ## 5. Model parallelism and sharding
 
 Data parallelism replicates the model and splits the batch; model parallelism splits the model when it will not fit on one device. Scale only after profiling — most 'we need more GPUs' problems are actually a slow data loader.
@@ -119,6 +127,8 @@ print('          opt.step(); opt.zero_grad()')
 
 **Common mistake:** Scaling the learning rate wrongly when you scale the batch — a larger batch usually needs a larger LR.
 
+Practice: open `examples/05_model_parallelism_and_sharding.py`, predict the output, change one line, predict again.
+
 ## 6. ZeRO and FSDP
 
 Data parallelism replicates the model and splits the batch; model parallelism splits the model when it will not fit on one device. Scale only after profiling — most 'we need more GPUs' problems are actually a slow data loader.
@@ -138,6 +148,8 @@ print('          opt.step(); opt.zero_grad()')
 **Remember:** Profile first. GPU at 30% utilisation means the bottleneck is the data pipeline, not the GPU.
 
 **Common mistake:** Scaling the learning rate wrongly when you scale the batch — a larger batch usually needs a larger LR.
+
+Practice: open `examples/06_zero_and_fsdp.py`, predict the output, change one line, predict again.
 
 ## 7. Mixed precision at scale
 
@@ -161,6 +173,8 @@ print('roc auc', round(roc_auc_score(yte, m.predict_proba(Xte)[:, 1]), 4))
 
 **Common mistake:** Optimising ROC-AUC on a heavily imbalanced problem where precision-recall AUC is the honest metric.
 
+Practice: open `examples/07_mixed_precision_at_scale.py`, predict the output, change one line, predict again.
+
 ## 8. Checkpointing large runs
 
 Data parallelism replicates the model and splits the batch; model parallelism splits the model when it will not fit on one device. Scale only after profiling — most 'we need more GPUs' problems are actually a slow data loader.
@@ -181,6 +195,8 @@ print('          opt.step(); opt.zero_grad()')
 
 **Common mistake:** Scaling the learning rate wrongly when you scale the batch — a larger batch usually needs a larger LR.
 
+Practice: open `examples/08_checkpointing_large_runs.py`, predict the output, change one line, predict again.
+
 ## 9. Cluster cost management
 
 Data parallelism replicates the model and splits the batch; model parallelism splits the model when it will not fit on one device. Scale only after profiling — most 'we need more GPUs' problems are actually a slow data loader.
@@ -200,6 +216,8 @@ print('          opt.step(); opt.zero_grad()')
 **Remember:** Profile first. GPU at 30% utilisation means the bottleneck is the data pipeline, not the GPU.
 
 **Common mistake:** Scaling the learning rate wrongly when you scale the batch — a larger batch usually needs a larger LR.
+
+Practice: open `examples/09_cluster_cost_management.py`, predict the output, change one line, predict again.
 
 ## 10. Deciding whether you need any of this
 
@@ -232,6 +250,8 @@ test_preprocess()
 **Remember:** Test the data contract, not just the function — bad data breaks more models than bad code.
 
 **Common mistake:** Testing only the happy path, so an all-null column silently trains a constant model.
+
+Practice: open `examples/10_deciding_whether_you_need_any_of_this.py`, predict the output, change one line, predict again.
 
 ---
 

@@ -35,6 +35,8 @@ print(f'P(sick | positive) = {posterior:.4f}')   # ~0.0098
 
 **Common mistake:** Reporting accuracy on an imbalanced problem where predicting 'no' always scores 99%.
 
+Practice: open `examples/01_from_linear_score_to_probability.py`, predict the output, change one line, predict again.
+
 ## 2. The sigmoid and the logit
 
 Logistic regression squashes a linear score through a sigmoid to get a probability. The coefficients are log-odds: +0.7 means the odds roughly double per unit. It stays the default for anything where you must explain the decision to a regulator.
@@ -60,6 +62,8 @@ print('weights', np.round(w, 2), 'acc', ((sigmoid(X @ w + b) > 0.5) == y).mean()
 **Remember:** Clip the sigmoid input — `exp` of a large negative number overflows and returns NaN.
 
 **Common mistake:** Reading the raw output as a calibrated probability without ever checking a calibration curve.
+
+Practice: open `examples/02_the_sigmoid_and_the_logit.py`, predict the output, change one line, predict again.
 
 ## 3. Odds and log-odds interpretation
 
@@ -87,6 +91,8 @@ print('weights', np.round(w, 2), 'acc', ((sigmoid(X @ w + b) > 0.5) == y).mean()
 
 **Common mistake:** Reading the raw output as a calibrated probability without ever checking a calibration curve.
 
+Practice: open `examples/03_odds_and_log_odds_interpretation.py`, predict the output, change one line, predict again.
+
 ## 4. Maximum likelihood for Bernoulli data
 
 Bayes' rule updates a belief with evidence: posterior = likelihood x prior / evidence. The most common mistake in applied ML is ignoring the prior — a 99%-accurate test for a 1-in-10000 disease still gives mostly false positives.
@@ -104,6 +110,8 @@ print(f'P(sick | positive) = {posterior:.4f}')   # ~0.0098
 **Remember:** Rare events make precision collapse no matter how good the classifier looks on accuracy.
 
 **Common mistake:** Reporting accuracy on an imbalanced problem where predicting 'no' always scores 99%.
+
+Practice: open `examples/04_maximum_likelihood_for_bernoulli_data.py`, predict the output, change one line, predict again.
 
 ## 5. Deriving the cross-entropy loss
 
@@ -128,6 +136,8 @@ print('perplexity    ', round(float(np.exp(cross_entropy(truth, unsure))), 3))
 
 **Common mistake:** Applying softmax twice (once in the model, once in the loss) and getting flat, untrainable gradients.
 
+Practice: open `examples/05_deriving_the_cross_entropy_loss.py`, predict the output, change one line, predict again.
+
 ## 6. The gradient of logistic loss
 
 The derivative answers: if I nudge this input a little, how much does the output move? The gradient is that answer for every input at once, so it points uphill. Training walks downhill by stepping against the gradient. The chain rule is what lets you propagate that answer through a stack of layers.
@@ -149,6 +159,8 @@ print('analytic ', 2 * x + 3)   # should match to ~1e-6
 **Remember:** A central difference `(f(x+h)-f(x-h))/2h` is the cheapest way to check a hand-written gradient.
 
 **Common mistake:** Trusting a derivation you never gradient-checked; a sign error trains slowly instead of failing loudly.
+
+Practice: open `examples/06_the_gradient_of_logistic_loss.py`, predict the output, change one line, predict again.
 
 ## 7. Decision boundaries
 
@@ -176,6 +188,8 @@ print('weights', np.round(w, 2), 'acc', ((sigmoid(X @ w + b) > 0.5) == y).mean()
 
 **Common mistake:** Reading the raw output as a calibrated probability without ever checking a calibration curve.
 
+Practice: open `examples/07_decision_boundaries.py`, predict the output, change one line, predict again.
+
 ## 8. Multiclass with softmax
 
 Logistic regression squashes a linear score through a sigmoid to get a probability. The coefficients are log-odds: +0.7 means the odds roughly double per unit. It stays the default for anything where you must explain the decision to a regulator.
@@ -201,6 +215,8 @@ print('weights', np.round(w, 2), 'acc', ((sigmoid(X @ w + b) > 0.5) == y).mean()
 **Remember:** Clip the sigmoid input — `exp` of a large negative number overflows and returns NaN.
 
 **Common mistake:** Reading the raw output as a calibrated probability without ever checking a calibration curve.
+
+Practice: open `examples/08_multiclass_with_softmax.py`, predict the output, change one line, predict again.
 
 ## 9. Regularised logistic regression
 
@@ -228,6 +244,8 @@ print('weights', np.round(w, 2), 'acc', ((sigmoid(X @ w + b) > 0.5) == y).mean()
 
 **Common mistake:** Reading the raw output as a calibrated probability without ever checking a calibration curve.
 
+Practice: open `examples/09_regularised_logistic_regression.py`, predict the output, change one line, predict again.
+
 ## 10. Implementing it from scratch
 
 Logistic regression squashes a linear score through a sigmoid to get a probability. The coefficients are log-odds: +0.7 means the odds roughly double per unit. It stays the default for anything where you must explain the decision to a regulator.
@@ -253,6 +271,8 @@ print('weights', np.round(w, 2), 'acc', ((sigmoid(X @ w + b) > 0.5) == y).mean()
 **Remember:** Clip the sigmoid input — `exp` of a large negative number overflows and returns NaN.
 
 **Common mistake:** Reading the raw output as a calibrated probability without ever checking a calibration curve.
+
+Practice: open `examples/10_implementing_it_from_scratch.py`, predict the output, change one line, predict again.
 
 ---
 

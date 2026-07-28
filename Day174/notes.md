@@ -46,6 +46,8 @@ print('\\nReal pipeline: chunk 300-800 tokens with overlap -> embed -> ANN index
 
 **Common mistake:** Chunking blindly at 1000 characters and cutting tables and code blocks in half.
 
+Practice: open `examples/01_goal_grounded_answers_over_your_own_docu.py`, predict the output, change one line, predict again.
+
 ## 2. Ingestion and chunking pipeline
 
 A Pipeline chains preprocessing and the model into one object that fits and predicts as a unit. This is the single best defence against leakage, and it means deployment ships one artefact instead of six loose steps you must remember to repeat.
@@ -73,6 +75,8 @@ print(model.predict(df))
 
 **Common mistake:** Preprocessing in a notebook and then forgetting one step when writing the serving code.
 
+Practice: open `examples/02_ingestion_and_chunking_pipeline.py`, predict the output, change one line, predict again.
+
 ## 3. Embedding and index construction
 
 An embedding maps text to a dense vector where nearby means similar in meaning. Unlike keyword search, 'car trouble' matches 'engine won't start'. Every RAG system is embeddings plus nearest-neighbour lookup.
@@ -99,6 +103,8 @@ print('king - man + woman ~', best)
 **Remember:** Normalise embeddings, then cosine similarity is just a dot product — much faster at scale.
 
 **Common mistake:** Mixing vectors from two different embedding models in one index; the spaces are unrelated.
+
+Practice: open `examples/03_embedding_and_index_construction.py`, predict the output, change one line, predict again.
 
 ## 4. Hybrid retrieval with reranking
 
@@ -129,6 +135,8 @@ print('\\nReal pipeline: chunk 300-800 tokens with overlap -> embed -> ANN index
 
 **Common mistake:** Chunking blindly at 1000 characters and cutting tables and code blocks in half.
 
+Practice: open `examples/04_hybrid_retrieval_with_reranking.py`, predict the output, change one line, predict again.
+
 ## 5. Grounded generation with citations
 
 RAG grounds answers in your documents: chunk, embed, store, retrieve the top-k for the question, and put them in the prompt. Retrieval quality is the whole ballgame — a perfect model answering from the wrong three chunks is still wrong.
@@ -157,6 +165,8 @@ print('\\nReal pipeline: chunk 300-800 tokens with overlap -> embed -> ANN index
 **Remember:** Always show the source of each retrieved chunk in the answer so users can verify it.
 
 **Common mistake:** Chunking blindly at 1000 characters and cutting tables and code blocks in half.
+
+Practice: open `examples/05_grounded_generation_with_citations.py`, predict the output, change one line, predict again.
 
 ## 6. Abstention when retrieval is weak
 
@@ -187,6 +197,8 @@ print('\\nReal pipeline: chunk 300-800 tokens with overlap -> embed -> ANN index
 
 **Common mistake:** Chunking blindly at 1000 characters and cutting tables and code blocks in half.
 
+Practice: open `examples/06_abstention_when_retrieval_is_weak.py`, predict the output, change one line, predict again.
+
 ## 7. Evaluation set and scoring harness
 
 RAG grounds answers in your documents: chunk, embed, store, retrieve the top-k for the question, and put them in the prompt. Retrieval quality is the whole ballgame — a perfect model answering from the wrong three chunks is still wrong.
@@ -215,6 +227,8 @@ print('\\nReal pipeline: chunk 300-800 tokens with overlap -> embed -> ANN index
 **Remember:** Always show the source of each retrieved chunk in the answer so users can verify it.
 
 **Common mistake:** Chunking blindly at 1000 characters and cutting tables and code blocks in half.
+
+Practice: open `examples/07_evaluation_set_and_scoring_harness.py`, predict the output, change one line, predict again.
 
 ## 8. Cost and latency measurement
 
@@ -245,6 +259,8 @@ print('\\nReal pipeline: chunk 300-800 tokens with overlap -> embed -> ANN index
 
 **Common mistake:** Chunking blindly at 1000 characters and cutting tables and code blocks in half.
 
+Practice: open `examples/08_cost_and_latency_measurement.py`, predict the output, change one line, predict again.
+
 ## 9. Prompt injection hardening
 
 RAG grounds answers in your documents: chunk, embed, store, retrieve the top-k for the question, and put them in the prompt. Retrieval quality is the whole ballgame — a perfect model answering from the wrong three chunks is still wrong.
@@ -274,6 +290,8 @@ print('\\nReal pipeline: chunk 300-800 tokens with overlap -> embed -> ANN index
 
 **Common mistake:** Chunking blindly at 1000 characters and cutting tables and code blocks in half.
 
+Practice: open `examples/09_prompt_injection_hardening.py`, predict the output, change one line, predict again.
+
 ## 10. Deploying it behind an API
 
 RAG grounds answers in your documents: chunk, embed, store, retrieve the top-k for the question, and put them in the prompt. Retrieval quality is the whole ballgame — a perfect model answering from the wrong three chunks is still wrong.
@@ -302,6 +320,8 @@ print('\\nReal pipeline: chunk 300-800 tokens with overlap -> embed -> ANN index
 **Remember:** Always show the source of each retrieved chunk in the answer so users can verify it.
 
 **Common mistake:** Chunking blindly at 1000 characters and cutting tables and code blocks in half.
+
+Practice: open `examples/10_deploying_it_behind_an_api.py`, predict the output, change one line, predict again.
 
 ---
 

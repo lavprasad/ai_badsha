@@ -44,6 +44,8 @@ print(model.predict(df))
 
 **Common mistake:** Preprocessing in a notebook and then forgetting one step when writing the serving code.
 
+Practice: open `examples/01_document_ingestion_pipeline.py`, predict the output, change one line, predict again.
+
 ## 2. Format detection and routing
 
 Document AI is a pipeline, not a model: detect whether the PDF has a text layer, OCR only if it does not, recover reading order and layout, then extract fields against a schema. Validation rules at the end (does the total equal the sum of lines?) catch more errors than a better OCR model.
@@ -71,6 +73,8 @@ print(validate_invoice({'lines': [100.0, 50.0], 'total': 150.0, 'date': '2024-03
 **Remember:** Arithmetic and schema checks on extracted fields catch OCR errors that no confidence score flags.
 
 **Common mistake:** Running OCR on PDFs that already had a perfect text layer, adding cost and introducing errors.
+
+Practice: open `examples/02_format_detection_and_routing.py`, predict the output, change one line, predict again.
 
 ## 3. PDF text vs scanned PDF
 
@@ -100,6 +104,8 @@ print(validate_invoice({'lines': [100.0, 50.0], 'total': 150.0, 'date': '2024-03
 
 **Common mistake:** Running OCR on PDFs that already had a perfect text layer, adding cost and introducing errors.
 
+Practice: open `examples/03_pdf_text_vs_scanned_pdf.py`, predict the output, change one line, predict again.
+
 ## 4. OCR fallback
 
 Document AI is a pipeline, not a model: detect whether the PDF has a text layer, OCR only if it does not, recover reading order and layout, then extract fields against a schema. Validation rules at the end (does the total equal the sum of lines?) catch more errors than a better OCR model.
@@ -127,6 +133,8 @@ print(validate_invoice({'lines': [100.0, 50.0], 'total': 150.0, 'date': '2024-03
 **Remember:** Arithmetic and schema checks on extracted fields catch OCR errors that no confidence score flags.
 
 **Common mistake:** Running OCR on PDFs that already had a perfect text layer, adding cost and introducing errors.
+
+Practice: open `examples/04_ocr_fallback.py`, predict the output, change one line, predict again.
 
 ## 5. Layout and reading order
 
@@ -156,6 +164,8 @@ print(validate_invoice({'lines': [100.0, 50.0], 'total': 150.0, 'date': '2024-03
 
 **Common mistake:** Running OCR on PDFs that already had a perfect text layer, adding cost and introducing errors.
 
+Practice: open `examples/05_layout_and_reading_order.py`, predict the output, change one line, predict again.
+
 ## 6. Table extraction strategies
 
 Document AI is a pipeline, not a model: detect whether the PDF has a text layer, OCR only if it does not, recover reading order and layout, then extract fields against a schema. Validation rules at the end (does the total equal the sum of lines?) catch more errors than a better OCR model.
@@ -184,6 +194,8 @@ print(validate_invoice({'lines': [100.0, 50.0], 'total': 150.0, 'date': '2024-03
 
 **Common mistake:** Running OCR on PDFs that already had a perfect text layer, adding cost and introducing errors.
 
+Practice: open `examples/06_table_extraction_strategies.py`, predict the output, change one line, predict again.
+
 ## 7. Metadata and provenance
 
 Missing data is information, not just noise. Before filling anything, ask *why* it is missing: a sensor that fails only under load is not missing at random. Then choose: drop rows, drop the column, fill with a statistic, or add an explicit 'was missing' indicator column.
@@ -203,6 +215,8 @@ print(df)
 **Remember:** Compute the fill statistic on the TRAIN split only, then apply it to test.
 
 **Common mistake:** Filling with the mean computed over the full dataset — that leaks test information into training.
+
+Practice: open `examples/07_metadata_and_provenance.py`, predict the output, change one line, predict again.
 
 ## 8. Incremental processing
 
@@ -225,6 +239,8 @@ print('roc auc', round(roc_auc_score(yte, m.predict_proba(Xte)[:, 1]), 4))
 **Remember:** Tune the decision threshold on validation data; 0.5 is a default, not a decision.
 
 **Common mistake:** Optimising ROC-AUC on a heavily imbalanced problem where precision-recall AUC is the honest metric.
+
+Practice: open `examples/08_incremental_processing.py`, predict the output, change one line, predict again.
 
 ## 9. Quality checks on extraction
 
@@ -254,6 +270,8 @@ print(validate_invoice({'lines': [100.0, 50.0], 'total': 150.0, 'date': '2024-03
 
 **Common mistake:** Running OCR on PDFs that already had a perfect text layer, adding cost and introducing errors.
 
+Practice: open `examples/09_quality_checks_on_extraction.py`, predict the output, change one line, predict again.
+
 ## 10. A document intelligence service
 
 Document AI is a pipeline, not a model: detect whether the PDF has a text layer, OCR only if it does not, recover reading order and layout, then extract fields against a schema. Validation rules at the end (does the total equal the sum of lines?) catch more errors than a better OCR model.
@@ -281,6 +299,8 @@ print(validate_invoice({'lines': [100.0, 50.0], 'total': 150.0, 'date': '2024-03
 **Remember:** Arithmetic and schema checks on extracted fields catch OCR errors that no confidence score flags.
 
 **Common mistake:** Running OCR on PDFs that already had a perfect text layer, adding cost and introducing errors.
+
+Practice: open `examples/10_a_document_intelligence_service.py`, predict the output, change one line, predict again.
 
 ---
 

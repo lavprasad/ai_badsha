@@ -49,6 +49,8 @@ test_preprocess()
 
 **Common mistake:** Testing only the happy path, so an all-null column silently trains a constant model.
 
+Practice: open `examples/01_what_a_model_incident_looks_like.py`, predict the output, change one line, predict again.
+
 ## 2. Detection and paging
 
 ML code needs the same tests as any code, plus data tests: schema, ranges, null rates, class balance. Add one behavioural test per known failure mode — a test that would have caught last quarter's outage is worth more than 90% coverage.
@@ -80,6 +82,8 @@ test_preprocess()
 **Remember:** Test the data contract, not just the function — bad data breaks more models than bad code.
 
 **Common mistake:** Testing only the happy path, so an all-null column silently trains a constant model.
+
+Practice: open `examples/02_detection_and_paging.py`, predict the output, change one line, predict again.
 
 ## 3. Immediate mitigation: rollback or disable
 
@@ -113,6 +117,8 @@ test_preprocess()
 
 **Common mistake:** Testing only the happy path, so an all-null column silently trains a constant model.
 
+Practice: open `examples/03_immediate_mitigation_rollback_or_disable.py`, predict the output, change one line, predict again.
+
 ## 4. Root cause categories
 
 ML code needs the same tests as any code, plus data tests: schema, ranges, null rates, class balance. Add one behavioural test per known failure mode — a test that would have caught last quarter's outage is worth more than 90% coverage.
@@ -145,6 +151,8 @@ test_preprocess()
 
 **Common mistake:** Testing only the happy path, so an all-null column silently trains a constant model.
 
+Practice: open `examples/04_root_cause_categories.py`, predict the output, change one line, predict again.
+
 ## 5. Data pipeline failures
 
 A Pipeline chains preprocessing and the model into one object that fits and predicts as a unit. This is the single best defence against leakage, and it means deployment ships one artefact instead of six loose steps you must remember to repeat.
@@ -171,6 +179,8 @@ print(model.predict(df))
 **Remember:** `handle_unknown='ignore'` stops production crashing on a category you never saw in training.
 
 **Common mistake:** Preprocessing in a notebook and then forgetting one step when writing the serving code.
+
+Practice: open `examples/05_data_pipeline_failures.py`, predict the output, change one line, predict again.
 
 ## 6. Silent quality degradation
 
@@ -204,6 +214,8 @@ test_preprocess()
 
 **Common mistake:** Testing only the happy path, so an all-null column silently trains a constant model.
 
+Practice: open `examples/06_silent_quality_degradation.py`, predict the output, change one line, predict again.
+
 ## 7. Communication with stakeholders
 
 ML code needs the same tests as any code, plus data tests: schema, ranges, null rates, class balance. Add one behavioural test per known failure mode — a test that would have caught last quarter's outage is worth more than 90% coverage.
@@ -235,6 +247,8 @@ test_preprocess()
 **Remember:** Test the data contract, not just the function — bad data breaks more models than bad code.
 
 **Common mistake:** Testing only the happy path, so an all-null column silently trains a constant model.
+
+Practice: open `examples/07_communication_with_stakeholders.py`, predict the output, change one line, predict again.
 
 ## 8. Postmortems without blame
 
@@ -268,6 +282,8 @@ test_preprocess()
 
 **Common mistake:** Testing only the happy path, so an all-null column silently trains a constant model.
 
+Practice: open `examples/08_postmortems_without_blame.py`, predict the output, change one line, predict again.
+
 ## 9. Turning incidents into tests
 
 ML code needs the same tests as any code, plus data tests: schema, ranges, null rates, class balance. Add one behavioural test per known failure mode — a test that would have caught last quarter's outage is worth more than 90% coverage.
@@ -300,6 +316,8 @@ test_preprocess()
 
 **Common mistake:** Testing only the happy path, so an all-null column silently trains a constant model.
 
+Practice: open `examples/09_turning_incidents_into_tests.py`, predict the output, change one line, predict again.
+
 ## 10. Reducing mean time to recovery
 
 The mean is pulled around by outliers; the median is not. Report both, plus a spread measure. When mean and median disagree sharply, the distribution is skewed and averages are lying to you.
@@ -320,6 +338,8 @@ print('outliers', salaries[(salaries < q1 - 1.5 * iqr) | (salaries > q3 + 1.5 * 
 **Remember:** Quote median + IQR for skewed data, mean + std only for roughly symmetric data.
 
 **Common mistake:** Removing 'outliers' automatically when they are the exact events you were hired to predict.
+
+Practice: open `examples/10_reducing_mean_time_to_recovery.py`, predict the output, change one line, predict again.
 
 ---
 

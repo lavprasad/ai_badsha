@@ -39,6 +39,8 @@ print(df)
 
 **Common mistake:** Building a feature from a column that is only filled in AFTER the event you are predicting.
 
+Practice: open `examples/01_representation_learning_vs_feature_engin.py`, predict the output, change one line, predict again.
+
 ## 2. What deep nets buy you and what they cost
 
 Deep learning earns its cost when raw inputs have structure a human cannot hand-engineer: pixels, audio, text. On a 50-column business table, gradient boosting usually wins with a fraction of the effort. Universal approximation says a big enough net *can* represent the function — it says nothing about whether your data and optimiser will find it.
@@ -59,6 +61,8 @@ for k, v in CHOOSE.items():
 **Remember:** Capacity is not the bottleneck in most projects — data quality and framing are.
 
 **Common mistake:** Reaching for a neural network on 3,000 tabular rows and losing to a random forest built in one line.
+
+Practice: open `examples/02_what_deep_nets_buy_you_and_what_they_cos.py`, predict the output, change one line, predict again.
 
 ## 3. Where deep learning beats trees, and where it does not
 
@@ -81,6 +85,8 @@ for k, v in CHOOSE.items():
 
 **Common mistake:** Reaching for a neural network on 3,000 tabular rows and losing to a random forest built in one line.
 
+Practice: open `examples/03_where_deep_learning_beats_trees_and_wher.py`, predict the output, change one line, predict again.
+
 ## 4. The hardware and data that made it work
 
 Deep learning earns its cost when raw inputs have structure a human cannot hand-engineer: pixels, audio, text. On a 50-column business table, gradient boosting usually wins with a fraction of the effort. Universal approximation says a big enough net *can* represent the function — it says nothing about whether your data and optimiser will find it.
@@ -101,6 +107,8 @@ for k, v in CHOOSE.items():
 **Remember:** Capacity is not the bottleneck in most projects — data quality and framing are.
 
 **Common mistake:** Reaching for a neural network on 3,000 tabular rows and losing to a random forest built in one line.
+
+Practice: open `examples/04_the_hardware_and_data_that_made_it_work.py`, predict the output, change one line, predict again.
 
 ## 5. Universal approximation, honestly read
 
@@ -123,6 +131,8 @@ for k, v in CHOOSE.items():
 
 **Common mistake:** Reaching for a neural network on 3,000 tabular rows and losing to a random forest built in one line.
 
+Practice: open `examples/05_universal_approximation_honestly_read.py`, predict the output, change one line, predict again.
+
 ## 6. Depth vs width
 
 Deep learning earns its cost when raw inputs have structure a human cannot hand-engineer: pixels, audio, text. On a 50-column business table, gradient boosting usually wins with a fraction of the effort. Universal approximation says a big enough net *can* represent the function — it says nothing about whether your data and optimiser will find it.
@@ -144,6 +154,8 @@ for k, v in CHOOSE.items():
 
 **Common mistake:** Reaching for a neural network on 3,000 tabular rows and losing to a random forest built in one line.
 
+Practice: open `examples/06_depth_vs_width.py`, predict the output, change one line, predict again.
+
 ## 7. Modern deep learning timeline
 
 Deep learning earns its cost when raw inputs have structure a human cannot hand-engineer: pixels, audio, text. On a 50-column business table, gradient boosting usually wins with a fraction of the effort. Universal approximation says a big enough net *can* represent the function — it says nothing about whether your data and optimiser will find it.
@@ -164,6 +176,8 @@ for k, v in CHOOSE.items():
 **Remember:** Capacity is not the bottleneck in most projects — data quality and framing are.
 
 **Common mistake:** Reaching for a neural network on 3,000 tabular rows and losing to a random forest built in one line.
+
+Practice: open `examples/07_modern_deep_learning_timeline.py`, predict the output, change one line, predict again.
 
 ## 8. Frameworks: PyTorch, TensorFlow, JAX
 
@@ -193,6 +207,8 @@ print('final loss', round(loss.item(), 4))
 
 **Common mistake:** Calling `loss.backward()` twice without `retain_graph` and getting a confusing runtime error.
 
+Practice: open `examples/08_frameworks_pytorch_tensorflow_jax.py`, predict the output, change one line, predict again.
+
 ## 9. The five-line training loop preview
 
 PyTorch is NumPy with gradients and a GPU. The training loop is always the same five lines: zero grads, forward, loss, backward, step. Write it out by hand once — every framework wrapper is just hiding these five.
@@ -221,6 +237,8 @@ print('final loss', round(loss.item(), 4))
 
 **Common mistake:** Calling `loss.backward()` twice without `retain_graph` and getting a confusing runtime error.
 
+Practice: open `examples/09_the_five_line_training_loop_preview.py`, predict the output, change one line, predict again.
+
 ## 10. Setting expectations for this phase
 
 Deep learning earns its cost when raw inputs have structure a human cannot hand-engineer: pixels, audio, text. On a 50-column business table, gradient boosting usually wins with a fraction of the effort. Universal approximation says a big enough net *can* represent the function — it says nothing about whether your data and optimiser will find it.
@@ -241,6 +259,8 @@ for k, v in CHOOSE.items():
 **Remember:** Capacity is not the bottleneck in most projects — data quality and framing are.
 
 **Common mistake:** Reaching for a neural network on 3,000 tabular rows and losing to a random forest built in one line.
+
+Practice: open `examples/10_setting_expectations_for_this_phase.py`, predict the output, change one line, predict again.
 
 ---
 

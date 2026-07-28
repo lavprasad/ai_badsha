@@ -46,6 +46,8 @@ print('\\nReal pipeline: chunk 300-800 tokens with overlap -> embed -> ANN index
 
 **Common mistake:** Chunking blindly at 1000 characters and cutting tables and code blocks in half.
 
+Practice: open `examples/01_retrieval_is_the_bottleneck_not_generati.py`, predict the output, change one line, predict again.
+
 ## 2. Measuring recall@k
 
 Accuracy hides everything on imbalanced data. Precision asks 'of the ones I flagged, how many were real'; recall asks 'of the real ones, how many did I catch'. You trade one for the other with the threshold, and the business decides which error hurts more.
@@ -67,6 +69,8 @@ print('roc auc', round(roc_auc_score(yte, m.predict_proba(Xte)[:, 1]), 4))
 **Remember:** Tune the decision threshold on validation data; 0.5 is a default, not a decision.
 
 **Common mistake:** Optimising ROC-AUC on a heavily imbalanced problem where precision-recall AUC is the honest metric.
+
+Practice: open `examples/02_measuring_recall_k.py`, predict the output, change one line, predict again.
 
 ## 3. Query rewriting
 
@@ -97,6 +101,8 @@ print('\\nReal pipeline: chunk 300-800 tokens with overlap -> embed -> ANN index
 
 **Common mistake:** Chunking blindly at 1000 characters and cutting tables and code blocks in half.
 
+Practice: open `examples/03_query_rewriting.py`, predict the output, change one line, predict again.
+
 ## 4. Hypothetical document embeddings
 
 An embedding maps text to a dense vector where nearby means similar in meaning. Unlike keyword search, 'car trouble' matches 'engine won't start'. Every RAG system is embeddings plus nearest-neighbour lookup.
@@ -123,6 +129,8 @@ print('king - man + woman ~', best)
 **Remember:** Normalise embeddings, then cosine similarity is just a dot product — much faster at scale.
 
 **Common mistake:** Mixing vectors from two different embedding models in one index; the spaces are unrelated.
+
+Practice: open `examples/04_hypothetical_document_embeddings.py`, predict the output, change one line, predict again.
 
 ## 5. Multi-query retrieval
 
@@ -153,6 +161,8 @@ print('\\nReal pipeline: chunk 300-800 tokens with overlap -> embed -> ANN index
 
 **Common mistake:** Chunking blindly at 1000 characters and cutting tables and code blocks in half.
 
+Practice: open `examples/05_multi_query_retrieval.py`, predict the output, change one line, predict again.
+
 ## 6. Hybrid dense plus keyword search
 
 RAG grounds answers in your documents: chunk, embed, store, retrieve the top-k for the question, and put them in the prompt. Retrieval quality is the whole ballgame — a perfect model answering from the wrong three chunks is still wrong.
@@ -181,6 +191,8 @@ print('\\nReal pipeline: chunk 300-800 tokens with overlap -> embed -> ANN index
 **Remember:** Always show the source of each retrieved chunk in the answer so users can verify it.
 
 **Common mistake:** Chunking blindly at 1000 characters and cutting tables and code blocks in half.
+
+Practice: open `examples/06_hybrid_dense_plus_keyword_search.py`, predict the output, change one line, predict again.
 
 ## 7. Reranking with a cross-encoder
 
@@ -211,6 +223,8 @@ print('\\nReal pipeline: chunk 300-800 tokens with overlap -> embed -> ANN index
 
 **Common mistake:** Chunking blindly at 1000 characters and cutting tables and code blocks in half.
 
+Practice: open `examples/07_reranking_with_a_cross_encoder.py`, predict the output, change one line, predict again.
+
 ## 8. Metadata filters
 
 RAG grounds answers in your documents: chunk, embed, store, retrieve the top-k for the question, and put them in the prompt. Retrieval quality is the whole ballgame — a perfect model answering from the wrong three chunks is still wrong.
@@ -239,6 +253,8 @@ print('\\nReal pipeline: chunk 300-800 tokens with overlap -> embed -> ANN index
 **Remember:** Always show the source of each retrieved chunk in the answer so users can verify it.
 
 **Common mistake:** Chunking blindly at 1000 characters and cutting tables and code blocks in half.
+
+Practice: open `examples/08_metadata_filters.py`, predict the output, change one line, predict again.
 
 ## 9. Handling tables and code chunks
 
@@ -269,6 +285,8 @@ print('\\nReal pipeline: chunk 300-800 tokens with overlap -> embed -> ANN index
 
 **Common mistake:** Chunking blindly at 1000 characters and cutting tables and code blocks in half.
 
+Practice: open `examples/09_handling_tables_and_code_chunks.py`, predict the output, change one line, predict again.
+
 ## 10. Building a retrieval eval set
 
 RAG grounds answers in your documents: chunk, embed, store, retrieve the top-k for the question, and put them in the prompt. Retrieval quality is the whole ballgame — a perfect model answering from the wrong three chunks is still wrong.
@@ -297,6 +315,8 @@ print('\\nReal pipeline: chunk 300-800 tokens with overlap -> embed -> ANN index
 **Remember:** Always show the source of each retrieved chunk in the answer so users can verify it.
 
 **Common mistake:** Chunking blindly at 1000 characters and cutting tables and code blocks in half.
+
+Practice: open `examples/10_building_a_retrieval_eval_set.py`, predict the output, change one line, predict again.
 
 ---
 

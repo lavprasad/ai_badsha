@@ -38,6 +38,8 @@ print('relu   ', np.maximum(0, np.array([-1.0, 0.0, 2.0])))
 
 **Common mistake:** Putting a softmax on the final layer AND using a loss that applies softmax internally.
 
+Practice: open `examples/01_why_non_linearity_is_mandatory.py`, predict the output, change one line, predict again.
+
 ## 2. Sigmoid and saturation
 
 Logistic regression squashes a linear score through a sigmoid to get a probability. The coefficients are log-odds: +0.7 means the odds roughly double per unit. It stays the default for anything where you must explain the decision to a regulator.
@@ -64,6 +66,8 @@ print('weights', np.round(w, 2), 'acc', ((sigmoid(X @ w + b) > 0.5) == y).mean()
 
 **Common mistake:** Reading the raw output as a calibrated probability without ever checking a calibration curve.
 
+Practice: open `examples/02_sigmoid_and_saturation.py`, predict the output, change one line, predict again.
+
 ## 3. Tanh
 
 ReLU is the default: cheap, and it does not saturate for positive inputs. Sigmoid and tanh squash into a fixed range and kill gradients at the extremes. GELU/SiLU are smoother ReLUs used in transformers. Softmax turns a vector of scores into a probability distribution.
@@ -84,6 +88,8 @@ print('relu   ', np.maximum(0, np.array([-1.0, 0.0, 2.0])))
 **Remember:** Always subtract the max before `exp` in softmax, or large logits overflow to inf/NaN.
 
 **Common mistake:** Putting a softmax on the final layer AND using a loss that applies softmax internally.
+
+Practice: open `examples/03_tanh.py`, predict the output, change one line, predict again.
 
 ## 4. ReLU and dying neurons
 
@@ -110,6 +116,8 @@ print('output', out.round(3))
 
 **Common mistake:** Initialising all weights to zero, so every neuron gets the same gradient and learns the same thing.
 
+Practice: open `examples/04_relu_and_dying_neurons.py`, predict the output, change one line, predict again.
+
 ## 5. Leaky ReLU and PReLU
 
 ReLU is the default: cheap, and it does not saturate for positive inputs. Sigmoid and tanh squash into a fixed range and kill gradients at the extremes. GELU/SiLU are smoother ReLUs used in transformers. Softmax turns a vector of scores into a probability distribution.
@@ -130,6 +138,8 @@ print('relu   ', np.maximum(0, np.array([-1.0, 0.0, 2.0])))
 **Remember:** Always subtract the max before `exp` in softmax, or large logits overflow to inf/NaN.
 
 **Common mistake:** Putting a softmax on the final layer AND using a loss that applies softmax internally.
+
+Practice: open `examples/05_leaky_relu_and_prelu.py`, predict the output, change one line, predict again.
 
 ## 6. GELU and SiLU/Swish
 
@@ -152,6 +162,8 @@ print('relu   ', np.maximum(0, np.array([-1.0, 0.0, 2.0])))
 
 **Common mistake:** Putting a softmax on the final layer AND using a loss that applies softmax internally.
 
+Practice: open `examples/06_gelu_and_silu_swish.py`, predict the output, change one line, predict again.
+
 ## 7. Softmax for output distributions
 
 A distribution says which values are likely. Gaussian for measurement noise, Bernoulli for yes/no, Poisson for counts per interval. Choosing the right one is choosing your loss function: Gaussian likelihood gives MSE, Bernoulli gives cross-entropy.
@@ -170,6 +182,8 @@ print('coin heads rate ', coin.mean())
 **Remember:** Always seed your RNG (`default_rng(0)`) when you want a result someone else can reproduce.
 
 **Common mistake:** Assuming Gaussian for skewed, bounded, or count data and then being surprised by the residuals.
+
+Practice: open `examples/07_softmax_for_output_distributions.py`, predict the output, change one line, predict again.
 
 ## 8. Numerical stability of softmax
 
@@ -192,6 +206,8 @@ print('relu   ', np.maximum(0, np.array([-1.0, 0.0, 2.0])))
 
 **Common mistake:** Putting a softmax on the final layer AND using a loss that applies softmax internally.
 
+Practice: open `examples/08_numerical_stability_of_softmax.py`, predict the output, change one line, predict again.
+
 ## 9. Choosing activations per layer
 
 ReLU is the default: cheap, and it does not saturate for positive inputs. Sigmoid and tanh squash into a fixed range and kill gradients at the extremes. GELU/SiLU are smoother ReLUs used in transformers. Softmax turns a vector of scores into a probability distribution.
@@ -212,6 +228,8 @@ print('relu   ', np.maximum(0, np.array([-1.0, 0.0, 2.0])))
 **Remember:** Always subtract the max before `exp` in softmax, or large logits overflow to inf/NaN.
 
 **Common mistake:** Putting a softmax on the final layer AND using a loss that applies softmax internally.
+
+Practice: open `examples/09_choosing_activations_per_layer.py`, predict the output, change one line, predict again.
 
 ## 10. Plotting them all and their gradients
 
@@ -234,6 +252,8 @@ print('wrote hist.png')
 **Remember:** Label the axes. An unlabelled plot is a decoration, not evidence.
 
 **Common mistake:** Judging a model by its accuracy number alone without ever looking at the data.
+
+Practice: open `examples/10_plotting_them_all_and_their_gradients.py`, predict the output, change one line, predict again.
 
 ---
 

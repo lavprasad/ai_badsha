@@ -43,6 +43,8 @@ print('same object across frames?', iou((10,10,50,50), (12,11,52,51)) > 0.5)
 
 **Common mistake:** Processing every frame of 30fps footage when 2fps would have given the same answer for 1/15th the cost.
 
+Practice: open `examples/01_video_as_a_sequence_of_frames.py`, predict the output, change one line, predict again.
+
 ## 2. Frame sampling strategies
 
 A distribution says which values are likely. Gaussian for measurement noise, Bernoulli for yes/no, Poisson for counts per interval. Choosing the right one is choosing your loss function: Gaussian likelihood gives MSE, Bernoulli gives cross-entropy.
@@ -61,6 +63,8 @@ print('coin heads rate ', coin.mean())
 **Remember:** Always seed your RNG (`default_rng(0)`) when you want a result someone else can reproduce.
 
 **Common mistake:** Assuming Gaussian for skewed, bounded, or count data and then being surprised by the residuals.
+
+Practice: open `examples/02_frame_sampling_strategies.py`, predict the output, change one line, predict again.
 
 ## 3. Optical flow
 
@@ -88,6 +92,8 @@ print('same object across frames?', iou((10,10,50,50), (12,11,52,51)) > 0.5)
 
 **Common mistake:** Processing every frame of 30fps footage when 2fps would have given the same answer for 1/15th the cost.
 
+Practice: open `examples/03_optical_flow.py`, predict the output, change one line, predict again.
+
 ## 4. Action recognition
 
 Video is frames plus time. Most practical systems sample a few frames per second, embed each with an image model, and put a small temporal model on top — far cheaper than 3D convolutions. Tracking links detections across frames so 'one car seen 90 times' does not become 90 cars.
@@ -113,6 +119,8 @@ print('same object across frames?', iou((10,10,50,50), (12,11,52,51)) > 0.5)
 **Remember:** Sample frames to the lowest rate that still answers the question — it is the biggest cost lever in video.
 
 **Common mistake:** Processing every frame of 30fps footage when 2fps would have given the same answer for 1/15th the cost.
+
+Practice: open `examples/04_action_recognition.py`, predict the output, change one line, predict again.
 
 ## 5. 3D convolutions
 
@@ -141,6 +149,8 @@ print(out)   # the edge column lights up
 
 **Common mistake:** Forgetting the channel dimension and feeding (H,W) where the layer expects (N,C,H,W).
 
+Practice: open `examples/05_3d_convolutions.py`, predict the output, change one line, predict again.
+
 ## 6. Temporal models over frame features
 
 Video is frames plus time. Most practical systems sample a few frames per second, embed each with an image model, and put a small temporal model on top — far cheaper than 3D convolutions. Tracking links detections across frames so 'one car seen 90 times' does not become 90 cars.
@@ -166,6 +176,8 @@ print('same object across frames?', iou((10,10,50,50), (12,11,52,51)) > 0.5)
 **Remember:** Sample frames to the lowest rate that still answers the question — it is the biggest cost lever in video.
 
 **Common mistake:** Processing every frame of 30fps footage when 2fps would have given the same answer for 1/15th the cost.
+
+Practice: open `examples/06_temporal_models_over_frame_features.py`, predict the output, change one line, predict again.
 
 ## 7. Object tracking
 
@@ -193,6 +205,8 @@ print('same object across frames?', iou((10,10,50,50), (12,11,52,51)) > 0.5)
 
 **Common mistake:** Processing every frame of 30fps footage when 2fps would have given the same answer for 1/15th the cost.
 
+Practice: open `examples/07_object_tracking.py`, predict the output, change one line, predict again.
+
 ## 8. Real-time constraints
 
 Video is frames plus time. Most practical systems sample a few frames per second, embed each with an image model, and put a small temporal model on top — far cheaper than 3D convolutions. Tracking links detections across frames so 'one car seen 90 times' does not become 90 cars.
@@ -218,6 +232,8 @@ print('same object across frames?', iou((10,10,50,50), (12,11,52,51)) > 0.5)
 **Remember:** Sample frames to the lowest rate that still answers the question — it is the biggest cost lever in video.
 
 **Common mistake:** Processing every frame of 30fps footage when 2fps would have given the same answer for 1/15th the cost.
+
+Practice: open `examples/08_real_time_constraints.py`, predict the output, change one line, predict again.
 
 ## 9. Storage and throughput planning
 
@@ -248,6 +264,8 @@ print('\\nReal pipeline: chunk 300-800 tokens with overlap -> embed -> ANN index
 
 **Common mistake:** Chunking blindly at 1000 characters and cutting tables and code blocks in half.
 
+Practice: open `examples/09_storage_and_throughput_planning.py`, predict the output, change one line, predict again.
+
 ## 10. A simple activity classifier
 
 Video is frames plus time. Most practical systems sample a few frames per second, embed each with an image model, and put a small temporal model on top — far cheaper than 3D convolutions. Tracking links detections across frames so 'one car seen 90 times' does not become 90 cars.
@@ -273,6 +291,8 @@ print('same object across frames?', iou((10,10,50,50), (12,11,52,51)) > 0.5)
 **Remember:** Sample frames to the lowest rate that still answers the question — it is the biggest cost lever in video.
 
 **Common mistake:** Processing every frame of 30fps footage when 2fps would have given the same answer for 1/15th the cost.
+
+Practice: open `examples/10_a_simple_activity_classifier.py`, predict the output, change one line, predict again.
 
 ---
 

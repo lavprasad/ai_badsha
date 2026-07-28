@@ -39,6 +39,8 @@ for s in STEPS:
 
 **Common mistake:** Six weeks of feature engineering with no baseline to prove any of it helped.
 
+Practice: open `examples/01_goal_a_tiny_numeric_library_you_understa.py`, predict the output, change one line, predict again.
+
 ## 2. Vector and matrix helpers
 
 A vector is a list of numbers with a direction and length. The dot product measures alignment: large and positive when two vectors point the same way, zero when perpendicular. Cosine similarity is the dot product with length divided out, which is why it compares embeddings of different magnitudes fairly.
@@ -58,6 +60,8 @@ print('cosine', cos)   # 1.0 -> same direction
 **Remember:** Cosine similarity ignores magnitude; Euclidean distance does not. Pick the one that matches your question.
 
 **Common mistake:** Comparing raw embeddings with Euclidean distance when only direction carries meaning.
+
+Practice: open `examples/02_vector_and_matrix_helpers.py`, predict the output, change one line, predict again.
 
 ## 3. Numeric gradient utility
 
@@ -81,6 +85,8 @@ print('analytic ', 2 * x + 3)   # should match to ~1e-6
 
 **Common mistake:** Trusting a derivation you never gradient-checked; a sign error trains slowly instead of failing loudly.
 
+Practice: open `examples/03_numeric_gradient_utility.py`, predict the output, change one line, predict again.
+
 ## 4. Gradient descent optimiser
 
 The derivative answers: if I nudge this input a little, how much does the output move? The gradient is that answer for every input at once, so it points uphill. Training walks downhill by stepping against the gradient. The chain rule is what lets you propagate that answer through a stack of layers.
@@ -103,6 +109,8 @@ print('analytic ', 2 * x + 3)   # should match to ~1e-6
 
 **Common mistake:** Trusting a derivation you never gradient-checked; a sign error trains slowly instead of failing loudly.
 
+Practice: open `examples/04_gradient_descent_optimiser.py`, predict the output, change one line, predict again.
+
 ## 5. Linear regression via normal equations
 
 A vector is a list of numbers with a direction and length. The dot product measures alignment: large and positive when two vectors point the same way, zero when perpendicular. Cosine similarity is the dot product with length divided out, which is why it compares embeddings of different magnitudes fairly.
@@ -122,6 +130,8 @@ print('cosine', cos)   # 1.0 -> same direction
 **Remember:** Cosine similarity ignores magnitude; Euclidean distance does not. Pick the one that matches your question.
 
 **Common mistake:** Comparing raw embeddings with Euclidean distance when only direction carries meaning.
+
+Practice: open `examples/05_linear_regression_via_normal_equations.py`, predict the output, change one line, predict again.
 
 ## 6. Linear regression via gradient descent
 
@@ -144,6 +154,8 @@ print('analytic ', 2 * x + 3)   # should match to ~1e-6
 **Remember:** A central difference `(f(x+h)-f(x-h))/2h` is the cheapest way to check a hand-written gradient.
 
 **Common mistake:** Trusting a derivation you never gradient-checked; a sign error trains slowly instead of failing loudly.
+
+Practice: open `examples/06_linear_regression_via_gradient_descent.py`, predict the output, change one line, predict again.
 
 ## 7. Logistic regression from scratch
 
@@ -170,6 +182,8 @@ print('weights', np.round(w, 2), 'acc', ((sigmoid(X @ w + b) > 0.5) == y).mean()
 **Remember:** Clip the sigmoid input — `exp` of a large negative number overflows and returns NaN.
 
 **Common mistake:** Reading the raw output as a calibrated probability without ever checking a calibration curve.
+
+Practice: open `examples/07_logistic_regression_from_scratch.py`, predict the output, change one line, predict again.
 
 ## 8. Validating against scikit-learn
 
@@ -203,6 +217,8 @@ test_preprocess()
 
 **Common mistake:** Testing only the happy path, so an all-null column silently trains a constant model.
 
+Practice: open `examples/08_validating_against_scikit_learn.py`, predict the output, change one line, predict again.
+
 ## 9. Writing assertions as your test suite
 
 ML code needs the same tests as any code, plus data tests: schema, ranges, null rates, class balance. Add one behavioural test per known failure mode — a test that would have caught last quarter's outage is worth more than 90% coverage.
@@ -235,6 +251,8 @@ test_preprocess()
 
 **Common mistake:** Testing only the happy path, so an all-null column silently trains a constant model.
 
+Practice: open `examples/09_writing_assertions_as_your_test_suite.py`, predict the output, change one line, predict again.
+
 ## 10. What you now never have to take on faith
 
 Projects are where the learning sticks. Build a thin end-to-end slice first — load data, train something dumb, evaluate, serve one prediction — then improve one layer at a time. A working baseline on day one beats a perfect model that never ships.
@@ -256,6 +274,8 @@ for s in STEPS:
 **Remember:** Spend an hour looking at wrong predictions before you spend a day tuning hyperparameters.
 
 **Common mistake:** Six weeks of feature engineering with no baseline to prove any of it helped.
+
+Practice: open `examples/10_what_you_now_never_have_to_take_on_faith.py`, predict the output, change one line, predict again.
 
 ---
 

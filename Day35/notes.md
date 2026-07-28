@@ -49,6 +49,8 @@ test_preprocess()
 
 **Common mistake:** Testing only the happy path, so an all-null column silently trains a constant model.
 
+Practice: open `examples/01_starting_from_the_decision_not_the_data.py`, predict the output, change one line, predict again.
+
 ## 2. Supervised, unsupervised, reinforcement
 
 Most failed ML projects failed at framing, not modelling. Write down: what decision changes because of this prediction, what the unit of prediction is, what metric measures success, and what the dumbest baseline scores. If a rule beats your model, ship the rule.
@@ -70,6 +72,8 @@ for k, v in BRIEF.items():
 **Remember:** List what data exists *at prediction time* before you list features. That list kills most leaks.
 
 **Common mistake:** Building a model for six weeks before discovering the decision it supports is already automated.
+
+Practice: open `examples/02_supervised_unsupervised_reinforcement.py`, predict the output, change one line, predict again.
 
 ## 3. Classification vs regression vs ranking
 
@@ -99,6 +103,8 @@ print((U @ V.T).round(2))
 
 **Common mistake:** Building a feedback loop that only ever recommends what it already recommended.
 
+Practice: open `examples/03_classification_vs_regression_vs_ranking.py`, predict the output, change one line, predict again.
+
 ## 4. Choosing a target variable
 
 Most failed ML projects failed at framing, not modelling. Write down: what decision changes because of this prediction, what the unit of prediction is, what metric measures success, and what the dumbest baseline scores. If a rule beats your model, ship the rule.
@@ -120,6 +126,8 @@ for k, v in BRIEF.items():
 **Remember:** List what data exists *at prediction time* before you list features. That list kills most leaks.
 
 **Common mistake:** Building a model for six weeks before discovering the decision it supports is already automated.
+
+Practice: open `examples/04_choosing_a_target_variable.py`, predict the output, change one line, predict again.
 
 ## 5. Choosing an evaluation metric
 
@@ -149,6 +157,8 @@ assert hits == len(GOLDEN), 'regression: fix before shipping'
 
 **Common mistake:** Changing the prompt on Friday with no eval and finding out from customers on Monday.
 
+Practice: open `examples/05_choosing_an_evaluation_metric.py`, predict the output, change one line, predict again.
+
 ## 6. Defining the unit of prediction
 
 Most failed ML projects failed at framing, not modelling. Write down: what decision changes because of this prediction, what the unit of prediction is, what metric measures success, and what the dumbest baseline scores. If a rule beats your model, ship the rule.
@@ -170,6 +180,8 @@ for k, v in BRIEF.items():
 **Remember:** List what data exists *at prediction time* before you list features. That list kills most leaks.
 
 **Common mistake:** Building a model for six weeks before discovering the decision it supports is already automated.
+
+Practice: open `examples/06_defining_the_unit_of_prediction.py`, predict the output, change one line, predict again.
 
 ## 7. Baselines you must beat
 
@@ -193,6 +205,8 @@ for k, v in BRIEF.items():
 
 **Common mistake:** Building a model for six weeks before discovering the decision it supports is already automated.
 
+Practice: open `examples/07_baselines_you_must_beat.py`, predict the output, change one line, predict again.
+
 ## 8. Feasibility: is the signal even there
 
 Most failed ML projects failed at framing, not modelling. Write down: what decision changes because of this prediction, what the unit of prediction is, what metric measures success, and what the dumbest baseline scores. If a rule beats your model, ship the rule.
@@ -214,6 +228,8 @@ for k, v in BRIEF.items():
 **Remember:** List what data exists *at prediction time* before you list features. That list kills most leaks.
 
 **Common mistake:** Building a model for six weeks before discovering the decision it supports is already automated.
+
+Practice: open `examples/08_feasibility_is_the_signal_even_there.py`, predict the output, change one line, predict again.
 
 ## 9. When not to use machine learning
 
@@ -237,6 +253,8 @@ for k, v in BRIEF.items():
 
 **Common mistake:** Building a model for six weeks before discovering the decision it supports is already automated.
 
+Practice: open `examples/09_when_not_to_use_machine_learning.py`, predict the output, change one line, predict again.
+
 ## 10. Writing a one-page problem statement
 
 Most failed ML projects failed at framing, not modelling. Write down: what decision changes because of this prediction, what the unit of prediction is, what metric measures success, and what the dumbest baseline scores. If a rule beats your model, ship the rule.
@@ -258,6 +276,8 @@ for k, v in BRIEF.items():
 **Remember:** List what data exists *at prediction time* before you list features. That list kills most leaks.
 
 **Common mistake:** Building a model for six weeks before discovering the decision it supports is already automated.
+
+Practice: open `examples/10_writing_a_one_page_problem_statement.py`, predict the output, change one line, predict again.
 
 ---
 

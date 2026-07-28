@@ -43,6 +43,8 @@ print('learned', np.round(w, 3), 'target', true_w)
 
 **Common mistake:** Leaving the learning rate fixed forever instead of decaying it once the loss plateaus.
 
+Practice: open `examples/01_why_a_constant_learning_rate_is_rarely_b.py`, predict the output, change one line, predict again.
+
 ## 2. Step decay
 
 Gradient descent repeatedly steps against the gradient. Full-batch is stable but slow; stochastic is noisy but escapes shallow traps; mini-batch is the practical middle. The learning rate is the single most important knob you will ever turn.
@@ -68,6 +70,8 @@ print('learned', np.round(w, 3), 'target', true_w)
 **Remember:** Shuffle every epoch, otherwise the model learns the order of your file.
 
 **Common mistake:** Leaving the learning rate fixed forever instead of decaying it once the loss plateaus.
+
+Practice: open `examples/02_step_decay.py`, predict the output, change one line, predict again.
 
 ## 3. Exponential decay
 
@@ -95,6 +99,8 @@ print('learned', np.round(w, 3), 'target', true_w)
 
 **Common mistake:** Leaving the learning rate fixed forever instead of decaying it once the loss plateaus.
 
+Practice: open `examples/03_exponential_decay.py`, predict the output, change one line, predict again.
+
 ## 4. Cosine annealing
 
 Gradient descent repeatedly steps against the gradient. Full-batch is stable but slow; stochastic is noisy but escapes shallow traps; mini-batch is the practical middle. The learning rate is the single most important knob you will ever turn.
@@ -120,6 +126,8 @@ print('learned', np.round(w, 3), 'target', true_w)
 **Remember:** Shuffle every epoch, otherwise the model learns the order of your file.
 
 **Common mistake:** Leaving the learning rate fixed forever instead of decaying it once the loss plateaus.
+
+Practice: open `examples/04_cosine_annealing.py`, predict the output, change one line, predict again.
 
 ## 5. Warmup and why transformers need it
 
@@ -147,6 +155,8 @@ print('learned', np.round(w, 3), 'target', true_w)
 
 **Common mistake:** Leaving the learning rate fixed forever instead of decaying it once the loss plateaus.
 
+Practice: open `examples/05_warmup_and_why_transformers_need_it.py`, predict the output, change one line, predict again.
+
 ## 6. One-cycle policy
 
 Gradient descent repeatedly steps against the gradient. Full-batch is stable but slow; stochastic is noisy but escapes shallow traps; mini-batch is the practical middle. The learning rate is the single most important knob you will ever turn.
@@ -172,6 +182,8 @@ print('learned', np.round(w, 3), 'target', true_w)
 **Remember:** Shuffle every epoch, otherwise the model learns the order of your file.
 
 **Common mistake:** Leaving the learning rate fixed forever instead of decaying it once the loss plateaus.
+
+Practice: open `examples/06_one_cycle_policy.py`, predict the output, change one line, predict again.
 
 ## 7. Reduce on plateau
 
@@ -199,6 +211,8 @@ print('learned', np.round(w, 3), 'target', true_w)
 
 **Common mistake:** Leaving the learning rate fixed forever instead of decaying it once the loss plateaus.
 
+Practice: open `examples/07_reduce_on_plateau.py`, predict the output, change one line, predict again.
+
 ## 8. Learning rate range test
 
 Gradient descent repeatedly steps against the gradient. Full-batch is stable but slow; stochastic is noisy but escapes shallow traps; mini-batch is the practical middle. The learning rate is the single most important knob you will ever turn.
@@ -224,6 +238,8 @@ print('learned', np.round(w, 3), 'target', true_w)
 **Remember:** Shuffle every epoch, otherwise the model learns the order of your file.
 
 **Common mistake:** Leaving the learning rate fixed forever instead of decaying it once the loss plateaus.
+
+Practice: open `examples/08_learning_rate_range_test.py`, predict the output, change one line, predict again.
 
 ## 9. Interaction with batch size
 
@@ -251,6 +267,8 @@ print('learned', np.round(w, 3), 'target', true_w)
 
 **Common mistake:** Leaving the learning rate fixed forever instead of decaying it once the loss plateaus.
 
+Practice: open `examples/09_interaction_with_batch_size.py`, predict the output, change one line, predict again.
+
 ## 10. Reading a loss curve to pick a schedule
 
 Gradient descent repeatedly steps against the gradient. Full-batch is stable but slow; stochastic is noisy but escapes shallow traps; mini-batch is the practical middle. The learning rate is the single most important knob you will ever turn.
@@ -276,6 +294,8 @@ print('learned', np.round(w, 3), 'target', true_w)
 **Remember:** Shuffle every epoch, otherwise the model learns the order of your file.
 
 **Common mistake:** Leaving the learning rate fixed forever instead of decaying it once the loss plateaus.
+
+Practice: open `examples/10_reading_a_loss_curve_to_pick_a_schedule.py`, predict the output, change one line, predict again.
 
 ---
 

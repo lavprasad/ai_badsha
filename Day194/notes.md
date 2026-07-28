@@ -39,6 +39,8 @@ for s in STEPS:
 
 **Common mistake:** Six weeks of feature engineering with no baseline to prove any of it helped.
 
+Practice: open `examples/01_choosing_a_paper_with_released_code_or_c.py`, predict the output, change one line, predict again.
+
 ## 2. Reading it with the three-pass method
 
 Projects are where the learning sticks. Build a thin end-to-end slice first — load data, train something dumb, evaluate, serve one prediction — then improve one layer at a time. A working baseline on day one beats a perfect model that never ships.
@@ -60,6 +62,8 @@ for s in STEPS:
 **Remember:** Spend an hour looking at wrong predictions before you spend a day tuning hyperparameters.
 
 **Common mistake:** Six weeks of feature engineering with no baseline to prove any of it helped.
+
+Practice: open `examples/02_reading_it_with_the_three_pass_method.py`, predict the output, change one line, predict again.
 
 ## 3. Restating the core idea in one paragraph
 
@@ -90,6 +94,8 @@ print('\\nReal pipeline: chunk 300-800 tokens with overlap -> embed -> ANN index
 
 **Common mistake:** Chunking blindly at 1000 characters and cutting tables and code blocks in half.
 
+Practice: open `examples/03_restating_the_core_idea_in_one_paragraph.py`, predict the output, change one line, predict again.
+
 ## 4. Minimal reimplementation
 
 Projects are where the learning sticks. Build a thin end-to-end slice first — load data, train something dumb, evaluate, serve one prediction — then improve one layer at a time. A working baseline on day one beats a perfect model that never ships.
@@ -111,6 +117,8 @@ for s in STEPS:
 **Remember:** Spend an hour looking at wrong predictions before you spend a day tuning hyperparameters.
 
 **Common mistake:** Six weeks of feature engineering with no baseline to prove any of it helped.
+
+Practice: open `examples/04_minimal_reimplementation.py`, predict the output, change one line, predict again.
 
 ## 5. Reproducing the headline number
 
@@ -144,6 +152,8 @@ test_preprocess()
 
 **Common mistake:** Testing only the happy path, so an all-null column silently trains a constant model.
 
+Practice: open `examples/05_reproducing_the_headline_number.py`, predict the output, change one line, predict again.
+
 ## 6. Where your numbers differ and why
 
 Projects are where the learning sticks. Build a thin end-to-end slice first — load data, train something dumb, evaluate, serve one prediction — then improve one layer at a time. A working baseline on day one beats a perfect model that never ships.
@@ -165,6 +175,8 @@ for s in STEPS:
 **Remember:** Spend an hour looking at wrong predictions before you spend a day tuning hyperparameters.
 
 **Common mistake:** Six weeks of feature engineering with no baseline to prove any of it helped.
+
+Practice: open `examples/06_where_your_numbers_differ_and_why.py`, predict the output, change one line, predict again.
 
 ## 7. Ablating the key component
 
@@ -188,6 +200,8 @@ for s in STEPS:
 
 **Common mistake:** Six weeks of feature engineering with no baseline to prove any of it helped.
 
+Practice: open `examples/07_ablating_the_key_component.py`, predict the output, change one line, predict again.
+
 ## 8. Extending it by one small idea
 
 Projects are where the learning sticks. Build a thin end-to-end slice first — load data, train something dumb, evaluate, serve one prediction — then improve one layer at a time. A working baseline on day one beats a perfect model that never ships.
@@ -209,6 +223,8 @@ for s in STEPS:
 **Remember:** Spend an hour looking at wrong predictions before you spend a day tuning hyperparameters.
 
 **Common mistake:** Six weeks of feature engineering with no baseline to prove any of it helped.
+
+Practice: open `examples/08_extending_it_by_one_small_idea.py`, predict the output, change one line, predict again.
 
 ## 9. Documenting honestly, including failures
 
@@ -232,6 +248,8 @@ for s in STEPS:
 
 **Common mistake:** Six weeks of feature engineering with no baseline to prove any of it helped.
 
+Practice: open `examples/09_documenting_honestly_including_failures.py`, predict the output, change one line, predict again.
+
 ## 10. Publishing the repository
 
 Projects are where the learning sticks. Build a thin end-to-end slice first — load data, train something dumb, evaluate, serve one prediction — then improve one layer at a time. A working baseline on day one beats a perfect model that never ships.
@@ -253,6 +271,8 @@ for s in STEPS:
 **Remember:** Spend an hour looking at wrong predictions before you spend a day tuning hyperparameters.
 
 **Common mistake:** Six weeks of feature engineering with no baseline to prove any of it helped.
+
+Practice: open `examples/10_publishing_the_repository.py`, predict the output, change one line, predict again.
 
 ---
 

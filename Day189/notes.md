@@ -37,6 +37,8 @@ print('\nEach phase can end the project. That is the point.')
 
 **Common mistake:** Promising 95% accuracy in a planning meeting before anyone has looked at the data.
 
+Practice: open `examples/01_roles_research_ml_engineer_data_engineer.py`, predict the output, change one line, predict again.
+
 ## 2. Writing a design doc
 
 ML estimates are unreliable because you do not know if the signal exists until you look. Estimate in phases with kill criteria: 'two weeks to establish whether a baseline beats the rule; if not, we stop'. Stakeholders accept uncertainty far better than a missed deadline.
@@ -56,6 +58,8 @@ print('\nEach phase can end the project. That is the point.')
 **Remember:** Give ranges and kill criteria, never a single date for work whose feasibility is unknown.
 
 **Common mistake:** Promising 95% accuracy in a planning meeting before anyone has looked at the data.
+
+Practice: open `examples/02_writing_a_design_doc.py`, predict the output, change one line, predict again.
 
 ## 3. Estimating ML work honestly
 
@@ -77,6 +81,8 @@ print('\nEach phase can end the project. That is the point.')
 
 **Common mistake:** Promising 95% accuracy in a planning meeting before anyone has looked at the data.
 
+Practice: open `examples/03_estimating_ml_work_honestly.py`, predict the output, change one line, predict again.
+
 ## 4. Communicating uncertainty to stakeholders
 
 ML estimates are unreliable because you do not know if the signal exists until you look. Estimate in phases with kill criteria: 'two weeks to establish whether a baseline beats the rule; if not, we stop'. Stakeholders accept uncertainty far better than a missed deadline.
@@ -96,6 +102,8 @@ print('\nEach phase can end the project. That is the point.')
 **Remember:** Give ranges and kill criteria, never a single date for work whose feasibility is unknown.
 
 **Common mistake:** Promising 95% accuracy in a planning meeting before anyone has looked at the data.
+
+Practice: open `examples/04_communicating_uncertainty_to_stakeholder.py`, predict the output, change one line, predict again.
 
 ## 5. Code review for ML
 
@@ -117,6 +125,8 @@ print('\nEach phase can end the project. That is the point.')
 
 **Common mistake:** Promising 95% accuracy in a planning meeting before anyone has looked at the data.
 
+Practice: open `examples/05_code_review_for_ml.py`, predict the output, change one line, predict again.
+
 ## 6. Sharing datasets and models internally
 
 ML estimates are unreliable because you do not know if the signal exists until you look. Estimate in phases with kill criteria: 'two weeks to establish whether a baseline beats the rule; if not, we stop'. Stakeholders accept uncertainty far better than a missed deadline.
@@ -136,6 +146,8 @@ print('\nEach phase can end the project. That is the point.')
 **Remember:** Give ranges and kill criteria, never a single date for work whose feasibility is unknown.
 
 **Common mistake:** Promising 95% accuracy in a planning meeting before anyone has looked at the data.
+
+Practice: open `examples/06_sharing_datasets_and_models_internally.py`, predict the output, change one line, predict again.
 
 ## 7. Documentation that survives handover
 
@@ -157,6 +169,8 @@ print('\nEach phase can end the project. That is the point.')
 
 **Common mistake:** Promising 95% accuracy in a planning meeting before anyone has looked at the data.
 
+Practice: open `examples/07_documentation_that_survives_handover.py`, predict the output, change one line, predict again.
+
 ## 8. Managing expectations about AI
 
 ML estimates are unreliable because you do not know if the signal exists until you look. Estimate in phases with kill criteria: 'two weeks to establish whether a baseline beats the rule; if not, we stop'. Stakeholders accept uncertainty far better than a missed deadline.
@@ -177,6 +191,8 @@ print('\nEach phase can end the project. That is the point.')
 
 **Common mistake:** Promising 95% accuracy in a planning meeting before anyone has looked at the data.
 
+Practice: open `examples/08_managing_expectations_about_ai.py`, predict the output, change one line, predict again.
+
 ## 9. Prioritising with limited compute
 
 Bayes' rule updates a belief with evidence: posterior = likelihood x prior / evidence. The most common mistake in applied ML is ignoring the prior — a 99%-accurate test for a 1-in-10000 disease still gives mostly false positives.
@@ -194,6 +210,8 @@ print(f'P(sick | positive) = {posterior:.4f}')   # ~0.0098
 **Remember:** Rare events make precision collapse no matter how good the classifier looks on accuracy.
 
 **Common mistake:** Reporting accuracy on an imbalanced problem where predicting 'no' always scores 99%.
+
+Practice: open `examples/09_prioritising_with_limited_compute.py`, predict the output, change one line, predict again.
 
 ## 10. Making a research result shippable
 
@@ -214,6 +232,8 @@ print('\nEach phase can end the project. That is the point.')
 **Remember:** Give ranges and kill criteria, never a single date for work whose feasibility is unknown.
 
 **Common mistake:** Promising 95% accuracy in a planning meeting before anyone has looked at the data.
+
+Practice: open `examples/10_making_a_research_result_shippable.py`, predict the output, change one line, predict again.
 
 ---
 

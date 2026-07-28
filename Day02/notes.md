@@ -38,6 +38,8 @@ print(0 in list(counts.values()))      # list membership: O(n)
 
 **Common mistake:** Using `if not value:` to check for a missing field and rejecting a legitimate zero.
 
+Practice: open `examples/01_variables_types_and_dynamic_typing.py`, predict the output, change one line, predict again.
+
 ## 2. Numbers, strings and f-strings
 
 Python decides types at runtime, which is fast to write and easy to get subtly wrong. Know your container costs: list for order, set for membership, dict for keyed lookup. Truthiness treats `0`, `''`, `[]`, `{}` and `None` as false — which is why `if x:` and `if x is not None:` are different tests.
@@ -59,6 +61,8 @@ print(0 in list(counts.values()))      # list membership: O(n)
 
 **Common mistake:** Using `if not value:` to check for a missing field and rejecting a legitimate zero.
 
+Practice: open `examples/02_numbers_strings_and_f_strings.py`, predict the output, change one line, predict again.
+
 ## 3. Lists, tuples, sets, dicts
 
 Python decides types at runtime, which is fast to write and easy to get subtly wrong. Know your container costs: list for order, set for membership, dict for keyed lookup. Truthiness treats `0`, `''`, `[]`, `{}` and `None` as false — which is why `if x:` and `if x is not None:` are different tests.
@@ -79,6 +83,8 @@ print(0 in list(counts.values()))      # list membership: O(n)
 **Remember:** `if x:` and `if x is not None:` differ for 0, '' and empty containers. Pick deliberately.
 
 **Common mistake:** Using `if not value:` to check for a missing field and rejecting a legitimate zero.
+
+Practice: open `examples/03_lists_tuples_sets_dicts.py`, predict the output, change one line, predict again.
 
 ## 4. Slicing and indexing rules
 
@@ -112,6 +118,8 @@ test_preprocess()
 
 **Common mistake:** Testing only the happy path, so an all-null column silently trains a constant model.
 
+Practice: open `examples/04_slicing_and_indexing_rules.py`, predict the output, change one line, predict again.
+
 ## 5. if/elif/else and truthiness
 
 Python decides types at runtime, which is fast to write and easy to get subtly wrong. Know your container costs: list for order, set for membership, dict for keyed lookup. Truthiness treats `0`, `''`, `[]`, `{}` and `None` as false — which is why `if x:` and `if x is not None:` are different tests.
@@ -133,6 +141,8 @@ print(0 in list(counts.values()))      # list membership: O(n)
 
 **Common mistake:** Using `if not value:` to check for a missing field and rejecting a legitimate zero.
 
+Practice: open `examples/05_if_elif_else_and_truthiness.py`, predict the output, change one line, predict again.
+
 ## 6. for and while loops
 
 Python decides types at runtime, which is fast to write and easy to get subtly wrong. Know your container costs: list for order, set for membership, dict for keyed lookup. Truthiness treats `0`, `''`, `[]`, `{}` and `None` as false — which is why `if x:` and `if x is not None:` are different tests.
@@ -153,6 +163,8 @@ print(0 in list(counts.values()))      # list membership: O(n)
 **Remember:** `if x:` and `if x is not None:` differ for 0, '' and empty containers. Pick deliberately.
 
 **Common mistake:** Using `if not value:` to check for a missing field and rejecting a legitimate zero.
+
+Practice: open `examples/06_for_and_while_loops.py`, predict the output, change one line, predict again.
 
 ## 7. Functions, arguments and defaults
 
@@ -177,6 +189,8 @@ print(good(1), good(2))   # [1] [2]     <- correct
 
 **Common mistake:** A `def f(x, cache={})` that silently accumulates state across every call in the process.
 
+Practice: open `examples/07_functions_arguments_and_defaults.py`, predict the output, change one line, predict again.
+
 ## 8. Scope and the mutable default trap
 
 Default arguments are evaluated once, at function definition time. A mutable default (list, dict, set) is therefore shared by every call — a bug that shows up as 'my function remembers the last call'. Use `None` and build the real default inside.
@@ -200,6 +214,8 @@ print(good(1), good(2))   # [1] [2]     <- correct
 
 **Common mistake:** A `def f(x, cache={})` that silently accumulates state across every call in the process.
 
+Practice: open `examples/08_scope_and_the_mutable_default_trap.py`, predict the output, change one line, predict again.
+
 ## 9. Modules, imports and __main__
 
 Today's idea — **Modules, imports and __main__** — sits inside the theme of Python essentials refresher. Read it as a tool, not trivia: what job does it do, what does it assume about your data, and what breaks when that assumption is false?
@@ -215,6 +231,8 @@ print("practice: Modules, imports and __main__")
 **Remember:** State one assumption `Modules, imports and __main__` makes about your data before you use it.
 
 **Common mistake:** Copy-pasting `Modules, imports and __main__` from a tutorial without knowing what it assumes or when it fails.
+
+Practice: open `examples/09_modules_imports_and_main.py`, predict the output, change one line, predict again.
 
 ## 10. Reading the standard library docs
 
@@ -236,6 +254,8 @@ print(load_rows.__annotations__)
 **Remember:** Hint the boundaries (function signatures, config objects); skip hints on obvious locals.
 
 **Common mistake:** Annotating everything, including throwaway locals, until the types outweigh the logic.
+
+Practice: open `examples/10_reading_the_standard_library_docs.py`, predict the output, change one line, predict again.
 
 ---
 

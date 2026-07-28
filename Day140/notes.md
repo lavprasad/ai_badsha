@@ -36,6 +36,8 @@ print('coin heads rate ', coin.mean())
 
 **Common mistake:** Assuming Gaussian for skewed, bounded, or count data and then being surprised by the residuals.
 
+Practice: open `examples/01_waveforms_and_sampling_rates.py`, predict the output, change one line, predict again.
+
 ## 2. Spectrograms and mel scale
 
 Audio becomes a spectrogram — time on one axis, frequency on the other — and from there it is an image problem. ASR transcribes speech to text; TTS goes the other way. Watch for accent and background-noise bias in the training data.
@@ -56,6 +58,8 @@ print('dominant frequencies (Hz):', np.sort(peaks))   # ~440 and ~880
 **Remember:** Resample everything to the model's expected sample rate before inference.
 
 **Common mistake:** Evaluating ASR only on clean studio audio, then deploying to a noisy call centre.
+
+Practice: open `examples/02_spectrograms_and_mel_scale.py`, predict the output, change one line, predict again.
 
 ## 3. Automatic speech recognition
 
@@ -78,6 +82,8 @@ print('dominant frequencies (Hz):', np.sort(peaks))   # ~440 and ~880
 
 **Common mistake:** Evaluating ASR only on clean studio audio, then deploying to a noisy call centre.
 
+Practice: open `examples/03_automatic_speech_recognition.py`, predict the output, change one line, predict again.
+
 ## 4. Whisper and its trade-offs
 
 Audio becomes a spectrogram — time on one axis, frequency on the other — and from there it is an image problem. ASR transcribes speech to text; TTS goes the other way. Watch for accent and background-noise bias in the training data.
@@ -98,6 +104,8 @@ print('dominant frequencies (Hz):', np.sort(peaks))   # ~440 and ~880
 **Remember:** Resample everything to the model's expected sample rate before inference.
 
 **Common mistake:** Evaluating ASR only on clean studio audio, then deploying to a noisy call centre.
+
+Practice: open `examples/04_whisper_and_its_trade_offs.py`, predict the output, change one line, predict again.
 
 ## 5. Diarisation: who spoke when
 
@@ -120,6 +128,8 @@ print('dominant frequencies (Hz):', np.sort(peaks))   # ~440 and ~880
 
 **Common mistake:** Evaluating ASR only on clean studio audio, then deploying to a noisy call centre.
 
+Practice: open `examples/05_diarisation_who_spoke_when.py`, predict the output, change one line, predict again.
+
 ## 6. Text-to-speech
 
 Audio becomes a spectrogram — time on one axis, frequency on the other — and from there it is an image problem. ASR transcribes speech to text; TTS goes the other way. Watch for accent and background-noise bias in the training data.
@@ -140,6 +150,8 @@ print('dominant frequencies (Hz):', np.sort(peaks))   # ~440 and ~880
 **Remember:** Resample everything to the model's expected sample rate before inference.
 
 **Common mistake:** Evaluating ASR only on clean studio audio, then deploying to a noisy call centre.
+
+Practice: open `examples/06_text_to_speech.py`, predict the output, change one line, predict again.
 
 ## 7. Voice cloning and its ethics
 
@@ -162,6 +174,8 @@ print('dominant frequencies (Hz):', np.sort(peaks))   # ~440 and ~880
 
 **Common mistake:** Evaluating ASR only on clean studio audio, then deploying to a noisy call centre.
 
+Practice: open `examples/07_voice_cloning_and_its_ethics.py`, predict the output, change one line, predict again.
+
 ## 8. Real-time streaming ASR
 
 Audio becomes a spectrogram — time on one axis, frequency on the other — and from there it is an image problem. ASR transcribes speech to text; TTS goes the other way. Watch for accent and background-noise bias in the training data.
@@ -183,6 +197,8 @@ print('dominant frequencies (Hz):', np.sort(peaks))   # ~440 and ~880
 
 **Common mistake:** Evaluating ASR only on clean studio audio, then deploying to a noisy call centre.
 
+Practice: open `examples/08_real_time_streaming_asr.py`, predict the output, change one line, predict again.
+
 ## 9. Noise robustness
 
 Audio becomes a spectrogram — time on one axis, frequency on the other — and from there it is an image problem. ASR transcribes speech to text; TTS goes the other way. Watch for accent and background-noise bias in the training data.
@@ -203,6 +219,8 @@ print('dominant frequencies (Hz):', np.sort(peaks))   # ~440 and ~880
 **Remember:** Resample everything to the model's expected sample rate before inference.
 
 **Common mistake:** Evaluating ASR only on clean studio audio, then deploying to a noisy call centre.
+
+Practice: open `examples/09_noise_robustness.py`, predict the output, change one line, predict again.
 
 ## 10. A meeting transcription pipeline
 
@@ -230,6 +248,8 @@ print(model.predict(df))
 **Remember:** `handle_unknown='ignore'` stops production crashing on a category you never saw in training.
 
 **Common mistake:** Preprocessing in a notebook and then forgetting one step when writing the serving code.
+
+Practice: open `examples/10_a_meeting_transcription_pipeline.py`, predict the output, change one line, predict again.
 
 ---
 

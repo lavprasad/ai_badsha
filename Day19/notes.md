@@ -39,6 +39,8 @@ print('analytic ', 2 * x + 3)   # should match to ~1e-6
 
 **Common mistake:** Trusting a derivation you never gradient-checked; a sign error trains slowly instead of failing loudly.
 
+Practice: open `examples/01_the_derivative_as_a_rate_of_change.py`, predict the output, change one line, predict again.
+
 ## 2. Rules: power, product, quotient, chain
 
 The derivative answers: if I nudge this input a little, how much does the output move? The gradient is that answer for every input at once, so it points uphill. Training walks downhill by stepping against the gradient. The chain rule is what lets you propagate that answer through a stack of layers.
@@ -60,6 +62,8 @@ print('analytic ', 2 * x + 3)   # should match to ~1e-6
 **Remember:** A central difference `(f(x+h)-f(x-h))/2h` is the cheapest way to check a hand-written gradient.
 
 **Common mistake:** Trusting a derivation you never gradient-checked; a sign error trains slowly instead of failing loudly.
+
+Practice: open `examples/02_rules_power_product_quotient_chain.py`, predict the output, change one line, predict again.
 
 ## 3. Partial derivatives
 
@@ -83,6 +87,8 @@ print('analytic ', 2 * x + 3)   # should match to ~1e-6
 
 **Common mistake:** Trusting a derivation you never gradient-checked; a sign error trains slowly instead of failing loudly.
 
+Practice: open `examples/03_partial_derivatives.py`, predict the output, change one line, predict again.
+
 ## 4. The gradient vector
 
 A vector is a list of numbers with a direction and length. The dot product measures alignment: large and positive when two vectors point the same way, zero when perpendicular. Cosine similarity is the dot product with length divided out, which is why it compares embeddings of different magnitudes fairly.
@@ -102,6 +108,8 @@ print('cosine', cos)   # 1.0 -> same direction
 **Remember:** Cosine similarity ignores magnitude; Euclidean distance does not. Pick the one that matches your question.
 
 **Common mistake:** Comparing raw embeddings with Euclidean distance when only direction carries meaning.
+
+Practice: open `examples/04_the_gradient_vector.py`, predict the output, change one line, predict again.
 
 ## 5. Directional derivatives
 
@@ -125,6 +133,8 @@ print('analytic ', 2 * x + 3)   # should match to ~1e-6
 
 **Common mistake:** Trusting a derivation you never gradient-checked; a sign error trains slowly instead of failing loudly.
 
+Practice: open `examples/05_directional_derivatives.py`, predict the output, change one line, predict again.
+
 ## 6. Numeric differentiation and gradient checking
 
 The derivative answers: if I nudge this input a little, how much does the output move? The gradient is that answer for every input at once, so it points uphill. Training walks downhill by stepping against the gradient. The chain rule is what lets you propagate that answer through a stack of layers.
@@ -146,6 +156,8 @@ print('analytic ', 2 * x + 3)   # should match to ~1e-6
 **Remember:** A central difference `(f(x+h)-f(x-h))/2h` is the cheapest way to check a hand-written gradient.
 
 **Common mistake:** Trusting a derivation you never gradient-checked; a sign error trains slowly instead of failing loudly.
+
+Practice: open `examples/06_numeric_differentiation_and_gradient_che.py`, predict the output, change one line, predict again.
 
 ## 7. The Jacobian
 
@@ -169,6 +181,8 @@ print('analytic ', 2 * x + 3)   # should match to ~1e-6
 
 **Common mistake:** Trusting a derivation you never gradient-checked; a sign error trains slowly instead of failing loudly.
 
+Practice: open `examples/07_the_jacobian.py`, predict the output, change one line, predict again.
+
 ## 8. The Hessian and curvature
 
 The derivative answers: if I nudge this input a little, how much does the output move? The gradient is that answer for every input at once, so it points uphill. Training walks downhill by stepping against the gradient. The chain rule is what lets you propagate that answer through a stack of layers.
@@ -190,6 +204,8 @@ print('analytic ', 2 * x + 3)   # should match to ~1e-6
 **Remember:** A central difference `(f(x+h)-f(x-h))/2h` is the cheapest way to check a hand-written gradient.
 
 **Common mistake:** Trusting a derivation you never gradient-checked; a sign error trains slowly instead of failing loudly.
+
+Practice: open `examples/08_the_hessian_and_curvature.py`, predict the output, change one line, predict again.
 
 ## 9. Why gradients drive all of deep learning
 
@@ -213,6 +229,8 @@ print('analytic ', 2 * x + 3)   # should match to ~1e-6
 
 **Common mistake:** Trusting a derivation you never gradient-checked; a sign error trains slowly instead of failing loudly.
 
+Practice: open `examples/09_why_gradients_drive_all_of_deep_learning.py`, predict the output, change one line, predict again.
+
 ## 10. Hand-deriving a two-layer gradient
 
 The derivative answers: if I nudge this input a little, how much does the output move? The gradient is that answer for every input at once, so it points uphill. Training walks downhill by stepping against the gradient. The chain rule is what lets you propagate that answer through a stack of layers.
@@ -234,6 +252,8 @@ print('analytic ', 2 * x + 3)   # should match to ~1e-6
 **Remember:** A central difference `(f(x+h)-f(x-h))/2h` is the cheapest way to check a hand-written gradient.
 
 **Common mistake:** Trusting a derivation you never gradient-checked; a sign error trains slowly instead of failing loudly.
+
+Practice: open `examples/10_hand_deriving_a_two_layer_gradient.py`, predict the output, change one line, predict again.
 
 ---
 

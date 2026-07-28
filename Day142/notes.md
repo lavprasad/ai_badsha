@@ -45,6 +45,8 @@ assert hits == len(GOLDEN), 'regression: fix before shipping'
 
 **Common mistake:** Changing the prompt on Friday with no eval and finding out from customers on Monday.
 
+Practice: open `examples/01_why_standard_benchmarks_mislead.py`, predict the output, change one line, predict again.
+
 ## 2. Building a golden dataset
 
 Vibes do not survive a prompt change. Build a small golden set of real inputs with expected outputs, run it on every change, and track the score. Use an LLM judge for open-ended quality, but calibrate the judge against human ratings first.
@@ -72,6 +74,8 @@ assert hits == len(GOLDEN), 'regression: fix before shipping'
 **Remember:** 50 real examples you curated beat 5000 synthetic ones nobody checked.
 
 **Common mistake:** Changing the prompt on Friday with no eval and finding out from customers on Monday.
+
+Practice: open `examples/02_building_a_golden_dataset.py`, predict the output, change one line, predict again.
 
 ## 3. Task-specific automatic metrics
 
@@ -101,6 +105,8 @@ assert hits == len(GOLDEN), 'regression: fix before shipping'
 
 **Common mistake:** Changing the prompt on Friday with no eval and finding out from customers on Monday.
 
+Practice: open `examples/03_task_specific_automatic_metrics.py`, predict the output, change one line, predict again.
+
 ## 4. Exact match and structured checks
 
 Vibes do not survive a prompt change. Build a small golden set of real inputs with expected outputs, run it on every change, and track the score. Use an LLM judge for open-ended quality, but calibrate the judge against human ratings first.
@@ -128,6 +134,8 @@ assert hits == len(GOLDEN), 'regression: fix before shipping'
 **Remember:** 50 real examples you curated beat 5000 synthetic ones nobody checked.
 
 **Common mistake:** Changing the prompt on Friday with no eval and finding out from customers on Monday.
+
+Practice: open `examples/04_exact_match_and_structured_checks.py`, predict the output, change one line, predict again.
 
 ## 5. LLM-as-judge
 
@@ -157,6 +165,8 @@ assert hits == len(GOLDEN), 'regression: fix before shipping'
 
 **Common mistake:** Changing the prompt on Friday with no eval and finding out from customers on Monday.
 
+Practice: open `examples/05_llm_as_judge.py`, predict the output, change one line, predict again.
+
 ## 6. Calibrating a judge against humans
 
 Vibes do not survive a prompt change. Build a small golden set of real inputs with expected outputs, run it on every change, and track the score. Use an LLM judge for open-ended quality, but calibrate the judge against human ratings first.
@@ -184,6 +194,8 @@ assert hits == len(GOLDEN), 'regression: fix before shipping'
 **Remember:** 50 real examples you curated beat 5000 synthetic ones nobody checked.
 
 **Common mistake:** Changing the prompt on Friday with no eval and finding out from customers on Monday.
+
+Practice: open `examples/06_calibrating_a_judge_against_humans.py`, predict the output, change one line, predict again.
 
 ## 7. Pairwise comparison and Elo
 
@@ -213,6 +225,8 @@ assert hits == len(GOLDEN), 'regression: fix before shipping'
 
 **Common mistake:** Changing the prompt on Friday with no eval and finding out from customers on Monday.
 
+Practice: open `examples/07_pairwise_comparison_and_elo.py`, predict the output, change one line, predict again.
+
 ## 8. Regression testing prompts
 
 Vibes do not survive a prompt change. Build a small golden set of real inputs with expected outputs, run it on every change, and track the score. Use an LLM judge for open-ended quality, but calibrate the judge against human ratings first.
@@ -240,6 +254,8 @@ assert hits == len(GOLDEN), 'regression: fix before shipping'
 **Remember:** 50 real examples you curated beat 5000 synthetic ones nobody checked.
 
 **Common mistake:** Changing the prompt on Friday with no eval and finding out from customers on Monday.
+
+Practice: open `examples/08_regression_testing_prompts.py`, predict the output, change one line, predict again.
 
 ## 9. Evaluating latency and cost too
 
@@ -269,6 +285,8 @@ assert hits == len(GOLDEN), 'regression: fix before shipping'
 
 **Common mistake:** Changing the prompt on Friday with no eval and finding out from customers on Monday.
 
+Practice: open `examples/09_evaluating_latency_and_cost_too.py`, predict the output, change one line, predict again.
+
 ## 10. An eval harness you run on every change
 
 Vibes do not survive a prompt change. Build a small golden set of real inputs with expected outputs, run it on every change, and track the score. Use an LLM judge for open-ended quality, but calibrate the judge against human ratings first.
@@ -296,6 +314,8 @@ assert hits == len(GOLDEN), 'regression: fix before shipping'
 **Remember:** 50 real examples you curated beat 5000 synthetic ones nobody checked.
 
 **Common mistake:** Changing the prompt on Friday with no eval and finding out from customers on Monday.
+
+Practice: open `examples/10_an_eval_harness_you_run_on_every_change.py`, predict the output, change one line, predict again.
 
 ---
 

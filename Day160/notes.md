@@ -38,6 +38,8 @@ for i, q in enumerate(REVIEW, 1):
 
 **Common mistake:** Installing a convenient community server with broad credentials and no review of what it sends upstream.
 
+Practice: open `examples/01_why_a_protocol_for_tools.py`, predict the output, change one line, predict again.
+
 ## 2. MCP servers and clients
 
 An agent is a loop: the model picks a tool, your code runs it, the result goes back into context, repeat until done. Power comes from the tools, not the prompt. Cap the iterations, log every step, and require confirmation before anything irreversible.
@@ -64,6 +66,8 @@ agent_loop([('calc', '2 + 2'), ('calc', '(2 + 2) * 10')])
 
 **Common mistake:** Giving an agent a shell tool with no allowlist and no confirmation step.
 
+Practice: open `examples/02_mcp_servers_and_clients.py`, predict the output, change one line, predict again.
+
 ## 3. Resources, tools and prompts
 
 A tool protocol standardises how a model discovers and calls capabilities, so one integration works across clients. The security question is the important one: a third-party server sees whatever context you send it and can return text that steers your agent. Review it like you would a dependency with network and disk access.
@@ -84,6 +88,8 @@ for i, q in enumerate(REVIEW, 1):
 **Remember:** A tool server's response is untrusted input to your agent. Delimit it and never let it grant permissions.
 
 **Common mistake:** Installing a convenient community server with broad credentials and no review of what it sends upstream.
+
+Practice: open `examples/03_resources_tools_and_prompts.py`, predict the output, change one line, predict again.
 
 ## 4. Local vs remote servers
 
@@ -106,6 +112,8 @@ for i, q in enumerate(REVIEW, 1):
 
 **Common mistake:** Installing a convenient community server with broad credentials and no review of what it sends upstream.
 
+Practice: open `examples/04_local_vs_remote_servers.py`, predict the output, change one line, predict again.
+
 ## 5. Authentication in integrations
 
 A tool protocol standardises how a model discovers and calls capabilities, so one integration works across clients. The security question is the important one: a third-party server sees whatever context you send it and can return text that steers your agent. Review it like you would a dependency with network and disk access.
@@ -126,6 +134,8 @@ for i, q in enumerate(REVIEW, 1):
 **Remember:** A tool server's response is untrusted input to your agent. Delimit it and never let it grant permissions.
 
 **Common mistake:** Installing a convenient community server with broad credentials and no review of what it sends upstream.
+
+Practice: open `examples/05_authentication_in_integrations.py`, predict the output, change one line, predict again.
 
 ## 6. Building a small MCP server
 
@@ -153,6 +163,8 @@ agent_loop([('calc', '2 + 2'), ('calc', '(2 + 2) * 10')])
 
 **Common mistake:** Giving an agent a shell tool with no allowlist and no confirmation step.
 
+Practice: open `examples/06_building_a_small_mcp_server.py`, predict the output, change one line, predict again.
+
 ## 7. Security review of a third-party server
 
 A tool protocol standardises how a model discovers and calls capabilities, so one integration works across clients. The security question is the important one: a third-party server sees whatever context you send it and can return text that steers your agent. Review it like you would a dependency with network and disk access.
@@ -173,6 +185,8 @@ for i, q in enumerate(REVIEW, 1):
 **Remember:** A tool server's response is untrusted input to your agent. Delimit it and never let it grant permissions.
 
 **Common mistake:** Installing a convenient community server with broad credentials and no review of what it sends upstream.
+
+Practice: open `examples/07_security_review_of_a_third_party_server.py`, predict the output, change one line, predict again.
 
 ## 8. Versioning tool contracts
 
@@ -200,6 +214,8 @@ print(json.dumps(run_record({'lr': 0.01, 'depth': 6}, {'auc': 0.912}, 'data/trai
 
 **Common mistake:** Naming files `model_final_v2_REAL_use_this.pkl` instead of using a registry.
 
+Practice: open `examples/08_versioning_tool_contracts.py`, predict the output, change one line, predict again.
+
 ## 9. Debugging protocol issues
 
 A tool protocol standardises how a model discovers and calls capabilities, so one integration works across clients. The security question is the important one: a third-party server sees whatever context you send it and can return text that steers your agent. Review it like you would a dependency with network and disk access.
@@ -221,6 +237,8 @@ for i, q in enumerate(REVIEW, 1):
 
 **Common mistake:** Installing a convenient community server with broad credentials and no review of what it sends upstream.
 
+Practice: open `examples/09_debugging_protocol_issues.py`, predict the output, change one line, predict again.
+
 ## 10. Integrations as the real product surface
 
 A tool protocol standardises how a model discovers and calls capabilities, so one integration works across clients. The security question is the important one: a third-party server sees whatever context you send it and can return text that steers your agent. Review it like you would a dependency with network and disk access.
@@ -241,6 +259,8 @@ for i, q in enumerate(REVIEW, 1):
 **Remember:** A tool server's response is untrusted input to your agent. Delimit it and never let it grant permissions.
 
 **Common mistake:** Installing a convenient community server with broad credentials and no review of what it sends upstream.
+
+Practice: open `examples/10_integrations_as_the_real_product_surface.py`, predict the output, change one line, predict again.
 
 ---
 

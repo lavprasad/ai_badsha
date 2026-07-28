@@ -47,6 +47,8 @@ print(fetch_pages(lambda p: ([f'row{p}'], p < 3)))
 
 **Common mistake:** Scraping a source whose terms forbid it and discovering the problem after the model is in production.
 
+Practice: open `examples/01_public_dataset_sources.py`, predict the output, change one line, predict again.
+
 ## 2. APIs and pagination
 
 Where data comes from decides what you may do with it. Check the licence before you train, strip or hash personal identifiers early, and record provenance so you can answer 'where did this row come from' a year later. Paginated APIs need backoff and idempotent resume.
@@ -77,6 +79,8 @@ print(fetch_pages(lambda p: ([f'row{p}'], p < 3)))
 
 **Common mistake:** Scraping a source whose terms forbid it and discovering the problem after the model is in production.
 
+Practice: open `examples/02_apis_and_pagination.py`, predict the output, change one line, predict again.
+
 ## 3. Web scraping ethics and robots.txt
 
 Models learn the bias in their training data and then apply it at scale with a veneer of objectivity. Measure error rates per group, not just overall. Fairness definitions genuinely conflict with each other — you must choose one explicitly and document why.
@@ -100,6 +104,8 @@ print('Large gaps here are the finding — investigate before shipping.')
 **Remember:** Dropping the sensitive attribute does not remove bias; proxies (pincode, name) carry it right back in.
 
 **Common mistake:** Auditing fairness once at launch and never again as the data drifts.
+
+Practice: open `examples/03_web_scraping_ethics_and_robots_txt.py`, predict the output, change one line, predict again.
 
 ## 4. Database extracts
 
@@ -131,6 +137,8 @@ print(fetch_pages(lambda p: ([f'row{p}'], p < 3)))
 
 **Common mistake:** Scraping a source whose terms forbid it and discovering the problem after the model is in production.
 
+Practice: open `examples/04_database_extracts.py`, predict the output, change one line, predict again.
+
 ## 5. File formats: CSV, Parquet, JSONL
 
 A DataFrame is a table with labelled columns and an index. Most real ML work is 80% reshaping tables: load, clean, group, join, aggregate. Learn `groupby` and `merge` well and you can answer most data questions without writing loops.
@@ -151,6 +159,8 @@ print(df.merge(lookup, on='city', how='left'))
 **Remember:** Always check `df.shape` before and after a merge — a silent row explosion means duplicate keys.
 
 **Common mistake:** Chained assignment (`df[df.a > 1]['b'] = 0`) that writes to a copy and changes nothing.
+
+Practice: open `examples/05_file_formats_csv_parquet_jsonl.py`, predict the output, change one line, predict again.
 
 ## 6. Parquet and columnar storage
 
@@ -180,6 +190,8 @@ print('\\nReal pipeline: chunk 300-800 tokens with overlap -> embed -> ANN index
 **Remember:** Always show the source of each retrieved chunk in the answer so users can verify it.
 
 **Common mistake:** Chunking blindly at 1000 characters and cutting tables and code blocks in half.
+
+Practice: open `examples/06_parquet_and_columnar_storage.py`, predict the output, change one line, predict again.
 
 ## 7. Data licensing and terms of use
 
@@ -211,6 +223,8 @@ print(fetch_pages(lambda p: ([f'row{p}'], p < 3)))
 
 **Common mistake:** Scraping a source whose terms forbid it and discovering the problem after the model is in production.
 
+Practice: open `examples/07_data_licensing_and_terms_of_use.py`, predict the output, change one line, predict again.
+
 ## 8. Personally identifiable information
 
 Where data comes from decides what you may do with it. Check the licence before you train, strip or hash personal identifiers early, and record provenance so you can answer 'where did this row come from' a year later. Paginated APIs need backoff and idempotent resume.
@@ -241,6 +255,8 @@ print(fetch_pages(lambda p: ([f'row{p}'], p < 3)))
 
 **Common mistake:** Scraping a source whose terms forbid it and discovering the problem after the model is in production.
 
+Practice: open `examples/08_personally_identifiable_information.py`, predict the output, change one line, predict again.
+
 ## 9. Sampling a large source safely
 
 A distribution says which values are likely. Gaussian for measurement noise, Bernoulli for yes/no, Poisson for counts per interval. Choosing the right one is choosing your loss function: Gaussian likelihood gives MSE, Bernoulli gives cross-entropy.
@@ -259,6 +275,8 @@ print('coin heads rate ', coin.mean())
 **Remember:** Always seed your RNG (`default_rng(0)`) when you want a result someone else can reproduce.
 
 **Common mistake:** Assuming Gaussian for skewed, bounded, or count data and then being surprised by the residuals.
+
+Practice: open `examples/09_sampling_a_large_source_safely.py`, predict the output, change one line, predict again.
 
 ## 10. Documenting data provenance
 
@@ -279,6 +297,8 @@ print(df)
 **Remember:** Compute the fill statistic on the TRAIN split only, then apply it to test.
 
 **Common mistake:** Filling with the mean computed over the full dataset — that leaks test information into training.
+
+Practice: open `examples/10_documenting_data_provenance.py`, predict the output, change one line, predict again.
 
 ---
 

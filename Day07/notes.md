@@ -42,6 +42,8 @@ print('top 3     ', x[order[:3]])
 
 **Common mistake:** Chaining `arr[mask][0] = 5` and wondering why the original array never changed — you wrote to a copy.
 
+Practice: open `examples/01_element_wise_arithmetic.py`, predict the output, change one line, predict again.
+
 ## 2. Broadcasting rules
 
 NumPy stores numbers in one contiguous typed block and runs loops in C. Vectorised code (whole-array operations) is often 50-100x faster than a Python `for` loop and reads closer to the maths. Broadcasting stretches smaller shapes to match without copying data.
@@ -62,6 +64,8 @@ print(a.sum(axis=1))             # row sums
 **Remember:** `axis=0` collapses rows (down the columns); `axis=1` collapses columns (across a row).
 
 **Common mistake:** Looping over array elements in Python instead of using a vectorised operation.
+
+Practice: open `examples/02_broadcasting_rules.py`, predict the output, change one line, predict again.
 
 ## 3. Reductions: sum, mean, max along an axis
 
@@ -84,6 +88,8 @@ print(a.sum(axis=1))             # row sums
 
 **Common mistake:** Looping over array elements in Python instead of using a vectorised operation.
 
+Practice: open `examples/03_reductions_sum_mean_max_along_an_axis.py`, predict the output, change one line, predict again.
+
 ## 4. Matrix multiplication with @
 
 A matrix is a linear transformation. Multiplying matrices composes transformations, which is exactly what stacking neural network layers does. Shapes must line up: (m,k) @ (k,n) -> (m,n); the inner dimensions must match and they vanish.
@@ -102,6 +108,8 @@ print(np.eye(3) @ A is not A, np.allclose(np.eye(3) @ A, A))
 **Remember:** Read every shape error as 'the inner dimensions did not match' and print the shapes.
 
 **Common mistake:** Reaching for `np.linalg.inv` to solve `Ax=b` instead of the numerically safer `np.linalg.solve`.
+
+Practice: open `examples/04_matrix_multiplication_with.py`, predict the output, change one line, predict again.
 
 ## 5. Transpose and axis swapping
 
@@ -123,6 +131,8 @@ print(a.sum(axis=1))             # row sums
 **Remember:** `axis=0` collapses rows (down the columns); `axis=1` collapses columns (across a row).
 
 **Common mistake:** Looping over array elements in Python instead of using a vectorised operation.
+
+Practice: open `examples/05_transpose_and_axis_swapping.py`, predict the output, change one line, predict again.
 
 ## 6. Stacking: concatenate, vstack, hstack
 
@@ -149,6 +159,8 @@ print('top 3     ', x[order[:3]])
 
 **Common mistake:** Chaining `arr[mask][0] = 5` and wondering why the original array never changed — you wrote to a copy.
 
+Practice: open `examples/06_stacking_concatenate_vstack_hstack.py`, predict the output, change one line, predict again.
+
 ## 7. np.where and conditional logic
 
 NumPy's power is selecting and combining without loops. A boolean mask picks rows by condition, fancy indexing picks them by position, `np.where` builds a new array from a condition, and `argsort` gives you the ordering so you can sort several arrays consistently.
@@ -173,6 +185,8 @@ print('top 3     ', x[order[:3]])
 **Remember:** A boolean mask returns a copy; a basic slice returns a view. Mutating one does not affect the other the same way.
 
 **Common mistake:** Chaining `arr[mask][0] = 5` and wondering why the original array never changed — you wrote to a copy.
+
+Practice: open `examples/07_np_where_and_conditional_logic.py`, predict the output, change one line, predict again.
 
 ## 8. Sorting and argsort
 
@@ -199,6 +213,8 @@ print('top 3     ', x[order[:3]])
 
 **Common mistake:** Chaining `arr[mask][0] = 5` and wondering why the original array never changed — you wrote to a copy.
 
+Practice: open `examples/08_sorting_and_argsort.py`, predict the output, change one line, predict again.
+
 ## 9. Saving and loading .npy files
 
 NumPy's power is selecting and combining without loops. A boolean mask picks rows by condition, fancy indexing picks them by position, `np.where` builds a new array from a condition, and `argsort` gives you the ordering so you can sort several arrays consistently.
@@ -224,6 +240,8 @@ print('top 3     ', x[order[:3]])
 
 **Common mistake:** Chaining `arr[mask][0] = 5` and wondering why the original array never changed — you wrote to a copy.
 
+Practice: open `examples/09_saving_and_loading_npy_files.py`, predict the output, change one line, predict again.
+
 ## 10. Common shape errors and how to read them
 
 If you cannot explain a decision, you cannot defend it — and in credit, hiring and healthcare you are legally required to. Permutation importance is model-agnostic and honest. SHAP gives per-prediction attributions with a solid theoretical basis but costs real compute.
@@ -248,6 +266,8 @@ for i in np.argsort(-imp.importances_mean)[:5]:
 **Remember:** Permutation importance on the TEST set answers 'what does this model rely on to generalise'.
 
 **Common mistake:** Presenting importance as causation — the model found correlation, nothing more.
+
+Practice: open `examples/10_common_shape_errors_and_how_to_read_them.py`, predict the output, change one line, predict again.
 
 ---
 

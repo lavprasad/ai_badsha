@@ -40,6 +40,8 @@ for mod in ('numpy', 'pandas', 'sklearn', 'torch'):
 
 **Common mistake:** Installing a package with one Python and importing it with another, then blaming the package.
 
+Practice: open `examples/01_why_python_owns_ai.py`, predict the output, change one line, predict again.
+
 ## 2. Installing Python and checking the version
 
 Python won AI not because it is fast but because the fast parts (NumPy, PyTorch) are C and CUDA underneath, wrapped in a language you can think in. Your first job is a working, isolated environment and the habit of checking which interpreter you are actually running — most 'it works on my machine' bugs start there.
@@ -63,6 +65,8 @@ for mod in ('numpy', 'pandas', 'sklearn', 'torch'):
 
 **Common mistake:** Installing a package with one Python and importing it with another, then blaming the package.
 
+Practice: open `examples/02_installing_python_and_checking_the_versi.py`, predict the output, change one line, predict again.
+
 ## 3. Virtual environments with venv
 
 A virtual environment is a private copy of Python for one project. Without it, two projects fight over the same library versions. Create it once, activate it, install into it, and freeze the exact versions so someone else can reproduce your run.
@@ -80,6 +84,8 @@ print(sys.executable)  # proves which Python you are actually using
 **Remember:** If `pip install` worked but the import fails, you installed into a different interpreter.
 
 **Common mistake:** Installing globally, then wondering why a colleague's machine gets different results.
+
+Practice: open `examples/03_virtual_environments_with_venv.py`, predict the output, change one line, predict again.
 
 ## 4. pip install and requirements.txt
 
@@ -103,6 +109,8 @@ print('Restore with: pip install -r requirements.txt')
 
 **Common mistake:** Committing code without the requirements file, so nobody can rebuild the environment that produced your numbers.
 
+Practice: open `examples/04_pip_install_and_requirements_txt.py`, predict the output, change one line, predict again.
+
 ## 5. Choosing an editor: VS Code basics
 
 Any editor works, but four features save real time: jump-to-definition, an integrated debugger, an interpreter selector, and inline type errors. Learn the debugger specifically — stepping through a shape mismatch beats twenty `print` statements every time.
@@ -125,6 +133,8 @@ At a breakpoint:  n = next line   s = step into   c = continue
 
 **Common mistake:** Debugging a nested pipeline with print statements you then forget to remove.
 
+Practice: open `examples/05_choosing_an_editor_vs_code_basics.py`, predict the output, change one line, predict again.
+
 ## 6. Jupyter notebooks vs .py scripts
 
 Notebooks keep state between cells, which is great for exploring and terrible for reproducibility. Treat the notebook as a scratchpad; once logic settles, move it into a `.py` module you can import and test.
@@ -140,6 +150,8 @@ df.head()
 **Remember:** 'Restart kernel and run all' is the only honest test that a notebook works.
 
 **Common mistake:** Shipping a notebook whose results depend on a deleted cell you ran ten minutes ago.
+
+Practice: open `examples/06_jupyter_notebooks_vs_py_scripts.py`, predict the output, change one line, predict again.
 
 ## 7. Google Colab and free GPUs
 
@@ -164,6 +176,8 @@ Colab survival rules:
 **Remember:** Anything not saved outside /content is gone when the runtime recycles. Checkpoint every epoch.
 
 **Common mistake:** Training for four hours in Colab with no checkpointing and losing everything to a disconnect.
+
+Practice: open `examples/07_google_colab_and_free_gpus.py`, predict the output, change one line, predict again.
 
 ## 8. Reading a traceback without panic
 
@@ -193,6 +207,8 @@ for value in ('42', 'abc', '999'):
 
 **Common mistake:** `except: pass` around a whole pipeline, turning a crash into silently wrong output.
 
+Practice: open `examples/08_reading_a_traceback_without_panic.py`, predict the output, change one line, predict again.
+
 ## 9. Your first script: hello, model
 
 Python won AI not because it is fast but because the fast parts (NumPy, PyTorch) are C and CUDA underneath, wrapped in a language you can think in. Your first job is a working, isolated environment and the habit of checking which interpreter you are actually running — most 'it works on my machine' bugs start there.
@@ -216,6 +232,8 @@ for mod in ('numpy', 'pandas', 'sklearn', 'torch'):
 
 **Common mistake:** Installing a package with one Python and importing it with another, then blaming the package.
 
+Practice: open `examples/09_your_first_script_hello_model.py`, predict the output, change one line, predict again.
+
 ## 10. How to use this 200-day course
 
 Python won AI not because it is fast but because the fast parts (NumPy, PyTorch) are C and CUDA underneath, wrapped in a language you can think in. Your first job is a working, isolated environment and the habit of checking which interpreter you are actually running — most 'it works on my machine' bugs start there.
@@ -238,6 +256,8 @@ for mod in ('numpy', 'pandas', 'sklearn', 'torch'):
 **Remember:** Run this file on day one and whenever anything mysterious breaks — it answers 'which Python?' instantly.
 
 **Common mistake:** Installing a package with one Python and importing it with another, then blaming the package.
+
+Practice: open `examples/10_how_to_use_this_200_day_course.py`, predict the output, change one line, predict again.
 
 ---
 

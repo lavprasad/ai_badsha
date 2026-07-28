@@ -44,6 +44,8 @@ print(model.predict(df))
 
 **Common mistake:** Preprocessing in a notebook and then forgetting one step when writing the serving code.
 
+Practice: open `examples/01_dataset_and_getitem.py`, predict the output, change one line, predict again.
+
 ## 2. DataLoader, batching and shuffling
 
 A Pipeline chains preprocessing and the model into one object that fits and predicts as a unit. This is the single best defence against leakage, and it means deployment ships one artefact instead of six loose steps you must remember to repeat.
@@ -70,6 +72,8 @@ print(model.predict(df))
 **Remember:** `handle_unknown='ignore'` stops production crashing on a category you never saw in training.
 
 **Common mistake:** Preprocessing in a notebook and then forgetting one step when writing the serving code.
+
+Practice: open `examples/02_dataloader_batching_and_shuffling.py`, predict the output, change one line, predict again.
 
 ## 3. num_workers and prefetching
 
@@ -98,6 +102,8 @@ print(model.predict(df))
 
 **Common mistake:** Preprocessing in a notebook and then forgetting one step when writing the serving code.
 
+Practice: open `examples/03_num_workers_and_prefetching.py`, predict the output, change one line, predict again.
+
 ## 4. Custom collate functions
 
 A Pipeline chains preprocessing and the model into one object that fits and predicts as a unit. This is the single best defence against leakage, and it means deployment ships one artefact instead of six loose steps you must remember to repeat.
@@ -124,6 +130,8 @@ print(model.predict(df))
 **Remember:** `handle_unknown='ignore'` stops production crashing on a category you never saw in training.
 
 **Common mistake:** Preprocessing in a notebook and then forgetting one step when writing the serving code.
+
+Practice: open `examples/04_custom_collate_functions.py`, predict the output, change one line, predict again.
 
 ## 5. Transforms and augmentation
 
@@ -152,6 +160,8 @@ print(model.predict(df))
 
 **Common mistake:** Preprocessing in a notebook and then forgetting one step when writing the serving code.
 
+Practice: open `examples/05_transforms_and_augmentation.py`, predict the output, change one line, predict again.
+
 ## 6. Handling variable-length inputs
 
 A Pipeline chains preprocessing and the model into one object that fits and predicts as a unit. This is the single best defence against leakage, and it means deployment ships one artefact instead of six loose steps you must remember to repeat.
@@ -178,6 +188,8 @@ print(model.predict(df))
 **Remember:** `handle_unknown='ignore'` stops production crashing on a category you never saw in training.
 
 **Common mistake:** Preprocessing in a notebook and then forgetting one step when writing the serving code.
+
+Practice: open `examples/06_handling_variable_length_inputs.py`, predict the output, change one line, predict again.
 
 ## 7. Weighted samplers for imbalance
 
@@ -206,6 +218,8 @@ print(model.predict(df))
 
 **Common mistake:** Preprocessing in a notebook and then forgetting one step when writing the serving code.
 
+Practice: open `examples/07_weighted_samplers_for_imbalance.py`, predict the output, change one line, predict again.
+
 ## 8. Reproducible shuffling with seeds
 
 A Pipeline chains preprocessing and the model into one object that fits and predicts as a unit. This is the single best defence against leakage, and it means deployment ships one artefact instead of six loose steps you must remember to repeat.
@@ -232,6 +246,8 @@ print(model.predict(df))
 **Remember:** `handle_unknown='ignore'` stops production crashing on a category you never saw in training.
 
 **Common mistake:** Preprocessing in a notebook and then forgetting one step when writing the serving code.
+
+Practice: open `examples/08_reproducible_shuffling_with_seeds.py`, predict the output, change one line, predict again.
 
 ## 9. Profiling a slow data loader
 
@@ -260,6 +276,8 @@ print(model.predict(df))
 
 **Common mistake:** Preprocessing in a notebook and then forgetting one step when writing the serving code.
 
+Practice: open `examples/09_profiling_a_slow_data_loader.py`, predict the output, change one line, predict again.
+
 ## 10. Building a Dataset for your own files
 
 A Pipeline chains preprocessing and the model into one object that fits and predicts as a unit. This is the single best defence against leakage, and it means deployment ships one artefact instead of six loose steps you must remember to repeat.
@@ -286,6 +304,8 @@ print(model.predict(df))
 **Remember:** `handle_unknown='ignore'` stops production crashing on a category you never saw in training.
 
 **Common mistake:** Preprocessing in a notebook and then forgetting one step when writing the serving code.
+
+Practice: open `examples/10_building_a_dataset_for_your_own_files.py`, predict the output, change one line, predict again.
 
 ---
 

@@ -33,6 +33,8 @@ df.head()
 
 **Common mistake:** Shipping a notebook whose results depend on a deleted cell you ran ten minutes ago.
 
+Practice: open `examples/01_why_notebooks_do_not_ship.py`, predict the output, change one line, predict again.
+
 ## 2. Project structure for ML repos
 
 Notebooks keep state between cells, which is great for exploring and terrible for reproducibility. Treat the notebook as a scratchpad; once logic settles, move it into a `.py` module you can import and test.
@@ -48,6 +50,8 @@ df.head()
 **Remember:** 'Restart kernel and run all' is the only honest test that a notebook works.
 
 **Common mistake:** Shipping a notebook whose results depend on a deleted cell you ran ten minutes ago.
+
+Practice: open `examples/02_project_structure_for_ml_repos.py`, predict the output, change one line, predict again.
 
 ## 3. Configuration files over hard-coded values
 
@@ -65,6 +69,8 @@ df.head()
 
 **Common mistake:** Shipping a notebook whose results depend on a deleted cell you ran ten minutes ago.
 
+Practice: open `examples/03_configuration_files_over_hard_coded_valu.py`, predict the output, change one line, predict again.
+
 ## 4. Separating data, training and serving code
 
 Notebooks keep state between cells, which is great for exploring and terrible for reproducibility. Treat the notebook as a scratchpad; once logic settles, move it into a `.py` module you can import and test.
@@ -80,6 +86,8 @@ df.head()
 **Remember:** 'Restart kernel and run all' is the only honest test that a notebook works.
 
 **Common mistake:** Shipping a notebook whose results depend on a deleted cell you ran ten minutes ago.
+
+Practice: open `examples/04_separating_data_training_and_serving_cod.py`, predict the output, change one line, predict again.
 
 ## 5. Logging instead of print
 
@@ -97,6 +105,8 @@ df.head()
 
 **Common mistake:** Shipping a notebook whose results depend on a deleted cell you ran ten minutes ago.
 
+Practice: open `examples/05_logging_instead_of_print.py`, predict the output, change one line, predict again.
+
 ## 6. Command-line entry points
 
 Notebooks keep state between cells, which is great for exploring and terrible for reproducibility. Treat the notebook as a scratchpad; once logic settles, move it into a `.py` module you can import and test.
@@ -112,6 +122,8 @@ df.head()
 **Remember:** 'Restart kernel and run all' is the only honest test that a notebook works.
 
 **Common mistake:** Shipping a notebook whose results depend on a deleted cell you ran ten minutes ago.
+
+Practice: open `examples/06_command_line_entry_points.py`, predict the output, change one line, predict again.
 
 ## 7. Packaging with pyproject.toml
 
@@ -129,6 +141,8 @@ df.head()
 
 **Common mistake:** Shipping a notebook whose results depend on a deleted cell you ran ten minutes ago.
 
+Practice: open `examples/07_packaging_with_pyproject_toml.py`, predict the output, change one line, predict again.
+
 ## 8. Dependency pinning
 
 Notebooks keep state between cells, which is great for exploring and terrible for reproducibility. Treat the notebook as a scratchpad; once logic settles, move it into a `.py` module you can import and test.
@@ -144,6 +158,8 @@ df.head()
 **Remember:** 'Restart kernel and run all' is the only honest test that a notebook works.
 
 **Common mistake:** Shipping a notebook whose results depend on a deleted cell you ran ten minutes ago.
+
+Practice: open `examples/08_dependency_pinning.py`, predict the output, change one line, predict again.
 
 ## 9. Making the whole run one command
 
@@ -161,6 +177,8 @@ df.head()
 
 **Common mistake:** Shipping a notebook whose results depend on a deleted cell you ran ten minutes ago.
 
+Practice: open `examples/09_making_the_whole_run_one_command.py`, predict the output, change one line, predict again.
+
 ## 10. Refactoring a notebook into modules
 
 Notebooks keep state between cells, which is great for exploring and terrible for reproducibility. Treat the notebook as a scratchpad; once logic settles, move it into a `.py` module you can import and test.
@@ -176,6 +194,8 @@ df.head()
 **Remember:** 'Restart kernel and run all' is the only honest test that a notebook works.
 
 **Common mistake:** Shipping a notebook whose results depend on a deleted cell you ran ten minutes ago.
+
+Practice: open `examples/10_refactoring_a_notebook_into_modules.py`, predict the output, change one line, predict again.
 
 ---
 

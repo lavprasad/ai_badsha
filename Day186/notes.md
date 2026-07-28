@@ -41,6 +41,8 @@ print('Large gaps here are the finding — investigate before shipping.')
 
 **Common mistake:** Auditing fairness once at launch and never again as the data drifts.
 
+Practice: open `examples/01_pii_identification_and_handling.py`, predict the output, change one line, predict again.
+
 ## 2. Anonymisation and pseudonymisation
 
 Models learn the bias in their training data and then apply it at scale with a veneer of objectivity. Measure error rates per group, not just overall. Fairness definitions genuinely conflict with each other — you must choose one explicitly and document why.
@@ -64,6 +66,8 @@ print('Large gaps here are the finding — investigate before shipping.')
 **Remember:** Dropping the sensitive attribute does not remove bias; proxies (pincode, name) carry it right back in.
 
 **Common mistake:** Auditing fairness once at launch and never again as the data drifts.
+
+Practice: open `examples/02_anonymisation_and_pseudonymisation.py`, predict the output, change one line, predict again.
 
 ## 3. Differential privacy basics
 
@@ -89,6 +93,8 @@ print('Large gaps here are the finding — investigate before shipping.')
 
 **Common mistake:** Auditing fairness once at launch and never again as the data drifts.
 
+Practice: open `examples/03_differential_privacy_basics.py`, predict the output, change one line, predict again.
+
 ## 4. Federated learning
 
 Models learn the bias in their training data and then apply it at scale with a veneer of objectivity. Measure error rates per group, not just overall. Fairness definitions genuinely conflict with each other — you must choose one explicitly and document why.
@@ -112,6 +118,8 @@ print('Large gaps here are the finding — investigate before shipping.')
 **Remember:** Dropping the sensitive attribute does not remove bias; proxies (pincode, name) carry it right back in.
 
 **Common mistake:** Auditing fairness once at launch and never again as the data drifts.
+
+Practice: open `examples/04_federated_learning.py`, predict the output, change one line, predict again.
 
 ## 5. Data retention policies
 
@@ -137,6 +145,8 @@ print('Large gaps here are the finding — investigate before shipping.')
 
 **Common mistake:** Auditing fairness once at launch and never again as the data drifts.
 
+Practice: open `examples/05_data_retention_policies.py`, predict the output, change one line, predict again.
+
 ## 6. GDPR and DPDP obligations
 
 Models learn the bias in their training data and then apply it at scale with a veneer of objectivity. Measure error rates per group, not just overall. Fairness definitions genuinely conflict with each other — you must choose one explicitly and document why.
@@ -160,6 +170,8 @@ print('Large gaps here are the finding — investigate before shipping.')
 **Remember:** Dropping the sensitive attribute does not remove bias; proxies (pincode, name) carry it right back in.
 
 **Common mistake:** Auditing fairness once at launch and never again as the data drifts.
+
+Practice: open `examples/06_gdpr_and_dpdp_obligations.py`, predict the output, change one line, predict again.
 
 ## 7. Model inversion and membership inference
 
@@ -185,6 +197,8 @@ print('Large gaps here are the finding — investigate before shipping.')
 
 **Common mistake:** Auditing fairness once at launch and never again as the data drifts.
 
+Practice: open `examples/07_model_inversion_and_membership_inference.py`, predict the output, change one line, predict again.
+
 ## 8. Secrets management
 
 Models learn the bias in their training data and then apply it at scale with a veneer of objectivity. Measure error rates per group, not just overall. Fairness definitions genuinely conflict with each other — you must choose one explicitly and document why.
@@ -208,6 +222,8 @@ print('Large gaps here are the finding — investigate before shipping.')
 **Remember:** Dropping the sensitive attribute does not remove bias; proxies (pincode, name) carry it right back in.
 
 **Common mistake:** Auditing fairness once at launch and never again as the data drifts.
+
+Practice: open `examples/08_secrets_management.py`, predict the output, change one line, predict again.
 
 ## 9. Audit trails
 
@@ -233,6 +249,8 @@ print('Large gaps here are the finding — investigate before shipping.')
 
 **Common mistake:** Auditing fairness once at launch and never again as the data drifts.
 
+Practice: open `examples/09_audit_trails.py`, predict the output, change one line, predict again.
+
 ## 10. Working with a compliance team
 
 Models learn the bias in their training data and then apply it at scale with a veneer of objectivity. Measure error rates per group, not just overall. Fairness definitions genuinely conflict with each other — you must choose one explicitly and document why.
@@ -256,6 +274,8 @@ print('Large gaps here are the finding — investigate before shipping.')
 **Remember:** Dropping the sensitive attribute does not remove bias; proxies (pincode, name) carry it right back in.
 
 **Common mistake:** Auditing fairness once at launch and never again as the data drifts.
+
+Practice: open `examples/10_working_with_a_compliance_team.py`, predict the output, change one line, predict again.
 
 ---
 

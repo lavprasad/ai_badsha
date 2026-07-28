@@ -39,6 +39,8 @@ print('Reverse process = a network predicting the noise added at each step.')
 
 **Common mistake:** Assuming generated images are free of copyright or bias concerns because 'the model made them'.
 
+Practice: open `examples/01_text_to_image_workflow.py`, predict the output, change one line, predict again.
+
 ## 2. Prompting for images
 
 A prompt is a program written in English. Be specific about role, task, format and constraints. Few-shot examples teach format better than any description. Asking for reasoning steps helps on multi-step problems and wastes tokens on simple lookups.
@@ -63,6 +65,8 @@ print('Structure: role -> task -> allowed outputs -> format -> examples -> input
 
 **Common mistake:** Writing a vague prompt, getting vague output, and blaming the model.
 
+Practice: open `examples/02_prompting_for_images.py`, predict the output, change one line, predict again.
+
 ## 3. Negative prompts
 
 Diffusion learns to reverse noise: add Gaussian noise to images in small steps, then train a network to undo one step. At generation you start from pure noise and denoise repeatedly, steered by a text embedding. It is more stable than GAN training and now the default for images.
@@ -84,6 +88,8 @@ print('Reverse process = a network predicting the noise added at each step.')
 **Remember:** More sampling steps means better quality and linearly more compute — that is the whole trade.
 
 **Common mistake:** Assuming generated images are free of copyright or bias concerns because 'the model made them'.
+
+Practice: open `examples/03_negative_prompts.py`, predict the output, change one line, predict again.
 
 ## 4. Image-to-image and inpainting
 
@@ -107,6 +113,8 @@ print('Reverse process = a network predicting the noise added at each step.')
 
 **Common mistake:** Assuming generated images are free of copyright or bias concerns because 'the model made them'.
 
+Practice: open `examples/04_image_to_image_and_inpainting.py`, predict the output, change one line, predict again.
+
 ## 5. Guidance scale and steps
 
 Diffusion learns to reverse noise: add Gaussian noise to images in small steps, then train a network to undo one step. At generation you start from pure noise and denoise repeatedly, steered by a text embedding. It is more stable than GAN training and now the default for images.
@@ -129,6 +137,8 @@ print('Reverse process = a network predicting the noise added at each step.')
 
 **Common mistake:** Assuming generated images are free of copyright or bias concerns because 'the model made them'.
 
+Practice: open `examples/05_guidance_scale_and_steps.py`, predict the output, change one line, predict again.
+
 ## 6. Seeds and reproducibility
 
 Diffusion learns to reverse noise: add Gaussian noise to images in small steps, then train a network to undo one step. At generation you start from pure noise and denoise repeatedly, steered by a text embedding. It is more stable than GAN training and now the default for images.
@@ -150,6 +160,8 @@ print('Reverse process = a network predicting the noise added at each step.')
 **Remember:** More sampling steps means better quality and linearly more compute — that is the whole trade.
 
 **Common mistake:** Assuming generated images are free of copyright or bias concerns because 'the model made them'.
+
+Practice: open `examples/06_seeds_and_reproducibility.py`, predict the output, change one line, predict again.
 
 ## 7. LoRA for style adaptation
 
@@ -174,6 +186,8 @@ print('effective W = W + A@B, shape', (W + delta).shape)
 
 **Common mistake:** Setting rank far too high — you lose the efficiency and gain the overfitting.
 
+Practice: open `examples/07_lora_for_style_adaptation.py`, predict the output, change one line, predict again.
+
 ## 8. Upscaling
 
 Diffusion learns to reverse noise: add Gaussian noise to images in small steps, then train a network to undo one step. At generation you start from pure noise and denoise repeatedly, steered by a text embedding. It is more stable than GAN training and now the default for images.
@@ -196,6 +210,8 @@ print('Reverse process = a network predicting the noise added at each step.')
 
 **Common mistake:** Assuming generated images are free of copyright or bias concerns because 'the model made them'.
 
+Practice: open `examples/08_upscaling.py`, predict the output, change one line, predict again.
+
 ## 9. Content provenance and watermarking
 
 Missing data is information, not just noise. Before filling anything, ask *why* it is missing: a sensor that fails only under load is not missing at random. Then choose: drop rows, drop the column, fill with a statistic, or add an explicit 'was missing' indicator column.
@@ -215,6 +231,8 @@ print(df)
 **Remember:** Compute the fill statistic on the TRAIN split only, then apply it to test.
 
 **Common mistake:** Filling with the mean computed over the full dataset — that leaks test information into training.
+
+Practice: open `examples/09_content_provenance_and_watermarking.py`, predict the output, change one line, predict again.
 
 ## 10. Copyright and dataset questions
 
@@ -237,6 +255,8 @@ print('Reverse process = a network predicting the noise added at each step.')
 **Remember:** More sampling steps means better quality and linearly more compute — that is the whole trade.
 
 **Common mistake:** Assuming generated images are free of copyright or bias concerns because 'the model made them'.
+
+Practice: open `examples/10_copyright_and_dataset_questions.py`, predict the output, change one line, predict again.
 
 ---
 

@@ -42,6 +42,8 @@ print('shape', pe.shape)
 
 **Common mistake:** Assuming a bigger context window is free — attention cost grows with the square of sequence length.
 
+Practice: open `examples/01_encoder_only_bert.py`, predict the output, change one line, predict again.
+
 ## 2. Masked language modelling
 
 A transformer block is attention + feed-forward, each wrapped in a residual connection and a LayerNorm. Attention alone is order-blind, so positions are injected explicitly. Encoder-only (BERT) is for understanding, decoder-only (GPT) for generation, encoder-decoder (T5) for translation-shaped tasks.
@@ -66,6 +68,8 @@ print('shape', pe.shape)
 **Remember:** Block = LayerNorm -> Attention -> add residual -> LayerNorm -> MLP -> add residual. Memorise it.
 
 **Common mistake:** Assuming a bigger context window is free — attention cost grows with the square of sequence length.
+
+Practice: open `examples/02_masked_language_modelling.py`, predict the output, change one line, predict again.
 
 ## 3. Decoder-only: GPT family
 
@@ -92,6 +96,8 @@ print('shape', pe.shape)
 
 **Common mistake:** Assuming a bigger context window is free — attention cost grows with the square of sequence length.
 
+Practice: open `examples/03_decoder_only_gpt_family.py`, predict the output, change one line, predict again.
+
 ## 4. Next-token prediction
 
 A transformer block is attention + feed-forward, each wrapped in a residual connection and a LayerNorm. Attention alone is order-blind, so positions are injected explicitly. Encoder-only (BERT) is for understanding, decoder-only (GPT) for generation, encoder-decoder (T5) for translation-shaped tasks.
@@ -116,6 +122,8 @@ print('shape', pe.shape)
 **Remember:** Block = LayerNorm -> Attention -> add residual -> LayerNorm -> MLP -> add residual. Memorise it.
 
 **Common mistake:** Assuming a bigger context window is free — attention cost grows with the square of sequence length.
+
+Practice: open `examples/04_next_token_prediction.py`, predict the output, change one line, predict again.
 
 ## 5. Encoder-decoder: T5 and BART
 
@@ -142,6 +150,8 @@ print('shape', pe.shape)
 
 **Common mistake:** Assuming a bigger context window is free — attention cost grows with the square of sequence length.
 
+Practice: open `examples/05_encoder_decoder_t5_and_bart.py`, predict the output, change one line, predict again.
+
 ## 6. Span corruption objectives
 
 A transformer block is attention + feed-forward, each wrapped in a residual connection and a LayerNorm. Attention alone is order-blind, so positions are injected explicitly. Encoder-only (BERT) is for understanding, decoder-only (GPT) for generation, encoder-decoder (T5) for translation-shaped tasks.
@@ -166,6 +176,8 @@ print('shape', pe.shape)
 **Remember:** Block = LayerNorm -> Attention -> add residual -> LayerNorm -> MLP -> add residual. Memorise it.
 
 **Common mistake:** Assuming a bigger context window is free — attention cost grows with the square of sequence length.
+
+Practice: open `examples/06_span_corruption_objectives.py`, predict the output, change one line, predict again.
 
 ## 7. Which family for which task
 
@@ -192,6 +204,8 @@ print('shape', pe.shape)
 
 **Common mistake:** Assuming a bigger context window is free — attention cost grows with the square of sequence length.
 
+Practice: open `examples/07_which_family_for_which_task.py`, predict the output, change one line, predict again.
+
 ## 8. Model size and capability
 
 A transformer block is attention + feed-forward, each wrapped in a residual connection and a LayerNorm. Attention alone is order-blind, so positions are injected explicitly. Encoder-only (BERT) is for understanding, decoder-only (GPT) for generation, encoder-decoder (T5) for translation-shaped tasks.
@@ -216,6 +230,8 @@ print('shape', pe.shape)
 **Remember:** Block = LayerNorm -> Attention -> add residual -> LayerNorm -> MLP -> add residual. Memorise it.
 
 **Common mistake:** Assuming a bigger context window is free — attention cost grows with the square of sequence length.
+
+Practice: open `examples/08_model_size_and_capability.py`, predict the output, change one line, predict again.
 
 ## 9. Open-weight vs API models
 
@@ -242,6 +258,8 @@ print('shape', pe.shape)
 
 **Common mistake:** Assuming a bigger context window is free — attention cost grows with the square of sequence length.
 
+Practice: open `examples/09_open_weight_vs_api_models.py`, predict the output, change one line, predict again.
+
 ## 10. Reading a model card
 
 A transformer block is attention + feed-forward, each wrapped in a residual connection and a LayerNorm. Attention alone is order-blind, so positions are injected explicitly. Encoder-only (BERT) is for understanding, decoder-only (GPT) for generation, encoder-decoder (T5) for translation-shaped tasks.
@@ -266,6 +284,8 @@ print('shape', pe.shape)
 **Remember:** Block = LayerNorm -> Attention -> add residual -> LayerNorm -> MLP -> add residual. Memorise it.
 
 **Common mistake:** Assuming a bigger context window is free — attention cost grows with the square of sequence length.
+
+Practice: open `examples/10_reading_a_model_card.py`, predict the output, change one line, predict again.
 
 ---
 

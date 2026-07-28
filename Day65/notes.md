@@ -45,6 +45,8 @@ print((U @ V.T).round(2))
 
 **Common mistake:** Building a feedback loop that only ever recommends what it already recommended.
 
+Practice: open `examples/01_content_based_filtering.py`, predict the output, change one line, predict again.
+
 ## 2. Collaborative filtering
 
 Collaborative filtering says: people who liked what you liked also liked X. Matrix factorisation learns latent user and item vectors whose dot product predicts the rating. The cold-start problem — new users and new items with no history — is solved with content features, not more factorisation.
@@ -72,6 +74,8 @@ print((U @ V.T).round(2))
 **Remember:** Evaluate recommenders with ranking metrics (precision@k, NDCG), not RMSE on ratings.
 
 **Common mistake:** Building a feedback loop that only ever recommends what it already recommended.
+
+Practice: open `examples/02_collaborative_filtering.py`, predict the output, change one line, predict again.
 
 ## 3. User-item matrices and sparsity
 
@@ -101,6 +105,8 @@ print((U @ V.T).round(2))
 
 **Common mistake:** Building a feedback loop that only ever recommends what it already recommended.
 
+Practice: open `examples/03_user_item_matrices_and_sparsity.py`, predict the output, change one line, predict again.
+
 ## 4. Matrix factorisation
 
 A matrix is a linear transformation. Multiplying matrices composes transformations, which is exactly what stacking neural network layers does. Shapes must line up: (m,k) @ (k,n) -> (m,n); the inner dimensions must match and they vanish.
@@ -119,6 +125,8 @@ print(np.eye(3) @ A is not A, np.allclose(np.eye(3) @ A, A))
 **Remember:** Read every shape error as 'the inner dimensions did not match' and print the shapes.
 
 **Common mistake:** Reaching for `np.linalg.inv` to solve `Ax=b` instead of the numerically safer `np.linalg.solve`.
+
+Practice: open `examples/04_matrix_factorisation.py`, predict the output, change one line, predict again.
 
 ## 5. Implicit vs explicit feedback
 
@@ -148,6 +156,8 @@ print((U @ V.T).round(2))
 
 **Common mistake:** Building a feedback loop that only ever recommends what it already recommended.
 
+Practice: open `examples/05_implicit_vs_explicit_feedback.py`, predict the output, change one line, predict again.
+
 ## 6. The cold-start problem
 
 Collaborative filtering says: people who liked what you liked also liked X. Matrix factorisation learns latent user and item vectors whose dot product predicts the rating. The cold-start problem — new users and new items with no history — is solved with content features, not more factorisation.
@@ -175,6 +185,8 @@ print((U @ V.T).round(2))
 **Remember:** Evaluate recommenders with ranking metrics (precision@k, NDCG), not RMSE on ratings.
 
 **Common mistake:** Building a feedback loop that only ever recommends what it already recommended.
+
+Practice: open `examples/06_the_cold_start_problem.py`, predict the output, change one line, predict again.
 
 ## 7. Popularity bias and feedback loops
 
@@ -204,6 +216,8 @@ print((U @ V.T).round(2))
 
 **Common mistake:** Building a feedback loop that only ever recommends what it already recommended.
 
+Practice: open `examples/07_popularity_bias_and_feedback_loops.py`, predict the output, change one line, predict again.
+
 ## 8. Ranking metrics: precision@k, NDCG
 
 Accuracy hides everything on imbalanced data. Precision asks 'of the ones I flagged, how many were real'; recall asks 'of the real ones, how many did I catch'. You trade one for the other with the threshold, and the business decides which error hurts more.
@@ -225,6 +239,8 @@ print('roc auc', round(roc_auc_score(yte, m.predict_proba(Xte)[:, 1]), 4))
 **Remember:** Tune the decision threshold on validation data; 0.5 is a default, not a decision.
 
 **Common mistake:** Optimising ROC-AUC on a heavily imbalanced problem where precision-recall AUC is the honest metric.
+
+Practice: open `examples/08_ranking_metrics_precision_k_ndcg.py`, predict the output, change one line, predict again.
 
 ## 9. Candidate generation and reranking
 
@@ -255,6 +271,8 @@ print('\\nReal pipeline: chunk 300-800 tokens with overlap -> embed -> ANN index
 
 **Common mistake:** Chunking blindly at 1000 characters and cutting tables and code blocks in half.
 
+Practice: open `examples/09_candidate_generation_and_reranking.py`, predict the output, change one line, predict again.
+
 ## 10. A movie recommender walkthrough
 
 Collaborative filtering says: people who liked what you liked also liked X. Matrix factorisation learns latent user and item vectors whose dot product predicts the rating. The cold-start problem — new users and new items with no history — is solved with content features, not more factorisation.
@@ -282,6 +300,8 @@ print((U @ V.T).round(2))
 **Remember:** Evaluate recommenders with ranking metrics (precision@k, NDCG), not RMSE on ratings.
 
 **Common mistake:** Building a feedback loop that only ever recommends what it already recommended.
+
+Practice: open `examples/10_a_movie_recommender_walkthrough.py`, predict the output, change one line, predict again.
 
 ---
 

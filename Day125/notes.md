@@ -44,6 +44,8 @@ print('output shape', (weights @ V).shape)
 
 **Common mistake:** Omitting the causal mask in a decoder, so the model trivially cheats by reading the next token.
 
+Practice: open `examples/01_the_2017_idea_attention_is_all_you_need.py`, predict the output, change one line, predict again.
+
 ## 2. Input embeddings and positional encoding
 
 An embedding maps text to a dense vector where nearby means similar in meaning. Unlike keyword search, 'car trouble' matches 'engine won't start'. Every RAG system is embeddings plus nearest-neighbour lookup.
@@ -70,6 +72,8 @@ print('king - man + woman ~', best)
 **Remember:** Normalise embeddings, then cosine similarity is just a dot product — much faster at scale.
 
 **Common mistake:** Mixing vectors from two different embedding models in one index; the spaces are unrelated.
+
+Practice: open `examples/02_input_embeddings_and_positional_encoding.py`, predict the output, change one line, predict again.
 
 ## 3. Self-attention block
 
@@ -98,6 +102,8 @@ print('output shape', (weights @ V).shape)
 
 **Common mistake:** Omitting the causal mask in a decoder, so the model trivially cheats by reading the next token.
 
+Practice: open `examples/03_self_attention_block.py`, predict the output, change one line, predict again.
+
 ## 4. Multi-head attention
 
 Attention lets every token look at every other token and decide what matters. Each token emits a query, a key and a value; the query-key dot products become weights over the values. Multiple heads let the model attend to several relationships at once.
@@ -125,6 +131,8 @@ print('output shape', (weights @ V).shape)
 
 **Common mistake:** Omitting the causal mask in a decoder, so the model trivially cheats by reading the next token.
 
+Practice: open `examples/04_multi_head_attention.py`, predict the output, change one line, predict again.
+
 ## 5. Feed-forward network per position
 
 A transformer block is attention + feed-forward, each wrapped in a residual connection and a LayerNorm. Attention alone is order-blind, so positions are injected explicitly. Encoder-only (BERT) is for understanding, decoder-only (GPT) for generation, encoder-decoder (T5) for translation-shaped tasks.
@@ -150,6 +158,8 @@ print('shape', pe.shape)
 
 **Common mistake:** Assuming a bigger context window is free — attention cost grows with the square of sequence length.
 
+Practice: open `examples/05_feed_forward_network_per_position.py`, predict the output, change one line, predict again.
+
 ## 6. Residual connections and LayerNorm
 
 A vector is a list of numbers with a direction and length. The dot product measures alignment: large and positive when two vectors point the same way, zero when perpendicular. Cosine similarity is the dot product with length divided out, which is why it compares embeddings of different magnitudes fairly.
@@ -169,6 +179,8 @@ print('cosine', cos)   # 1.0 -> same direction
 **Remember:** Cosine similarity ignores magnitude; Euclidean distance does not. Pick the one that matches your question.
 
 **Common mistake:** Comparing raw embeddings with Euclidean distance when only direction carries meaning.
+
+Practice: open `examples/06_residual_connections_and_layernorm.py`, predict the output, change one line, predict again.
 
 ## 7. Encoder stack
 
@@ -195,6 +207,8 @@ print('shape', pe.shape)
 
 **Common mistake:** Assuming a bigger context window is free — attention cost grows with the square of sequence length.
 
+Practice: open `examples/07_encoder_stack.py`, predict the output, change one line, predict again.
+
 ## 8. Decoder stack and causal masking
 
 A transformer block is attention + feed-forward, each wrapped in a residual connection and a LayerNorm. Attention alone is order-blind, so positions are injected explicitly. Encoder-only (BERT) is for understanding, decoder-only (GPT) for generation, encoder-decoder (T5) for translation-shaped tasks.
@@ -219,6 +233,8 @@ print('shape', pe.shape)
 **Remember:** Block = LayerNorm -> Attention -> add residual -> LayerNorm -> MLP -> add residual. Memorise it.
 
 **Common mistake:** Assuming a bigger context window is free — attention cost grows with the square of sequence length.
+
+Practice: open `examples/08_decoder_stack_and_causal_masking.py`, predict the output, change one line, predict again.
 
 ## 9. Parameter count breakdown
 
@@ -245,6 +261,8 @@ print('shape', pe.shape)
 
 **Common mistake:** Assuming a bigger context window is free — attention cost grows with the square of sequence length.
 
+Practice: open `examples/09_parameter_count_breakdown.py`, predict the output, change one line, predict again.
+
 ## 10. Drawing the block from memory
 
 A transformer block is attention + feed-forward, each wrapped in a residual connection and a LayerNorm. Attention alone is order-blind, so positions are injected explicitly. Encoder-only (BERT) is for understanding, decoder-only (GPT) for generation, encoder-decoder (T5) for translation-shaped tasks.
@@ -269,6 +287,8 @@ print('shape', pe.shape)
 **Remember:** Block = LayerNorm -> Attention -> add residual -> LayerNorm -> MLP -> add residual. Memorise it.
 
 **Common mistake:** Assuming a bigger context window is free — attention cost grows with the square of sequence length.
+
+Practice: open `examples/10_drawing_the_block_from_memory.py`, predict the output, change one line, predict again.
 
 ---
 

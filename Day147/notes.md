@@ -36,6 +36,8 @@ print('variance kept by first 2 dims:', round(float(energy[1]), 3))
 
 **Common mistake:** Running PCA/SVD on unscaled features so the largest-unit column dominates every component.
 
+Practice: open `examples/01_decomposition_into_sub_prompts.py`, predict the output, change one line, predict again.
+
 ## 2. Prompt chaining
 
 A prompt is a program written in English. Be specific about role, task, format and constraints. Few-shot examples teach format better than any description. Asking for reasoning steps helps on multi-step problems and wastes tokens on simple lookups.
@@ -59,6 +61,8 @@ print('Structure: role -> task -> allowed outputs -> format -> examples -> input
 **Remember:** Put the output format last and show it as an example — models copy the nearest pattern.
 
 **Common mistake:** Writing a vague prompt, getting vague output, and blaming the model.
+
+Practice: open `examples/02_prompt_chaining.py`, predict the output, change one line, predict again.
 
 ## 3. Self-critique and revision loops
 
@@ -84,6 +88,8 @@ print('Structure: role -> task -> allowed outputs -> format -> examples -> input
 
 **Common mistake:** Writing a vague prompt, getting vague output, and blaming the model.
 
+Practice: open `examples/03_self_critique_and_revision_loops.py`, predict the output, change one line, predict again.
+
 ## 4. Rubric-based grading prompts
 
 A prompt is a program written in English. Be specific about role, task, format and constraints. Few-shot examples teach format better than any description. Asking for reasoning steps helps on multi-step problems and wastes tokens on simple lookups.
@@ -107,6 +113,8 @@ print('Structure: role -> task -> allowed outputs -> format -> examples -> input
 **Remember:** Put the output format last and show it as an example — models copy the nearest pattern.
 
 **Common mistake:** Writing a vague prompt, getting vague output, and blaming the model.
+
+Practice: open `examples/04_rubric_based_grading_prompts.py`, predict the output, change one line, predict again.
 
 ## 5. Persona and expertise framing
 
@@ -132,6 +140,8 @@ print('Structure: role -> task -> allowed outputs -> format -> examples -> input
 
 **Common mistake:** Writing a vague prompt, getting vague output, and blaming the model.
 
+Practice: open `examples/05_persona_and_expertise_framing.py`, predict the output, change one line, predict again.
+
 ## 6. Handling ambiguity explicitly
 
 A prompt is a program written in English. Be specific about role, task, format and constraints. Few-shot examples teach format better than any description. Asking for reasoning steps helps on multi-step problems and wastes tokens on simple lookups.
@@ -155,6 +165,8 @@ print('Structure: role -> task -> allowed outputs -> format -> examples -> input
 **Remember:** Put the output format last and show it as an example — models copy the nearest pattern.
 
 **Common mistake:** Writing a vague prompt, getting vague output, and blaming the model.
+
+Practice: open `examples/06_handling_ambiguity_explicitly.py`, predict the output, change one line, predict again.
 
 ## 7. Refusal and safe-completion design
 
@@ -180,6 +192,8 @@ print('Structure: role -> task -> allowed outputs -> format -> examples -> input
 
 **Common mistake:** Writing a vague prompt, getting vague output, and blaming the model.
 
+Practice: open `examples/07_refusal_and_safe_completion_design.py`, predict the output, change one line, predict again.
+
 ## 8. Prompt caching for cost
 
 A prompt is a program written in English. Be specific about role, task, format and constraints. Few-shot examples teach format better than any description. Asking for reasoning steps helps on multi-step problems and wastes tokens on simple lookups.
@@ -203,6 +217,8 @@ print('Structure: role -> task -> allowed outputs -> format -> examples -> input
 **Remember:** Put the output format last and show it as an example — models copy the nearest pattern.
 
 **Common mistake:** Writing a vague prompt, getting vague output, and blaming the model.
+
+Practice: open `examples/08_prompt_caching_for_cost.py`, predict the output, change one line, predict again.
 
 ## 9. Token budgeting
 
@@ -228,6 +244,8 @@ print('Structure: role -> task -> allowed outputs -> format -> examples -> input
 
 **Common mistake:** Writing a vague prompt, getting vague output, and blaming the model.
 
+Practice: open `examples/09_token_budgeting.py`, predict the output, change one line, predict again.
+
 ## 10. A prompt library with tests
 
 A prompt is a program written in English. Be specific about role, task, format and constraints. Few-shot examples teach format better than any description. Asking for reasoning steps helps on multi-step problems and wastes tokens on simple lookups.
@@ -251,6 +269,8 @@ print('Structure: role -> task -> allowed outputs -> format -> examples -> input
 **Remember:** Put the output format last and show it as an example — models copy the nearest pattern.
 
 **Common mistake:** Writing a vague prompt, getting vague output, and blaming the model.
+
+Practice: open `examples/10_a_prompt_library_with_tests.py`, predict the output, change one line, predict again.
 
 ---
 

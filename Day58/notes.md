@@ -39,6 +39,8 @@ print('roc auc', round(roc_auc_score(yte, m.predict_proba(Xte)[:, 1]), 4))
 
 **Common mistake:** Optimising ROC-AUC on a heavily imbalanced problem where precision-recall AUC is the honest metric.
 
+Practice: open `examples/01_why_accuracy_lies_here.py`, predict the output, change one line, predict again.
+
 ## 2. Class weights
 
 When one class is 1% of the data, the model learns to always say 'no'. Fix it with class weights (cheap, first choice), threshold tuning, or resampling. SMOTE synthesises minority points — and must only ever be applied to the training fold.
@@ -61,6 +63,8 @@ print('recall balanced', round(recall_score(yte, weighted.predict(Xte)), 3))
 **Remember:** Try `class_weight='balanced'` before installing anything.
 
 **Common mistake:** Applying SMOTE before the split so synthetic copies of test rows appear in training.
+
+Practice: open `examples/02_class_weights.py`, predict the output, change one line, predict again.
 
 ## 3. Threshold moving
 
@@ -85,6 +89,8 @@ print('recall balanced', round(recall_score(yte, weighted.predict(Xte)), 3))
 
 **Common mistake:** Applying SMOTE before the split so synthetic copies of test rows appear in training.
 
+Practice: open `examples/03_threshold_moving.py`, predict the output, change one line, predict again.
+
 ## 4. Random over- and under-sampling
 
 A distribution says which values are likely. Gaussian for measurement noise, Bernoulli for yes/no, Poisson for counts per interval. Choosing the right one is choosing your loss function: Gaussian likelihood gives MSE, Bernoulli gives cross-entropy.
@@ -103,6 +109,8 @@ print('coin heads rate ', coin.mean())
 **Remember:** Always seed your RNG (`default_rng(0)`) when you want a result someone else can reproduce.
 
 **Common mistake:** Assuming Gaussian for skewed, bounded, or count data and then being surprised by the residuals.
+
+Practice: open `examples/04_random_over_and_under_sampling.py`, predict the output, change one line, predict again.
 
 ## 5. SMOTE and synthetic minority points
 
@@ -127,6 +135,8 @@ print('recall balanced', round(recall_score(yte, weighted.predict(Xte)), 3))
 
 **Common mistake:** Applying SMOTE before the split so synthetic copies of test rows appear in training.
 
+Practice: open `examples/05_smote_and_synthetic_minority_points.py`, predict the output, change one line, predict again.
+
 ## 6. Where resampling must happen in the pipeline
 
 A distribution says which values are likely. Gaussian for measurement noise, Bernoulli for yes/no, Poisson for counts per interval. Choosing the right one is choosing your loss function: Gaussian likelihood gives MSE, Bernoulli gives cross-entropy.
@@ -145,6 +155,8 @@ print('coin heads rate ', coin.mean())
 **Remember:** Always seed your RNG (`default_rng(0)`) when you want a result someone else can reproduce.
 
 **Common mistake:** Assuming Gaussian for skewed, bounded, or count data and then being surprised by the residuals.
+
+Practice: open `examples/06_where_resampling_must_happen_in_the_pipe.py`, predict the output, change one line, predict again.
 
 ## 7. Anomaly detection framing instead
 
@@ -169,6 +181,8 @@ print('recall balanced', round(recall_score(yte, weighted.predict(Xte)), 3))
 
 **Common mistake:** Applying SMOTE before the split so synthetic copies of test rows appear in training.
 
+Practice: open `examples/07_anomaly_detection_framing_instead.py`, predict the output, change one line, predict again.
+
 ## 8. Cost-sensitive learning
 
 When one class is 1% of the data, the model learns to always say 'no'. Fix it with class weights (cheap, first choice), threshold tuning, or resampling. SMOTE synthesises minority points — and must only ever be applied to the training fold.
@@ -192,6 +206,8 @@ print('recall balanced', round(recall_score(yte, weighted.predict(Xte)), 3))
 
 **Common mistake:** Applying SMOTE before the split so synthetic copies of test rows appear in training.
 
+Practice: open `examples/08_cost_sensitive_learning.py`, predict the output, change one line, predict again.
+
 ## 9. Choosing PR-AUC over ROC-AUC
 
 Accuracy hides everything on imbalanced data. Precision asks 'of the ones I flagged, how many were real'; recall asks 'of the real ones, how many did I catch'. You trade one for the other with the threshold, and the business decides which error hurts more.
@@ -213,6 +229,8 @@ print('roc auc', round(roc_auc_score(yte, m.predict_proba(Xte)[:, 1]), 4))
 **Remember:** Tune the decision threshold on validation data; 0.5 is a default, not a decision.
 
 **Common mistake:** Optimising ROC-AUC on a heavily imbalanced problem where precision-recall AUC is the honest metric.
+
+Practice: open `examples/09_choosing_pr_auc_over_roc_auc.py`, predict the output, change one line, predict again.
 
 ## 10. A fraud detection walkthrough
 
@@ -236,6 +254,8 @@ print('recall balanced', round(recall_score(yte, weighted.predict(Xte)), 3))
 **Remember:** Try `class_weight='balanced'` before installing anything.
 
 **Common mistake:** Applying SMOTE before the split so synthetic copies of test rows appear in training.
+
+Practice: open `examples/10_a_fraud_detection_walkthrough.py`, predict the output, change one line, predict again.
 
 ---
 

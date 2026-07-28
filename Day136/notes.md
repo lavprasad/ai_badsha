@@ -36,6 +36,8 @@ print(answer_with_guard('CEO home address?', [{'id': 'policy.pdf#3', 'text': 'Re
 
 **Common mistake:** Shipping a chatbot with no abstain path, so it invents a policy under pressure.
 
+Practice: open `examples/01_fluency_versus_factuality.py`, predict the output, change one line, predict again.
+
 ## 2. Hallucination causes
 
 A language model predicts plausible tokens, not true ones. Fluent and wrong is its default failure mode. Reduce it by grounding answers in retrieved sources, requiring citations, allowing 'I don't know', and verifying claims that carry cost.
@@ -54,6 +56,8 @@ print(answer_with_guard('CEO home address?', [{'id': 'policy.pdf#3', 'text': 'Re
 **Remember:** An explicit 'not in my sources' path is worth more than any confidence score.
 
 **Common mistake:** Shipping a chatbot with no abstain path, so it invents a policy under pressure.
+
+Practice: open `examples/02_hallucination_causes.py`, predict the output, change one line, predict again.
 
 ## 3. Grounding in sources
 
@@ -74,6 +78,8 @@ print(answer_with_guard('CEO home address?', [{'id': 'policy.pdf#3', 'text': 'Re
 
 **Common mistake:** Shipping a chatbot with no abstain path, so it invents a policy under pressure.
 
+Practice: open `examples/03_grounding_in_sources.py`, predict the output, change one line, predict again.
+
 ## 4. Citations and verifiability
 
 A language model predicts plausible tokens, not true ones. Fluent and wrong is its default failure mode. Reduce it by grounding answers in retrieved sources, requiring citations, allowing 'I don't know', and verifying claims that carry cost.
@@ -92,6 +98,8 @@ print(answer_with_guard('CEO home address?', [{'id': 'policy.pdf#3', 'text': 'Re
 **Remember:** An explicit 'not in my sources' path is worth more than any confidence score.
 
 **Common mistake:** Shipping a chatbot with no abstain path, so it invents a policy under pressure.
+
+Practice: open `examples/04_citations_and_verifiability.py`, predict the output, change one line, predict again.
 
 ## 5. Self-consistency sampling
 
@@ -112,6 +120,8 @@ print('coin heads rate ', coin.mean())
 
 **Common mistake:** Assuming Gaussian for skewed, bounded, or count data and then being surprised by the residuals.
 
+Practice: open `examples/05_self_consistency_sampling.py`, predict the output, change one line, predict again.
+
 ## 6. Verification passes
 
 Today's idea — **Verification passes** — sits inside the theme of Text generation quality. Read it as a tool, not trivia: what job does it do, what does it assume about your data, and what breaks when that assumption is false?
@@ -128,6 +138,8 @@ print("practice: Verification passes")
 
 **Common mistake:** Copy-pasting `Verification passes` from a tutorial without knowing what it assumes or when it fails.
 
+Practice: open `examples/06_verification_passes.py`, predict the output, change one line, predict again.
+
 ## 7. Abstaining when uncertain
 
 Today's idea — **Abstaining when uncertain** — sits inside the theme of Text generation quality. Read it as a tool, not trivia: what job does it do, what does it assume about your data, and what breaks when that assumption is false?
@@ -143,6 +155,8 @@ print("practice: Abstaining when uncertain")
 **Remember:** State one assumption `Abstaining when uncertain` makes about your data before you use it.
 
 **Common mistake:** Copy-pasting `Abstaining when uncertain` from a tutorial without knowing what it assumes or when it fails.
+
+Practice: open `examples/07_abstaining_when_uncertain.py`, predict the output, change one line, predict again.
 
 ## 8. Measuring hallucination rate
 
@@ -162,6 +176,8 @@ print(answer_with_guard('CEO home address?', [{'id': 'policy.pdf#3', 'text': 'Re
 **Remember:** An explicit 'not in my sources' path is worth more than any confidence score.
 
 **Common mistake:** Shipping a chatbot with no abstain path, so it invents a policy under pressure.
+
+Practice: open `examples/08_measuring_hallucination_rate.py`, predict the output, change one line, predict again.
 
 ## 9. User-facing uncertainty communication
 
@@ -195,6 +211,8 @@ test_preprocess()
 
 **Common mistake:** Testing only the happy path, so an all-null column silently trains a constant model.
 
+Practice: open `examples/09_user_facing_uncertainty_communication.py`, predict the output, change one line, predict again.
+
 ## 10. Designing for graceful wrongness
 
 Today's idea — **Designing for graceful wrongness** — sits inside the theme of Text generation quality. Read it as a tool, not trivia: what job does it do, what does it assume about your data, and what breaks when that assumption is false?
@@ -210,6 +228,8 @@ print("practice: Designing for graceful wrongness")
 **Remember:** State one assumption `Designing for graceful wrongness` makes about your data before you use it.
 
 **Common mistake:** Copy-pasting `Designing for graceful wrongness` from a tutorial without knowing what it assumes or when it fails.
+
+Practice: open `examples/10_designing_for_graceful_wrongness.py`, predict the output, change one line, predict again.
 
 ---
 

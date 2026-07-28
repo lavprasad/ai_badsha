@@ -33,6 +33,8 @@ print("practice: Why small models matter")
 
 **Common mistake:** Copy-pasting `Why small models matter` from a tutorial without knowing what it assumes or when it fails.
 
+Practice: open `examples/01_why_small_models_matter.py`, predict the output, change one line, predict again.
+
 ## 2. Distillation from a large teacher
 
 Training cost is paid once; inference cost is paid on every request forever. Distillation trains a small student on the large teacher's outputs, quantisation stores weights in fewer bits, and ONNX gives you one artefact that runs across runtimes. Measure the accuracy you lose against the latency you gain.
@@ -49,6 +51,8 @@ print('\nPlus KV cache and activations at runtime — budget roughly 20-30% more
 **Remember:** Quantise, measure quality on your own eval set, then decide. Published benchmarks are not your task.
 
 **Common mistake:** Shipping an int4 model because it fits, without ever measuring what accuracy it cost you.
+
+Practice: open `examples/02_distillation_from_a_large_teacher.py`, predict the output, change one line, predict again.
 
 ## 3. Task-specific small models
 
@@ -82,6 +86,8 @@ test_preprocess()
 
 **Common mistake:** Testing only the happy path, so an all-null column silently trains a constant model.
 
+Practice: open `examples/03_task_specific_small_models.py`, predict the output, change one line, predict again.
+
 ## 4. Running models on a laptop
 
 Training cost is paid once; inference cost is paid on every request forever. Distillation trains a small student on the large teacher's outputs, quantisation stores weights in fewer bits, and ONNX gives you one artefact that runs across runtimes. Measure the accuracy you lose against the latency you gain.
@@ -98,6 +104,8 @@ print('\nPlus KV cache and activations at runtime — budget roughly 20-30% more
 **Remember:** Quantise, measure quality on your own eval set, then decide. Published benchmarks are not your task.
 
 **Common mistake:** Shipping an int4 model because it fits, without ever measuring what accuracy it cost you.
+
+Practice: open `examples/04_running_models_on_a_laptop.py`, predict the output, change one line, predict again.
 
 ## 5. GGUF quantisation levels
 
@@ -122,6 +130,8 @@ print('effective W = W + A@B, shape', (W + delta).shape)
 
 **Common mistake:** Setting rank far too high — you lose the efficiency and gain the overfitting.
 
+Practice: open `examples/05_gguf_quantisation_levels.py`, predict the output, change one line, predict again.
+
 ## 6. Ollama and LM Studio
 
 Training cost is paid once; inference cost is paid on every request forever. Distillation trains a small student on the large teacher's outputs, quantisation stores weights in fewer bits, and ONNX gives you one artefact that runs across runtimes. Measure the accuracy you lose against the latency you gain.
@@ -138,6 +148,8 @@ print('\nPlus KV cache and activations at runtime — budget roughly 20-30% more
 **Remember:** Quantise, measure quality on your own eval set, then decide. Published benchmarks are not your task.
 
 **Common mistake:** Shipping an int4 model because it fits, without ever measuring what accuracy it cost you.
+
+Practice: open `examples/06_ollama_and_lm_studio.py`, predict the output, change one line, predict again.
 
 ## 7. Privacy advantages of local inference
 
@@ -163,6 +175,8 @@ print('Large gaps here are the finding — investigate before shipping.')
 
 **Common mistake:** Auditing fairness once at launch and never again as the data drifts.
 
+Practice: open `examples/07_privacy_advantages_of_local_inference.py`, predict the output, change one line, predict again.
+
 ## 8. Latency and cost comparison
 
 Data parallelism replicates the model and splits the batch; model parallelism splits the model when it will not fit on one device. Scale only after profiling — most 'we need more GPUs' problems are actually a slow data loader.
@@ -183,6 +197,8 @@ print('          opt.step(); opt.zero_grad()')
 
 **Common mistake:** Scaling the learning rate wrongly when you scale the batch — a larger batch usually needs a larger LR.
 
+Practice: open `examples/08_latency_and_cost_comparison.py`, predict the output, change one line, predict again.
+
 ## 9. Quality gap by task type
 
 Today's idea — **Quality gap by task type** — sits inside the theme of Small models and local AI. Read it as a tool, not trivia: what job does it do, what does it assume about your data, and what breaks when that assumption is false?
@@ -199,6 +215,8 @@ print("practice: Quality gap by task type")
 
 **Common mistake:** Copy-pasting `Quality gap by task type` from a tutorial without knowing what it assumes or when it fails.
 
+Practice: open `examples/09_quality_gap_by_task_type.py`, predict the output, change one line, predict again.
+
 ## 10. Routing between small and large models
 
 Today's idea — **Routing between small and large models** — sits inside the theme of Small models and local AI. Read it as a tool, not trivia: what job does it do, what does it assume about your data, and what breaks when that assumption is false?
@@ -214,6 +232,8 @@ print("practice: Routing between small and large models")
 **Remember:** State one assumption `Routing between small and large models` makes about your data before you use it.
 
 **Common mistake:** Copy-pasting `Routing between small and large models` from a tutorial without knowing what it assumes or when it fails.
+
+Practice: open `examples/10_routing_between_small_and_large_models.py`, predict the output, change one line, predict again.
 
 ---
 

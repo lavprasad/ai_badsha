@@ -39,6 +39,8 @@ for s in STEPS:
 
 **Common mistake:** Six weeks of feature engineering with no baseline to prove any of it helped.
 
+Practice: open `examples/01_problem_framing_and_metric.py`, predict the output, change one line, predict again.
+
 ## 2. Data acquisition and validation
 
 Projects are where the learning sticks. Build a thin end-to-end slice first — load data, train something dumb, evaluate, serve one prediction — then improve one layer at a time. A working baseline on day one beats a perfect model that never ships.
@@ -61,6 +63,8 @@ for s in STEPS:
 
 **Common mistake:** Six weeks of feature engineering with no baseline to prove any of it helped.
 
+Practice: open `examples/02_data_acquisition_and_validation.py`, predict the output, change one line, predict again.
+
 ## 3. EDA and leakage audit
 
 Leakage is information in training that will not exist at prediction time. It produces impossible validation scores and a model that collapses in production. If your accuracy jumps suspiciously, hunt for a leak before you celebrate.
@@ -81,6 +85,8 @@ print(train['ts'].max(), '<', test['ts'].min())
 **Remember:** 0.999 AUC on a hard business problem is a bug report, not a result.
 
 **Common mistake:** Shipping a leaked model and discovering the real accuracy from angry users.
+
+Practice: open `examples/03_eda_and_leakage_audit.py`, predict the output, change one line, predict again.
 
 ## 4. Baseline and iteration log
 
@@ -104,6 +110,8 @@ for s in STEPS:
 
 **Common mistake:** Six weeks of feature engineering with no baseline to prove any of it helped.
 
+Practice: open `examples/04_baseline_and_iteration_log.py`, predict the output, change one line, predict again.
+
 ## 5. Model selection with honest CV
 
 Projects are where the learning sticks. Build a thin end-to-end slice first — load data, train something dumb, evaluate, serve one prediction — then improve one layer at a time. A working baseline on day one beats a perfect model that never ships.
@@ -125,6 +133,8 @@ for s in STEPS:
 **Remember:** Spend an hour looking at wrong predictions before you spend a day tuning hyperparameters.
 
 **Common mistake:** Six weeks of feature engineering with no baseline to prove any of it helped.
+
+Practice: open `examples/05_model_selection_with_honest_cv.py`, predict the output, change one line, predict again.
 
 ## 6. Error analysis and targeted improvement
 
@@ -148,6 +158,8 @@ for s in STEPS:
 
 **Common mistake:** Six weeks of feature engineering with no baseline to prove any of it helped.
 
+Practice: open `examples/06_error_analysis_and_targeted_improvement.py`, predict the output, change one line, predict again.
+
 ## 7. Calibration and threshold choice
 
 Projects are where the learning sticks. Build a thin end-to-end slice first — load data, train something dumb, evaluate, serve one prediction — then improve one layer at a time. A working baseline on day one beats a perfect model that never ships.
@@ -169,6 +181,8 @@ for s in STEPS:
 **Remember:** Spend an hour looking at wrong predictions before you spend a day tuning hyperparameters.
 
 **Common mistake:** Six weeks of feature engineering with no baseline to prove any of it helped.
+
+Practice: open `examples/07_calibration_and_threshold_choice.py`, predict the output, change one line, predict again.
 
 ## 8. Packaging and serving
 
@@ -200,6 +214,8 @@ print('Load once at startup; validate with a schema; expose /health for the load
 
 **Common mistake:** Reloading the model per request and wondering why p99 latency is four seconds.
 
+Practice: open `examples/08_packaging_and_serving.py`, predict the output, change one line, predict again.
+
 ## 9. Monitoring plan
 
 Models rot. The world moves, inputs shift (data drift) or the relationship itself changes (concept drift). Monitor input distributions and prediction distributions daily, because ground-truth labels usually arrive weeks late.
@@ -225,6 +241,8 @@ print('shifted    PSI', round(psi(baseline, rng.normal(0.6, 1.2, 5_000)), 4))
 
 **Common mistake:** Only monitoring uptime, so a model that returns 200 OK while being badly wrong looks healthy.
 
+Practice: open `examples/09_monitoring_plan.py`, predict the output, change one line, predict again.
+
 ## 10. Write-up with results and limitations
 
 Projects are where the learning sticks. Build a thin end-to-end slice first — load data, train something dumb, evaluate, serve one prediction — then improve one layer at a time. A working baseline on day one beats a perfect model that never ships.
@@ -246,6 +264,8 @@ for s in STEPS:
 **Remember:** Spend an hour looking at wrong predictions before you spend a day tuning hyperparameters.
 
 **Common mistake:** Six weeks of feature engineering with no baseline to prove any of it helped.
+
+Practice: open `examples/10_write_up_with_results_and_limitations.py`, predict the output, change one line, predict again.
 
 ---
 

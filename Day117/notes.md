@@ -41,6 +41,8 @@ print('order-independent feature:', np.allclose(feat_a, feat_b))
 
 **Common mistake:** Feeding a point cloud to a model that depends on point order and getting different answers per run.
 
+Practice: open `examples/01_depth_from_stereo.py`, predict the output, change one line, predict again.
+
 ## 2. Monocular depth estimation
 
 3D data comes as depth maps, point clouds or meshes. Point clouds are unordered sets, so models must be permutation-invariant (that is PointNet's whole idea). NeRF and Gaussian splatting reconstruct a scene from many photos and are compute-hungry but stunning.
@@ -64,6 +66,8 @@ print('order-independent feature:', np.allclose(feat_a, feat_b))
 **Remember:** Stereo depth error grows with the square of distance — far objects are barely measurable.
 
 **Common mistake:** Feeding a point cloud to a model that depends on point order and getting different answers per run.
+
+Practice: open `examples/02_monocular_depth_estimation.py`, predict the output, change one line, predict again.
 
 ## 3. Point clouds
 
@@ -89,6 +93,8 @@ print('order-independent feature:', np.allclose(feat_a, feat_b))
 
 **Common mistake:** Feeding a point cloud to a model that depends on point order and getting different answers per run.
 
+Practice: open `examples/03_point_clouds.py`, predict the output, change one line, predict again.
+
 ## 4. Voxels and meshes
 
 3D data comes as depth maps, point clouds or meshes. Point clouds are unordered sets, so models must be permutation-invariant (that is PointNet's whole idea). NeRF and Gaussian splatting reconstruct a scene from many photos and are compute-hungry but stunning.
@@ -112,6 +118,8 @@ print('order-independent feature:', np.allclose(feat_a, feat_b))
 **Remember:** Stereo depth error grows with the square of distance — far objects are barely measurable.
 
 **Common mistake:** Feeding a point cloud to a model that depends on point order and getting different answers per run.
+
+Practice: open `examples/04_voxels_and_meshes.py`, predict the output, change one line, predict again.
 
 ## 5. PointNet
 
@@ -137,6 +145,8 @@ print('order-independent feature:', np.allclose(feat_a, feat_b))
 
 **Common mistake:** Feeding a point cloud to a model that depends on point order and getting different answers per run.
 
+Practice: open `examples/05_pointnet.py`, predict the output, change one line, predict again.
+
 ## 6. NeRF and neural rendering
 
 3D data comes as depth maps, point clouds or meshes. Point clouds are unordered sets, so models must be permutation-invariant (that is PointNet's whole idea). NeRF and Gaussian splatting reconstruct a scene from many photos and are compute-hungry but stunning.
@@ -161,6 +171,8 @@ print('order-independent feature:', np.allclose(feat_a, feat_b))
 
 **Common mistake:** Feeding a point cloud to a model that depends on point order and getting different answers per run.
 
+Practice: open `examples/06_nerf_and_neural_rendering.py`, predict the output, change one line, predict again.
+
 ## 7. Gaussian splatting
 
 A distribution says which values are likely. Gaussian for measurement noise, Bernoulli for yes/no, Poisson for counts per interval. Choosing the right one is choosing your loss function: Gaussian likelihood gives MSE, Bernoulli gives cross-entropy.
@@ -179,6 +191,8 @@ print('coin heads rate ', coin.mean())
 **Remember:** Always seed your RNG (`default_rng(0)`) when you want a result someone else can reproduce.
 
 **Common mistake:** Assuming Gaussian for skewed, bounded, or count data and then being surprised by the residuals.
+
+Practice: open `examples/07_gaussian_splatting.py`, predict the output, change one line, predict again.
 
 ## 8. Applications in robotics and AR
 
@@ -204,6 +218,8 @@ print('order-independent feature:', np.allclose(feat_a, feat_b))
 
 **Common mistake:** Feeding a point cloud to a model that depends on point order and getting different answers per run.
 
+Practice: open `examples/08_applications_in_robotics_and_ar.py`, predict the output, change one line, predict again.
+
 ## 9. Data collection challenges
 
 3D data comes as depth maps, point clouds or meshes. Point clouds are unordered sets, so models must be permutation-invariant (that is PointNet's whole idea). NeRF and Gaussian splatting reconstruct a scene from many photos and are compute-hungry but stunning.
@@ -227,6 +243,8 @@ print('order-independent feature:', np.allclose(feat_a, feat_b))
 **Remember:** Stereo depth error grows with the square of distance — far objects are barely measurable.
 
 **Common mistake:** Feeding a point cloud to a model that depends on point order and getting different answers per run.
+
+Practice: open `examples/09_data_collection_challenges.py`, predict the output, change one line, predict again.
 
 ## 10. Evaluating 3D reconstructions
 
@@ -255,6 +273,8 @@ assert hits == len(GOLDEN), 'regression: fix before shipping'
 **Remember:** 50 real examples you curated beat 5000 synthetic ones nobody checked.
 
 **Common mistake:** Changing the prompt on Friday with no eval and finding out from customers on Monday.
+
+Practice: open `examples/10_evaluating_3d_reconstructions.py`, predict the output, change one line, predict again.
 
 ---
 

@@ -49,6 +49,8 @@ test_preprocess()
 
 **Common mistake:** Testing only the happy path, so an all-null column silently trains a constant model.
 
+Practice: open `examples/01_the_scikit_learn_estimator_api.py`, predict the output, change one line, predict again.
+
 ## 2. fit, predict, score
 
 Every scikit-learn model has the same three methods, which means swapping algorithms is a one-line change. Start every problem with `DummyClassifier` — if your real model cannot beat 'always predict the majority class' by a clear margin, something is wrong with the data, not the model.
@@ -70,6 +72,8 @@ print(f'dummy {baseline.score(Xte, yte):.3f}   model {model.score(Xte, yte):.3f}
 **Remember:** Report your model's score next to the dummy's. A number alone means nothing.
 
 **Common mistake:** Celebrating 92% accuracy on data where 91% of rows are one class.
+
+Practice: open `examples/02_fit_predict_score.py`, predict the output, change one line, predict again.
 
 ## 3. Loading a built-in dataset
 
@@ -93,6 +97,8 @@ print(f'dummy {baseline.score(Xte, yte):.3f}   model {model.score(Xte, yte):.3f}
 
 **Common mistake:** Celebrating 92% accuracy on data where 91% of rows are one class.
 
+Practice: open `examples/03_loading_a_built_in_dataset.py`, predict the output, change one line, predict again.
+
 ## 4. Splitting the data
 
 Today's idea — **Splitting the data** — sits inside the theme of Your first model, end to end. Read it as a tool, not trivia: what job does it do, what does it assume about your data, and what breaks when that assumption is false?
@@ -108,6 +114,8 @@ print("practice: Splitting the data")
 **Remember:** State one assumption `Splitting the data` makes about your data before you use it.
 
 **Common mistake:** Copy-pasting `Splitting the data` from a tutorial without knowing what it assumes or when it fails.
+
+Practice: open `examples/04_splitting_the_data.py`, predict the output, change one line, predict again.
 
 ## 5. Training a logistic regression
 
@@ -135,6 +143,8 @@ print('weights', np.round(w, 2), 'acc', ((sigmoid(X @ w + b) > 0.5) == y).mean()
 
 **Common mistake:** Reading the raw output as a calibrated probability without ever checking a calibration curve.
 
+Practice: open `examples/05_training_a_logistic_regression.py`, predict the output, change one line, predict again.
+
 ## 6. Reading the accuracy honestly
 
 Accuracy hides everything on imbalanced data. Precision asks 'of the ones I flagged, how many were real'; recall asks 'of the real ones, how many did I catch'. You trade one for the other with the threshold, and the business decides which error hurts more.
@@ -157,6 +167,8 @@ print('roc auc', round(roc_auc_score(yte, m.predict_proba(Xte)[:, 1]), 4))
 
 **Common mistake:** Optimising ROC-AUC on a heavily imbalanced problem where precision-recall AUC is the honest metric.
 
+Practice: open `examples/06_reading_the_accuracy_honestly.py`, predict the output, change one line, predict again.
+
 ## 7. Comparing against a dummy baseline
 
 Every scikit-learn model has the same three methods, which means swapping algorithms is a one-line change. Start every problem with `DummyClassifier` — if your real model cannot beat 'always predict the majority class' by a clear margin, something is wrong with the data, not the model.
@@ -178,6 +190,8 @@ print(f'dummy {baseline.score(Xte, yte):.3f}   model {model.score(Xte, yte):.3f}
 **Remember:** Report your model's score next to the dummy's. A number alone means nothing.
 
 **Common mistake:** Celebrating 92% accuracy on data where 91% of rows are one class.
+
+Practice: open `examples/07_comparing_against_a_dummy_baseline.py`, predict the output, change one line, predict again.
 
 ## 8. Inspecting the coefficients
 
@@ -211,6 +225,8 @@ test_preprocess()
 
 **Common mistake:** Testing only the happy path, so an all-null column silently trains a constant model.
 
+Practice: open `examples/08_inspecting_the_coefficients.py`, predict the output, change one line, predict again.
+
 ## 9. Saving and reloading the model
 
 Today's idea — **Saving and reloading the model** — sits inside the theme of Your first model, end to end. Read it as a tool, not trivia: what job does it do, what does it assume about your data, and what breaks when that assumption is false?
@@ -226,6 +242,8 @@ print("practice: Saving and reloading the model")
 **Remember:** State one assumption `Saving and reloading the model` makes about your data before you use it.
 
 **Common mistake:** Copy-pasting `Saving and reloading the model` from a tutorial without knowing what it assumes or when it fails.
+
+Practice: open `examples/09_saving_and_reloading_the_model.py`, predict the output, change one line, predict again.
 
 ## 10. The seven-line template you will reuse forever
 
@@ -248,6 +266,8 @@ print(f'dummy {baseline.score(Xte, yte):.3f}   model {model.score(Xte, yte):.3f}
 **Remember:** Report your model's score next to the dummy's. A number alone means nothing.
 
 **Common mistake:** Celebrating 92% accuracy on data where 91% of rows are one class.
+
+Practice: open `examples/10_the_seven_line_template_you_will_reuse_f.py`, predict the output, change one line, predict again.
 
 ---
 

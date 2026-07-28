@@ -48,6 +48,8 @@ print(README)
 
 **Common mistake:** A README that explains your architecture for 400 lines and never says what score it achieved.
 
+Practice: open `examples/01_structure_of_a_good_technical_write_up.py`, predict the output, change one line, predict again.
+
 ## 2. Leading with the result
 
 Lead with the result, then the method, then the caveats. Most readers stop after two paragraphs, so the first two must contain the finding and why it matters. A README that states the problem, the number, and how to run it is worth more than a perfect architecture diagram.
@@ -78,6 +80,8 @@ print(README)
 **Remember:** Put the number in the first paragraph. If you are hiding it, the reader assumes it is bad.
 
 **Common mistake:** A README that explains your architecture for 400 lines and never says what score it achieved.
+
+Practice: open `examples/02_leading_with_the_result.py`, predict the output, change one line, predict again.
 
 ## 3. Explaining the method without jargon
 
@@ -110,6 +114,8 @@ print(README)
 
 **Common mistake:** A README that explains your architecture for 400 lines and never says what score it achieved.
 
+Practice: open `examples/03_explaining_the_method_without_jargon.py`, predict the output, change one line, predict again.
+
 ## 4. Charts that carry the argument
 
 Plot before you model. A histogram exposes skew and outliers, a scatter exposes non-linearity, and a line of residuals exposes a model that is systematically wrong. Five minutes of plotting saves hours of confused tuning.
@@ -132,6 +138,8 @@ print('wrote hist.png')
 
 **Common mistake:** Judging a model by its accuracy number alone without ever looking at the data.
 
+Practice: open `examples/04_charts_that_carry_the_argument.py`, predict the output, change one line, predict again.
+
 ## 5. Reporting limitations builds trust
 
 Projects are where the learning sticks. Build a thin end-to-end slice first — load data, train something dumb, evaluate, serve one prediction — then improve one layer at a time. A working baseline on day one beats a perfect model that never ships.
@@ -153,6 +161,8 @@ for s in STEPS:
 **Remember:** Spend an hour looking at wrong predictions before you spend a day tuning hyperparameters.
 
 **Common mistake:** Six weeks of feature engineering with no baseline to prove any of it helped.
+
+Practice: open `examples/05_reporting_limitations_builds_trust.py`, predict the output, change one line, predict again.
 
 ## 6. Reproducibility section
 
@@ -179,6 +189,8 @@ print(json.dumps(run_record({'lr': 0.01, 'depth': 6}, {'auc': 0.912}, 'data/trai
 **Remember:** Log the data version alongside the code version — data changes silently, code changes loudly.
 
 **Common mistake:** Naming files `model_final_v2_REAL_use_this.pkl` instead of using a registry.
+
+Practice: open `examples/06_reproducibility_section.py`, predict the output, change one line, predict again.
 
 ## 7. README as the front door
 
@@ -211,6 +223,8 @@ print(README)
 
 **Common mistake:** A README that explains your architecture for 400 lines and never says what score it achieved.
 
+Practice: open `examples/07_readme_as_the_front_door.py`, predict the output, change one line, predict again.
+
 ## 8. Blog post vs repository documentation
 
 Lead with the result, then the method, then the caveats. Most readers stop after two paragraphs, so the first two must contain the finding and why it matters. A README that states the problem, the number, and how to run it is worth more than a perfect architecture diagram.
@@ -241,6 +255,8 @@ print(README)
 **Remember:** Put the number in the first paragraph. If you are hiding it, the reader assumes it is bad.
 
 **Common mistake:** A README that explains your architecture for 400 lines and never says what score it achieved.
+
+Practice: open `examples/08_blog_post_vs_repository_documentation.py`, predict the output, change one line, predict again.
 
 ## 9. Getting feedback before publishing
 
@@ -273,6 +289,8 @@ print(README)
 
 **Common mistake:** A README that explains your architecture for 400 lines and never says what score it achieved.
 
+Practice: open `examples/09_getting_feedback_before_publishing.py`, predict the output, change one line, predict again.
+
 ## 10. Publishing on GitHub Pages
 
 Lead with the result, then the method, then the caveats. Most readers stop after two paragraphs, so the first two must contain the finding and why it matters. A README that states the problem, the number, and how to run it is worth more than a perfect architecture diagram.
@@ -303,6 +321,8 @@ print(README)
 **Remember:** Put the number in the first paragraph. If you are hiding it, the reader assumes it is bad.
 
 **Common mistake:** A README that explains your architecture for 400 lines and never says what score it achieved.
+
+Practice: open `examples/10_publishing_on_github_pages.py`, predict the output, change one line, predict again.
 
 ---
 

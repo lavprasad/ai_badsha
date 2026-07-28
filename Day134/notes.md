@@ -47,6 +47,8 @@ print('Load once at startup; validate with a schema; expose /health for the load
 
 **Common mistake:** Reloading the model per request and wondering why p99 latency is four seconds.
 
+Practice: open `examples/01_prefill_vs_decode_phases.py`, predict the output, change one line, predict again.
+
 ## 2. KV cache memory maths
 
 Serving a model means loading it once at startup and answering HTTP requests. Validate the input schema, return errors as structured JSON, add a health endpoint, and never load the model inside the request handler.
@@ -76,6 +78,8 @@ print('Load once at startup; validate with a schema; expose /health for the load
 **Remember:** Batch requests where latency allows — GPU throughput collapses on batch size 1.
 
 **Common mistake:** Reloading the model per request and wondering why p99 latency is four seconds.
+
+Practice: open `examples/02_kv_cache_memory_maths.py`, predict the output, change one line, predict again.
 
 ## 3. Continuous batching
 
@@ -107,6 +111,8 @@ print('Load once at startup; validate with a schema; expose /health for the load
 
 **Common mistake:** Reloading the model per request and wondering why p99 latency is four seconds.
 
+Practice: open `examples/03_continuous_batching.py`, predict the output, change one line, predict again.
+
 ## 4. PagedAttention and vLLM
 
 Attention lets every token look at every other token and decide what matters. Each token emits a query, a key and a value; the query-key dot products become weights over the values. Multiple heads let the model attend to several relationships at once.
@@ -133,6 +139,8 @@ print('output shape', (weights @ V).shape)
 **Remember:** The 1/sqrt(d) scale is not cosmetic — without it softmax saturates and gradients die.
 
 **Common mistake:** Omitting the causal mask in a decoder, so the model trivially cheats by reading the next token.
+
+Practice: open `examples/04_pagedattention_and_vllm.py`, predict the output, change one line, predict again.
 
 ## 5. Quantised inference: GPTQ, AWQ, GGUF
 
@@ -164,6 +172,8 @@ print('Load once at startup; validate with a schema; expose /health for the load
 
 **Common mistake:** Reloading the model per request and wondering why p99 latency is four seconds.
 
+Practice: open `examples/05_quantised_inference_gptq_awq_gguf.py`, predict the output, change one line, predict again.
+
 ## 6. Speculative decoding
 
 Serving a model means loading it once at startup and answering HTTP requests. Validate the input schema, return errors as structured JSON, add a health endpoint, and never load the model inside the request handler.
@@ -193,6 +203,8 @@ print('Load once at startup; validate with a schema; expose /health for the load
 **Remember:** Batch requests where latency allows — GPU throughput collapses on batch size 1.
 
 **Common mistake:** Reloading the model per request and wondering why p99 latency is four seconds.
+
+Practice: open `examples/06_speculative_decoding.py`, predict the output, change one line, predict again.
 
 ## 7. Throughput vs latency trade-offs
 
@@ -224,6 +236,8 @@ print('Load once at startup; validate with a schema; expose /health for the load
 
 **Common mistake:** Reloading the model per request and wondering why p99 latency is four seconds.
 
+Practice: open `examples/07_throughput_vs_latency_trade_offs.py`, predict the output, change one line, predict again.
+
 ## 8. Cost per million tokens
 
 Serving a model means loading it once at startup and answering HTTP requests. Validate the input schema, return errors as structured JSON, add a health endpoint, and never load the model inside the request handler.
@@ -253,6 +267,8 @@ print('Load once at startup; validate with a schema; expose /health for the load
 **Remember:** Batch requests where latency allows — GPU throughput collapses on batch size 1.
 
 **Common mistake:** Reloading the model per request and wondering why p99 latency is four seconds.
+
+Practice: open `examples/08_cost_per_million_tokens.py`, predict the output, change one line, predict again.
 
 ## 9. Local models with llama.cpp and Ollama
 
@@ -284,6 +300,8 @@ print('Load once at startup; validate with a schema; expose /health for the load
 
 **Common mistake:** Reloading the model per request and wondering why p99 latency is four seconds.
 
+Practice: open `examples/09_local_models_with_llama_cpp_and_ollama.py`, predict the output, change one line, predict again.
+
 ## 10. Choosing hosted vs self-hosted
 
 Serving a model means loading it once at startup and answering HTTP requests. Validate the input schema, return errors as structured JSON, add a health endpoint, and never load the model inside the request handler.
@@ -313,6 +331,8 @@ print('Load once at startup; validate with a schema; expose /health for the load
 **Remember:** Batch requests where latency allows — GPU throughput collapses on batch size 1.
 
 **Common mistake:** Reloading the model per request and wondering why p99 latency is four seconds.
+
+Practice: open `examples/10_choosing_hosted_vs_self_hosted.py`, predict the output, change one line, predict again.
 
 ---
 

@@ -42,6 +42,8 @@ print('shape', pe.shape)
 
 **Common mistake:** Assuming a bigger context window is free — attention cost grows with the square of sequence length.
 
+Practice: open `examples/01_starting_from_a_known_good_architecture.py`, predict the output, change one line, predict again.
+
 ## 2. Choosing depth and width
 
 ML code needs the same tests as any code, plus data tests: schema, ranges, null rates, class balance. Add one behavioural test per known failure mode — a test that would have caught last quarter's outage is worth more than 90% coverage.
@@ -74,6 +76,8 @@ test_preprocess()
 
 **Common mistake:** Testing only the happy path, so an all-null column silently trains a constant model.
 
+Practice: open `examples/02_choosing_depth_and_width.py`, predict the output, change one line, predict again.
+
 ## 3. Skip connections by default
 
 Multiplying many small derivatives makes gradients vanish; many large ones makes them explode. Residual connections give the gradient a straight path back, which is why 100-layer networks became trainable. Clipping caps the update norm so one bad batch cannot blow up the weights.
@@ -98,6 +102,8 @@ print('norm after ', round(float(np.sqrt(sum((g ** 2).sum() for g in clipped))),
 
 **Common mistake:** Chasing an architecture change when a `clip_grad_norm_(1.0)` would have fixed the instability.
 
+Practice: open `examples/03_skip_connections_by_default.py`, predict the output, change one line, predict again.
+
 ## 4. Normalisation placement
 
 A vector is a list of numbers with a direction and length. The dot product measures alignment: large and positive when two vectors point the same way, zero when perpendicular. Cosine similarity is the dot product with length divided out, which is why it compares embeddings of different magnitudes fairly.
@@ -117,6 +123,8 @@ print('cosine', cos)   # 1.0 -> same direction
 **Remember:** Cosine similarity ignores magnitude; Euclidean distance does not. Pick the one that matches your question.
 
 **Common mistake:** Comparing raw embeddings with Euclidean distance when only direction carries meaning.
+
+Practice: open `examples/04_normalisation_placement.py`, predict the output, change one line, predict again.
 
 ## 5. Regularisation budget
 
@@ -138,6 +146,8 @@ print('lasso non-zero coefs', int(np.sum(np.abs(lasso.coef_) > 1e-6)))
 **Remember:** Scale features before regularising, or the penalty punishes whichever column happens to use small units.
 
 **Common mistake:** Tuning `alpha` on the test set — pick it with cross-validation on train only.
+
+Practice: open `examples/05_regularisation_budget.py`, predict the output, change one line, predict again.
 
 ## 6. Output layer for your task
 
@@ -171,6 +181,8 @@ test_preprocess()
 
 **Common mistake:** Testing only the happy path, so an all-null column silently trains a constant model.
 
+Practice: open `examples/06_output_layer_for_your_task.py`, predict the output, change one line, predict again.
+
 ## 7. Loss matching the output layer
 
 ML code needs the same tests as any code, plus data tests: schema, ranges, null rates, class balance. Add one behavioural test per known failure mode — a test that would have caught last quarter's outage is worth more than 90% coverage.
@@ -202,6 +214,8 @@ test_preprocess()
 **Remember:** Test the data contract, not just the function — bad data breaks more models than bad code.
 
 **Common mistake:** Testing only the happy path, so an all-null column silently trains a constant model.
+
+Practice: open `examples/07_loss_matching_the_output_layer.py`, predict the output, change one line, predict again.
 
 ## 8. Parameter count vs data size
 
@@ -235,6 +249,8 @@ test_preprocess()
 
 **Common mistake:** Testing only the happy path, so an all-null column silently trains a constant model.
 
+Practice: open `examples/08_parameter_count_vs_data_size.py`, predict the output, change one line, predict again.
+
 ## 9. Ablation studies
 
 ML code needs the same tests as any code, plus data tests: schema, ranges, null rates, class balance. Add one behavioural test per known failure mode — a test that would have caught last quarter's outage is worth more than 90% coverage.
@@ -267,6 +283,8 @@ test_preprocess()
 
 **Common mistake:** Testing only the happy path, so an all-null column silently trains a constant model.
 
+Practice: open `examples/09_ablation_studies.py`, predict the output, change one line, predict again.
+
 ## 10. Documenting why each choice was made
 
 ML code needs the same tests as any code, plus data tests: schema, ranges, null rates, class balance. Add one behavioural test per known failure mode — a test that would have caught last quarter's outage is worth more than 90% coverage.
@@ -298,6 +316,8 @@ test_preprocess()
 **Remember:** Test the data contract, not just the function — bad data breaks more models than bad code.
 
 **Common mistake:** Testing only the happy path, so an all-null column silently trains a constant model.
+
+Practice: open `examples/10_documenting_why_each_choice_was_made.py`, predict the output, change one line, predict again.
 
 ---
 

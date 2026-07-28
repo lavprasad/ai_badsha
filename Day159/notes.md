@@ -43,6 +43,8 @@ agent_loop([('calc', '2 + 2'), ('calc', '(2 + 2) * 10')])
 
 **Common mistake:** Giving an agent a shell tool with no allowlist and no confirmation step.
 
+Practice: open `examples/01_explicit_planning_steps.py`, predict the output, change one line, predict again.
+
 ## 2. Replanning after failure
 
 An agent is a loop: the model picks a tool, your code runs it, the result goes back into context, repeat until done. Power comes from the tools, not the prompt. Cap the iterations, log every step, and require confirmation before anything irreversible.
@@ -68,6 +70,8 @@ agent_loop([('calc', '2 + 2'), ('calc', '(2 + 2) * 10')])
 **Remember:** Always bound the loop. An unbounded agent burns money and finds creative ways to fail.
 
 **Common mistake:** Giving an agent a shell tool with no allowlist and no confirmation step.
+
+Practice: open `examples/02_replanning_after_failure.py`, predict the output, change one line, predict again.
 
 ## 3. Subagents and delegation
 
@@ -95,6 +99,8 @@ agent_loop([('calc', '2 + 2'), ('calc', '(2 + 2) * 10')])
 
 **Common mistake:** Giving an agent a shell tool with no allowlist and no confirmation step.
 
+Practice: open `examples/03_subagents_and_delegation.py`, predict the output, change one line, predict again.
+
 ## 4. Parallel tool calls
 
 An agent is a loop: the model picks a tool, your code runs it, the result goes back into context, repeat until done. Power comes from the tools, not the prompt. Cap the iterations, log every step, and require confirmation before anything irreversible.
@@ -120,6 +126,8 @@ agent_loop([('calc', '2 + 2'), ('calc', '(2 + 2) * 10')])
 **Remember:** Always bound the loop. An unbounded agent burns money and finds creative ways to fail.
 
 **Common mistake:** Giving an agent a shell tool with no allowlist and no confirmation step.
+
+Practice: open `examples/04_parallel_tool_calls.py`, predict the output, change one line, predict again.
 
 ## 5. Context management across long runs
 
@@ -147,6 +155,8 @@ agent_loop([('calc', '2 + 2'), ('calc', '(2 + 2) * 10')])
 
 **Common mistake:** Giving an agent a shell tool with no allowlist and no confirmation step.
 
+Practice: open `examples/05_context_management_across_long_runs.py`, predict the output, change one line, predict again.
+
 ## 6. Cost control and budgets
 
 An agent is a loop: the model picks a tool, your code runs it, the result goes back into context, repeat until done. Power comes from the tools, not the prompt. Cap the iterations, log every step, and require confirmation before anything irreversible.
@@ -172,6 +182,8 @@ agent_loop([('calc', '2 + 2'), ('calc', '(2 + 2) * 10')])
 **Remember:** Always bound the loop. An unbounded agent burns money and finds creative ways to fail.
 
 **Common mistake:** Giving an agent a shell tool with no allowlist and no confirmation step.
+
+Practice: open `examples/06_cost_control_and_budgets.py`, predict the output, change one line, predict again.
 
 ## 7. Detecting loops and stalls
 
@@ -199,6 +211,8 @@ agent_loop([('calc', '2 + 2'), ('calc', '(2 + 2) * 10')])
 
 **Common mistake:** Giving an agent a shell tool with no allowlist and no confirmation step.
 
+Practice: open `examples/07_detecting_loops_and_stalls.py`, predict the output, change one line, predict again.
+
 ## 8. Checkpointing long tasks
 
 An agent is a loop: the model picks a tool, your code runs it, the result goes back into context, repeat until done. Power comes from the tools, not the prompt. Cap the iterations, log every step, and require confirmation before anything irreversible.
@@ -224,6 +238,8 @@ agent_loop([('calc', '2 + 2'), ('calc', '(2 + 2) * 10')])
 **Remember:** Always bound the loop. An unbounded agent burns money and finds creative ways to fail.
 
 **Common mistake:** Giving an agent a shell tool with no allowlist and no confirmation step.
+
+Practice: open `examples/08_checkpointing_long_tasks.py`, predict the output, change one line, predict again.
 
 ## 9. Determinism where it matters
 
@@ -251,6 +267,8 @@ agent_loop([('calc', '2 + 2'), ('calc', '(2 + 2) * 10')])
 
 **Common mistake:** Giving an agent a shell tool with no allowlist and no confirmation step.
 
+Practice: open `examples/09_determinism_where_it_matters.py`, predict the output, change one line, predict again.
+
 ## 10. Evaluating agent trajectories
 
 An agent is a loop: the model picks a tool, your code runs it, the result goes back into context, repeat until done. Power comes from the tools, not the prompt. Cap the iterations, log every step, and require confirmation before anything irreversible.
@@ -276,6 +294,8 @@ agent_loop([('calc', '2 + 2'), ('calc', '(2 + 2) * 10')])
 **Remember:** Always bound the loop. An unbounded agent burns money and finds creative ways to fail.
 
 **Common mistake:** Giving an agent a shell tool with no allowlist and no confirmation step.
+
+Practice: open `examples/10_evaluating_agent_trajectories.py`, predict the output, change one line, predict again.
 
 ---
 

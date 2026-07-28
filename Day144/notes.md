@@ -38,6 +38,8 @@ print('\nRule: if it can change without a retrain, it must not live in weights.'
 
 **Common mistake:** Fine-tuning prices into a model and re-running the whole job every time the price list updates.
 
+Practice: open `examples/01_parametric_vs_retrieved_knowledge.py`, predict the output, change one line, predict again.
+
 ## 2. Knowledge cutoffs
 
 A model's weights hold a frozen, lossy snapshot of the world up to its cutoff. Anything that changes — prices, policies, staff, inventory — belongs in a database or a retrieval index, not in weights. Draw that boundary explicitly and the hallucination rate falls sharply.
@@ -59,6 +61,8 @@ print('\nRule: if it can change without a retrain, it must not live in weights.'
 
 **Common mistake:** Fine-tuning prices into a model and re-running the whole job every time the price list updates.
 
+Practice: open `examples/02_knowledge_cutoffs.py`, predict the output, change one line, predict again.
+
 ## 3. Model editing
 
 A model's weights hold a frozen, lossy snapshot of the world up to its cutoff. Anything that changes — prices, policies, staff, inventory — belongs in a database or a retrieval index, not in weights. Draw that boundary explicitly and the hallucination rate falls sharply.
@@ -79,6 +83,8 @@ print('\nRule: if it can change without a retrain, it must not live in weights.'
 **Remember:** If a fact can change tomorrow, retrieve it. If it cannot, the weights may hold it.
 
 **Common mistake:** Fine-tuning prices into a model and re-running the whole job every time the price list updates.
+
+Practice: open `examples/03_model_editing.py`, predict the output, change one line, predict again.
 
 ## 4. Knowledge graphs alongside LLMs
 
@@ -103,6 +109,8 @@ print(H_next.round(3))
 
 **Common mistake:** Splitting graph data randomly so a node's own neighbours end up in both train and test.
 
+Practice: open `examples/04_knowledge_graphs_alongside_llms.py`, predict the output, change one line, predict again.
+
 ## 5. Entity linking
 
 A model's weights hold a frozen, lossy snapshot of the world up to its cutoff. Anything that changes — prices, policies, staff, inventory — belongs in a database or a retrieval index, not in weights. Draw that boundary explicitly and the hallucination rate falls sharply.
@@ -123,6 +131,8 @@ print('\nRule: if it can change without a retrain, it must not live in weights.'
 **Remember:** If a fact can change tomorrow, retrieve it. If it cannot, the weights may hold it.
 
 **Common mistake:** Fine-tuning prices into a model and re-running the whole job every time the price list updates.
+
+Practice: open `examples/05_entity_linking.py`, predict the output, change one line, predict again.
 
 ## 6. Fact verification
 
@@ -145,6 +155,8 @@ print('\nRule: if it can change without a retrain, it must not live in weights.'
 
 **Common mistake:** Fine-tuning prices into a model and re-running the whole job every time the price list updates.
 
+Practice: open `examples/06_fact_verification.py`, predict the output, change one line, predict again.
+
 ## 7. Temporal reasoning failures
 
 A model's weights hold a frozen, lossy snapshot of the world up to its cutoff. Anything that changes — prices, policies, staff, inventory — belongs in a database or a retrieval index, not in weights. Draw that boundary explicitly and the hallucination rate falls sharply.
@@ -165,6 +177,8 @@ print('\nRule: if it can change without a retrain, it must not live in weights.'
 **Remember:** If a fact can change tomorrow, retrieve it. If it cannot, the weights may hold it.
 
 **Common mistake:** Fine-tuning prices into a model and re-running the whole job every time the price list updates.
+
+Practice: open `examples/07_temporal_reasoning_failures.py`, predict the output, change one line, predict again.
 
 ## 8. Numerical and counting weaknesses
 
@@ -187,6 +201,8 @@ print('\nRule: if it can change without a retrain, it must not live in weights.'
 
 **Common mistake:** Fine-tuning prices into a model and re-running the whole job every time the price list updates.
 
+Practice: open `examples/08_numerical_and_counting_weaknesses.py`, predict the output, change one line, predict again.
+
 ## 9. When to use a database instead
 
 A model's weights hold a frozen, lossy snapshot of the world up to its cutoff. Anything that changes — prices, policies, staff, inventory — belongs in a database or a retrieval index, not in weights. Draw that boundary explicitly and the hallucination rate falls sharply.
@@ -208,6 +224,8 @@ print('\nRule: if it can change without a retrain, it must not live in weights.'
 
 **Common mistake:** Fine-tuning prices into a model and re-running the whole job every time the price list updates.
 
+Practice: open `examples/09_when_to_use_a_database_instead.py`, predict the output, change one line, predict again.
+
 ## 10. Designing the knowledge boundary
 
 A model's weights hold a frozen, lossy snapshot of the world up to its cutoff. Anything that changes — prices, policies, staff, inventory — belongs in a database or a retrieval index, not in weights. Draw that boundary explicitly and the hallucination rate falls sharply.
@@ -228,6 +246,8 @@ print('\nRule: if it can change without a retrain, it must not live in weights.'
 **Remember:** If a fact can change tomorrow, retrieve it. If it cannot, the weights may hold it.
 
 **Common mistake:** Fine-tuning prices into a model and re-running the whole job every time the price list updates.
+
+Practice: open `examples/10_designing_the_knowledge_boundary.py`, predict the output, change one line, predict again.
 
 ---
 

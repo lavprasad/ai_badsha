@@ -41,6 +41,8 @@ p.unlink()
 
 **Common mistake:** `fh.read().split('\n')` on a huge file, which loads it all into RAM and then dies.
 
+Practice: open `examples/01_reading_and_writing_text_files.py`, predict the output, change one line, predict again.
+
 ## 2. Context managers and with
 
 `with open(...)` closes the file even if the body raises — that is what a context manager is for. Iterate a file object line by line and Python never loads the whole thing into memory, which is how you process a 40 GB log on a laptop.
@@ -65,6 +67,8 @@ p.unlink()
 
 **Common mistake:** `fh.read().split('\n')` on a huge file, which loads it all into RAM and then dies.
 
+Practice: open `examples/02_context_managers_and_with.py`, predict the output, change one line, predict again.
+
 ## 3. CSV files with the csv module
 
 A DataFrame is a table with labelled columns and an index. Most real ML work is 80% reshaping tables: load, clean, group, join, aggregate. Learn `groupby` and `merge` well and you can answer most data questions without writing loops.
@@ -85,6 +89,8 @@ print(df.merge(lookup, on='city', how='left'))
 **Remember:** Always check `df.shape` before and after a merge — a silent row explosion means duplicate keys.
 
 **Common mistake:** Chained assignment (`df[df.a > 1]['b'] = 0`) that writes to a copy and changes nothing.
+
+Practice: open `examples/03_csv_files_with_the_csv_module.py`, predict the output, change one line, predict again.
 
 ## 4. JSON serialisation and parsing
 
@@ -108,6 +114,8 @@ print('reloaded score', round(loaded.score(X, y), 4))
 
 **Common mistake:** Shipping a pickle with no version metadata and discovering the drift six months later.
 
+Practice: open `examples/04_json_serialisation_and_parsing.py`, predict the output, change one line, predict again.
+
 ## 5. pathlib for portable paths
 
 JSON is the lingua franca between your code, APIs and model outputs. `pathlib` makes paths work identically on Windows and Linux. Secrets belong in environment variables, never in the source file — because the source file ends up in git, and git is forever.
@@ -130,6 +138,8 @@ print('key loaded from env:', bool(api_key))   # never print the key itself
 
 **Common mistake:** Committing an API key, then 'removing' it in a later commit where it still lives in history.
 
+Practice: open `examples/05_pathlib_for_portable_paths.py`, predict the output, change one line, predict again.
+
 ## 6. Encoding: UTF-8 and why it bites
 
 Today's idea — **Encoding: UTF-8 and why it bites** — sits inside the theme of Files, JSON and the filesystem. Read it as a tool, not trivia: what job does it do, what does it assume about your data, and what breaks when that assumption is false?
@@ -145,6 +155,8 @@ print("practice: Encoding: UTF-8 and why it bites")
 **Remember:** State one assumption `Encoding: UTF-8 and why it bites` makes about your data before you use it.
 
 **Common mistake:** Copy-pasting `Encoding: UTF-8 and why it bites` from a tutorial without knowing what it assumes or when it fails.
+
+Practice: open `examples/06_encoding_utf_8_and_why_it_bites.py`, predict the output, change one line, predict again.
 
 ## 7. Working with large files line by line
 
@@ -170,6 +182,8 @@ p.unlink()
 
 **Common mistake:** `fh.read().split('\n')` on a huge file, which loads it all into RAM and then dies.
 
+Practice: open `examples/07_working_with_large_files_line_by_line.py`, predict the output, change one line, predict again.
+
 ## 8. Compressed files: gzip and zip
 
 `with open(...)` closes the file even if the body raises — that is what a context manager is for. Iterate a file object line by line and Python never loads the whole thing into memory, which is how you process a 40 GB log on a laptop.
@@ -194,6 +208,8 @@ p.unlink()
 
 **Common mistake:** `fh.read().split('\n')` on a huge file, which loads it all into RAM and then dies.
 
+Practice: open `examples/08_compressed_files_gzip_and_zip.py`, predict the output, change one line, predict again.
+
 ## 9. Environment variables and secrets
 
 JSON is the lingua franca between your code, APIs and model outputs. `pathlib` makes paths work identically on Windows and Linux. Secrets belong in environment variables, never in the source file — because the source file ends up in git, and git is forever.
@@ -216,6 +232,8 @@ print('key loaded from env:', bool(api_key))   # never print the key itself
 
 **Common mistake:** Committing an API key, then 'removing' it in a later commit where it still lives in history.
 
+Practice: open `examples/09_environment_variables_and_secrets.py`, predict the output, change one line, predict again.
+
 ## 10. A tiny dataset downloader script
 
 JSON is the lingua franca between your code, APIs and model outputs. `pathlib` makes paths work identically on Windows and Linux. Secrets belong in environment variables, never in the source file — because the source file ends up in git, and git is forever.
@@ -237,6 +255,8 @@ print('key loaded from env:', bool(api_key))   # never print the key itself
 **Remember:** Use `Path` division (`root / 'data' / 'x.csv'`) instead of string concatenation with slashes.
 
 **Common mistake:** Committing an API key, then 'removing' it in a later commit where it still lives in history.
+
+Practice: open `examples/10_a_tiny_dataset_downloader_script.py`, predict the output, change one line, predict again.
 
 ---
 

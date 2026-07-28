@@ -39,6 +39,8 @@ if device == 'cuda':
 
 **Common mistake:** Keeping the full loss tensor in a list each step — it holds the whole graph and leaks memory.
 
+Practice: open `examples/01_cpu_vs_gpu_vs_tpu.py`, predict the output, change one line, predict again.
+
 ## 2. Memory bandwidth as the real bottleneck
 
 Most training runs are not compute-bound; they are waiting on data. Before buying a bigger GPU, check utilisation: if it sits at 30%, the fix is more data-loader workers or a faster storage format. Estimate cost before starting — hours x instance price is a number you can approve or refuse.
@@ -57,6 +59,8 @@ print('If GPU utilization < 60%, fix the data pipeline before scaling hardware.'
 
 **Common mistake:** Renting four GPUs to fix a bottleneck that was a single-threaded JPEG decode.
 
+Practice: open `examples/02_memory_bandwidth_as_the_real_bottleneck.py`, predict the output, change one line, predict again.
+
 ## 3. Batch size and utilisation
 
 Most training runs are not compute-bound; they are waiting on data. Before buying a bigger GPU, check utilisation: if it sits at 30%, the fix is more data-loader workers or a faster storage format. Estimate cost before starting — hours x instance price is a number you can approve or refuse.
@@ -74,6 +78,8 @@ print('If GPU utilization < 60%, fix the data pipeline before scaling hardware.'
 **Remember:** Profile before you scale. A slow `__getitem__` wastes more money than a small GPU.
 
 **Common mistake:** Renting four GPUs to fix a bottleneck that was a single-threaded JPEG decode.
+
+Practice: open `examples/03_batch_size_and_utilisation.py`, predict the output, change one line, predict again.
 
 ## 4. Mixed precision: fp16 and bf16
 
@@ -97,6 +103,8 @@ print('roc auc', round(roc_auc_score(yte, m.predict_proba(Xte)[:, 1]), 4))
 
 **Common mistake:** Optimising ROC-AUC on a heavily imbalanced problem where precision-recall AUC is the honest metric.
 
+Practice: open `examples/04_mixed_precision_fp16_and_bf16.py`, predict the output, change one line, predict again.
+
 ## 5. Gradient checkpointing
 
 The derivative answers: if I nudge this input a little, how much does the output move? The gradient is that answer for every input at once, so it points uphill. Training walks downhill by stepping against the gradient. The chain rule is what lets you propagate that answer through a stack of layers.
@@ -119,6 +127,8 @@ print('analytic ', 2 * x + 3)   # should match to ~1e-6
 
 **Common mistake:** Trusting a derivation you never gradient-checked; a sign error trains slowly instead of failing loudly.
 
+Practice: open `examples/05_gradient_checkpointing.py`, predict the output, change one line, predict again.
+
 ## 6. Profiling a training run
 
 Most training runs are not compute-bound; they are waiting on data. Before buying a bigger GPU, check utilisation: if it sits at 30%, the fix is more data-loader workers or a faster storage format. Estimate cost before starting — hours x instance price is a number you can approve or refuse.
@@ -137,6 +147,8 @@ print('If GPU utilization < 60%, fix the data pipeline before scaling hardware.'
 
 **Common mistake:** Renting four GPUs to fix a bottleneck that was a single-threaded JPEG decode.
 
+Practice: open `examples/06_profiling_a_training_run.py`, predict the output, change one line, predict again.
+
 ## 7. Data loading bottlenecks
 
 Most training runs are not compute-bound; they are waiting on data. Before buying a bigger GPU, check utilisation: if it sits at 30%, the fix is more data-loader workers or a faster storage format. Estimate cost before starting — hours x instance price is a number you can approve or refuse.
@@ -154,6 +166,8 @@ print('If GPU utilization < 60%, fix the data pipeline before scaling hardware.'
 **Remember:** Profile before you scale. A slow `__getitem__` wastes more money than a small GPU.
 
 **Common mistake:** Renting four GPUs to fix a bottleneck that was a single-threaded JPEG decode.
+
+Practice: open `examples/07_data_loading_bottlenecks.py`, predict the output, change one line, predict again.
 
 ## 8. Multi-GPU data parallelism
 
@@ -174,6 +188,8 @@ print('          opt.step(); opt.zero_grad()')
 **Remember:** Profile first. GPU at 30% utilisation means the bottleneck is the data pipeline, not the GPU.
 
 **Common mistake:** Scaling the learning rate wrongly when you scale the batch — a larger batch usually needs a larger LR.
+
+Practice: open `examples/08_multi_gpu_data_parallelism.py`, predict the output, change one line, predict again.
 
 ## 9. Model and pipeline parallelism
 
@@ -202,6 +218,8 @@ print(model.predict(df))
 
 **Common mistake:** Preprocessing in a notebook and then forgetting one step when writing the serving code.
 
+Practice: open `examples/09_model_and_pipeline_parallelism.py`, predict the output, change one line, predict again.
+
 ## 10. Estimating training cost before you start
 
 Most training runs are not compute-bound; they are waiting on data. Before buying a bigger GPU, check utilisation: if it sits at 30%, the fix is more data-loader workers or a faster storage format. Estimate cost before starting — hours x instance price is a number you can approve or refuse.
@@ -219,6 +237,8 @@ print('If GPU utilization < 60%, fix the data pipeline before scaling hardware.'
 **Remember:** Profile before you scale. A slow `__getitem__` wastes more money than a small GPU.
 
 **Common mistake:** Renting four GPUs to fix a bottleneck that was a single-threaded JPEG decode.
+
+Practice: open `examples/10_estimating_training_cost_before_you_star.py`, predict the output, change one line, predict again.
 
 ---
 

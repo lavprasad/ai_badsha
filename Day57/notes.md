@@ -44,6 +44,8 @@ print(search.best_params_, round(search.best_score_, 4))
 
 **Common mistake:** Tuning 40 hyperparameters on 400 rows — you are now fitting the validation set.
 
+Practice: open `examples/01_parameters_vs_hyperparameters.py`, predict the output, change one line, predict again.
+
 ## 2. Manual tuning and its limits
 
 Hyperparameters are the settings you choose, not learn. Grid search is exhaustive and wasteful; random search finds good regions faster in high dimensions; Bayesian search learns from previous trials. Always search inside cross-validation.
@@ -70,6 +72,8 @@ print(search.best_params_, round(search.best_score_, 4))
 **Remember:** Fix the random seed and log every trial, or you cannot reproduce your own best model.
 
 **Common mistake:** Tuning 40 hyperparameters on 400 rows — you are now fitting the validation set.
+
+Practice: open `examples/02_manual_tuning_and_its_limits.py`, predict the output, change one line, predict again.
 
 ## 3. Grid search
 
@@ -98,6 +102,8 @@ print(search.best_params_, round(search.best_score_, 4))
 
 **Common mistake:** Tuning 40 hyperparameters on 400 rows — you are now fitting the validation set.
 
+Practice: open `examples/03_grid_search.py`, predict the output, change one line, predict again.
+
 ## 4. Random search and why it wins
 
 Hyperparameters are the settings you choose, not learn. Grid search is exhaustive and wasteful; random search finds good regions faster in high dimensions; Bayesian search learns from previous trials. Always search inside cross-validation.
@@ -125,6 +131,8 @@ print(search.best_params_, round(search.best_score_, 4))
 
 **Common mistake:** Tuning 40 hyperparameters on 400 rows — you are now fitting the validation set.
 
+Practice: open `examples/04_random_search_and_why_it_wins.py`, predict the output, change one line, predict again.
+
 ## 5. Bayesian optimisation
 
 Bayes' rule updates a belief with evidence: posterior = likelihood x prior / evidence. The most common mistake in applied ML is ignoring the prior — a 99%-accurate test for a 1-in-10000 disease still gives mostly false positives.
@@ -143,6 +151,8 @@ print(f'P(sick | positive) = {posterior:.4f}')   # ~0.0098
 
 **Common mistake:** Reporting accuracy on an imbalanced problem where predicting 'no' always scores 99%.
 
+Practice: open `examples/05_bayesian_optimisation.py`, predict the output, change one line, predict again.
+
 ## 6. Optuna and pruning bad trials
 
 A tree asks yes/no questions, splitting to make each side purer. It needs no scaling, handles mixed types, and reads like a flowchart. Left unconstrained it memorises the training set perfectly, so depth and leaf-size limits are mandatory.
@@ -159,6 +169,8 @@ print(export_text(tree, feature_names=load_iris().feature_names))
 **Remember:** A single unpruned tree is almost always worse than a small forest — but it is readable, which sometimes wins.
 
 **Common mistake:** Trusting a deep tree's feature importances; they are unstable and biased toward high-cardinality columns.
+
+Practice: open `examples/06_optuna_and_pruning_bad_trials.py`, predict the output, change one line, predict again.
 
 ## 7. Successive halving
 
@@ -187,6 +199,8 @@ print(search.best_params_, round(search.best_score_, 4))
 
 **Common mistake:** Tuning 40 hyperparameters on 400 rows — you are now fitting the validation set.
 
+Practice: open `examples/07_successive_halving.py`, predict the output, change one line, predict again.
+
 ## 8. Search spaces that make sense
 
 Hyperparameters are the settings you choose, not learn. Grid search is exhaustive and wasteful; random search finds good regions faster in high dimensions; Bayesian search learns from previous trials. Always search inside cross-validation.
@@ -213,6 +227,8 @@ print(search.best_params_, round(search.best_score_, 4))
 **Remember:** Fix the random seed and log every trial, or you cannot reproduce your own best model.
 
 **Common mistake:** Tuning 40 hyperparameters on 400 rows — you are now fitting the validation set.
+
+Practice: open `examples/08_search_spaces_that_make_sense.py`, predict the output, change one line, predict again.
 
 ## 9. Budgeting compute for search
 
@@ -241,6 +257,8 @@ print(search.best_params_, round(search.best_score_, 4))
 
 **Common mistake:** Tuning 40 hyperparameters on 400 rows — you are now fitting the validation set.
 
+Practice: open `examples/09_budgeting_compute_for_search.py`, predict the output, change one line, predict again.
+
 ## 10. Logging every trial
 
 Hyperparameters are the settings you choose, not learn. Grid search is exhaustive and wasteful; random search finds good regions faster in high dimensions; Bayesian search learns from previous trials. Always search inside cross-validation.
@@ -267,6 +285,8 @@ print(search.best_params_, round(search.best_score_, 4))
 **Remember:** Fix the random seed and log every trial, or you cannot reproduce your own best model.
 
 **Common mistake:** Tuning 40 hyperparameters on 400 rows — you are now fitting the validation set.
+
+Practice: open `examples/10_logging_every_trial.py`, predict the output, change one line, predict again.
 
 ---
 

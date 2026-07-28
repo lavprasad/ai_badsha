@@ -43,6 +43,8 @@ print('numeric dy/dw', (((w + h) * x + b) ** 2 - ((w - h) * x + b) ** 2) / (2 * 
 
 **Common mistake:** Forgetting to zero gradients between steps, so they accumulate and the model diverges.
 
+Practice: open `examples/01_the_computational_graph.py`, predict the output, change one line, predict again.
+
 ## 2. Forward pass caching
 
 Backpropagation is the chain rule applied backwards through the computation graph, reusing intermediate results so the cost is roughly one extra forward pass. Every framework does it for you — but writing it once by hand is what makes the failure modes readable.
@@ -69,6 +71,8 @@ print('numeric dy/dw', (((w + h) * x + b) ** 2 - ((w - h) * x + b) ** 2) / (2 * 
 
 **Common mistake:** Forgetting to zero gradients between steps, so they accumulate and the model diverges.
 
+Practice: open `examples/02_forward_pass_caching.py`, predict the output, change one line, predict again.
+
 ## 3. The chain rule, backwards
 
 The derivative answers: if I nudge this input a little, how much does the output move? The gradient is that answer for every input at once, so it points uphill. Training walks downhill by stepping against the gradient. The chain rule is what lets you propagate that answer through a stack of layers.
@@ -91,6 +95,8 @@ print('analytic ', 2 * x + 3)   # should match to ~1e-6
 
 **Common mistake:** Trusting a derivation you never gradient-checked; a sign error trains slowly instead of failing loudly.
 
+Practice: open `examples/03_the_chain_rule_backwards.py`, predict the output, change one line, predict again.
+
 ## 4. Gradients of common operations
 
 The derivative answers: if I nudge this input a little, how much does the output move? The gradient is that answer for every input at once, so it points uphill. Training walks downhill by stepping against the gradient. The chain rule is what lets you propagate that answer through a stack of layers.
@@ -112,6 +118,8 @@ print('analytic ', 2 * x + 3)   # should match to ~1e-6
 **Remember:** A central difference `(f(x+h)-f(x-h))/2h` is the cheapest way to check a hand-written gradient.
 
 **Common mistake:** Trusting a derivation you never gradient-checked; a sign error trains slowly instead of failing loudly.
+
+Practice: open `examples/04_gradients_of_common_operations.py`, predict the output, change one line, predict again.
 
 ## 5. Backprop through a two-layer network
 
@@ -139,6 +147,8 @@ print('numeric dy/dw', (((w + h) * x + b) ** 2 - ((w - h) * x + b) ** 2) / (2 * 
 
 **Common mistake:** Forgetting to zero gradients between steps, so they accumulate and the model diverges.
 
+Practice: open `examples/05_backprop_through_a_two_layer_network.py`, predict the output, change one line, predict again.
+
 ## 6. Vectorised gradient computation
 
 A vector is a list of numbers with a direction and length. The dot product measures alignment: large and positive when two vectors point the same way, zero when perpendicular. Cosine similarity is the dot product with length divided out, which is why it compares embeddings of different magnitudes fairly.
@@ -158,6 +168,8 @@ print('cosine', cos)   # 1.0 -> same direction
 **Remember:** Cosine similarity ignores magnitude; Euclidean distance does not. Pick the one that matches your question.
 
 **Common mistake:** Comparing raw embeddings with Euclidean distance when only direction carries meaning.
+
+Practice: open `examples/06_vectorised_gradient_computation.py`, predict the output, change one line, predict again.
 
 ## 7. Gradient checking
 
@@ -180,6 +192,8 @@ print('analytic ', 2 * x + 3)   # should match to ~1e-6
 **Remember:** A central difference `(f(x+h)-f(x-h))/2h` is the cheapest way to check a hand-written gradient.
 
 **Common mistake:** Trusting a derivation you never gradient-checked; a sign error trains slowly instead of failing loudly.
+
+Practice: open `examples/07_gradient_checking.py`, predict the output, change one line, predict again.
 
 ## 8. Common sign and shape errors
 
@@ -207,6 +221,8 @@ print('numeric dy/dw', (((w + h) * x + b) ** 2 - ((w - h) * x + b) ** 2) / (2 * 
 
 **Common mistake:** Forgetting to zero gradients between steps, so they accumulate and the model diverges.
 
+Practice: open `examples/08_common_sign_and_shape_errors.py`, predict the output, change one line, predict again.
+
 ## 9. Why frameworks exist
 
 Backpropagation is the chain rule applied backwards through the computation graph, reusing intermediate results so the cost is roughly one extra forward pass. Every framework does it for you — but writing it once by hand is what makes the failure modes readable.
@@ -233,6 +249,8 @@ print('numeric dy/dw', (((w + h) * x + b) ** 2 - ((w - h) * x + b) ** 2) / (2 * 
 
 **Common mistake:** Forgetting to zero gradients between steps, so they accumulate and the model diverges.
 
+Practice: open `examples/09_why_frameworks_exist.py`, predict the output, change one line, predict again.
+
 ## 10. Implementing a full training loop in NumPy
 
 Backpropagation is the chain rule applied backwards through the computation graph, reusing intermediate results so the cost is roughly one extra forward pass. Every framework does it for you — but writing it once by hand is what makes the failure modes readable.
@@ -258,6 +276,8 @@ print('numeric dy/dw', (((w + h) * x + b) ** 2 - ((w - h) * x + b) ** 2) / (2 * 
 **Remember:** Gradient-check any hand-written backward pass against a numeric estimate before trusting it.
 
 **Common mistake:** Forgetting to zero gradients between steps, so they accumulate and the model diverges.
+
+Practice: open `examples/10_implementing_a_full_training_loop_in_num.py`, predict the output, change one line, predict again.
 
 ---
 

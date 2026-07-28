@@ -47,6 +47,8 @@ bpe_merges({'low': 5, 'lower': 2, 'newest': 6, 'widest': 3})
 
 **Common mistake:** Estimating cost or context usage in words instead of tokens and overflowing the window in production.
 
+Practice: open `examples/01_tokenisation_cost_across_scripts.py`, predict the output, change one line, predict again.
+
 ## 2. Multilingual model families
 
 Tokenisers are trained mostly on English, so the same sentence in Hindi or Tamil can cost three to five times more tokens — which means more money, less context and worse quality. Check the token cost of your actual users' language before you price or size anything.
@@ -69,6 +71,8 @@ print('\nSame meaning, very different bills and context usage.')
 
 **Common mistake:** Sizing a context window and a budget from English samples, then launching in a script that costs 4x.
 
+Practice: open `examples/02_multilingual_model_families.py`, predict the output, change one line, predict again.
+
 ## 3. Cross-lingual transfer
 
 Tokenisers are trained mostly on English, so the same sentence in Hindi or Tamil can cost three to five times more tokens — which means more money, less context and worse quality. Check the token cost of your actual users' language before you price or size anything.
@@ -90,6 +94,8 @@ print('\nSame meaning, very different bills and context usage.')
 **Remember:** Measure tokens per request in your users' actual language, not in English.
 
 **Common mistake:** Sizing a context window and a budget from English samples, then launching in a script that costs 4x.
+
+Practice: open `examples/03_cross_lingual_transfer.py`, predict the output, change one line, predict again.
 
 ## 4. Translation quality evaluation
 
@@ -119,6 +125,8 @@ assert hits == len(GOLDEN), 'regression: fix before shipping'
 
 **Common mistake:** Changing the prompt on Friday with no eval and finding out from customers on Monday.
 
+Practice: open `examples/04_translation_quality_evaluation.py`, predict the output, change one line, predict again.
+
 ## 5. Code-mixed Hinglish text
 
 Tokenisers are trained mostly on English, so the same sentence in Hindi or Tamil can cost three to five times more tokens — which means more money, less context and worse quality. Check the token cost of your actual users' language before you price or size anything.
@@ -140,6 +148,8 @@ print('\nSame meaning, very different bills and context usage.')
 **Remember:** Measure tokens per request in your users' actual language, not in English.
 
 **Common mistake:** Sizing a context window and a budget from English samples, then launching in a script that costs 4x.
+
+Practice: open `examples/05_code_mixed_hinglish_text.py`, predict the output, change one line, predict again.
 
 ## 6. Transliteration
 
@@ -163,6 +173,8 @@ print('\nSame meaning, very different bills and context usage.')
 
 **Common mistake:** Sizing a context window and a budget from English samples, then launching in a script that costs 4x.
 
+Practice: open `examples/06_transliteration.py`, predict the output, change one line, predict again.
+
 ## 7. Low-resource language strategies
 
 Tokenisers are trained mostly on English, so the same sentence in Hindi or Tamil can cost three to five times more tokens — which means more money, less context and worse quality. Check the token cost of your actual users' language before you price or size anything.
@@ -184,6 +196,8 @@ print('\nSame meaning, very different bills and context usage.')
 **Remember:** Measure tokens per request in your users' actual language, not in English.
 
 **Common mistake:** Sizing a context window and a budget from English samples, then launching in a script that costs 4x.
+
+Practice: open `examples/07_low_resource_language_strategies.py`, predict the output, change one line, predict again.
 
 ## 8. Dataset scarcity workarounds
 
@@ -217,6 +231,8 @@ test_preprocess()
 
 **Common mistake:** Testing only the happy path, so an all-null column silently trains a constant model.
 
+Practice: open `examples/08_dataset_scarcity_workarounds.py`, predict the output, change one line, predict again.
+
 ## 9. Evaluation in non-English languages
 
 Vibes do not survive a prompt change. Build a small golden set of real inputs with expected outputs, run it on every change, and track the score. Use an LLM judge for open-ended quality, but calibrate the judge against human ratings first.
@@ -245,6 +261,8 @@ assert hits == len(GOLDEN), 'regression: fix before shipping'
 
 **Common mistake:** Changing the prompt on Friday with no eval and finding out from customers on Monday.
 
+Practice: open `examples/09_evaluation_in_non_english_languages.py`, predict the output, change one line, predict again.
+
 ## 10. Building for Indian language users
 
 Projects are where the learning sticks. Build a thin end-to-end slice first — load data, train something dumb, evaluate, serve one prediction — then improve one layer at a time. A working baseline on day one beats a perfect model that never ships.
@@ -266,6 +284,8 @@ for s in STEPS:
 **Remember:** Spend an hour looking at wrong predictions before you spend a day tuning hyperparameters.
 
 **Common mistake:** Six weeks of feature engineering with no baseline to prove any of it helped.
+
+Practice: open `examples/10_building_for_indian_language_users.py`, predict the output, change one line, predict again.
 
 ---
 

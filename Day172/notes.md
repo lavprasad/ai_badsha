@@ -35,6 +35,8 @@ for reqs in (50_000, 2_000_000, 20_000_000):
 
 **Common mistake:** Renting a GPU 24/7 for a workload that peaks for two hours a day at 8% utilisation.
 
+Practice: open `examples/01_open_weights_vs_open_source.py`, predict the output, change one line, predict again.
+
 ## 2. Licence obligations
 
 'Open weights' is not 'open source' — many licences restrict commercial use, scale, or redistribution. Self-hosting makes sense for data residency, high steady volume, or heavy customisation; APIs win on spiky traffic and zero ops. Do the arithmetic before the ideology.
@@ -52,6 +54,8 @@ for reqs in (50_000, 2_000_000, 20_000_000):
 **Remember:** Self-hosting costs run whether or not traffic does. Spiky workloads almost always favour an API.
 
 **Common mistake:** Renting a GPU 24/7 for a workload that peaks for two hours a day at 8% utilisation.
+
+Practice: open `examples/02_licence_obligations.py`, predict the output, change one line, predict again.
 
 ## 3. Choosing an open model
 
@@ -71,6 +75,8 @@ for reqs in (50_000, 2_000_000, 20_000_000):
 
 **Common mistake:** Renting a GPU 24/7 for a workload that peaks for two hours a day at 8% utilisation.
 
+Practice: open `examples/03_choosing_an_open_model.py`, predict the output, change one line, predict again.
+
 ## 4. Hardware requirements by model size
 
 'Open weights' is not 'open source' — many licences restrict commercial use, scale, or redistribution. Self-hosting makes sense for data residency, high steady volume, or heavy customisation; APIs win on spiky traffic and zero ops. Do the arithmetic before the ideology.
@@ -88,6 +94,8 @@ for reqs in (50_000, 2_000_000, 20_000_000):
 **Remember:** Self-hosting costs run whether or not traffic does. Spiky workloads almost always favour an API.
 
 **Common mistake:** Renting a GPU 24/7 for a workload that peaks for two hours a day at 8% utilisation.
+
+Practice: open `examples/04_hardware_requirements_by_model_size.py`, predict the output, change one line, predict again.
 
 ## 5. Serving with vLLM or TGI
 
@@ -119,6 +127,8 @@ print('Load once at startup; validate with a schema; expose /health for the load
 
 **Common mistake:** Reloading the model per request and wondering why p99 latency is four seconds.
 
+Practice: open `examples/05_serving_with_vllm_or_tgi.py`, predict the output, change one line, predict again.
+
 ## 6. Fine-tuning your own
 
 Hyperparameters are the settings you choose, not learn. Grid search is exhaustive and wasteful; random search finds good regions faster in high dimensions; Bayesian search learns from previous trials. Always search inside cross-validation.
@@ -146,6 +156,8 @@ print(search.best_params_, round(search.best_score_, 4))
 
 **Common mistake:** Tuning 40 hyperparameters on 400 rows — you are now fitting the validation set.
 
+Practice: open `examples/06_fine_tuning_your_own.py`, predict the output, change one line, predict again.
+
 ## 7. Update and maintenance burden
 
 Missing data is information, not just noise. Before filling anything, ask *why* it is missing: a sensor that fails only under load is not missing at random. Then choose: drop rows, drop the column, fill with a statistic, or add an explicit 'was missing' indicator column.
@@ -166,6 +178,8 @@ print(df)
 
 **Common mistake:** Filling with the mean computed over the full dataset — that leaks test information into training.
 
+Practice: open `examples/07_update_and_maintenance_burden.py`, predict the output, change one line, predict again.
+
 ## 8. Cost comparison with APIs
 
 'Open weights' is not 'open source' — many licences restrict commercial use, scale, or redistribution. Self-hosting makes sense for data residency, high steady volume, or heavy customisation; APIs win on spiky traffic and zero ops. Do the arithmetic before the ideology.
@@ -184,6 +198,8 @@ for reqs in (50_000, 2_000_000, 20_000_000):
 
 **Common mistake:** Renting a GPU 24/7 for a workload that peaks for two hours a day at 8% utilisation.
 
+Practice: open `examples/08_cost_comparison_with_apis.py`, predict the output, change one line, predict again.
+
 ## 9. Data residency requirements
 
 'Open weights' is not 'open source' — many licences restrict commercial use, scale, or redistribution. Self-hosting makes sense for data residency, high steady volume, or heavy customisation; APIs win on spiky traffic and zero ops. Do the arithmetic before the ideology.
@@ -201,6 +217,8 @@ for reqs in (50_000, 2_000_000, 20_000_000):
 **Remember:** Self-hosting costs run whether or not traffic does. Spiky workloads almost always favour an API.
 
 **Common mistake:** Renting a GPU 24/7 for a workload that peaks for two hours a day at 8% utilisation.
+
+Practice: open `examples/09_data_residency_requirements.py`, predict the output, change one line, predict again.
 
 ## 10. Making the build-vs-buy call
 
@@ -223,6 +241,8 @@ for s in STEPS:
 **Remember:** Spend an hour looking at wrong predictions before you spend a day tuning hyperparameters.
 
 **Common mistake:** Six weeks of feature engineering with no baseline to prove any of it helped.
+
+Practice: open `examples/10_making_the_build_vs_buy_call.py`, predict the output, change one line, predict again.
 
 ---
 

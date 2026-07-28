@@ -44,6 +44,8 @@ print(search.best_params_, round(search.best_score_, 4))
 
 **Common mistake:** Tuning 40 hyperparameters on 400 rows — you are now fitting the validation set.
 
+Practice: open `examples/01_why_full_fine_tuning_is_expensive.py`, predict the output, change one line, predict again.
+
 ## 2. Adapters
 
 Hyperparameters are the settings you choose, not learn. Grid search is exhaustive and wasteful; random search finds good regions faster in high dimensions; Bayesian search learns from previous trials. Always search inside cross-validation.
@@ -70,6 +72,8 @@ print(search.best_params_, round(search.best_score_, 4))
 **Remember:** Fix the random seed and log every trial, or you cannot reproduce your own best model.
 
 **Common mistake:** Tuning 40 hyperparameters on 400 rows — you are now fitting the validation set.
+
+Practice: open `examples/02_adapters.py`, predict the output, change one line, predict again.
 
 ## 3. LoRA: the low-rank idea
 
@@ -98,6 +102,8 @@ print(search.best_params_, round(search.best_score_, 4))
 
 **Common mistake:** Tuning 40 hyperparameters on 400 rows — you are now fitting the validation set.
 
+Practice: open `examples/03_lora_the_low_rank_idea.py`, predict the output, change one line, predict again.
+
 ## 4. Rank, alpha and target modules
 
 Hyperparameters are the settings you choose, not learn. Grid search is exhaustive and wasteful; random search finds good regions faster in high dimensions; Bayesian search learns from previous trials. Always search inside cross-validation.
@@ -124,6 +130,8 @@ print(search.best_params_, round(search.best_score_, 4))
 **Remember:** Fix the random seed and log every trial, or you cannot reproduce your own best model.
 
 **Common mistake:** Tuning 40 hyperparameters on 400 rows — you are now fitting the validation set.
+
+Practice: open `examples/04_rank_alpha_and_target_modules.py`, predict the output, change one line, predict again.
 
 ## 5. QLoRA and 4-bit base weights
 
@@ -152,6 +160,8 @@ print(search.best_params_, round(search.best_score_, 4))
 
 **Common mistake:** Tuning 40 hyperparameters on 400 rows — you are now fitting the validation set.
 
+Practice: open `examples/05_qlora_and_4_bit_base_weights.py`, predict the output, change one line, predict again.
+
 ## 6. Prefix and prompt tuning
 
 Hyperparameters are the settings you choose, not learn. Grid search is exhaustive and wasteful; random search finds good regions faster in high dimensions; Bayesian search learns from previous trials. Always search inside cross-validation.
@@ -178,6 +188,8 @@ print(search.best_params_, round(search.best_score_, 4))
 **Remember:** Fix the random seed and log every trial, or you cannot reproduce your own best model.
 
 **Common mistake:** Tuning 40 hyperparameters on 400 rows — you are now fitting the validation set.
+
+Practice: open `examples/06_prefix_and_prompt_tuning.py`, predict the output, change one line, predict again.
 
 ## 7. Merging adapters back
 
@@ -206,6 +218,8 @@ print(search.best_params_, round(search.best_score_, 4))
 
 **Common mistake:** Tuning 40 hyperparameters on 400 rows — you are now fitting the validation set.
 
+Practice: open `examples/07_merging_adapters_back.py`, predict the output, change one line, predict again.
+
 ## 8. Serving multiple adapters
 
 Hyperparameters are the settings you choose, not learn. Grid search is exhaustive and wasteful; random search finds good regions faster in high dimensions; Bayesian search learns from previous trials. Always search inside cross-validation.
@@ -232,6 +246,8 @@ print(search.best_params_, round(search.best_score_, 4))
 **Remember:** Fix the random seed and log every trial, or you cannot reproduce your own best model.
 
 **Common mistake:** Tuning 40 hyperparameters on 400 rows — you are now fitting the validation set.
+
+Practice: open `examples/08_serving_multiple_adapters.py`, predict the output, change one line, predict again.
 
 ## 9. Choosing PEFT hyperparameters
 
@@ -260,6 +276,8 @@ print(search.best_params_, round(search.best_score_, 4))
 
 **Common mistake:** Tuning 40 hyperparameters on 400 rows — you are now fitting the validation set.
 
+Practice: open `examples/09_choosing_peft_hyperparameters.py`, predict the output, change one line, predict again.
+
 ## 10. Fine-tuning a small model on one GPU
 
 Hyperparameters are the settings you choose, not learn. Grid search is exhaustive and wasteful; random search finds good regions faster in high dimensions; Bayesian search learns from previous trials. Always search inside cross-validation.
@@ -286,6 +304,8 @@ print(search.best_params_, round(search.best_score_, 4))
 **Remember:** Fix the random seed and log every trial, or you cannot reproduce your own best model.
 
 **Common mistake:** Tuning 40 hyperparameters on 400 rows — you are now fitting the validation set.
+
+Practice: open `examples/10_fine_tuning_a_small_model_on_one_gpu.py`, predict the output, change one line, predict again.
 
 ---
 

@@ -39,6 +39,8 @@ print('\\nRule: mask the loss on system+user tokens; train only on the assistant
 
 **Common mistake:** Fine-tuning to inject company facts, then re-training every time a policy document changes.
 
+Practice: open `examples/01_base_models_do_not_follow_instructions.py`, predict the output, change one line, predict again.
+
 ## 2. Supervised fine-tuning data format
 
 Hyperparameters are the settings you choose, not learn. Grid search is exhaustive and wasteful; random search finds good regions faster in high dimensions; Bayesian search learns from previous trials. Always search inside cross-validation.
@@ -66,6 +68,8 @@ print(search.best_params_, round(search.best_score_, 4))
 
 **Common mistake:** Tuning 40 hyperparameters on 400 rows — you are now fitting the validation set.
 
+Practice: open `examples/02_supervised_fine_tuning_data_format.py`, predict the output, change one line, predict again.
+
 ## 3. Masking the loss to the response only
 
 Fine-tuning continues training a pretrained model on your examples. It teaches format, tone and task shape far better than it teaches new facts — for facts, use retrieval. A few hundred excellent examples usually beat ten thousand mediocre ones.
@@ -87,6 +91,8 @@ print('\\nRule: mask the loss on system+user tokens; train only on the assistant
 **Remember:** Fine-tune for behaviour and format. Use RAG for knowledge that changes.
 
 **Common mistake:** Fine-tuning to inject company facts, then re-training every time a policy document changes.
+
+Practice: open `examples/03_masking_the_loss_to_the_response_only.py`, predict the output, change one line, predict again.
 
 ## 4. Data quality over quantity
 
@@ -110,6 +116,8 @@ print('\\nRule: mask the loss on system+user tokens; train only on the assistant
 
 **Common mistake:** Fine-tuning to inject company facts, then re-training every time a policy document changes.
 
+Practice: open `examples/04_data_quality_over_quantity.py`, predict the output, change one line, predict again.
+
 ## 5. Reward models
 
 Fine-tuning continues training a pretrained model on your examples. It teaches format, tone and task shape far better than it teaches new facts — for facts, use retrieval. A few hundred excellent examples usually beat ten thousand mediocre ones.
@@ -131,6 +139,8 @@ print('\\nRule: mask the loss on system+user tokens; train only on the assistant
 **Remember:** Fine-tune for behaviour and format. Use RAG for knowledge that changes.
 
 **Common mistake:** Fine-tuning to inject company facts, then re-training every time a policy document changes.
+
+Practice: open `examples/05_reward_models.py`, predict the output, change one line, predict again.
 
 ## 6. RLHF with PPO
 
@@ -154,6 +164,8 @@ print('\\nRule: mask the loss on system+user tokens; train only on the assistant
 
 **Common mistake:** Fine-tuning to inject company facts, then re-training every time a policy document changes.
 
+Practice: open `examples/06_rlhf_with_ppo.py`, predict the output, change one line, predict again.
+
 ## 7. Direct preference optimisation
 
 Fine-tuning continues training a pretrained model on your examples. It teaches format, tone and task shape far better than it teaches new facts — for facts, use retrieval. A few hundred excellent examples usually beat ten thousand mediocre ones.
@@ -175,6 +187,8 @@ print('\\nRule: mask the loss on system+user tokens; train only on the assistant
 **Remember:** Fine-tune for behaviour and format. Use RAG for knowledge that changes.
 
 **Common mistake:** Fine-tuning to inject company facts, then re-training every time a policy document changes.
+
+Practice: open `examples/07_direct_preference_optimisation.py`, predict the output, change one line, predict again.
 
 ## 8. Constitutional and rule-based methods
 
@@ -198,6 +212,8 @@ print('\\nRule: mask the loss on system+user tokens; train only on the assistant
 
 **Common mistake:** Fine-tuning to inject company facts, then re-training every time a policy document changes.
 
+Practice: open `examples/08_constitutional_and_rule_based_methods.py`, predict the output, change one line, predict again.
+
 ## 9. Sycophancy and reward hacking
 
 Fine-tuning continues training a pretrained model on your examples. It teaches format, tone and task shape far better than it teaches new facts — for facts, use retrieval. A few hundred excellent examples usually beat ten thousand mediocre ones.
@@ -220,6 +236,8 @@ print('\\nRule: mask the loss on system+user tokens; train only on the assistant
 
 **Common mistake:** Fine-tuning to inject company facts, then re-training every time a policy document changes.
 
+Practice: open `examples/09_sycophancy_and_reward_hacking.py`, predict the output, change one line, predict again.
+
 ## 10. Evaluating alignment
 
 Fine-tuning continues training a pretrained model on your examples. It teaches format, tone and task shape far better than it teaches new facts — for facts, use retrieval. A few hundred excellent examples usually beat ten thousand mediocre ones.
@@ -241,6 +259,8 @@ print('\\nRule: mask the loss on system+user tokens; train only on the assistant
 **Remember:** Fine-tune for behaviour and format. Use RAG for knowledge that changes.
 
 **Common mistake:** Fine-tuning to inject company facts, then re-training every time a policy document changes.
+
+Practice: open `examples/10_evaluating_alignment.py`, predict the output, change one line, predict again.
 
 ---
 

@@ -48,6 +48,8 @@ print('learned policy:', ['left' if a == 0 else 'right' for a in Q.argmax(axis=1
 
 **Common mistake:** Rewarding a proxy metric and getting an agent that maximises the proxy while failing the real goal.
 
+Practice: open `examples/01_actor_critic_methods.py`, predict the output, change one line, predict again.
+
 ## 2. Advantage estimation
 
 RL learns from reward instead of labels. The agent takes actions, the environment returns state and reward, and the agent learns a policy that maximises long-term return. The hard part is exploration versus exploitation and the fact that reward is delayed and sparse.
@@ -79,6 +81,8 @@ print('learned policy:', ['left' if a == 0 else 'right' for a in Q.argmax(axis=1
 
 **Common mistake:** Rewarding a proxy metric and getting an agent that maximises the proxy while failing the real goal.
 
+Practice: open `examples/02_advantage_estimation.py`, predict the output, change one line, predict again.
+
 ## 3. PPO and clipped objectives
 
 Multimodal models put images and text in one shared embedding space, so a picture of a dog lands near the words 'a dog'. That single trick gives you zero-shot classification, image search by description, and captioning — with no task-specific training.
@@ -102,6 +106,8 @@ print('zero-shot pick:', labels[int(np.argmax(scores))], scores.round(3))
 **Remember:** Zero-shot quality depends heavily on prompt wording — 'a photo of a {}' beats a bare noun.
 
 **Common mistake:** Feeding an image at the wrong resolution or normalisation and getting silent quality loss.
+
+Practice: open `examples/03_ppo_and_clipped_objectives.py`, predict the output, change one line, predict again.
 
 ## 4. Continuous action spaces
 
@@ -134,6 +140,8 @@ print('learned policy:', ['left' if a == 0 else 'right' for a in Q.argmax(axis=1
 
 **Common mistake:** Rewarding a proxy metric and getting an agent that maximises the proxy while failing the real goal.
 
+Practice: open `examples/04_continuous_action_spaces.py`, predict the output, change one line, predict again.
+
 ## 5. Sample efficiency problems
 
 RL learns from reward instead of labels. The agent takes actions, the environment returns state and reward, and the agent learns a policy that maximises long-term return. The hard part is exploration versus exploitation and the fact that reward is delayed and sparse.
@@ -164,6 +172,8 @@ print('learned policy:', ['left' if a == 0 else 'right' for a in Q.argmax(axis=1
 **Remember:** Reward shaping decides what the agent actually learns — and it will exploit any loophole you leave.
 
 **Common mistake:** Rewarding a proxy metric and getting an agent that maximises the proxy while failing the real goal.
+
+Practice: open `examples/05_sample_efficiency_problems.py`, predict the output, change one line, predict again.
 
 ## 6. Offline reinforcement learning
 
@@ -196,6 +206,8 @@ print('learned policy:', ['left' if a == 0 else 'right' for a in Q.argmax(axis=1
 
 **Common mistake:** Rewarding a proxy metric and getting an agent that maximises the proxy while failing the real goal.
 
+Practice: open `examples/06_offline_reinforcement_learning.py`, predict the output, change one line, predict again.
+
 ## 7. Simulation and the sim-to-real gap
 
 RL learns from reward instead of labels. The agent takes actions, the environment returns state and reward, and the agent learns a policy that maximises long-term return. The hard part is exploration versus exploitation and the fact that reward is delayed and sparse.
@@ -226,6 +238,8 @@ print('learned policy:', ['left' if a == 0 else 'right' for a in Q.argmax(axis=1
 **Remember:** Reward shaping decides what the agent actually learns — and it will exploit any loophole you leave.
 
 **Common mistake:** Rewarding a proxy metric and getting an agent that maximises the proxy while failing the real goal.
+
+Practice: open `examples/07_simulation_and_the_sim_to_real_gap.py`, predict the output, change one line, predict again.
 
 ## 8. RL from human feedback preview
 
@@ -258,6 +272,8 @@ print('learned policy:', ['left' if a == 0 else 'right' for a in Q.argmax(axis=1
 
 **Common mistake:** Rewarding a proxy metric and getting an agent that maximises the proxy while failing the real goal.
 
+Practice: open `examples/08_rl_from_human_feedback_preview.py`, predict the output, change one line, predict again.
+
 ## 9. When RL is the wrong tool
 
 RL learns from reward instead of labels. The agent takes actions, the environment returns state and reward, and the agent learns a policy that maximises long-term return. The hard part is exploration versus exploitation and the fact that reward is delayed and sparse.
@@ -289,6 +305,8 @@ print('learned policy:', ['left' if a == 0 else 'right' for a in Q.argmax(axis=1
 
 **Common mistake:** Rewarding a proxy metric and getting an agent that maximises the proxy while failing the real goal.
 
+Practice: open `examples/09_when_rl_is_the_wrong_tool.py`, predict the output, change one line, predict again.
+
 ## 10. A gridworld agent from scratch
 
 An agent is a loop: the model picks a tool, your code runs it, the result goes back into context, repeat until done. Power comes from the tools, not the prompt. Cap the iterations, log every step, and require confirmation before anything irreversible.
@@ -314,6 +332,8 @@ agent_loop([('calc', '2 + 2'), ('calc', '(2 + 2) * 10')])
 **Remember:** Always bound the loop. An unbounded agent burns money and finds creative ways to fail.
 
 **Common mistake:** Giving an agent a shell tool with no allowlist and no confirmation step.
+
+Practice: open `examples/10_a_gridworld_agent_from_scratch.py`, predict the output, change one line, predict again.
 
 ---
 

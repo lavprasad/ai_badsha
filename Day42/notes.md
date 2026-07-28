@@ -38,6 +38,8 @@ print(train['ts'].max(), '<', test['ts'].min())
 
 **Common mistake:** Shipping a leaked model and discovering the real accuracy from angry users.
 
+Practice: open `examples/01_what_leakage_actually_is.py`, predict the output, change one line, predict again.
+
 ## 2. Preprocessing leakage
 
 Leakage is information in training that will not exist at prediction time. It produces impossible validation scores and a model that collapses in production. If your accuracy jumps suspiciously, hunt for a leak before you celebrate.
@@ -58,6 +60,8 @@ print(train['ts'].max(), '<', test['ts'].min())
 **Remember:** 0.999 AUC on a hard business problem is a bug report, not a result.
 
 **Common mistake:** Shipping a leaked model and discovering the real accuracy from angry users.
+
+Practice: open `examples/02_preprocessing_leakage.py`, predict the output, change one line, predict again.
 
 ## 3. Target leakage from future columns
 
@@ -80,6 +84,8 @@ print(train['ts'].max(), '<', test['ts'].min())
 
 **Common mistake:** Shipping a leaked model and discovering the real accuracy from angry users.
 
+Practice: open `examples/03_target_leakage_from_future_columns.py`, predict the output, change one line, predict again.
+
 ## 4. Duplicate rows across splits
 
 Leakage is information in training that will not exist at prediction time. It produces impossible validation scores and a model that collapses in production. If your accuracy jumps suspiciously, hunt for a leak before you celebrate.
@@ -100,6 +106,8 @@ print(train['ts'].max(), '<', test['ts'].min())
 **Remember:** 0.999 AUC on a hard business problem is a bug report, not a result.
 
 **Common mistake:** Shipping a leaked model and discovering the real accuracy from angry users.
+
+Practice: open `examples/04_duplicate_rows_across_splits.py`, predict the output, change one line, predict again.
 
 ## 5. Group leakage: same entity both sides
 
@@ -122,6 +130,8 @@ print(train['ts'].max(), '<', test['ts'].min())
 
 **Common mistake:** Shipping a leaked model and discovering the real accuracy from angry users.
 
+Practice: open `examples/05_group_leakage_same_entity_both_sides.py`, predict the output, change one line, predict again.
+
 ## 6. Temporal leakage
 
 Leakage is information in training that will not exist at prediction time. It produces impossible validation scores and a model that collapses in production. If your accuracy jumps suspiciously, hunt for a leak before you celebrate.
@@ -142,6 +152,8 @@ print(train['ts'].max(), '<', test['ts'].min())
 **Remember:** 0.999 AUC on a hard business problem is a bug report, not a result.
 
 **Common mistake:** Shipping a leaked model and discovering the real accuracy from angry users.
+
+Practice: open `examples/06_temporal_leakage.py`, predict the output, change one line, predict again.
 
 ## 7. Leakage through feature selection
 
@@ -165,6 +177,8 @@ print(df)
 
 **Common mistake:** Building a feature from a column that is only filled in AFTER the event you are predicting.
 
+Practice: open `examples/07_leakage_through_feature_selection.py`, predict the output, change one line, predict again.
+
 ## 8. Symptoms: impossible scores
 
 Leakage is information in training that will not exist at prediction time. It produces impossible validation scores and a model that collapses in production. If your accuracy jumps suspiciously, hunt for a leak before you celebrate.
@@ -185,6 +199,8 @@ print(train['ts'].max(), '<', test['ts'].min())
 **Remember:** 0.999 AUC on a hard business problem is a bug report, not a result.
 
 **Common mistake:** Shipping a leaked model and discovering the real accuracy from angry users.
+
+Practice: open `examples/08_symptoms_impossible_scores.py`, predict the output, change one line, predict again.
 
 ## 9. A leakage audit checklist
 
@@ -207,6 +223,8 @@ print(train['ts'].max(), '<', test['ts'].min())
 
 **Common mistake:** Shipping a leaked model and discovering the real accuracy from angry users.
 
+Practice: open `examples/09_a_leakage_audit_checklist.py`, predict the output, change one line, predict again.
+
 ## 10. Fixing a leak without starting over
 
 Leakage is information in training that will not exist at prediction time. It produces impossible validation scores and a model that collapses in production. If your accuracy jumps suspiciously, hunt for a leak before you celebrate.
@@ -227,6 +245,8 @@ print(train['ts'].max(), '<', test['ts'].min())
 **Remember:** 0.999 AUC on a hard business problem is a bug report, not a result.
 
 **Common mistake:** Shipping a leaked model and discovering the real accuracy from angry users.
+
+Practice: open `examples/10_fixing_a_leak_without_starting_over.py`, predict the output, change one line, predict again.
 
 ---
 

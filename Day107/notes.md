@@ -38,6 +38,8 @@ print(round(iou((0, 0, 10, 10), (5, 5, 15, 15)), 4))   # 0.1429
 
 **Common mistake:** Mixing box formats (xywh vs xyxy) between the model and the evaluation code.
 
+Practice: open `examples/01_detection_vs_classification.py`, predict the output, change one line, predict again.
+
 ## 2. Bounding box formats
 
 Classification says what; detection says what and where. Boxes are scored by IoU (intersection over union) and duplicates are removed with non-maximum suppression. Segmentation goes further and labels every pixel.
@@ -58,6 +60,8 @@ print(round(iou((0, 0, 10, 10), (5, 5, 15, 15)), 4))   # 0.1429
 **Remember:** IoU >= 0.5 is the usual 'correct detection' threshold; report mAP, not accuracy.
 
 **Common mistake:** Mixing box formats (xywh vs xyxy) between the model and the evaluation code.
+
+Practice: open `examples/02_bounding_box_formats.py`, predict the output, change one line, predict again.
 
 ## 3. Intersection over union
 
@@ -80,6 +84,8 @@ print(round(iou((0, 0, 10, 10), (5, 5, 15, 15)), 4))   # 0.1429
 
 **Common mistake:** Mixing box formats (xywh vs xyxy) between the model and the evaluation code.
 
+Practice: open `examples/03_intersection_over_union.py`, predict the output, change one line, predict again.
+
 ## 4. Anchor boxes
 
 Classification says what; detection says what and where. Boxes are scored by IoU (intersection over union) and duplicates are removed with non-maximum suppression. Segmentation goes further and labels every pixel.
@@ -100,6 +106,8 @@ print(round(iou((0, 0, 10, 10), (5, 5, 15, 15)), 4))   # 0.1429
 **Remember:** IoU >= 0.5 is the usual 'correct detection' threshold; report mAP, not accuracy.
 
 **Common mistake:** Mixing box formats (xywh vs xyxy) between the model and the evaluation code.
+
+Practice: open `examples/04_anchor_boxes.py`, predict the output, change one line, predict again.
 
 ## 5. Two-stage detectors: R-CNN family
 
@@ -128,6 +136,8 @@ print(out)   # the edge column lights up
 
 **Common mistake:** Forgetting the channel dimension and feeding (H,W) where the layer expects (N,C,H,W).
 
+Practice: open `examples/05_two_stage_detectors_r_cnn_family.py`, predict the output, change one line, predict again.
+
 ## 6. One-stage detectors: YOLO and SSD
 
 Classification says what; detection says what and where. Boxes are scored by IoU (intersection over union) and duplicates are removed with non-maximum suppression. Segmentation goes further and labels every pixel.
@@ -148,6 +158,8 @@ print(round(iou((0, 0, 10, 10), (5, 5, 15, 15)), 4))   # 0.1429
 **Remember:** IoU >= 0.5 is the usual 'correct detection' threshold; report mAP, not accuracy.
 
 **Common mistake:** Mixing box formats (xywh vs xyxy) between the model and the evaluation code.
+
+Practice: open `examples/06_one_stage_detectors_yolo_and_ssd.py`, predict the output, change one line, predict again.
 
 ## 7. Non-maximum suppression
 
@@ -170,6 +182,8 @@ print(round(iou((0, 0, 10, 10), (5, 5, 15, 15)), 4))   # 0.1429
 
 **Common mistake:** Mixing box formats (xywh vs xyxy) between the model and the evaluation code.
 
+Practice: open `examples/07_non_maximum_suppression.py`, predict the output, change one line, predict again.
+
 ## 8. mAP as the detection metric
 
 Classification says what; detection says what and where. Boxes are scored by IoU (intersection over union) and duplicates are removed with non-maximum suppression. Segmentation goes further and labels every pixel.
@@ -191,6 +205,8 @@ print(round(iou((0, 0, 10, 10), (5, 5, 15, 15)), 4))   # 0.1429
 
 **Common mistake:** Mixing box formats (xywh vs xyxy) between the model and the evaluation code.
 
+Practice: open `examples/08_map_as_the_detection_metric.py`, predict the output, change one line, predict again.
+
 ## 9. Annotating a detection dataset
 
 Classification says what; detection says what and where. Boxes are scored by IoU (intersection over union) and duplicates are removed with non-maximum suppression. Segmentation goes further and labels every pixel.
@@ -211,6 +227,8 @@ print(round(iou((0, 0, 10, 10), (5, 5, 15, 15)), 4))   # 0.1429
 **Remember:** IoU >= 0.5 is the usual 'correct detection' threshold; report mAP, not accuracy.
 
 **Common mistake:** Mixing box formats (xywh vs xyxy) between the model and the evaluation code.
+
+Practice: open `examples/09_annotating_a_detection_dataset.py`, predict the output, change one line, predict again.
 
 ## 10. Fine-tuning a detector
 
@@ -238,6 +256,8 @@ print(search.best_params_, round(search.best_score_, 4))
 **Remember:** Fix the random seed and log every trial, or you cannot reproduce your own best model.
 
 **Common mistake:** Tuning 40 hyperparameters on 400 rows — you are now fitting the validation set.
+
+Practice: open `examples/10_fine_tuning_a_detector.py`, predict the output, change one line, predict again.
 
 ---
 

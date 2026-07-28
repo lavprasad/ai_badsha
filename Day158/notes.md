@@ -43,6 +43,8 @@ agent_loop([('calc', '2 + 2'), ('calc', '(2 + 2) * 10')])
 
 **Common mistake:** Giving an agent a shell tool with no allowlist and no confirmation step.
 
+Practice: open `examples/01_designing_a_good_tool_interface.py`, predict the output, change one line, predict again.
+
 ## 2. Read-only vs mutating tools
 
 An agent is a loop: the model picks a tool, your code runs it, the result goes back into context, repeat until done. Power comes from the tools, not the prompt. Cap the iterations, log every step, and require confirmation before anything irreversible.
@@ -68,6 +70,8 @@ agent_loop([('calc', '2 + 2'), ('calc', '(2 + 2) * 10')])
 **Remember:** Always bound the loop. An unbounded agent burns money and finds creative ways to fail.
 
 **Common mistake:** Giving an agent a shell tool with no allowlist and no confirmation step.
+
+Practice: open `examples/02_read_only_vs_mutating_tools.py`, predict the output, change one line, predict again.
 
 ## 3. Search and retrieval tools
 
@@ -95,6 +99,8 @@ agent_loop([('calc', '2 + 2'), ('calc', '(2 + 2) * 10')])
 
 **Common mistake:** Giving an agent a shell tool with no allowlist and no confirmation step.
 
+Practice: open `examples/03_search_and_retrieval_tools.py`, predict the output, change one line, predict again.
+
 ## 4. Code execution sandboxes
 
 An agent is a loop: the model picks a tool, your code runs it, the result goes back into context, repeat until done. Power comes from the tools, not the prompt. Cap the iterations, log every step, and require confirmation before anything irreversible.
@@ -120,6 +126,8 @@ agent_loop([('calc', '2 + 2'), ('calc', '(2 + 2) * 10')])
 **Remember:** Always bound the loop. An unbounded agent burns money and finds creative ways to fail.
 
 **Common mistake:** Giving an agent a shell tool with no allowlist and no confirmation step.
+
+Practice: open `examples/04_code_execution_sandboxes.py`, predict the output, change one line, predict again.
 
 ## 5. File system access controls
 
@@ -147,6 +155,8 @@ agent_loop([('calc', '2 + 2'), ('calc', '(2 + 2) * 10')])
 
 **Common mistake:** Giving an agent a shell tool with no allowlist and no confirmation step.
 
+Practice: open `examples/05_file_system_access_controls.py`, predict the output, change one line, predict again.
+
 ## 6. API calling tools
 
 An agent is a loop: the model picks a tool, your code runs it, the result goes back into context, repeat until done. Power comes from the tools, not the prompt. Cap the iterations, log every step, and require confirmation before anything irreversible.
@@ -172,6 +182,8 @@ agent_loop([('calc', '2 + 2'), ('calc', '(2 + 2) * 10')])
 **Remember:** Always bound the loop. An unbounded agent burns money and finds creative ways to fail.
 
 **Common mistake:** Giving an agent a shell tool with no allowlist and no confirmation step.
+
+Practice: open `examples/06_api_calling_tools.py`, predict the output, change one line, predict again.
 
 ## 7. Database query tools with allowlists
 
@@ -199,6 +211,8 @@ agent_loop([('calc', '2 + 2'), ('calc', '(2 + 2) * 10')])
 
 **Common mistake:** Giving an agent a shell tool with no allowlist and no confirmation step.
 
+Practice: open `examples/07_database_query_tools_with_allowlists.py`, predict the output, change one line, predict again.
+
 ## 8. Human approval gates
 
 An agent is a loop: the model picks a tool, your code runs it, the result goes back into context, repeat until done. Power comes from the tools, not the prompt. Cap the iterations, log every step, and require confirmation before anything irreversible.
@@ -224,6 +238,8 @@ agent_loop([('calc', '2 + 2'), ('calc', '(2 + 2) * 10')])
 **Remember:** Always bound the loop. An unbounded agent burns money and finds creative ways to fail.
 
 **Common mistake:** Giving an agent a shell tool with no allowlist and no confirmation step.
+
+Practice: open `examples/08_human_approval_gates.py`, predict the output, change one line, predict again.
 
 ## 9. Tool descriptions as prompts
 
@@ -251,6 +267,8 @@ agent_loop([('calc', '2 + 2'), ('calc', '(2 + 2) * 10')])
 
 **Common mistake:** Giving an agent a shell tool with no allowlist and no confirmation step.
 
+Practice: open `examples/09_tool_descriptions_as_prompts.py`, predict the output, change one line, predict again.
+
 ## 10. Testing tools independently
 
 An agent is a loop: the model picks a tool, your code runs it, the result goes back into context, repeat until done. Power comes from the tools, not the prompt. Cap the iterations, log every step, and require confirmation before anything irreversible.
@@ -276,6 +294,8 @@ agent_loop([('calc', '2 + 2'), ('calc', '(2 + 2) * 10')])
 **Remember:** Always bound the loop. An unbounded agent burns money and finds creative ways to fail.
 
 **Common mistake:** Giving an agent a shell tool with no allowlist and no confirmation step.
+
+Practice: open `examples/10_testing_tools_independently.py`, predict the output, change one line, predict again.
 
 ---
 

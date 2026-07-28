@@ -43,6 +43,8 @@ print(f'adjusted for severity {adjusted:+.3f}   (true effect is -0.3)')
 
 **Common mistake:** Telling a business to change X because the model gave X a high feature importance.
 
+Practice: open `examples/01_prediction_vs_intervention.py`, predict the output, change one line, predict again.
+
 ## 2. Confounders
 
 Prediction asks 'what will happen'; causal inference asks 'what happens if I intervene'. A model can predict perfectly using a confounded correlation and give you catastrophically wrong advice about what to change. Randomised experiments answer causal questions; observational data needs strong assumptions you must state.
@@ -68,6 +70,8 @@ print(f'adjusted for severity {adjusted:+.3f}   (true effect is -0.3)')
 **Remember:** Name the confounders before you interpret any observational effect. If you cannot, do not claim causality.
 
 **Common mistake:** Telling a business to change X because the model gave X a high feature importance.
+
+Practice: open `examples/02_confounders.py`, predict the output, change one line, predict again.
 
 ## 3. Randomised experiments as the gold standard
 
@@ -95,6 +99,8 @@ print(f'adjusted for severity {adjusted:+.3f}   (true effect is -0.3)')
 
 **Common mistake:** Telling a business to change X because the model gave X a high feature importance.
 
+Practice: open `examples/03_randomised_experiments_as_the_gold_stand.py`, predict the output, change one line, predict again.
+
 ## 4. Propensity score matching
 
 Prediction asks 'what will happen'; causal inference asks 'what happens if I intervene'. A model can predict perfectly using a confounded correlation and give you catastrophically wrong advice about what to change. Randomised experiments answer causal questions; observational data needs strong assumptions you must state.
@@ -120,6 +126,8 @@ print(f'adjusted for severity {adjusted:+.3f}   (true effect is -0.3)')
 **Remember:** Name the confounders before you interpret any observational effect. If you cannot, do not claim causality.
 
 **Common mistake:** Telling a business to change X because the model gave X a high feature importance.
+
+Practice: open `examples/04_propensity_score_matching.py`, predict the output, change one line, predict again.
 
 ## 5. Difference-in-differences
 
@@ -147,6 +155,8 @@ print(f'adjusted for severity {adjusted:+.3f}   (true effect is -0.3)')
 
 **Common mistake:** Telling a business to change X because the model gave X a high feature importance.
 
+Practice: open `examples/05_difference_in_differences.py`, predict the output, change one line, predict again.
+
 ## 6. Instrumental variables
 
 Prediction asks 'what will happen'; causal inference asks 'what happens if I intervene'. A model can predict perfectly using a confounded correlation and give you catastrophically wrong advice about what to change. Randomised experiments answer causal questions; observational data needs strong assumptions you must state.
@@ -172,6 +182,8 @@ print(f'adjusted for severity {adjusted:+.3f}   (true effect is -0.3)')
 **Remember:** Name the confounders before you interpret any observational effect. If you cannot, do not claim causality.
 
 **Common mistake:** Telling a business to change X because the model gave X a high feature importance.
+
+Practice: open `examples/06_instrumental_variables.py`, predict the output, change one line, predict again.
 
 ## 7. Directed acyclic graphs
 
@@ -205,6 +217,8 @@ for r in rows:
 
 **Common mistake:** `SELECT *` on a wide table, then dropping 90% of the columns in pandas.
 
+Practice: open `examples/07_directed_acyclic_graphs.py`, predict the output, change one line, predict again.
+
 ## 8. Uplift modelling
 
 Prediction asks 'what will happen'; causal inference asks 'what happens if I intervene'. A model can predict perfectly using a confounded correlation and give you catastrophically wrong advice about what to change. Randomised experiments answer causal questions; observational data needs strong assumptions you must state.
@@ -230,6 +244,8 @@ print(f'adjusted for severity {adjusted:+.3f}   (true effect is -0.3)')
 **Remember:** Name the confounders before you interpret any observational effect. If you cannot, do not claim causality.
 
 **Common mistake:** Telling a business to change X because the model gave X a high feature importance.
+
+Practice: open `examples/08_uplift_modelling.py`, predict the output, change one line, predict again.
 
 ## 9. Why ML models answer the wrong question
 
@@ -257,6 +273,8 @@ print(f'adjusted for severity {adjusted:+.3f}   (true effect is -0.3)')
 
 **Common mistake:** Telling a business to change X because the model gave X a high feature importance.
 
+Practice: open `examples/09_why_ml_models_answer_the_wrong_question.py`, predict the output, change one line, predict again.
+
 ## 10. Asking causal questions honestly
 
 Prediction asks 'what will happen'; causal inference asks 'what happens if I intervene'. A model can predict perfectly using a confounded correlation and give you catastrophically wrong advice about what to change. Randomised experiments answer causal questions; observational data needs strong assumptions you must state.
@@ -282,6 +300,8 @@ print(f'adjusted for severity {adjusted:+.3f}   (true effect is -0.3)')
 **Remember:** Name the confounders before you interpret any observational effect. If you cannot, do not claim causality.
 
 **Common mistake:** Telling a business to change X because the model gave X a high feature importance.
+
+Practice: open `examples/10_asking_causal_questions_honestly.py`, predict the output, change one line, predict again.
 
 ---
 

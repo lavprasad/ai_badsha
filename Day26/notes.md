@@ -40,6 +40,8 @@ print('perplexity    ', round(float(np.exp(cross_entropy(truth, unsure))), 3))
 
 **Common mistake:** Applying softmax twice (once in the model, once in the loss) and getting flat, untrainable gradients.
 
+Practice: open `examples/01_information_as_surprise.py`, predict the output, change one line, predict again.
+
 ## 2. Entropy
 
 Entropy measures surprise: a fair coin has 1 bit, a two-headed coin has 0. Cross-entropy measures how surprised your model is by the truth — which is why it is the loss for classifiers and language models. Perplexity is just exp(cross-entropy), read as 'effective number of choices'.
@@ -62,6 +64,8 @@ print('perplexity    ', round(float(np.exp(cross_entropy(truth, unsure))), 3))
 **Remember:** Clip probabilities before `log` — `log(0)` is `-inf` and poisons the whole batch.
 
 **Common mistake:** Applying softmax twice (once in the model, once in the loss) and getting flat, untrainable gradients.
+
+Practice: open `examples/02_entropy.py`, predict the output, change one line, predict again.
 
 ## 3. Cross-entropy
 
@@ -86,6 +90,8 @@ print('perplexity    ', round(float(np.exp(cross_entropy(truth, unsure))), 3))
 
 **Common mistake:** Applying softmax twice (once in the model, once in the loss) and getting flat, untrainable gradients.
 
+Practice: open `examples/03_cross_entropy.py`, predict the output, change one line, predict again.
+
 ## 4. KL divergence
 
 Entropy measures surprise: a fair coin has 1 bit, a two-headed coin has 0. Cross-entropy measures how surprised your model is by the truth — which is why it is the loss for classifiers and language models. Perplexity is just exp(cross-entropy), read as 'effective number of choices'.
@@ -108,6 +114,8 @@ print('perplexity    ', round(float(np.exp(cross_entropy(truth, unsure))), 3))
 **Remember:** Clip probabilities before `log` — `log(0)` is `-inf` and poisons the whole batch.
 
 **Common mistake:** Applying softmax twice (once in the model, once in the loss) and getting flat, untrainable gradients.
+
+Practice: open `examples/04_kl_divergence.py`, predict the output, change one line, predict again.
 
 ## 5. Mutual information
 
@@ -132,6 +140,8 @@ print('perplexity    ', round(float(np.exp(cross_entropy(truth, unsure))), 3))
 
 **Common mistake:** Applying softmax twice (once in the model, once in the loss) and getting flat, untrainable gradients.
 
+Practice: open `examples/05_mutual_information.py`, predict the output, change one line, predict again.
+
 ## 6. Perplexity in language models
 
 Entropy measures surprise: a fair coin has 1 bit, a two-headed coin has 0. Cross-entropy measures how surprised your model is by the truth — which is why it is the loss for classifiers and language models. Perplexity is just exp(cross-entropy), read as 'effective number of choices'.
@@ -154,6 +164,8 @@ print('perplexity    ', round(float(np.exp(cross_entropy(truth, unsure))), 3))
 **Remember:** Clip probabilities before `log` — `log(0)` is `-inf` and poisons the whole batch.
 
 **Common mistake:** Applying softmax twice (once in the model, once in the loss) and getting flat, untrainable gradients.
+
+Practice: open `examples/06_perplexity_in_language_models.py`, predict the output, change one line, predict again.
 
 ## 7. Coding length intuition
 
@@ -178,6 +190,8 @@ print('perplexity    ', round(float(np.exp(cross_entropy(truth, unsure))), 3))
 
 **Common mistake:** Applying softmax twice (once in the model, once in the loss) and getting flat, untrainable gradients.
 
+Practice: open `examples/07_coding_length_intuition.py`, predict the output, change one line, predict again.
+
 ## 8. Entropy in decision-tree splits
 
 Entropy measures surprise: a fair coin has 1 bit, a two-headed coin has 0. Cross-entropy measures how surprised your model is by the truth — which is why it is the loss for classifiers and language models. Perplexity is just exp(cross-entropy), read as 'effective number of choices'.
@@ -200,6 +214,8 @@ print('perplexity    ', round(float(np.exp(cross_entropy(truth, unsure))), 3))
 **Remember:** Clip probabilities before `log` — `log(0)` is `-inf` and poisons the whole batch.
 
 **Common mistake:** Applying softmax twice (once in the model, once in the loss) and getting flat, untrainable gradients.
+
+Practice: open `examples/08_entropy_in_decision_tree_splits.py`, predict the output, change one line, predict again.
 
 ## 9. Cross-entropy as the classification loss
 
@@ -224,6 +240,8 @@ print('perplexity    ', round(float(np.exp(cross_entropy(truth, unsure))), 3))
 
 **Common mistake:** Applying softmax twice (once in the model, once in the loss) and getting flat, untrainable gradients.
 
+Practice: open `examples/09_cross_entropy_as_the_classification_loss.py`, predict the output, change one line, predict again.
+
 ## 10. Computing all of these in NumPy
 
 Entropy measures surprise: a fair coin has 1 bit, a two-headed coin has 0. Cross-entropy measures how surprised your model is by the truth — which is why it is the loss for classifiers and language models. Perplexity is just exp(cross-entropy), read as 'effective number of choices'.
@@ -246,6 +264,8 @@ print('perplexity    ', round(float(np.exp(cross_entropy(truth, unsure))), 3))
 **Remember:** Clip probabilities before `log` — `log(0)` is `-inf` and poisons the whole batch.
 
 **Common mistake:** Applying softmax twice (once in the model, once in the loss) and getting flat, untrainable gradients.
+
+Practice: open `examples/10_computing_all_of_these_in_numpy.py`, predict the output, change one line, predict again.
 
 ---
 

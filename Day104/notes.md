@@ -39,6 +39,8 @@ for s in STEPS:
 
 **Common mistake:** Six weeks of feature engineering with no baseline to prove any of it helped.
 
+Practice: open `examples/01_goal_a_fine_tuned_classifier_you_can_def.py`, predict the output, change one line, predict again.
+
 ## 2. Dataset collection and cleaning
 
 Projects are where the learning sticks. Build a thin end-to-end slice first — load data, train something dumb, evaluate, serve one prediction — then improve one layer at a time. A working baseline on day one beats a perfect model that never ships.
@@ -61,6 +63,8 @@ for s in STEPS:
 
 **Common mistake:** Six weeks of feature engineering with no baseline to prove any of it helped.
 
+Practice: open `examples/02_dataset_collection_and_cleaning.py`, predict the output, change one line, predict again.
+
 ## 3. Stratified splits and a locked test set
 
 Projects are where the learning sticks. Build a thin end-to-end slice first — load data, train something dumb, evaluate, serve one prediction — then improve one layer at a time. A working baseline on day one beats a perfect model that never ships.
@@ -82,6 +86,8 @@ for s in STEPS:
 **Remember:** Spend an hour looking at wrong predictions before you spend a day tuning hyperparameters.
 
 **Common mistake:** Six weeks of feature engineering with no baseline to prove any of it helped.
+
+Practice: open `examples/03_stratified_splits_and_a_locked_test_set.py`, predict the output, change one line, predict again.
 
 ## 4. Baseline: logistic regression on embeddings
 
@@ -109,6 +115,8 @@ print('weights', np.round(w, 2), 'acc', ((sigmoid(X @ w + b) > 0.5) == y).mean()
 
 **Common mistake:** Reading the raw output as a calibrated probability without ever checking a calibration curve.
 
+Practice: open `examples/04_baseline_logistic_regression_on_embeddin.py`, predict the output, change one line, predict again.
+
 ## 5. Transfer learning with a pretrained backbone
 
 Almost nobody trains a vision model from scratch. Take a network pretrained on millions of images, replace the last layer, and either freeze the backbone (small data) or fine-tune it at a low learning rate (more data). This is the highest-leverage trick in applied vision.
@@ -128,6 +136,8 @@ print('Transfer learning: freeze backbone, replace head, train head, then unfree
 **Remember:** Use the exact normalisation statistics the pretrained model was trained with.
 
 **Common mistake:** Fine-tuning the whole network at 1e-3 and washing away everything ImageNet taught it.
+
+Practice: open `examples/05_transfer_learning_with_a_pretrained_back.py`, predict the output, change one line, predict again.
 
 ## 6. Augmentation and regularisation tuning
 
@@ -149,6 +159,8 @@ print('lasso non-zero coefs', int(np.sum(np.abs(lasso.coef_) > 1e-6)))
 **Remember:** Scale features before regularising, or the penalty punishes whichever column happens to use small units.
 
 **Common mistake:** Tuning `alpha` on the test set — pick it with cross-validation on train only.
+
+Practice: open `examples/06_augmentation_and_regularisation_tuning.py`, predict the output, change one line, predict again.
 
 ## 7. Training loop with checkpointing
 
@@ -178,6 +190,8 @@ print('final loss', round(loss.item(), 4))
 
 **Common mistake:** Calling `loss.backward()` twice without `retain_graph` and getting a confusing runtime error.
 
+Practice: open `examples/07_training_loop_with_checkpointing.py`, predict the output, change one line, predict again.
+
 ## 8. Error analysis on the worst classes
 
 Projects are where the learning sticks. Build a thin end-to-end slice first — load data, train something dumb, evaluate, serve one prediction — then improve one layer at a time. A working baseline on day one beats a perfect model that never ships.
@@ -199,6 +213,8 @@ for s in STEPS:
 **Remember:** Spend an hour looking at wrong predictions before you spend a day tuning hyperparameters.
 
 **Common mistake:** Six weeks of feature engineering with no baseline to prove any of it helped.
+
+Practice: open `examples/08_error_analysis_on_the_worst_classes.py`, predict the output, change one line, predict again.
 
 ## 9. Exporting for inference
 
@@ -222,6 +238,8 @@ for s in STEPS:
 
 **Common mistake:** Six weeks of feature engineering with no baseline to prove any of it helped.
 
+Practice: open `examples/09_exporting_for_inference.py`, predict the output, change one line, predict again.
+
 ## 10. A short model card
 
 Projects are where the learning sticks. Build a thin end-to-end slice first — load data, train something dumb, evaluate, serve one prediction — then improve one layer at a time. A working baseline on day one beats a perfect model that never ships.
@@ -243,6 +261,8 @@ for s in STEPS:
 **Remember:** Spend an hour looking at wrong predictions before you spend a day tuning hyperparameters.
 
 **Common mistake:** Six weeks of feature engineering with no baseline to prove any of it helped.
+
+Practice: open `examples/10_a_short_model_card.py`, predict the output, change one line, predict again.
 
 ---
 

@@ -43,6 +43,8 @@ print(json.dumps(run_record({'lr': 0.01, 'depth': 6}, {'auc': 0.912}, 'data/trai
 
 **Common mistake:** Naming files `model_final_v2_REAL_use_this.pkl` instead of using a registry.
 
+Practice: open `examples/01_what_to_record_for_every_run.py`, predict the output, change one line, predict again.
+
 ## 2. MLflow and alternatives
 
 An experiment you cannot reproduce is an anecdote. Track for every run: code commit, data version, hyperparameters, metrics and the artefact. Six months later, 'which run produced the model in production' must have an answer.
@@ -68,6 +70,8 @@ print(json.dumps(run_record({'lr': 0.01, 'depth': 6}, {'auc': 0.912}, 'data/trai
 **Remember:** Log the data version alongside the code version — data changes silently, code changes loudly.
 
 **Common mistake:** Naming files `model_final_v2_REAL_use_this.pkl` instead of using a registry.
+
+Practice: open `examples/02_mlflow_and_alternatives.py`, predict the output, change one line, predict again.
 
 ## 3. Artefact storage
 
@@ -98,6 +102,8 @@ print('\\nReal pipeline: chunk 300-800 tokens with overlap -> embed -> ANN index
 
 **Common mistake:** Chunking blindly at 1000 characters and cutting tables and code blocks in half.
 
+Practice: open `examples/03_artefact_storage.py`, predict the output, change one line, predict again.
+
 ## 4. Data versioning with DVC
 
 An experiment you cannot reproduce is an anecdote. Track for every run: code commit, data version, hyperparameters, metrics and the artefact. Six months later, 'which run produced the model in production' must have an answer.
@@ -123,6 +129,8 @@ print(json.dumps(run_record({'lr': 0.01, 'depth': 6}, {'auc': 0.912}, 'data/trai
 **Remember:** Log the data version alongside the code version — data changes silently, code changes loudly.
 
 **Common mistake:** Naming files `model_final_v2_REAL_use_this.pkl` instead of using a registry.
+
+Practice: open `examples/04_data_versioning_with_dvc.py`, predict the output, change one line, predict again.
 
 ## 5. Seeding everything
 
@@ -150,6 +158,8 @@ print(json.dumps(run_record({'lr': 0.01, 'depth': 6}, {'auc': 0.912}, 'data/trai
 
 **Common mistake:** Naming files `model_final_v2_REAL_use_this.pkl` instead of using a registry.
 
+Practice: open `examples/05_seeding_everything.py`, predict the output, change one line, predict again.
+
 ## 6. Environment capture
 
 An experiment you cannot reproduce is an anecdote. Track for every run: code commit, data version, hyperparameters, metrics and the artefact. Six months later, 'which run produced the model in production' must have an answer.
@@ -175,6 +185,8 @@ print(json.dumps(run_record({'lr': 0.01, 'depth': 6}, {'auc': 0.912}, 'data/trai
 **Remember:** Log the data version alongside the code version — data changes silently, code changes loudly.
 
 **Common mistake:** Naming files `model_final_v2_REAL_use_this.pkl` instead of using a registry.
+
+Practice: open `examples/06_environment_capture.py`, predict the output, change one line, predict again.
 
 ## 7. Comparing runs
 
@@ -202,6 +214,8 @@ print(json.dumps(run_record({'lr': 0.01, 'depth': 6}, {'auc': 0.912}, 'data/trai
 
 **Common mistake:** Naming files `model_final_v2_REAL_use_this.pkl` instead of using a registry.
 
+Practice: open `examples/07_comparing_runs.py`, predict the output, change one line, predict again.
+
 ## 8. Linking a production model to its run
 
 An experiment you cannot reproduce is an anecdote. Track for every run: code commit, data version, hyperparameters, metrics and the artefact. Six months later, 'which run produced the model in production' must have an answer.
@@ -227,6 +241,8 @@ print(json.dumps(run_record({'lr': 0.01, 'depth': 6}, {'auc': 0.912}, 'data/trai
 **Remember:** Log the data version alongside the code version — data changes silently, code changes loudly.
 
 **Common mistake:** Naming files `model_final_v2_REAL_use_this.pkl` instead of using a registry.
+
+Practice: open `examples/08_linking_a_production_model_to_its_run.py`, predict the output, change one line, predict again.
 
 ## 9. Reproducing a six-month-old result
 
@@ -254,6 +270,8 @@ print(json.dumps(run_record({'lr': 0.01, 'depth': 6}, {'auc': 0.912}, 'data/trai
 
 **Common mistake:** Naming files `model_final_v2_REAL_use_this.pkl` instead of using a registry.
 
+Practice: open `examples/09_reproducing_a_six_month_old_result.py`, predict the output, change one line, predict again.
+
 ## 10. A tracking habit that costs 5 minutes
 
 An experiment you cannot reproduce is an anecdote. Track for every run: code commit, data version, hyperparameters, metrics and the artefact. Six months later, 'which run produced the model in production' must have an answer.
@@ -279,6 +297,8 @@ print(json.dumps(run_record({'lr': 0.01, 'depth': 6}, {'auc': 0.912}, 'data/trai
 **Remember:** Log the data version alongside the code version — data changes silently, code changes loudly.
 
 **Common mistake:** Naming files `model_final_v2_REAL_use_this.pkl` instead of using a registry.
+
+Practice: open `examples/10_a_tracking_habit_that_costs_5_minutes.py`, predict the output, change one line, predict again.
 
 ---
 

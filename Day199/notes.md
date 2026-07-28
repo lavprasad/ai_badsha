@@ -44,6 +44,8 @@ print('output shape', (weights @ V).shape)
 
 **Common mistake:** Omitting the causal mask in a decoder, so the model trivially cheats by reading the next token.
 
+Practice: open `examples/01_choosing_sources_worth_your_attention.py`, predict the output, change one line, predict again.
+
 ## 2. A weekly learning cadence
 
 Tutorial hell is watching, not building. The cure is a cadence: read a little, build something small that could fail, and write down what surprised you. Explaining a concept to someone else is the fastest test of whether you actually understand it.
@@ -63,6 +65,8 @@ for day, task in WEEK.items():
 **Remember:** If you cannot explain it without notes, you have not learned it — you have watched it.
 
 **Common mistake:** Finishing a tenth course while having shipped nothing anyone else can run.
+
+Practice: open `examples/02_a_weekly_learning_cadence.py`, predict the output, change one line, predict again.
 
 ## 3. Learning by building, not watching
 
@@ -86,6 +90,8 @@ for s in STEPS:
 
 **Common mistake:** Six weeks of feature engineering with no baseline to prove any of it helped.
 
+Practice: open `examples/03_learning_by_building_not_watching.py`, predict the output, change one line, predict again.
+
 ## 4. Spaced repetition for fundamentals
 
 Tutorial hell is watching, not building. The cure is a cadence: read a little, build something small that could fail, and write down what surprised you. Explaining a concept to someone else is the fastest test of whether you actually understand it.
@@ -106,6 +112,8 @@ for day, task in WEEK.items():
 
 **Common mistake:** Finishing a tenth course while having shipped nothing anyone else can run.
 
+Practice: open `examples/04_spaced_repetition_for_fundamentals.py`, predict the output, change one line, predict again.
+
 ## 5. Teaching to test understanding
 
 Tutorial hell is watching, not building. The cure is a cadence: read a little, build something small that could fail, and write down what surprised you. Explaining a concept to someone else is the fastest test of whether you actually understand it.
@@ -125,6 +133,8 @@ for day, task in WEEK.items():
 **Remember:** If you cannot explain it without notes, you have not learned it — you have watched it.
 
 **Common mistake:** Finishing a tenth course while having shipped nothing anyone else can run.
+
+Practice: open `examples/05_teaching_to_test_understanding.py`, predict the output, change one line, predict again.
 
 ## 6. Communities worth joining
 
@@ -147,6 +157,8 @@ print(df.merge(lookup, on='city', how='left'))
 
 **Common mistake:** Chained assignment (`df[df.a > 1]['b'] = 0`) that writes to a copy and changes nothing.
 
+Practice: open `examples/06_communities_worth_joining.py`, predict the output, change one line, predict again.
+
 ## 7. Tracking what you learned
 
 Tutorial hell is watching, not building. The cure is a cadence: read a little, build something small that could fail, and write down what surprised you. Explaining a concept to someone else is the fastest test of whether you actually understand it.
@@ -166,6 +178,8 @@ for day, task in WEEK.items():
 **Remember:** If you cannot explain it without notes, you have not learned it — you have watched it.
 
 **Common mistake:** Finishing a tenth course while having shipped nothing anyone else can run.
+
+Practice: open `examples/07_tracking_what_you_learned.py`, predict the output, change one line, predict again.
 
 ## 8. Avoiding tutorial hell
 
@@ -187,6 +201,8 @@ for day, task in WEEK.items():
 
 **Common mistake:** Finishing a tenth course while having shipped nothing anyone else can run.
 
+Practice: open `examples/08_avoiding_tutorial_hell.py`, predict the output, change one line, predict again.
+
 ## 9. Depth-first on one area per quarter
 
 Tutorial hell is watching, not building. The cure is a cadence: read a little, build something small that could fail, and write down what surprised you. Explaining a concept to someone else is the fastest test of whether you actually understand it.
@@ -207,6 +223,8 @@ for day, task in WEEK.items():
 
 **Common mistake:** Finishing a tenth course while having shipped nothing anyone else can run.
 
+Practice: open `examples/09_depth_first_on_one_area_per_quarter.py`, predict the output, change one line, predict again.
+
 ## 10. Your personal curriculum for year two
 
 Tutorial hell is watching, not building. The cure is a cadence: read a little, build something small that could fail, and write down what surprised you. Explaining a concept to someone else is the fastest test of whether you actually understand it.
@@ -226,6 +244,8 @@ for day, task in WEEK.items():
 **Remember:** If you cannot explain it without notes, you have not learned it — you have watched it.
 
 **Common mistake:** Finishing a tenth course while having shipped nothing anyone else can run.
+
+Practice: open `examples/10_your_personal_curriculum_for_year_two.py`, predict the output, change one line, predict again.
 
 ---
 

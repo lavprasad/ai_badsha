@@ -33,6 +33,8 @@ print("practice: Why unregularised models overfit wide data")
 
 **Common mistake:** Copy-pasting `Why unregularised models overfit wide data` from a tutorial without knowing what it assumes or when it fails.
 
+Practice: open `examples/01_why_unregularised_models_overfit_wide_da.py`, predict the output, change one line, predict again.
+
 ## 2. Ridge regression
 
 Regularisation penalises large weights so the model prefers simpler explanations. L2 (ridge) shrinks everything smoothly; L1 (lasso) drives some weights exactly to zero and thereby selects features. Elastic net mixes both.
@@ -53,6 +55,8 @@ print('lasso non-zero coefs', int(np.sum(np.abs(lasso.coef_) > 1e-6)))
 **Remember:** Scale features before regularising, or the penalty punishes whichever column happens to use small units.
 
 **Common mistake:** Tuning `alpha` on the test set — pick it with cross-validation on train only.
+
+Practice: open `examples/02_ridge_regression.py`, predict the output, change one line, predict again.
 
 ## 3. Lasso and automatic feature selection
 
@@ -75,6 +79,8 @@ print('lasso non-zero coefs', int(np.sum(np.abs(lasso.coef_) > 1e-6)))
 
 **Common mistake:** Tuning `alpha` on the test set — pick it with cross-validation on train only.
 
+Practice: open `examples/03_lasso_and_automatic_feature_selection.py`, predict the output, change one line, predict again.
+
 ## 4. Elastic net
 
 Regularisation penalises large weights so the model prefers simpler explanations. L2 (ridge) shrinks everything smoothly; L1 (lasso) drives some weights exactly to zero and thereby selects features. Elastic net mixes both.
@@ -96,6 +102,8 @@ print('lasso non-zero coefs', int(np.sum(np.abs(lasso.coef_) > 1e-6)))
 
 **Common mistake:** Tuning `alpha` on the test set — pick it with cross-validation on train only.
 
+Practice: open `examples/04_elastic_net.py`, predict the output, change one line, predict again.
+
 ## 5. Choosing alpha with cross-validation
 
 Three splits, three jobs: train fits parameters, validation picks hyperparameters, test gives one honest final number. K-fold cross-validation reuses data by rotating the validation slice, which matters when you only have a few thousand rows.
@@ -116,6 +124,8 @@ print(f'mean {scores.mean():.3f} +/- {scores.std():.3f}')
 
 **Common mistake:** Random K-fold on time-series or on grouped data (same patient in train and test) — both leak.
 
+Practice: open `examples/05_choosing_alpha_with_cross_validation.py`, predict the output, change one line, predict again.
+
 ## 6. The scaling requirement
 
 Data parallelism replicates the model and splits the batch; model parallelism splits the model when it will not fit on one device. Scale only after profiling — most 'we need more GPUs' problems are actually a slow data loader.
@@ -135,6 +145,8 @@ print('          opt.step(); opt.zero_grad()')
 **Remember:** Profile first. GPU at 30% utilisation means the bottleneck is the data pipeline, not the GPU.
 
 **Common mistake:** Scaling the learning rate wrongly when you scale the batch — a larger batch usually needs a larger LR.
+
+Practice: open `examples/06_the_scaling_requirement.py`, predict the output, change one line, predict again.
 
 ## 7. Coefficient paths
 
@@ -168,6 +180,8 @@ test_preprocess()
 
 **Common mistake:** Testing only the happy path, so an all-null column silently trains a constant model.
 
+Practice: open `examples/07_coefficient_paths.py`, predict the output, change one line, predict again.
+
 ## 8. Regularisation for logistic regression
 
 Logistic regression squashes a linear score through a sigmoid to get a probability. The coefficients are log-odds: +0.7 means the odds roughly double per unit. It stays the default for anything where you must explain the decision to a regulator.
@@ -194,6 +208,8 @@ print('weights', np.round(w, 2), 'acc', ((sigmoid(X @ w + b) > 0.5) == y).mean()
 
 **Common mistake:** Reading the raw output as a calibrated probability without ever checking a calibration curve.
 
+Practice: open `examples/08_regularisation_for_logistic_regression.py`, predict the output, change one line, predict again.
+
 ## 9. Sparse models for interpretability
 
 If you cannot explain a decision, you cannot defend it — and in credit, hiring and healthcare you are legally required to. Permutation importance is model-agnostic and honest. SHAP gives per-prediction attributions with a solid theoretical basis but costs real compute.
@@ -219,6 +235,8 @@ for i in np.argsort(-imp.importances_mean)[:5]:
 
 **Common mistake:** Presenting importance as causation — the model found correlation, nothing more.
 
+Practice: open `examples/09_sparse_models_for_interpretability.py`, predict the output, change one line, predict again.
+
 ## 10. Comparing all four on one dataset
 
 Today's idea — **Comparing all four on one dataset** — sits inside the theme of Regularised linear models. Read it as a tool, not trivia: what job does it do, what does it assume about your data, and what breaks when that assumption is false?
@@ -234,6 +252,8 @@ print("practice: Comparing all four on one dataset")
 **Remember:** State one assumption `Comparing all four on one dataset` makes about your data before you use it.
 
 **Common mistake:** Copy-pasting `Comparing all four on one dataset` from a tutorial without knowing what it assumes or when it fails.
+
+Practice: open `examples/10_comparing_all_four_on_one_dataset.py`, predict the output, change one line, predict again.
 
 ---
 

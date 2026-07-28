@@ -36,6 +36,8 @@ print(np.eye(3) @ A is not A, np.allclose(np.eye(3) @ A, A))
 
 **Common mistake:** Reaching for `np.linalg.inv` to solve `Ax=b` instead of the numerically safer `np.linalg.solve`.
 
+Practice: open `examples/01_goal_raw_file_to_model_ready_matrix.py`, predict the output, change one line, predict again.
+
 ## 2. Ingest with schema validation
 
 A Pipeline chains preprocessing and the model into one object that fits and predicts as a unit. This is the single best defence against leakage, and it means deployment ships one artefact instead of six loose steps you must remember to repeat.
@@ -62,6 +64,8 @@ print(model.predict(df))
 **Remember:** `handle_unknown='ignore'` stops production crashing on a category you never saw in training.
 
 **Common mistake:** Preprocessing in a notebook and then forgetting one step when writing the serving code.
+
+Practice: open `examples/02_ingest_with_schema_validation.py`, predict the output, change one line, predict again.
 
 ## 3. Cleaning stage with logged decisions
 
@@ -90,6 +94,8 @@ print(model.predict(df))
 
 **Common mistake:** Preprocessing in a notebook and then forgetting one step when writing the serving code.
 
+Practice: open `examples/03_cleaning_stage_with_logged_decisions.py`, predict the output, change one line, predict again.
+
 ## 4. Feature engineering stage
 
 Feature engineering is where domain knowledge beats compute. A ratio, a lag, a time-since-last-event, or a count over a window often adds more than switching algorithms. Selection then removes features that add variance without signal.
@@ -111,6 +117,8 @@ print(df)
 **Remember:** Every engineered feature must be computable at prediction time with data you will actually have.
 
 **Common mistake:** Building a feature from a column that is only filled in AFTER the event you are predicting.
+
+Practice: open `examples/04_feature_engineering_stage.py`, predict the output, change one line, predict again.
 
 ## 5. Encoding and scaling inside a Pipeline
 
@@ -139,6 +147,8 @@ print(model.predict(df))
 
 **Common mistake:** Preprocessing in a notebook and then forgetting one step when writing the serving code.
 
+Practice: open `examples/05_encoding_and_scaling_inside_a_pipeline.py`, predict the output, change one line, predict again.
+
 ## 6. Train/validation/test split strategy
 
 A Pipeline chains preprocessing and the model into one object that fits and predicts as a unit. This is the single best defence against leakage, and it means deployment ships one artefact instead of six loose steps you must remember to repeat.
@@ -165,6 +175,8 @@ print(model.predict(df))
 **Remember:** `handle_unknown='ignore'` stops production crashing on a category you never saw in training.
 
 **Common mistake:** Preprocessing in a notebook and then forgetting one step when writing the serving code.
+
+Practice: open `examples/06_train_validation_test_split_strategy.py`, predict the output, change one line, predict again.
 
 ## 7. Persisting the fitted pipeline
 
@@ -193,6 +205,8 @@ print(model.predict(df))
 
 **Common mistake:** Preprocessing in a notebook and then forgetting one step when writing the serving code.
 
+Practice: open `examples/07_persisting_the_fitted_pipeline.py`, predict the output, change one line, predict again.
+
 ## 8. Unit tests for each stage
 
 A Pipeline chains preprocessing and the model into one object that fits and predicts as a unit. This is the single best defence against leakage, and it means deployment ships one artefact instead of six loose steps you must remember to repeat.
@@ -219,6 +233,8 @@ print(model.predict(df))
 **Remember:** `handle_unknown='ignore'` stops production crashing on a category you never saw in training.
 
 **Common mistake:** Preprocessing in a notebook and then forgetting one step when writing the serving code.
+
+Practice: open `examples/08_unit_tests_for_each_stage.py`, predict the output, change one line, predict again.
 
 ## 9. Running the whole thing from one command
 
@@ -247,6 +263,8 @@ print(model.predict(df))
 
 **Common mistake:** Preprocessing in a notebook and then forgetting one step when writing the serving code.
 
+Practice: open `examples/09_running_the_whole_thing_from_one_command.py`, predict the output, change one line, predict again.
+
 ## 10. A data card describing the result
 
 A Pipeline chains preprocessing and the model into one object that fits and predicts as a unit. This is the single best defence against leakage, and it means deployment ships one artefact instead of six loose steps you must remember to repeat.
@@ -273,6 +291,8 @@ print(model.predict(df))
 **Remember:** `handle_unknown='ignore'` stops production crashing on a category you never saw in training.
 
 **Common mistake:** Preprocessing in a notebook and then forgetting one step when writing the serving code.
+
+Practice: open `examples/10_a_data_card_describing_the_result.py`, predict the output, change one line, predict again.
 
 ---
 

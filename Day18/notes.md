@@ -37,6 +37,8 @@ print('cosine', cos)   # 1.0 -> same direction
 
 **Common mistake:** Comparing raw embeddings with Euclidean distance when only direction carries meaning.
 
+Practice: open `examples/01_eigenvectors_as_invariant_directions.py`, predict the output, change one line, predict again.
+
 ## 2. Eigenvalues as stretch factors
 
 Eigenvectors are the directions a matrix only stretches, never rotates; the eigenvalue is the stretch factor. SVD generalises this to any matrix and is the engine under PCA, low-rank compression, and LoRA adapters.
@@ -55,6 +57,8 @@ print('variance kept by first 2 dims:', round(float(energy[1]), 3))
 **Remember:** Singular values sorted descending tell you how many dimensions actually carry information.
 
 **Common mistake:** Running PCA/SVD on unscaled features so the largest-unit column dominates every component.
+
+Practice: open `examples/02_eigenvalues_as_stretch_factors.py`, predict the output, change one line, predict again.
 
 ## 3. The characteristic equation
 
@@ -75,6 +79,8 @@ print('variance kept by first 2 dims:', round(float(energy[1]), 3))
 
 **Common mistake:** Running PCA/SVD on unscaled features so the largest-unit column dominates every component.
 
+Practice: open `examples/03_the_characteristic_equation.py`, predict the output, change one line, predict again.
+
 ## 4. Diagonalisation
 
 Eigenvectors are the directions a matrix only stretches, never rotates; the eigenvalue is the stretch factor. SVD generalises this to any matrix and is the engine under PCA, low-rank compression, and LoRA adapters.
@@ -93,6 +99,8 @@ print('variance kept by first 2 dims:', round(float(energy[1]), 3))
 **Remember:** Singular values sorted descending tell you how many dimensions actually carry information.
 
 **Common mistake:** Running PCA/SVD on unscaled features so the largest-unit column dominates every component.
+
+Practice: open `examples/04_diagonalisation.py`, predict the output, change one line, predict again.
 
 ## 5. Singular value decomposition
 
@@ -113,6 +121,8 @@ print('variance kept by first 2 dims:', round(float(energy[1]), 3))
 
 **Common mistake:** Running PCA/SVD on unscaled features so the largest-unit column dominates every component.
 
+Practice: open `examples/05_singular_value_decomposition.py`, predict the output, change one line, predict again.
+
 ## 6. Low-rank approximation
 
 Eigenvectors are the directions a matrix only stretches, never rotates; the eigenvalue is the stretch factor. SVD generalises this to any matrix and is the engine under PCA, low-rank compression, and LoRA adapters.
@@ -131,6 +141,8 @@ print('variance kept by first 2 dims:', round(float(energy[1]), 3))
 **Remember:** Singular values sorted descending tell you how many dimensions actually carry information.
 
 **Common mistake:** Running PCA/SVD on unscaled features so the largest-unit column dominates every component.
+
+Practice: open `examples/06_low_rank_approximation.py`, predict the output, change one line, predict again.
 
 ## 7. SVD for image compression
 
@@ -151,6 +163,8 @@ print('variance kept by first 2 dims:', round(float(energy[1]), 3))
 
 **Common mistake:** Running PCA/SVD on unscaled features so the largest-unit column dominates every component.
 
+Practice: open `examples/07_svd_for_image_compression.py`, predict the output, change one line, predict again.
+
 ## 8. Condition number and numerical stability
 
 Eigenvectors are the directions a matrix only stretches, never rotates; the eigenvalue is the stretch factor. SVD generalises this to any matrix and is the engine under PCA, low-rank compression, and LoRA adapters.
@@ -169,6 +183,8 @@ print('variance kept by first 2 dims:', round(float(energy[1]), 3))
 **Remember:** Singular values sorted descending tell you how many dimensions actually carry information.
 
 **Common mistake:** Running PCA/SVD on unscaled features so the largest-unit column dominates every component.
+
+Practice: open `examples/08_condition_number_and_numerical_stability.py`, predict the output, change one line, predict again.
 
 ## 9. Connection to PCA
 
@@ -189,6 +205,8 @@ print('variance kept by first 2 dims:', round(float(energy[1]), 3))
 
 **Common mistake:** Running PCA/SVD on unscaled features so the largest-unit column dominates every component.
 
+Practice: open `examples/09_connection_to_pca.py`, predict the output, change one line, predict again.
+
 ## 10. Connection to LoRA adapters
 
 Eigenvectors are the directions a matrix only stretches, never rotates; the eigenvalue is the stretch factor. SVD generalises this to any matrix and is the engine under PCA, low-rank compression, and LoRA adapters.
@@ -207,6 +225,8 @@ print('variance kept by first 2 dims:', round(float(energy[1]), 3))
 **Remember:** Singular values sorted descending tell you how many dimensions actually carry information.
 
 **Common mistake:** Running PCA/SVD on unscaled features so the largest-unit column dominates every component.
+
+Practice: open `examples/10_connection_to_lora_adapters.py`, predict the output, change one line, predict again.
 
 ---
 

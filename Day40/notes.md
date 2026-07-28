@@ -37,6 +37,8 @@ print(df)
 
 **Common mistake:** One-hot encoding a 50,000-value ID column and blowing up memory for zero signal.
 
+Practice: open `examples/01_one_hot_encoding.py`, predict the output, change one line, predict again.
+
 ## 2. Ordinal encoding when order is real
 
 Models need numbers. One-hot is safe for low-cardinality nominal categories. Label/ordinal encoding invents a false order unless the order is real (small < medium < large). Target encoding is powerful and leaks badly unless you fit it inside cross-validation folds.
@@ -56,6 +58,8 @@ print(df)
 **Remember:** Handle unseen categories at inference time — decide up front whether they map to 'other' or raise.
 
 **Common mistake:** One-hot encoding a 50,000-value ID column and blowing up memory for zero signal.
+
+Practice: open `examples/02_ordinal_encoding_when_order_is_real.py`, predict the output, change one line, predict again.
 
 ## 3. Target encoding and its leakage risk
 
@@ -77,6 +81,8 @@ print(df)
 
 **Common mistake:** One-hot encoding a 50,000-value ID column and blowing up memory for zero signal.
 
+Practice: open `examples/03_target_encoding_and_its_leakage_risk.py`, predict the output, change one line, predict again.
+
 ## 4. Hashing trick for high cardinality
 
 Data parallelism replicates the model and splits the batch; model parallelism splits the model when it will not fit on one device. Scale only after profiling — most 'we need more GPUs' problems are actually a slow data loader.
@@ -97,6 +103,8 @@ print('          opt.step(); opt.zero_grad()')
 
 **Common mistake:** Scaling the learning rate wrongly when you scale the batch — a larger batch usually needs a larger LR.
 
+Practice: open `examples/04_hashing_trick_for_high_cardinality.py`, predict the output, change one line, predict again.
+
 ## 5. Handling unseen categories at inference
 
 Data parallelism replicates the model and splits the batch; model parallelism splits the model when it will not fit on one device. Scale only after profiling — most 'we need more GPUs' problems are actually a slow data loader.
@@ -116,6 +124,8 @@ print('          opt.step(); opt.zero_grad()')
 **Remember:** Profile first. GPU at 30% utilisation means the bottleneck is the data pipeline, not the GPU.
 
 **Common mistake:** Scaling the learning rate wrongly when you scale the batch — a larger batch usually needs a larger LR.
+
+Practice: open `examples/05_handling_unseen_categories_at_inference.py`, predict the output, change one line, predict again.
 
 ## 6. StandardScaler vs MinMaxScaler
 
@@ -138,6 +148,8 @@ print('cv accuracy', cross_val_score(pipe, X, y, cv=5).mean().round(4))
 
 **Common mistake:** Calling `fit_transform` on the full dataset before splitting — classic, silent, score-inflating leak.
 
+Practice: open `examples/06_standardscaler_vs_minmaxscaler.py`, predict the output, change one line, predict again.
+
 ## 7. RobustScaler for outlier-heavy data
 
 The mean is pulled around by outliers; the median is not. Report both, plus a spread measure. When mean and median disagree sharply, the distribution is skewed and averages are lying to you.
@@ -159,6 +171,8 @@ print('outliers', salaries[(salaries < q1 - 1.5 * iqr) | (salaries > q3 + 1.5 * 
 
 **Common mistake:** Removing 'outliers' automatically when they are the exact events you were hired to predict.
 
+Practice: open `examples/07_robustscaler_for_outlier_heavy_data.py`, predict the output, change one line, predict again.
+
 ## 8. Log and power transforms
 
 Data parallelism replicates the model and splits the batch; model parallelism splits the model when it will not fit on one device. Scale only after profiling — most 'we need more GPUs' problems are actually a slow data loader.
@@ -178,6 +192,8 @@ print('          opt.step(); opt.zero_grad()')
 **Remember:** Profile first. GPU at 30% utilisation means the bottleneck is the data pipeline, not the GPU.
 
 **Common mistake:** Scaling the learning rate wrongly when you scale the batch — a larger batch usually needs a larger LR.
+
+Practice: open `examples/08_log_and_power_transforms.py`, predict the output, change one line, predict again.
 
 ## 9. Which models need scaling and which do not
 
@@ -199,6 +215,8 @@ print('          opt.step(); opt.zero_grad()')
 
 **Common mistake:** Scaling the learning rate wrongly when you scale the batch — a larger batch usually needs a larger LR.
 
+Practice: open `examples/09_which_models_need_scaling_and_which_do_n.py`, predict the output, change one line, predict again.
+
 ## 10. Fitting transforms on train only
 
 Data parallelism replicates the model and splits the batch; model parallelism splits the model when it will not fit on one device. Scale only after profiling — most 'we need more GPUs' problems are actually a slow data loader.
@@ -218,6 +236,8 @@ print('          opt.step(); opt.zero_grad()')
 **Remember:** Profile first. GPU at 30% utilisation means the bottleneck is the data pipeline, not the GPU.
 
 **Common mistake:** Scaling the learning rate wrongly when you scale the batch — a larger batch usually needs a larger LR.
+
+Practice: open `examples/10_fitting_transforms_on_train_only.py`, predict the output, change one line, predict again.
 
 ---
 

@@ -44,6 +44,8 @@ print(out)   # the edge column lights up
 
 **Common mistake:** Forgetting the channel dimension and feeding (H,W) where the layer expects (N,C,H,W).
 
+Practice: open `examples/01_dataset_preparation_and_splits.py`, predict the output, change one line, predict again.
+
 ## 2. Normalisation statistics
 
 A vector is a list of numbers with a direction and length. The dot product measures alignment: large and positive when two vectors point the same way, zero when perpendicular. Cosine similarity is the dot product with length divided out, which is why it compares embeddings of different magnitudes fairly.
@@ -63,6 +65,8 @@ print('cosine', cos)   # 1.0 -> same direction
 **Remember:** Cosine similarity ignores magnitude; Euclidean distance does not. Pick the one that matches your question.
 
 **Common mistake:** Comparing raw embeddings with Euclidean distance when only direction carries meaning.
+
+Practice: open `examples/02_normalisation_statistics.py`, predict the output, change one line, predict again.
 
 ## 3. Augmentation strategy
 
@@ -91,6 +95,8 @@ print(out)   # the edge column lights up
 
 **Common mistake:** Forgetting the channel dimension and feeding (H,W) where the layer expects (N,C,H,W).
 
+Practice: open `examples/03_augmentation_strategy.py`, predict the output, change one line, predict again.
+
 ## 4. Choosing batch size
 
 A convolution slides a small learned filter over the image, so the same edge detector works anywhere in the frame. That weight sharing is why a CNN needs far fewer parameters than a dense net. Pooling shrinks the map and adds a little translation tolerance.
@@ -118,6 +124,8 @@ print(out)   # the edge column lights up
 
 **Common mistake:** Forgetting the channel dimension and feeding (H,W) where the layer expects (N,C,H,W).
 
+Practice: open `examples/04_choosing_batch_size.py`, predict the output, change one line, predict again.
+
 ## 5. Learning rate finder
 
 Gradient descent repeatedly steps against the gradient. Full-batch is stable but slow; stochastic is noisy but escapes shallow traps; mini-batch is the practical middle. The learning rate is the single most important knob you will ever turn.
@@ -143,6 +151,8 @@ print('learned', np.round(w, 3), 'target', true_w)
 **Remember:** Shuffle every epoch, otherwise the model learns the order of your file.
 
 **Common mistake:** Leaving the learning rate fixed forever instead of decaying it once the loss plateaus.
+
+Practice: open `examples/05_learning_rate_finder.py`, predict the output, change one line, predict again.
 
 ## 6. Monitoring train vs validation
 
@@ -171,6 +181,8 @@ print(out)   # the edge column lights up
 
 **Common mistake:** Forgetting the channel dimension and feeding (H,W) where the layer expects (N,C,H,W).
 
+Practice: open `examples/06_monitoring_train_vs_validation.py`, predict the output, change one line, predict again.
+
 ## 7. Confusion matrix on validation
 
 A matrix is a linear transformation. Multiplying matrices composes transformations, which is exactly what stacking neural network layers does. Shapes must line up: (m,k) @ (k,n) -> (m,n); the inner dimensions must match and they vanish.
@@ -189,6 +201,8 @@ print(np.eye(3) @ A is not A, np.allclose(np.eye(3) @ A, A))
 **Remember:** Read every shape error as 'the inner dimensions did not match' and print the shapes.
 
 **Common mistake:** Reaching for `np.linalg.inv` to solve `Ax=b` instead of the numerically safer `np.linalg.solve`.
+
+Practice: open `examples/07_confusion_matrix_on_validation.py`, predict the output, change one line, predict again.
 
 ## 8. Test-time augmentation
 
@@ -217,6 +231,8 @@ print(out)   # the edge column lights up
 
 **Common mistake:** Forgetting the channel dimension and feeding (H,W) where the layer expects (N,C,H,W).
 
+Practice: open `examples/08_test_time_augmentation.py`, predict the output, change one line, predict again.
+
 ## 9. Class imbalance in images
 
 A convolution slides a small learned filter over the image, so the same edge detector works anywhere in the frame. That weight sharing is why a CNN needs far fewer parameters than a dense net. Pooling shrinks the map and adds a little translation tolerance.
@@ -244,6 +260,8 @@ print(out)   # the edge column lights up
 
 **Common mistake:** Forgetting the channel dimension and feeding (H,W) where the layer expects (N,C,H,W).
 
+Practice: open `examples/09_class_imbalance_in_images.py`, predict the output, change one line, predict again.
+
 ## 10. An image classifier walkthrough
 
 A convolution slides a small learned filter over the image, so the same edge detector works anywhere in the frame. That weight sharing is why a CNN needs far fewer parameters than a dense net. Pooling shrinks the map and adds a little translation tolerance.
@@ -270,6 +288,8 @@ print(out)   # the edge column lights up
 **Remember:** Output size = (in - kernel + 2*pad)/stride + 1. Print shapes when a layer refuses to connect.
 
 **Common mistake:** Forgetting the channel dimension and feeding (H,W) where the layer expects (N,C,H,W).
+
+Practice: open `examples/10_an_image_classifier_walkthrough.py`, predict the output, change one line, predict again.
 
 ---
 

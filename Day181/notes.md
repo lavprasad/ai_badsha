@@ -47,6 +47,8 @@ print('Load once at startup; validate with a schema; expose /health for the load
 
 **Common mistake:** Reloading the model per request and wondering why p99 latency is four seconds.
 
+Practice: open `examples/01_training_serving_skew.py`, predict the output, change one line, predict again.
+
 ## 2. The feature store idea
 
 Training/serving skew is when the feature computed offline differs from the one computed at request time — different code, different window, different timezone. A feature store fixes it by computing once and serving both paths. For most teams a shared function plus tests is enough.
@@ -68,6 +70,8 @@ print('\nIf these are computed by two different code paths, they WILL drift apar
 **Remember:** One function, imported by both paths, with a test asserting they agree. That is 90% of a feature store.
 
 **Common mistake:** A SQL feature in training and a hand-written Python reimplementation in serving, silently disagreeing.
+
+Practice: open `examples/02_the_feature_store_idea.py`, predict the output, change one line, predict again.
 
 ## 3. Offline vs online stores
 
@@ -91,6 +95,8 @@ print('\nIf these are computed by two different code paths, they WILL drift apar
 
 **Common mistake:** A SQL feature in training and a hand-written Python reimplementation in serving, silently disagreeing.
 
+Practice: open `examples/03_offline_vs_online_stores.py`, predict the output, change one line, predict again.
+
 ## 4. Point-in-time correct joins
 
 A DataFrame is a table with labelled columns and an index. Most real ML work is 80% reshaping tables: load, clean, group, join, aggregate. Learn `groupby` and `merge` well and you can answer most data questions without writing loops.
@@ -111,6 +117,8 @@ print(df.merge(lookup, on='city', how='left'))
 **Remember:** Always check `df.shape` before and after a merge — a silent row explosion means duplicate keys.
 
 **Common mistake:** Chained assignment (`df[df.a > 1]['b'] = 0`) that writes to a copy and changes nothing.
+
+Practice: open `examples/04_point_in_time_correct_joins.py`, predict the output, change one line, predict again.
 
 ## 5. Feature freshness
 
@@ -134,6 +142,8 @@ print('\nIf these are computed by two different code paths, they WILL drift apar
 
 **Common mistake:** A SQL feature in training and a hand-written Python reimplementation in serving, silently disagreeing.
 
+Practice: open `examples/05_feature_freshness.py`, predict the output, change one line, predict again.
+
 ## 6. Shared features across teams
 
 Training/serving skew is when the feature computed offline differs from the one computed at request time — different code, different window, different timezone. A feature store fixes it by computing once and serving both paths. For most teams a shared function plus tests is enough.
@@ -155,6 +165,8 @@ print('\nIf these are computed by two different code paths, they WILL drift apar
 **Remember:** One function, imported by both paths, with a test asserting they agree. That is 90% of a feature store.
 
 **Common mistake:** A SQL feature in training and a hand-written Python reimplementation in serving, silently disagreeing.
+
+Practice: open `examples/06_shared_features_across_teams.py`, predict the output, change one line, predict again.
 
 ## 7. When a feature store is overkill
 
@@ -178,6 +190,8 @@ print('\nIf these are computed by two different code paths, they WILL drift apar
 
 **Common mistake:** A SQL feature in training and a hand-written Python reimplementation in serving, silently disagreeing.
 
+Practice: open `examples/07_when_a_feature_store_is_overkill.py`, predict the output, change one line, predict again.
+
 ## 8. Simple alternatives that work
 
 Training/serving skew is when the feature computed offline differs from the one computed at request time — different code, different window, different timezone. A feature store fixes it by computing once and serving both paths. For most teams a shared function plus tests is enough.
@@ -199,6 +213,8 @@ print('\nIf these are computed by two different code paths, they WILL drift apar
 **Remember:** One function, imported by both paths, with a test asserting they agree. That is 90% of a feature store.
 
 **Common mistake:** A SQL feature in training and a hand-written Python reimplementation in serving, silently disagreeing.
+
+Practice: open `examples/08_simple_alternatives_that_work.py`, predict the output, change one line, predict again.
 
 ## 9. Data contracts between teams
 
@@ -222,6 +238,8 @@ print('\nIf these are computed by two different code paths, they WILL drift apar
 
 **Common mistake:** A SQL feature in training and a hand-written Python reimplementation in serving, silently disagreeing.
 
+Practice: open `examples/09_data_contracts_between_teams.py`, predict the output, change one line, predict again.
+
 ## 10. Designing for consistency
 
 Training/serving skew is when the feature computed offline differs from the one computed at request time — different code, different window, different timezone. A feature store fixes it by computing once and serving both paths. For most teams a shared function plus tests is enough.
@@ -243,6 +261,8 @@ print('\nIf these are computed by two different code paths, they WILL drift apar
 **Remember:** One function, imported by both paths, with a test asserting they agree. That is 90% of a feature store.
 
 **Common mistake:** A SQL feature in training and a hand-written Python reimplementation in serving, silently disagreeing.
+
+Practice: open `examples/10_designing_for_consistency.py`, predict the output, change one line, predict again.
 
 ---
 

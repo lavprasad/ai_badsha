@@ -41,6 +41,8 @@ print(f'{len(docs)} chunks -> {rounds} rounds -> {summary!r}')
 
 **Common mistake:** Judging summary quality by ROUGE, which rewards word overlap and ignores whether it is true.
 
+Practice: open `examples/01_extractive_vs_abstractive_summarisation.py`, predict the output, change one line, predict again.
+
 ## 2. Chunking long documents
 
 RAG grounds answers in your documents: chunk, embed, store, retrieve the top-k for the question, and put them in the prompt. Retrieval quality is the whole ballgame — a perfect model answering from the wrong three chunks is still wrong.
@@ -70,6 +72,8 @@ print('\\nReal pipeline: chunk 300-800 tokens with overlap -> embed -> ANN index
 
 **Common mistake:** Chunking blindly at 1000 characters and cutting tables and code blocks in half.
 
+Practice: open `examples/02_chunking_long_documents.py`, predict the output, change one line, predict again.
+
 ## 3. Map-reduce summarisation
 
 For documents larger than the context window, summarise in a tree: chunk, summarise each, then summarise the summaries. Detail is lost at every level, so keep the things that must survive (numbers, names, decisions) as structured extraction alongside the prose.
@@ -93,6 +97,8 @@ print(f'{len(docs)} chunks -> {rounds} rounds -> {summary!r}')
 **Remember:** Extract facts structurally and summarise prose separately — summarisation loses numbers first.
 
 **Common mistake:** Judging summary quality by ROUGE, which rewards word overlap and ignores whether it is true.
+
+Practice: open `examples/03_map_reduce_summarisation.py`, predict the output, change one line, predict again.
 
 ## 4. Refine chains
 
@@ -118,6 +124,8 @@ print(f'{len(docs)} chunks -> {rounds} rounds -> {summary!r}')
 
 **Common mistake:** Judging summary quality by ROUGE, which rewards word overlap and ignores whether it is true.
 
+Practice: open `examples/04_refine_chains.py`, predict the output, change one line, predict again.
+
 ## 5. Structured extraction with schemas
 
 For documents larger than the context window, summarise in a tree: chunk, summarise each, then summarise the summaries. Detail is lost at every level, so keep the things that must survive (numbers, names, decisions) as structured extraction alongside the prose.
@@ -142,6 +150,8 @@ print(f'{len(docs)} chunks -> {rounds} rounds -> {summary!r}')
 
 **Common mistake:** Judging summary quality by ROUGE, which rewards word overlap and ignores whether it is true.
 
+Practice: open `examples/05_structured_extraction_with_schemas.py`, predict the output, change one line, predict again.
+
 ## 6. Handling documents beyond context
 
 For documents larger than the context window, summarise in a tree: chunk, summarise each, then summarise the summaries. Detail is lost at every level, so keep the things that must survive (numbers, names, decisions) as structured extraction alongside the prose.
@@ -165,6 +175,8 @@ print(f'{len(docs)} chunks -> {rounds} rounds -> {summary!r}')
 **Remember:** Extract facts structurally and summarise prose separately — summarisation loses numbers first.
 
 **Common mistake:** Judging summary quality by ROUGE, which rewards word overlap and ignores whether it is true.
+
+Practice: open `examples/06_handling_documents_beyond_context.py`, predict the output, change one line, predict again.
 
 ## 7. Evaluating summaries
 
@@ -194,6 +206,8 @@ assert hits == len(GOLDEN), 'regression: fix before shipping'
 
 **Common mistake:** Changing the prompt on Friday with no eval and finding out from customers on Monday.
 
+Practice: open `examples/07_evaluating_summaries.py`, predict the output, change one line, predict again.
+
 ## 8. ROUGE and its limits
 
 For documents larger than the context window, summarise in a tree: chunk, summarise each, then summarise the summaries. Detail is lost at every level, so keep the things that must survive (numbers, names, decisions) as structured extraction alongside the prose.
@@ -217,6 +231,8 @@ print(f'{len(docs)} chunks -> {rounds} rounds -> {summary!r}')
 **Remember:** Extract facts structurally and summarise prose separately — summarisation loses numbers first.
 
 **Common mistake:** Judging summary quality by ROUGE, which rewards word overlap and ignores whether it is true.
+
+Practice: open `examples/08_rouge_and_its_limits.py`, predict the output, change one line, predict again.
 
 ## 9. Human evaluation rubrics
 
@@ -246,6 +262,8 @@ assert hits == len(GOLDEN), 'regression: fix before shipping'
 
 **Common mistake:** Changing the prompt on Friday with no eval and finding out from customers on Monday.
 
+Practice: open `examples/09_human_evaluation_rubrics.py`, predict the output, change one line, predict again.
+
 ## 10. A meeting-notes summariser
 
 For documents larger than the context window, summarise in a tree: chunk, summarise each, then summarise the summaries. Detail is lost at every level, so keep the things that must survive (numbers, names, decisions) as structured extraction alongside the prose.
@@ -269,6 +287,8 @@ print(f'{len(docs)} chunks -> {rounds} rounds -> {summary!r}')
 **Remember:** Extract facts structurally and summarise prose separately — summarisation loses numbers first.
 
 **Common mistake:** Judging summary quality by ROUGE, which rewards word overlap and ignores whether it is true.
+
+Practice: open `examples/10_a_meeting_notes_summariser.py`, predict the output, change one line, predict again.
 
 ---
 

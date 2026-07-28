@@ -39,6 +39,8 @@ print('top features', [(n, round(v, 3)) for n, v in top])
 
 **Common mistake:** Using impurity-based importances for business decisions instead of permutation importance.
 
+Practice: open `examples/01_why_ensembles_work.py`, predict the output, change one line, predict again.
+
 ## 2. Voting classifiers: hard and soft
 
 Ensembles work when the members make *different* mistakes. Averaging correlated models buys nothing. Stacking trains a meta-model on out-of-fold predictions — using in-fold predictions leaks and produces a meta-model that looks perfect and fails instantly.
@@ -66,6 +68,8 @@ print('meta weights:', meta.coef_.round(3))
 **Remember:** Stack on out-of-fold predictions only. In-fold predictions are a leak wearing a disguise.
 
 **Common mistake:** Shipping a five-model ensemble for a 0.2% gain and quintupling inference cost and failure modes.
+
+Practice: open `examples/02_voting_classifiers_hard_and_soft.py`, predict the output, change one line, predict again.
 
 ## 3. Averaging regressors
 
@@ -96,6 +100,8 @@ print('\\nReal pipeline: chunk 300-800 tokens with overlap -> embed -> ANN index
 
 **Common mistake:** Chunking blindly at 1000 characters and cutting tables and code blocks in half.
 
+Practice: open `examples/03_averaging_regressors.py`, predict the output, change one line, predict again.
+
 ## 4. Weighted blending
 
 Ensembles work when the members make *different* mistakes. Averaging correlated models buys nothing. Stacking trains a meta-model on out-of-fold predictions — using in-fold predictions leaks and produces a meta-model that looks perfect and fails instantly.
@@ -124,6 +130,8 @@ print('meta weights:', meta.coef_.round(3))
 
 **Common mistake:** Shipping a five-model ensemble for a 0.2% gain and quintupling inference cost and failure modes.
 
+Practice: open `examples/04_weighted_blending.py`, predict the output, change one line, predict again.
+
 ## 5. Stacking with a meta-learner
 
 NumPy's power is selecting and combining without loops. A boolean mask picks rows by condition, fancy indexing picks them by position, `np.where` builds a new array from a condition, and `argsort` gives you the ordering so you can sort several arrays consistently.
@@ -149,6 +157,8 @@ print('top 3     ', x[order[:3]])
 
 **Common mistake:** Chaining `arr[mask][0] = 5` and wondering why the original array never changed — you wrote to a copy.
 
+Practice: open `examples/05_stacking_with_a_meta_learner.py`, predict the output, change one line, predict again.
+
 ## 6. Out-of-fold predictions for stacking
 
 NumPy's power is selecting and combining without loops. A boolean mask picks rows by condition, fancy indexing picks them by position, `np.where` builds a new array from a condition, and `argsort` gives you the ordering so you can sort several arrays consistently.
@@ -173,6 +183,8 @@ print('top 3     ', x[order[:3]])
 **Remember:** A boolean mask returns a copy; a basic slice returns a view. Mutating one does not affect the other the same way.
 
 **Common mistake:** Chaining `arr[mask][0] = 5` and wondering why the original array never changed — you wrote to a copy.
+
+Practice: open `examples/06_out_of_fold_predictions_for_stacking.py`, predict the output, change one line, predict again.
 
 ## 7. Diversity beats individual strength
 
@@ -202,6 +214,8 @@ print('meta weights:', meta.coef_.round(3))
 
 **Common mistake:** Shipping a five-model ensemble for a 0.2% gain and quintupling inference cost and failure modes.
 
+Practice: open `examples/07_diversity_beats_individual_strength.py`, predict the output, change one line, predict again.
+
 ## 8. Complexity cost in production
 
 Today's idea — **Complexity cost in production** — sits inside the theme of Ensembling your own models. Read it as a tool, not trivia: what job does it do, what does it assume about your data, and what breaks when that assumption is false?
@@ -217,6 +231,8 @@ print("practice: Complexity cost in production")
 **Remember:** State one assumption `Complexity cost in production` makes about your data before you use it.
 
 **Common mistake:** Copy-pasting `Complexity cost in production` from a tutorial without knowing what it assumes or when it fails.
+
+Practice: open `examples/08_complexity_cost_in_production.py`, predict the output, change one line, predict again.
 
 ## 9. When a single model is the right call
 
@@ -246,6 +262,8 @@ print('meta weights:', meta.coef_.round(3))
 
 **Common mistake:** Shipping a five-model ensemble for a 0.2% gain and quintupling inference cost and failure modes.
 
+Practice: open `examples/09_when_a_single_model_is_the_right_call.py`, predict the output, change one line, predict again.
+
 ## 10. Building a stacked ensemble correctly
 
 Bagging trains many trees on bootstrap samples with random feature subsets, then averages. Averaging cancels the variance that makes single trees erratic. Random forests are the best default for tabular data when you want something that works with almost no tuning.
@@ -267,6 +285,8 @@ print('top features', [(n, round(v, 3)) for n, v in top])
 **Remember:** More trees never overfit — they only cost time. Depth and leaf size are the knobs that control fit.
 
 **Common mistake:** Using impurity-based importances for business decisions instead of permutation importance.
+
+Practice: open `examples/10_building_a_stacked_ensemble_correctly.py`, predict the output, change one line, predict again.
 
 ---
 

@@ -38,6 +38,8 @@ print(a.sum(axis=1))             # row sums
 
 **Common mistake:** Looping over array elements in Python instead of using a vectorised operation.
 
+Practice: open `examples/01_tensors_and_dtypes.py`, predict the output, change one line, predict again.
+
 ## 2. Tensor operations mirror NumPy
 
 PyTorch is NumPy with gradients and a GPU. The training loop is always the same five lines: zero grads, forward, loss, backward, step. Write it out by hand once — every framework wrapper is just hiding these five.
@@ -65,6 +67,8 @@ print('final loss', round(loss.item(), 4))
 **Remember:** `opt.zero_grad()` first, every step. PyTorch accumulates gradients by design.
 
 **Common mistake:** Calling `loss.backward()` twice without `retain_graph` and getting a confusing runtime error.
+
+Practice: open `examples/02_tensor_operations_mirror_numpy.py`, predict the output, change one line, predict again.
 
 ## 3. CPU and GPU devices
 
@@ -94,6 +98,8 @@ print('final loss', round(loss.item(), 4))
 
 **Common mistake:** Calling `loss.backward()` twice without `retain_graph` and getting a confusing runtime error.
 
+Practice: open `examples/03_cpu_and_gpu_devices.py`, predict the output, change one line, predict again.
+
 ## 4. requires_grad and autograd
 
 Backpropagation is the chain rule applied backwards through the computation graph, reusing intermediate results so the cost is roughly one extra forward pass. Every framework does it for you — but writing it once by hand is what makes the failure modes readable.
@@ -119,6 +125,8 @@ print('numeric dy/dw', (((w + h) * x + b) ** 2 - ((w - h) * x + b) ** 2) / (2 * 
 **Remember:** Gradient-check any hand-written backward pass against a numeric estimate before trusting it.
 
 **Common mistake:** Forgetting to zero gradients between steps, so they accumulate and the model diverges.
+
+Practice: open `examples/04_requires_grad_and_autograd.py`, predict the output, change one line, predict again.
 
 ## 5. backward() and .grad
 
@@ -148,6 +156,8 @@ print('final loss', round(loss.item(), 4))
 
 **Common mistake:** Calling `loss.backward()` twice without `retain_graph` and getting a confusing runtime error.
 
+Practice: open `examples/05_backward_and_grad.py`, predict the output, change one line, predict again.
+
 ## 6. Detaching from the graph
 
 PyTorch is NumPy with gradients and a GPU. The training loop is always the same five lines: zero grads, forward, loss, backward, step. Write it out by hand once — every framework wrapper is just hiding these five.
@@ -175,6 +185,8 @@ print('final loss', round(loss.item(), 4))
 **Remember:** `opt.zero_grad()` first, every step. PyTorch accumulates gradients by design.
 
 **Common mistake:** Calling `loss.backward()` twice without `retain_graph` and getting a confusing runtime error.
+
+Practice: open `examples/06_detaching_from_the_graph.py`, predict the output, change one line, predict again.
 
 ## 7. nn.Module and parameters
 
@@ -204,6 +216,8 @@ print('final loss', round(loss.item(), 4))
 
 **Common mistake:** Calling `loss.backward()` twice without `retain_graph` and getting a confusing runtime error.
 
+Practice: open `examples/07_nn_module_and_parameters.py`, predict the output, change one line, predict again.
+
 ## 8. nn.Sequential
 
 PyTorch is NumPy with gradients and a GPU. The training loop is always the same five lines: zero grads, forward, loss, backward, step. Write it out by hand once — every framework wrapper is just hiding these five.
@@ -231,6 +245,8 @@ print('final loss', round(loss.item(), 4))
 **Remember:** `opt.zero_grad()` first, every step. PyTorch accumulates gradients by design.
 
 **Common mistake:** Calling `loss.backward()` twice without `retain_graph` and getting a confusing runtime error.
+
+Practice: open `examples/08_nn_sequential.py`, predict the output, change one line, predict again.
 
 ## 9. The canonical training loop
 
@@ -260,6 +276,8 @@ print('final loss', round(loss.item(), 4))
 
 **Common mistake:** Calling `loss.backward()` twice without `retain_graph` and getting a confusing runtime error.
 
+Practice: open `examples/09_the_canonical_training_loop.py`, predict the output, change one line, predict again.
+
 ## 10. Common PyTorch error messages
 
 PyTorch is NumPy with gradients and a GPU. The training loop is always the same five lines: zero grads, forward, loss, backward, step. Write it out by hand once — every framework wrapper is just hiding these five.
@@ -287,6 +305,8 @@ print('final loss', round(loss.item(), 4))
 **Remember:** `opt.zero_grad()` first, every step. PyTorch accumulates gradients by design.
 
 **Common mistake:** Calling `loss.backward()` twice without `retain_graph` and getting a confusing runtime error.
+
+Practice: open `examples/10_common_pytorch_error_messages.py`, predict the output, change one line, predict again.
 
 ---
 

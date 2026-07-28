@@ -47,6 +47,8 @@ print('final:', generate_until_passing(fake_gen, fake_tests))
 
 **Common mistake:** Accepting generated code that imports a package name nobody verified exists (a real supply-chain vector).
 
+Practice: open `examples/01_code_as_a_modality.py`, predict the output, change one line, predict again.
+
 ## 2. Code completion models
 
 Code has something text does not: an oracle. You can run it. Any code-generating loop should compile, test and lint the output and feed failures back — that single loop closes most of the quality gap. Review generated code for injected dependencies and unsafe calls before it ever runs with real credentials.
@@ -76,6 +78,8 @@ print('final:', generate_until_passing(fake_gen, fake_tests))
 **Remember:** Feed the test failure text straight back as context — it is the highest-signal prompt you have.
 
 **Common mistake:** Accepting generated code that imports a package name nobody verified exists (a real supply-chain vector).
+
+Practice: open `examples/02_code_completion_models.py`, predict the output, change one line, predict again.
 
 ## 3. Repository-level context
 
@@ -107,6 +111,8 @@ print('final:', generate_until_passing(fake_gen, fake_tests))
 
 **Common mistake:** Accepting generated code that imports a package name nobody verified exists (a real supply-chain vector).
 
+Practice: open `examples/03_repository_level_context.py`, predict the output, change one line, predict again.
+
 ## 4. Test generation
 
 Code has something text does not: an oracle. You can run it. Any code-generating loop should compile, test and lint the output and feed failures back — that single loop closes most of the quality gap. Review generated code for injected dependencies and unsafe calls before it ever runs with real credentials.
@@ -136,6 +142,8 @@ print('final:', generate_until_passing(fake_gen, fake_tests))
 **Remember:** Feed the test failure text straight back as context — it is the highest-signal prompt you have.
 
 **Common mistake:** Accepting generated code that imports a package name nobody verified exists (a real supply-chain vector).
+
+Practice: open `examples/04_test_generation.py`, predict the output, change one line, predict again.
 
 ## 5. Code review assistance
 
@@ -167,6 +175,8 @@ print('final:', generate_until_passing(fake_gen, fake_tests))
 
 **Common mistake:** Accepting generated code that imports a package name nobody verified exists (a real supply-chain vector).
 
+Practice: open `examples/05_code_review_assistance.py`, predict the output, change one line, predict again.
+
 ## 6. Refactoring with LLMs
 
 Code has something text does not: an oracle. You can run it. Any code-generating loop should compile, test and lint the output and feed failures back — that single loop closes most of the quality gap. Review generated code for injected dependencies and unsafe calls before it ever runs with real credentials.
@@ -196,6 +206,8 @@ print('final:', generate_until_passing(fake_gen, fake_tests))
 **Remember:** Feed the test failure text straight back as context — it is the highest-signal prompt you have.
 
 **Common mistake:** Accepting generated code that imports a package name nobody verified exists (a real supply-chain vector).
+
+Practice: open `examples/06_refactoring_with_llms.py`, predict the output, change one line, predict again.
 
 ## 7. Execution feedback loops
 
@@ -227,6 +239,8 @@ print('final:', generate_until_passing(fake_gen, fake_tests))
 
 **Common mistake:** Accepting generated code that imports a package name nobody verified exists (a real supply-chain vector).
 
+Practice: open `examples/07_execution_feedback_loops.py`, predict the output, change one line, predict again.
+
 ## 8. Security of generated code
 
 Code has something text does not: an oracle. You can run it. Any code-generating loop should compile, test and lint the output and feed failures back — that single loop closes most of the quality gap. Review generated code for injected dependencies and unsafe calls before it ever runs with real credentials.
@@ -257,6 +271,8 @@ print('final:', generate_until_passing(fake_gen, fake_tests))
 
 **Common mistake:** Accepting generated code that imports a package name nobody verified exists (a real supply-chain vector).
 
+Practice: open `examples/08_security_of_generated_code.py`, predict the output, change one line, predict again.
+
 ## 9. Evaluating code correctness
 
 Vibes do not survive a prompt change. Build a small golden set of real inputs with expected outputs, run it on every change, and track the score. Use an LLM judge for open-ended quality, but calibrate the judge against human ratings first.
@@ -285,6 +301,8 @@ assert hits == len(GOLDEN), 'regression: fix before shipping'
 
 **Common mistake:** Changing the prompt on Friday with no eval and finding out from customers on Monday.
 
+Practice: open `examples/09_evaluating_code_correctness.py`, predict the output, change one line, predict again.
+
 ## 10. Building a code assistant workflow
 
 Projects are where the learning sticks. Build a thin end-to-end slice first — load data, train something dumb, evaluate, serve one prediction — then improve one layer at a time. A working baseline on day one beats a perfect model that never ships.
@@ -306,6 +324,8 @@ for s in STEPS:
 **Remember:** Spend an hour looking at wrong predictions before you spend a day tuning hyperparameters.
 
 **Common mistake:** Six weeks of feature engineering with no baseline to prove any of it helped.
+
+Practice: open `examples/10_building_a_code_assistant_workflow.py`, predict the output, change one line, predict again.
 
 ---
 

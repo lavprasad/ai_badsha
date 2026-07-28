@@ -45,6 +45,8 @@ print('sampled:', generate(dist, greedy=False))
 
 **Common mistake:** Leaving max_tokens unbounded on a retry loop and burning a month's budget overnight.
 
+Practice: open `examples/01_autoregressive_generation.py`, predict the output, change one line, predict again.
+
 ## 2. Greedy decoding
 
 Generation is a loop: predict a distribution, pick a token, append, repeat. Greedy is deterministic and repetitive; sampling is varied and riskier. Stop sequences and max_tokens are your circuit breakers — without them a loop can run until it exhausts your budget.
@@ -73,6 +75,8 @@ print('sampled:', generate(dist, greedy=False))
 
 **Common mistake:** Leaving max_tokens unbounded on a retry loop and burning a month's budget overnight.
 
+Practice: open `examples/02_greedy_decoding.py`, predict the output, change one line, predict again.
+
 ## 3. Temperature
 
 Temperature 0 is near-deterministic and right for extraction; higher values add diversity for creative work. Top-p keeps the smallest set of tokens covering p of the probability mass. Cost is per token in and out, so trimming the prompt is the cheapest optimisation there is.
@@ -98,6 +102,8 @@ print('creative  (T=1.5):', sample(logits, temperature=1.5, seed=3))
 
 **Common mistake:** Running extraction at temperature 1 and debugging 'random' JSON failures for a week.
 
+Practice: open `examples/03_temperature.py`, predict the output, change one line, predict again.
+
 ## 4. Top-k sampling
 
 A distribution says which values are likely. Gaussian for measurement noise, Bernoulli for yes/no, Poisson for counts per interval. Choosing the right one is choosing your loss function: Gaussian likelihood gives MSE, Bernoulli gives cross-entropy.
@@ -116,6 +122,8 @@ print('coin heads rate ', coin.mean())
 **Remember:** Always seed your RNG (`default_rng(0)`) when you want a result someone else can reproduce.
 
 **Common mistake:** Assuming Gaussian for skewed, bounded, or count data and then being surprised by the residuals.
+
+Practice: open `examples/04_top_k_sampling.py`, predict the output, change one line, predict again.
 
 ## 5. Top-p nucleus sampling
 
@@ -136,6 +144,8 @@ print('coin heads rate ', coin.mean())
 
 **Common mistake:** Assuming Gaussian for skewed, bounded, or count data and then being surprised by the residuals.
 
+Practice: open `examples/05_top_p_nucleus_sampling.py`, predict the output, change one line, predict again.
+
 ## 6. Repetition penalties
 
 Today's idea — **Repetition penalties** — sits inside the theme of Inference and decoding. Read it as a tool, not trivia: what job does it do, what does it assume about your data, and what breaks when that assumption is false?
@@ -151,6 +161,8 @@ print("practice: Repetition penalties")
 **Remember:** State one assumption `Repetition penalties` makes about your data before you use it.
 
 **Common mistake:** Copy-pasting `Repetition penalties` from a tutorial without knowing what it assumes or when it fails.
+
+Practice: open `examples/06_repetition_penalties.py`, predict the output, change one line, predict again.
 
 ## 7. Beam search for constrained tasks
 
@@ -180,6 +192,8 @@ print('sampled:', generate(dist, greedy=False))
 
 **Common mistake:** Leaving max_tokens unbounded on a retry loop and burning a month's budget overnight.
 
+Practice: open `examples/07_beam_search_for_constrained_tasks.py`, predict the output, change one line, predict again.
+
 ## 8. Stop sequences
 
 Generation is a loop: predict a distribution, pick a token, append, repeat. Greedy is deterministic and repetitive; sampling is varied and riskier. Stop sequences and max_tokens are your circuit breakers — without them a loop can run until it exhausts your budget.
@@ -207,6 +221,8 @@ print('sampled:', generate(dist, greedy=False))
 **Remember:** Always set max_tokens and stop sequences. They are the difference between a bug and a bill.
 
 **Common mistake:** Leaving max_tokens unbounded on a retry loop and burning a month's budget overnight.
+
+Practice: open `examples/08_stop_sequences.py`, predict the output, change one line, predict again.
 
 ## 9. Streaming tokens to the user
 
@@ -236,6 +252,8 @@ print('sampled:', generate(dist, greedy=False))
 
 **Common mistake:** Leaving max_tokens unbounded on a retry loop and burning a month's budget overnight.
 
+Practice: open `examples/09_streaming_tokens_to_the_user.py`, predict the output, change one line, predict again.
+
 ## 10. Choosing decoding settings per task
 
 Generation is a loop: predict a distribution, pick a token, append, repeat. Greedy is deterministic and repetitive; sampling is varied and riskier. Stop sequences and max_tokens are your circuit breakers — without them a loop can run until it exhausts your budget.
@@ -263,6 +281,8 @@ print('sampled:', generate(dist, greedy=False))
 **Remember:** Always set max_tokens and stop sequences. They are the difference between a bug and a bill.
 
 **Common mistake:** Leaving max_tokens unbounded on a retry loop and burning a month's budget overnight.
+
+Practice: open `examples/10_choosing_decoding_settings_per_task.py`, predict the output, change one line, predict again.
 
 ---
 

@@ -40,6 +40,8 @@ for e in EXPIRING:
 
 **Common mistake:** Measuring your skill by the number of tools you have touched rather than problems you have solved.
 
+Practice: open `examples/01_what_200_days_actually_gave_you.py`, predict the output, change one line, predict again.
+
 ## 2. Auditing your own gaps honestly
 
 The frameworks in this course will change; the fundamentals will not. Linear algebra, probability, honest evaluation, leakage, and knowing what your data can and cannot support outlive every library. Audit yourself against those, not against the tool list.
@@ -62,6 +64,8 @@ for e in EXPIRING:
 **Remember:** Rebuild one project from Day 1 knowledge at the end. The gap between the two versions is your progress.
 
 **Common mistake:** Measuring your skill by the number of tools you have touched rather than problems you have solved.
+
+Practice: open `examples/02_auditing_your_own_gaps_honestly.py`, predict the output, change one line, predict again.
 
 ## 3. The fundamentals that will not expire
 
@@ -86,6 +90,8 @@ for e in EXPIRING:
 
 **Common mistake:** Measuring your skill by the number of tools you have touched rather than problems you have solved.
 
+Practice: open `examples/03_the_fundamentals_that_will_not_expire.py`, predict the output, change one line, predict again.
+
 ## 4. The tools that will expire
 
 The frameworks in this course will change; the fundamentals will not. Linear algebra, probability, honest evaluation, leakage, and knowing what your data can and cannot support outlive every library. Audit yourself against those, not against the tool list.
@@ -108,6 +114,8 @@ for e in EXPIRING:
 **Remember:** Rebuild one project from Day 1 knowledge at the end. The gap between the two versions is your progress.
 
 **Common mistake:** Measuring your skill by the number of tools you have touched rather than problems you have solved.
+
+Practice: open `examples/04_the_tools_that_will_expire.py`, predict the output, change one line, predict again.
 
 ## 5. Choosing a specialisation
 
@@ -141,6 +149,8 @@ test_preprocess()
 
 **Common mistake:** Testing only the happy path, so an all-null column silently trains a constant model.
 
+Practice: open `examples/05_choosing_a_specialisation.py`, predict the output, change one line, predict again.
+
 ## 6. Building in public
 
 Projects are where the learning sticks. Build a thin end-to-end slice first — load data, train something dumb, evaluate, serve one prediction — then improve one layer at a time. A working baseline on day one beats a perfect model that never ships.
@@ -162,6 +172,8 @@ for s in STEPS:
 **Remember:** Spend an hour looking at wrong predictions before you spend a day tuning hyperparameters.
 
 **Common mistake:** Six weeks of feature engineering with no baseline to prove any of it helped.
+
+Practice: open `examples/06_building_in_public.py`, predict the output, change one line, predict again.
 
 ## 7. Contributing to open source AI
 
@@ -186,6 +198,8 @@ for e in EXPIRING:
 
 **Common mistake:** Measuring your skill by the number of tools you have touched rather than problems you have solved.
 
+Practice: open `examples/07_contributing_to_open_source_ai.py`, predict the output, change one line, predict again.
+
 ## 8. Mentoring someone behind you
 
 The frameworks in this course will change; the fundamentals will not. Linear algebra, probability, honest evaluation, leakage, and knowing what your data can and cannot support outlive every library. Audit yourself against those, not against the tool list.
@@ -208,6 +222,8 @@ for e in EXPIRING:
 **Remember:** Rebuild one project from Day 1 knowledge at the end. The gap between the two versions is your progress.
 
 **Common mistake:** Measuring your skill by the number of tools you have touched rather than problems you have solved.
+
+Practice: open `examples/08_mentoring_someone_behind_you.py`, predict the output, change one line, predict again.
 
 ## 9. Ethics as an ongoing practice
 
@@ -233,6 +249,8 @@ print('Large gaps here are the finding — investigate before shipping.')
 
 **Common mistake:** Auditing fairness once at launch and never again as the data drifts.
 
+Practice: open `examples/09_ethics_as_an_ongoing_practice.py`, predict the output, change one line, predict again.
+
 ## 10. Your next 200 days
 
 The frameworks in this course will change; the fundamentals will not. Linear algebra, probability, honest evaluation, leakage, and knowing what your data can and cannot support outlive every library. Audit yourself against those, not against the tool list.
@@ -255,6 +273,8 @@ for e in EXPIRING:
 **Remember:** Rebuild one project from Day 1 knowledge at the end. The gap between the two versions is your progress.
 
 **Common mistake:** Measuring your skill by the number of tools you have touched rather than problems you have solved.
+
+Practice: open `examples/10_your_next_200_days.py`, predict the output, change one line, predict again.
 
 ---
 

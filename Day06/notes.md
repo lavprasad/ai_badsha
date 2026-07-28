@@ -33,6 +33,8 @@ print("practice: Why NumPy is fast: contiguous memory")
 
 **Common mistake:** Copy-pasting `Why NumPy is fast: contiguous memory` from a tutorial without knowing what it assumes or when it fails.
 
+Practice: open `examples/01_why_numpy_is_fast_contiguous_memory.py`, predict the output, change one line, predict again.
+
 ## 2. Creating arrays: array, zeros, arange, linspace
 
 NumPy's power is selecting and combining without loops. A boolean mask picks rows by condition, fancy indexing picks them by position, `np.where` builds a new array from a condition, and `argsort` gives you the ordering so you can sort several arrays consistently.
@@ -58,6 +60,8 @@ print('top 3     ', x[order[:3]])
 
 **Common mistake:** Chaining `arr[mask][0] = 5` and wondering why the original array never changed — you wrote to a copy.
 
+Practice: open `examples/02_creating_arrays_array_zeros_arange_linsp.py`, predict the output, change one line, predict again.
+
 ## 3. dtype and memory footprint
 
 NumPy stores numbers in one contiguous typed block and runs loops in C. Vectorised code (whole-array operations) is often 50-100x faster than a Python `for` loop and reads closer to the maths. Broadcasting stretches smaller shapes to match without copying data.
@@ -78,6 +82,8 @@ print(a.sum(axis=1))             # row sums
 **Remember:** `axis=0` collapses rows (down the columns); `axis=1` collapses columns (across a row).
 
 **Common mistake:** Looping over array elements in Python instead of using a vectorised operation.
+
+Practice: open `examples/03_dtype_and_memory_footprint.py`, predict the output, change one line, predict again.
 
 ## 4. Shape, reshape and ravel
 
@@ -103,6 +109,8 @@ for i in np.argsort(-imp.importances_mean)[:5]:
 **Remember:** Permutation importance on the TEST set answers 'what does this model rely on to generalise'.
 
 **Common mistake:** Presenting importance as causation — the model found correlation, nothing more.
+
+Practice: open `examples/04_shape_reshape_and_ravel.py`, predict the output, change one line, predict again.
 
 ## 5. Indexing, slicing and views vs copies
 
@@ -136,6 +144,8 @@ test_preprocess()
 
 **Common mistake:** Testing only the happy path, so an all-null column silently trains a constant model.
 
+Practice: open `examples/05_indexing_slicing_and_views_vs_copies.py`, predict the output, change one line, predict again.
+
 ## 6. Boolean masking
 
 NumPy's power is selecting and combining without loops. A boolean mask picks rows by condition, fancy indexing picks them by position, `np.where` builds a new array from a condition, and `argsort` gives you the ordering so you can sort several arrays consistently.
@@ -160,6 +170,8 @@ print('top 3     ', x[order[:3]])
 **Remember:** A boolean mask returns a copy; a basic slice returns a view. Mutating one does not affect the other the same way.
 
 **Common mistake:** Chaining `arr[mask][0] = 5` and wondering why the original array never changed — you wrote to a copy.
+
+Practice: open `examples/06_boolean_masking.py`, predict the output, change one line, predict again.
 
 ## 7. Fancy indexing
 
@@ -186,6 +198,8 @@ print('top 3     ', x[order[:3]])
 
 **Common mistake:** Chaining `arr[mask][0] = 5` and wondering why the original array never changed — you wrote to a copy.
 
+Practice: open `examples/07_fancy_indexing.py`, predict the output, change one line, predict again.
+
 ## 8. Vectorisation vs Python loops
 
 NumPy stores numbers in one contiguous typed block and runs loops in C. Vectorised code (whole-array operations) is often 50-100x faster than a Python `for` loop and reads closer to the maths. Broadcasting stretches smaller shapes to match without copying data.
@@ -206,6 +220,8 @@ print(a.sum(axis=1))             # row sums
 **Remember:** `axis=0` collapses rows (down the columns); `axis=1` collapses columns (across a row).
 
 **Common mistake:** Looping over array elements in Python instead of using a vectorised operation.
+
+Practice: open `examples/08_vectorisation_vs_python_loops.py`, predict the output, change one line, predict again.
 
 ## 9. Random numbers with default_rng
 
@@ -232,6 +248,8 @@ print('top 3     ', x[order[:3]])
 
 **Common mistake:** Chaining `arr[mask][0] = 5` and wondering why the original array never changed — you wrote to a copy.
 
+Practice: open `examples/09_random_numbers_with_default_rng.py`, predict the output, change one line, predict again.
+
 ## 10. Timing a vectorised speedup
 
 A vector is a list of numbers with a direction and length. The dot product measures alignment: large and positive when two vectors point the same way, zero when perpendicular. Cosine similarity is the dot product with length divided out, which is why it compares embeddings of different magnitudes fairly.
@@ -251,6 +269,8 @@ print('cosine', cos)   # 1.0 -> same direction
 **Remember:** Cosine similarity ignores magnitude; Euclidean distance does not. Pick the one that matches your question.
 
 **Common mistake:** Comparing raw embeddings with Euclidean distance when only direction carries meaning.
+
+Practice: open `examples/10_timing_a_vectorised_speedup.py`, predict the output, change one line, predict again.
 
 ---
 

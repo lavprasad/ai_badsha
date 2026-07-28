@@ -49,6 +49,8 @@ test_preprocess()
 
 **Common mistake:** Testing only the happy path, so an all-null column silently trains a constant model.
 
+Practice: open `examples/01_goal_a_small_model_specialised_to_one_ta.py`, predict the output, change one line, predict again.
+
 ## 2. Collecting and curating examples
 
 Projects are where the learning sticks. Build a thin end-to-end slice first — load data, train something dumb, evaluate, serve one prediction — then improve one layer at a time. A working baseline on day one beats a perfect model that never ships.
@@ -70,6 +72,8 @@ for s in STEPS:
 **Remember:** Spend an hour looking at wrong predictions before you spend a day tuning hyperparameters.
 
 **Common mistake:** Six weeks of feature engineering with no baseline to prove any of it helped.
+
+Practice: open `examples/02_collecting_and_curating_examples.py`, predict the output, change one line, predict again.
 
 ## 3. Formatting an SFT dataset
 
@@ -93,6 +97,8 @@ print('\\nRule: mask the loss on system+user tokens; train only on the assistant
 
 **Common mistake:** Fine-tuning to inject company facts, then re-training every time a policy document changes.
 
+Practice: open `examples/03_formatting_an_sft_dataset.py`, predict the output, change one line, predict again.
+
 ## 4. Choosing base model and LoRA settings
 
 LoRA freezes the base weights and trains two small low-rank matrices whose product is added to each target layer. You update ~0.1% of the parameters, the checkpoint is megabytes not gigabytes, and you can swap adapters per customer. QLoRA adds 4-bit base weights so a 7B model fits on one consumer GPU.
@@ -115,6 +121,8 @@ print('effective W = W + A@B, shape', (W + delta).shape)
 **Remember:** Initialise B to zeros so the adapted model starts exactly equal to the base model.
 
 **Common mistake:** Setting rank far too high — you lose the efficiency and gain the overfitting.
+
+Practice: open `examples/04_choosing_base_model_and_lora_settings.py`, predict the output, change one line, predict again.
 
 ## 5. Training run and monitoring
 
@@ -140,6 +148,8 @@ print('shifted    PSI', round(psi(baseline, rng.normal(0.6, 1.2, 5_000)), 4))
 **Remember:** PSI under 0.1 stable, 0.1-0.2 watch, above 0.2 investigate. Alert on the prediction distribution too.
 
 **Common mistake:** Only monitoring uptime, so a model that returns 200 OK while being badly wrong looks healthy.
+
+Practice: open `examples/05_training_run_and_monitoring.py`, predict the output, change one line, predict again.
 
 ## 6. Evaluating against the base model
 
@@ -169,6 +179,8 @@ assert hits == len(GOLDEN), 'regression: fix before shipping'
 
 **Common mistake:** Changing the prompt on Friday with no eval and finding out from customers on Monday.
 
+Practice: open `examples/06_evaluating_against_the_base_model.py`, predict the output, change one line, predict again.
+
 ## 7. Comparing against a prompted large model
 
 Projects are where the learning sticks. Build a thin end-to-end slice first — load data, train something dumb, evaluate, serve one prediction — then improve one layer at a time. A working baseline on day one beats a perfect model that never ships.
@@ -191,6 +203,8 @@ for s in STEPS:
 
 **Common mistake:** Six weeks of feature engineering with no baseline to prove any of it helped.
 
+Practice: open `examples/07_comparing_against_a_prompted_large_model.py`, predict the output, change one line, predict again.
+
 ## 8. Cost and latency comparison
 
 Data parallelism replicates the model and splits the batch; model parallelism splits the model when it will not fit on one device. Scale only after profiling — most 'we need more GPUs' problems are actually a slow data loader.
@@ -210,6 +224,8 @@ print('          opt.step(); opt.zero_grad()')
 **Remember:** Profile first. GPU at 30% utilisation means the bottleneck is the data pipeline, not the GPU.
 
 **Common mistake:** Scaling the learning rate wrongly when you scale the batch — a larger batch usually needs a larger LR.
+
+Practice: open `examples/08_cost_and_latency_comparison.py`, predict the output, change one line, predict again.
 
 ## 9. Deciding whether tuning was worth it
 
@@ -238,6 +254,8 @@ print(search.best_params_, round(search.best_score_, 4))
 
 **Common mistake:** Tuning 40 hyperparameters on 400 rows — you are now fitting the validation set.
 
+Practice: open `examples/09_deciding_whether_tuning_was_worth_it.py`, predict the output, change one line, predict again.
+
 ## 10. Packaging the adapter
 
 LoRA freezes the base weights and trains two small low-rank matrices whose product is added to each target layer. You update ~0.1% of the parameters, the checkpoint is megabytes not gigabytes, and you can swap adapters per customer. QLoRA adds 4-bit base weights so a 7B model fits on one consumer GPU.
@@ -260,6 +278,8 @@ print('effective W = W + A@B, shape', (W + delta).shape)
 **Remember:** Initialise B to zeros so the adapted model starts exactly equal to the base model.
 
 **Common mistake:** Setting rank far too high — you lose the efficiency and gain the overfitting.
+
+Practice: open `examples/10_packaging_the_adapter.py`, predict the output, change one line, predict again.
 
 ---
 

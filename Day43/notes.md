@@ -55,6 +55,8 @@ except ValueError as e:
 
 **Common mistake:** Validating only in the training pipeline, so production quietly accepts a renamed column full of nulls.
 
+Practice: open `examples/01_schema_as_a_contract.py`, predict the output, change one line, predict again.
+
 ## 2. Range and type assertions
 
 ML code needs the same tests as any code, plus data tests: schema, ranges, null rates, class balance. Add one behavioural test per known failure mode — a test that would have caught last quarter's outage is worth more than 90% coverage.
@@ -86,6 +88,8 @@ test_preprocess()
 **Remember:** Test the data contract, not just the function — bad data breaks more models than bad code.
 
 **Common mistake:** Testing only the happy path, so an all-null column silently trains a constant model.
+
+Practice: open `examples/02_range_and_type_assertions.py`, predict the output, change one line, predict again.
 
 ## 3. Null rate thresholds
 
@@ -125,6 +129,8 @@ except ValueError as e:
 
 **Common mistake:** Validating only in the training pipeline, so production quietly accepts a renamed column full of nulls.
 
+Practice: open `examples/03_null_rate_thresholds.py`, predict the output, change one line, predict again.
+
 ## 4. Category allowlists
 
 A data contract is a set of assertions your pipeline refuses to run without: columns present, types correct, nulls under a threshold, categories from a known set, row count in a plausible range. Failing loudly on ingestion is cheaper than a quarter of quietly wrong predictions.
@@ -163,6 +169,8 @@ except ValueError as e:
 
 **Common mistake:** Validating only in the training pipeline, so production quietly accepts a renamed column full of nulls.
 
+Practice: open `examples/04_category_allowlists.py`, predict the output, change one line, predict again.
+
 ## 5. Distribution checks against a baseline
 
 A distribution says which values are likely. Gaussian for measurement noise, Bernoulli for yes/no, Poisson for counts per interval. Choosing the right one is choosing your loss function: Gaussian likelihood gives MSE, Bernoulli gives cross-entropy.
@@ -181,6 +189,8 @@ print('coin heads rate ', coin.mean())
 **Remember:** Always seed your RNG (`default_rng(0)`) when you want a result someone else can reproduce.
 
 **Common mistake:** Assuming Gaussian for skewed, bounded, or count data and then being surprised by the residuals.
+
+Practice: open `examples/05_distribution_checks_against_a_baseline.py`, predict the output, change one line, predict again.
 
 ## 6. Row count sanity checks
 
@@ -220,6 +230,8 @@ except ValueError as e:
 
 **Common mistake:** Validating only in the training pipeline, so production quietly accepts a renamed column full of nulls.
 
+Practice: open `examples/06_row_count_sanity_checks.py`, predict the output, change one line, predict again.
+
 ## 7. Failing loudly vs failing quietly
 
 A data contract is a set of assertions your pipeline refuses to run without: columns present, types correct, nulls under a threshold, categories from a known set, row count in a plausible range. Failing loudly on ingestion is cheaper than a quarter of quietly wrong predictions.
@@ -258,6 +270,8 @@ except ValueError as e:
 
 **Common mistake:** Validating only in the training pipeline, so production quietly accepts a renamed column full of nulls.
 
+Practice: open `examples/07_failing_loudly_vs_failing_quietly.py`, predict the output, change one line, predict again.
+
 ## 8. Validation in the training pipeline
 
 A Pipeline chains preprocessing and the model into one object that fits and predicts as a unit. This is the single best defence against leakage, and it means deployment ships one artefact instead of six loose steps you must remember to repeat.
@@ -284,6 +298,8 @@ print(model.predict(df))
 **Remember:** `handle_unknown='ignore'` stops production crashing on a category you never saw in training.
 
 **Common mistake:** Preprocessing in a notebook and then forgetting one step when writing the serving code.
+
+Practice: open `examples/08_validation_in_the_training_pipeline.py`, predict the output, change one line, predict again.
 
 ## 9. Validation at inference time
 
@@ -323,6 +339,8 @@ except ValueError as e:
 
 **Common mistake:** Validating only in the training pipeline, so production quietly accepts a renamed column full of nulls.
 
+Practice: open `examples/09_validation_at_inference_time.py`, predict the output, change one line, predict again.
+
 ## 10. Writing a validate() function with asserts
 
 ML code needs the same tests as any code, plus data tests: schema, ranges, null rates, class balance. Add one behavioural test per known failure mode — a test that would have caught last quarter's outage is worth more than 90% coverage.
@@ -354,6 +372,8 @@ test_preprocess()
 **Remember:** Test the data contract, not just the function — bad data breaks more models than bad code.
 
 **Common mistake:** Testing only the happy path, so an all-null column silently trains a constant model.
+
+Practice: open `examples/10_writing_a_validate_function_with_asserts.py`, predict the output, change one line, predict again.
 
 ---
 

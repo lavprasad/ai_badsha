@@ -35,6 +35,8 @@ print(f'P(sick | positive) = {posterior:.4f}')   # ~0.0098
 
 **Common mistake:** Reporting accuracy on an imbalanced problem where predicting 'no' always scores 99%.
 
+Practice: open `examples/01_discrete_vs_continuous_distributions.py`, predict the output, change one line, predict again.
+
 ## 2. Bernoulli and binomial
 
 Bayes' rule updates a belief with evidence: posterior = likelihood x prior / evidence. The most common mistake in applied ML is ignoring the prior — a 99%-accurate test for a 1-in-10000 disease still gives mostly false positives.
@@ -52,6 +54,8 @@ print(f'P(sick | positive) = {posterior:.4f}')   # ~0.0098
 **Remember:** Rare events make precision collapse no matter how good the classifier looks on accuracy.
 
 **Common mistake:** Reporting accuracy on an imbalanced problem where predicting 'no' always scores 99%.
+
+Practice: open `examples/02_bernoulli_and_binomial.py`, predict the output, change one line, predict again.
 
 ## 3. Poisson for counts
 
@@ -71,6 +75,8 @@ print(f'P(sick | positive) = {posterior:.4f}')   # ~0.0098
 
 **Common mistake:** Reporting accuracy on an imbalanced problem where predicting 'no' always scores 99%.
 
+Practice: open `examples/03_poisson_for_counts.py`, predict the output, change one line, predict again.
+
 ## 4. Uniform distribution
 
 Bayes' rule updates a belief with evidence: posterior = likelihood x prior / evidence. The most common mistake in applied ML is ignoring the prior — a 99%-accurate test for a 1-in-10000 disease still gives mostly false positives.
@@ -88,6 +94,8 @@ print(f'P(sick | positive) = {posterior:.4f}')   # ~0.0098
 **Remember:** Rare events make precision collapse no matter how good the classifier looks on accuracy.
 
 **Common mistake:** Reporting accuracy on an imbalanced problem where predicting 'no' always scores 99%.
+
+Practice: open `examples/04_uniform_distribution.py`, predict the output, change one line, predict again.
 
 ## 5. The Gaussian and the CLT
 
@@ -107,6 +115,8 @@ print(f'P(sick | positive) = {posterior:.4f}')   # ~0.0098
 
 **Common mistake:** Reporting accuracy on an imbalanced problem where predicting 'no' always scores 99%.
 
+Practice: open `examples/05_the_gaussian_and_the_clt.py`, predict the output, change one line, predict again.
+
 ## 6. Exponential and heavy tails
 
 Bayes' rule updates a belief with evidence: posterior = likelihood x prior / evidence. The most common mistake in applied ML is ignoring the prior — a 99%-accurate test for a 1-in-10000 disease still gives mostly false positives.
@@ -124,6 +134,8 @@ print(f'P(sick | positive) = {posterior:.4f}')   # ~0.0098
 **Remember:** Rare events make precision collapse no matter how good the classifier looks on accuracy.
 
 **Common mistake:** Reporting accuracy on an imbalanced problem where predicting 'no' always scores 99%.
+
+Practice: open `examples/06_exponential_and_heavy_tails.py`, predict the output, change one line, predict again.
 
 ## 7. Multivariate Gaussian and covariance
 
@@ -143,6 +155,8 @@ print(f'P(sick | positive) = {posterior:.4f}')   # ~0.0098
 
 **Common mistake:** Reporting accuracy on an imbalanced problem where predicting 'no' always scores 99%.
 
+Practice: open `examples/07_multivariate_gaussian_and_covariance.py`, predict the output, change one line, predict again.
+
 ## 8. Sampling from a distribution
 
 Bayes' rule updates a belief with evidence: posterior = likelihood x prior / evidence. The most common mistake in applied ML is ignoring the prior — a 99%-accurate test for a 1-in-10000 disease still gives mostly false positives.
@@ -160,6 +174,8 @@ print(f'P(sick | positive) = {posterior:.4f}')   # ~0.0098
 **Remember:** Rare events make precision collapse no matter how good the classifier looks on accuracy.
 
 **Common mistake:** Reporting accuracy on an imbalanced problem where predicting 'no' always scores 99%.
+
+Practice: open `examples/08_sampling_from_a_distribution.py`, predict the output, change one line, predict again.
 
 ## 9. Choosing a likelihood for your data
 
@@ -179,6 +195,8 @@ print(f'P(sick | positive) = {posterior:.4f}')   # ~0.0098
 
 **Common mistake:** Reporting accuracy on an imbalanced problem where predicting 'no' always scores 99%.
 
+Practice: open `examples/09_choosing_a_likelihood_for_your_data.py`, predict the output, change one line, predict again.
+
 ## 10. How the likelihood picks your loss function
 
 Bayes' rule updates a belief with evidence: posterior = likelihood x prior / evidence. The most common mistake in applied ML is ignoring the prior — a 99%-accurate test for a 1-in-10000 disease still gives mostly false positives.
@@ -196,6 +214,8 @@ print(f'P(sick | positive) = {posterior:.4f}')   # ~0.0098
 **Remember:** Rare events make precision collapse no matter how good the classifier looks on accuracy.
 
 **Common mistake:** Reporting accuracy on an imbalanced problem where predicting 'no' always scores 99%.
+
+Practice: open `examples/10_how_the_likelihood_picks_your_loss_funct.py`, predict the output, change one line, predict again.
 
 ---
 

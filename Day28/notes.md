@@ -42,6 +42,8 @@ for n in (10_000, 100_000, 1_000_000):
 
 **Common mistake:** A membership test against a list inside a loop, turning a linear job into a quadratic one.
 
+Practice: open `examples/01_sets_relations_and_functions.py`, predict the output, change one line, predict again.
+
 ## 2. Combinatorics: permutations and combinations
 
 Complexity decides architecture. Attention is quadratic in sequence length, kNN is linear in dataset size per query, and a hash lookup is constant. Knowing which operation dominates tells you what will break first when your data grows tenfold.
@@ -66,6 +68,8 @@ for n in (10_000, 100_000, 1_000_000):
 **Remember:** Before optimising constants, check whether you picked an O(n^2) shape for an O(n log n) problem.
 
 **Common mistake:** A membership test against a list inside a loop, turning a linear job into a quadratic one.
+
+Practice: open `examples/02_combinatorics_permutations_and_combinati.py`, predict the output, change one line, predict again.
 
 ## 3. Graphs, nodes and edges
 
@@ -92,6 +96,8 @@ for n in (10_000, 100_000, 1_000_000):
 
 **Common mistake:** A membership test against a list inside a loop, turning a linear job into a quadratic one.
 
+Practice: open `examples/03_graphs_nodes_and_edges.py`, predict the output, change one line, predict again.
+
 ## 4. Adjacency matrices
 
 Complexity decides architecture. Attention is quadratic in sequence length, kNN is linear in dataset size per query, and a hash lookup is constant. Knowing which operation dominates tells you what will break first when your data grows tenfold.
@@ -116,6 +122,8 @@ for n in (10_000, 100_000, 1_000_000):
 **Remember:** Before optimising constants, check whether you picked an O(n^2) shape for an O(n log n) problem.
 
 **Common mistake:** A membership test against a list inside a loop, turning a linear job into a quadratic one.
+
+Practice: open `examples/04_adjacency_matrices.py`, predict the output, change one line, predict again.
 
 ## 5. Trees and traversal
 
@@ -142,6 +150,8 @@ for n in (10_000, 100_000, 1_000_000):
 
 **Common mistake:** A membership test against a list inside a loop, turning a linear job into a quadratic one.
 
+Practice: open `examples/05_trees_and_traversal.py`, predict the output, change one line, predict again.
+
 ## 6. Big-O notation
 
 Complexity decides architecture. Attention is quadratic in sequence length, kNN is linear in dataset size per query, and a hash lookup is constant. Knowing which operation dominates tells you what will break first when your data grows tenfold.
@@ -166,6 +176,8 @@ for n in (10_000, 100_000, 1_000_000):
 **Remember:** Before optimising constants, check whether you picked an O(n^2) shape for an O(n log n) problem.
 
 **Common mistake:** A membership test against a list inside a loop, turning a linear job into a quadratic one.
+
+Practice: open `examples/06_big_o_notation.py`, predict the output, change one line, predict again.
 
 ## 7. Complexity of common ML operations
 
@@ -192,6 +204,8 @@ for n in (10_000, 100_000, 1_000_000):
 
 **Common mistake:** A membership test against a list inside a loop, turning a linear job into a quadratic one.
 
+Practice: open `examples/07_complexity_of_common_ml_operations.py`, predict the output, change one line, predict again.
+
 ## 8. Recursion and dynamic programming
 
 Complexity decides architecture. Attention is quadratic in sequence length, kNN is linear in dataset size per query, and a hash lookup is constant. Knowing which operation dominates tells you what will break first when your data grows tenfold.
@@ -216,6 +230,8 @@ for n in (10_000, 100_000, 1_000_000):
 **Remember:** Before optimising constants, check whether you picked an O(n^2) shape for an O(n log n) problem.
 
 **Common mistake:** A membership test against a list inside a loop, turning a linear job into a quadratic one.
+
+Practice: open `examples/08_recursion_and_dynamic_programming.py`, predict the output, change one line, predict again.
 
 ## 9. Hashing and hash collisions
 
@@ -242,6 +258,8 @@ for n in (10_000, 100_000, 1_000_000):
 
 **Common mistake:** A membership test against a list inside a loop, turning a linear job into a quadratic one.
 
+Practice: open `examples/09_hashing_and_hash_collisions.py`, predict the output, change one line, predict again.
+
 ## 10. Why complexity decides your architecture
 
 A transformer block is attention + feed-forward, each wrapped in a residual connection and a LayerNorm. Attention alone is order-blind, so positions are injected explicitly. Encoder-only (BERT) is for understanding, decoder-only (GPT) for generation, encoder-decoder (T5) for translation-shaped tasks.
@@ -266,6 +284,8 @@ print('shape', pe.shape)
 **Remember:** Block = LayerNorm -> Attention -> add residual -> LayerNorm -> MLP -> add residual. Memorise it.
 
 **Common mistake:** Assuming a bigger context window is free — attention cost grows with the square of sequence length.
+
+Practice: open `examples/10_why_complexity_decides_your_architecture.py`, predict the output, change one line, predict again.
 
 ---
 

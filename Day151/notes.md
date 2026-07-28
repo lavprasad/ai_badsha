@@ -47,6 +47,8 @@ except (json.JSONDecodeError, AssertionError) as e:
 
 **Common mistake:** Passing model output straight into `eval`, a shell command, or an SQL string.
 
+Practice: open `examples/01_why_free_text_is_hard_to_use.py`, predict the output, change one line, predict again.
+
 ## 2. JSON schemas for outputs
 
 Free text is hard to parse; ask for JSON against a schema instead. Tool/function calling formalises this: you describe callable functions, the model returns a structured call, your code executes it and returns the result. Always validate before you act on the output.
@@ -76,6 +78,8 @@ except (json.JSONDecodeError, AssertionError) as e:
 **Remember:** Validate every model-produced payload against the schema before it reaches your database.
 
 **Common mistake:** Passing model output straight into `eval`, a shell command, or an SQL string.
+
+Practice: open `examples/02_json_schemas_for_outputs.py`, predict the output, change one line, predict again.
 
 ## 3. Tool/function calling
 
@@ -107,6 +111,8 @@ except (json.JSONDecodeError, AssertionError) as e:
 
 **Common mistake:** Passing model output straight into `eval`, a shell command, or an SQL string.
 
+Practice: open `examples/03_tool_function_calling.py`, predict the output, change one line, predict again.
+
 ## 4. Validation and repair loops
 
 Free text is hard to parse; ask for JSON against a schema instead. Tool/function calling formalises this: you describe callable functions, the model returns a structured call, your code executes it and returns the result. Always validate before you act on the output.
@@ -136,6 +142,8 @@ except (json.JSONDecodeError, AssertionError) as e:
 **Remember:** Validate every model-produced payload against the schema before it reaches your database.
 
 **Common mistake:** Passing model output straight into `eval`, a shell command, or an SQL string.
+
+Practice: open `examples/04_validation_and_repair_loops.py`, predict the output, change one line, predict again.
 
 ## 5. Pydantic models for responses
 
@@ -167,6 +175,8 @@ except (json.JSONDecodeError, AssertionError) as e:
 
 **Common mistake:** Passing model output straight into `eval`, a shell command, or an SQL string.
 
+Practice: open `examples/05_pydantic_models_for_responses.py`, predict the output, change one line, predict again.
+
 ## 6. Enums to constrain choices
 
 Free text is hard to parse; ask for JSON against a schema instead. Tool/function calling formalises this: you describe callable functions, the model returns a structured call, your code executes it and returns the result. Always validate before you act on the output.
@@ -196,6 +206,8 @@ except (json.JSONDecodeError, AssertionError) as e:
 **Remember:** Validate every model-produced payload against the schema before it reaches your database.
 
 **Common mistake:** Passing model output straight into `eval`, a shell command, or an SQL string.
+
+Practice: open `examples/06_enums_to_constrain_choices.py`, predict the output, change one line, predict again.
 
 ## 7. Handling partial and malformed output
 
@@ -227,6 +239,8 @@ except (json.JSONDecodeError, AssertionError) as e:
 
 **Common mistake:** Passing model output straight into `eval`, a shell command, or an SQL string.
 
+Practice: open `examples/07_handling_partial_and_malformed_output.py`, predict the output, change one line, predict again.
+
 ## 8. Streaming structured output
 
 Free text is hard to parse; ask for JSON against a schema instead. Tool/function calling formalises this: you describe callable functions, the model returns a structured call, your code executes it and returns the result. Always validate before you act on the output.
@@ -256,6 +270,8 @@ except (json.JSONDecodeError, AssertionError) as e:
 **Remember:** Validate every model-produced payload against the schema before it reaches your database.
 
 **Common mistake:** Passing model output straight into `eval`, a shell command, or an SQL string.
+
+Practice: open `examples/08_streaming_structured_output.py`, predict the output, change one line, predict again.
 
 ## 9. Confidence fields and their honesty
 
@@ -287,6 +303,8 @@ except (json.JSONDecodeError, AssertionError) as e:
 
 **Common mistake:** Passing model output straight into `eval`, a shell command, or an SQL string.
 
+Practice: open `examples/09_confidence_fields_and_their_honesty.py`, predict the output, change one line, predict again.
+
 ## 10. A robust extraction service
 
 Free text is hard to parse; ask for JSON against a schema instead. Tool/function calling formalises this: you describe callable functions, the model returns a structured call, your code executes it and returns the result. Always validate before you act on the output.
@@ -316,6 +334,8 @@ except (json.JSONDecodeError, AssertionError) as e:
 **Remember:** Validate every model-produced payload against the schema before it reaches your database.
 
 **Common mistake:** Passing model output straight into `eval`, a shell command, or an SQL string.
+
+Practice: open `examples/10_a_robust_extraction_service.py`, predict the output, change one line, predict again.
 
 ---
 

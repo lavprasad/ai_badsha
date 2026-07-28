@@ -42,6 +42,8 @@ sanity_report(X, rng.integers(0, 3, 200), 3)
 
 **Common mistake:** Tuning hyperparameters for two days on a pipeline whose labels were misaligned by one row.
 
+Practice: open `examples/01_check_the_data_before_the_model.py`, predict the output, change one line, predict again.
+
 ## 2. Verify labels and their alignment
 
 After supervised tuning, models are aligned to human preference. RLHF trains a reward model on human comparisons, then optimises against it with PPO. DPO skips the reward model and optimises preference pairs directly — simpler, cheaper, and now the common choice.
@@ -63,6 +65,8 @@ print(f'margin {margin:.4f}  dpo loss {loss:.4f}')
 **Remember:** Alignment optimises a proxy for what humans want; the proxy can always be gamed.
 
 **Common mistake:** Over-optimising the reward model until outputs are sycophantic and useless — classic reward hacking.
+
+Practice: open `examples/02_verify_labels_and_their_alignment.py`, predict the output, change one line, predict again.
 
 ## 3. Overfit a tiny subset deliberately
 
@@ -89,6 +93,8 @@ sanity_report(X, rng.integers(0, 3, 200), 3)
 
 **Common mistake:** Tuning hyperparameters for two days on a pipeline whose labels were misaligned by one row.
 
+Practice: open `examples/03_overfit_a_tiny_subset_deliberately.py`, predict the output, change one line, predict again.
+
 ## 4. Check for constant or leaky features
 
 Debug in a fixed order, cheapest test first. Can the model overfit 20 rows to zero loss? If not, the bug is in the data or the wiring, not the capacity. Is the loss at step zero what random guessing predicts? If not, the labels or the output layer are wrong.
@@ -113,6 +119,8 @@ sanity_report(X, rng.integers(0, 3, 200), 3)
 **Remember:** Expected cross-entropy at initialisation is ln(n_classes). A different value means a wiring bug.
 
 **Common mistake:** Tuning hyperparameters for two days on a pipeline whose labels were misaligned by one row.
+
+Practice: open `examples/04_check_for_constant_or_leaky_features.py`, predict the output, change one line, predict again.
 
 ## 5. Inspect the loss curve
 
@@ -139,6 +147,8 @@ sanity_report(X, rng.integers(0, 3, 200), 3)
 
 **Common mistake:** Tuning hyperparameters for two days on a pipeline whose labels were misaligned by one row.
 
+Practice: open `examples/05_inspect_the_loss_curve.py`, predict the output, change one line, predict again.
+
 ## 6. Compare against the dummy baseline
 
 Every scikit-learn model has the same three methods, which means swapping algorithms is a one-line change. Start every problem with `DummyClassifier` — if your real model cannot beat 'always predict the majority class' by a clear margin, something is wrong with the data, not the model.
@@ -160,6 +170,8 @@ print(f'dummy {baseline.score(Xte, yte):.3f}   model {model.score(Xte, yte):.3f}
 **Remember:** Report your model's score next to the dummy's. A number alone means nothing.
 
 **Common mistake:** Celebrating 92% accuracy on data where 91% of rows are one class.
+
+Practice: open `examples/06_compare_against_the_dummy_baseline.py`, predict the output, change one line, predict again.
 
 ## 7. Look at the worst predictions by hand
 
@@ -186,6 +198,8 @@ sanity_report(X, rng.integers(0, 3, 200), 3)
 
 **Common mistake:** Tuning hyperparameters for two days on a pipeline whose labels were misaligned by one row.
 
+Practice: open `examples/07_look_at_the_worst_predictions_by_hand.py`, predict the output, change one line, predict again.
+
 ## 8. Check the split for contamination
 
 Debug in a fixed order, cheapest test first. Can the model overfit 20 rows to zero loss? If not, the bug is in the data or the wiring, not the capacity. Is the loss at step zero what random guessing predicts? If not, the labels or the output layer are wrong.
@@ -211,6 +225,8 @@ sanity_report(X, rng.integers(0, 3, 200), 3)
 
 **Common mistake:** Tuning hyperparameters for two days on a pipeline whose labels were misaligned by one row.
 
+Practice: open `examples/08_check_the_split_for_contamination.py`, predict the output, change one line, predict again.
+
 ## 9. Simplify until it works, then rebuild
 
 Projects are where the learning sticks. Build a thin end-to-end slice first — load data, train something dumb, evaluate, serve one prediction — then improve one layer at a time. A working baseline on day one beats a perfect model that never ships.
@@ -232,6 +248,8 @@ for s in STEPS:
 **Remember:** Spend an hour looking at wrong predictions before you spend a day tuning hyperparameters.
 
 **Common mistake:** Six weeks of feature engineering with no baseline to prove any of it helped.
+
+Practice: open `examples/09_simplify_until_it_works_then_rebuild.py`, predict the output, change one line, predict again.
 
 ## 10. A systematic debugging checklist
 
@@ -257,6 +275,8 @@ sanity_report(X, rng.integers(0, 3, 200), 3)
 **Remember:** Expected cross-entropy at initialisation is ln(n_classes). A different value means a wiring bug.
 
 **Common mistake:** Tuning hyperparameters for two days on a pipeline whose labels were misaligned by one row.
+
+Practice: open `examples/10_a_systematic_debugging_checklist.py`, predict the output, change one line, predict again.
 
 ---
 

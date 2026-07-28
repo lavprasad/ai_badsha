@@ -52,6 +52,8 @@ print(with_retries(flaky))
 
 **Common mistake:** Infinite retries on a 400-class error that will never succeed, hammering the API and your budget.
 
+Practice: open `examples/01_anatomy_of_a_chat_completion_request.py`, predict the output, change one line, predict again.
+
 ## 2. System prompts and message roles
 
 A prompt is a program written in English. Be specific about role, task, format and constraints. Few-shot examples teach format better than any description. Asking for reasoning steps helps on multi-step problems and wastes tokens on simple lookups.
@@ -75,6 +77,8 @@ print('Structure: role -> task -> allowed outputs -> format -> examples -> input
 **Remember:** Put the output format last and show it as an example — models copy the nearest pattern.
 
 **Common mistake:** Writing a vague prompt, getting vague output, and blaming the model.
+
+Practice: open `examples/02_system_prompts_and_message_roles.py`, predict the output, change one line, predict again.
 
 ## 3. max_tokens and stop conditions
 
@@ -104,6 +108,8 @@ print('sampled:', generate(dist, greedy=False))
 
 **Common mistake:** Leaving max_tokens unbounded on a retry loop and burning a month's budget overnight.
 
+Practice: open `examples/03_max_tokens_and_stop_conditions.py`, predict the output, change one line, predict again.
+
 ## 4. Streaming responses
 
 Temperature 0 is near-deterministic and right for extraction; higher values add diversity for creative work. Top-p keeps the smallest set of tokens covering p of the probability mass. Cost is per token in and out, so trimming the prompt is the cheapest optimisation there is.
@@ -128,6 +134,8 @@ print('creative  (T=1.5):', sample(logits, temperature=1.5, seed=3))
 **Remember:** Use temperature 0 for anything you will parse; save randomness for prose.
 
 **Common mistake:** Running extraction at temperature 1 and debugging 'random' JSON failures for a week.
+
+Practice: open `examples/04_streaming_responses.py`, predict the output, change one line, predict again.
 
 ## 5. Retries, timeouts and backoff
 
@@ -164,6 +172,8 @@ print(with_retries(flaky))
 
 **Common mistake:** Infinite retries on a 400-class error that will never succeed, hammering the API and your budget.
 
+Practice: open `examples/05_retries_timeouts_and_backoff.py`, predict the output, change one line, predict again.
+
 ## 6. Rate limits and concurrency
 
 Any network call to a model will eventually time out, get rate-limited, or return malformed output. A production client needs timeouts, bounded retries with exponential backoff and jitter, a concurrency cap, and per-request cost logging. Write it once and reuse it everywhere.
@@ -198,6 +208,8 @@ print(with_retries(flaky))
 **Remember:** Jitter matters: without it, every client retries at the same instant and re-creates the outage.
 
 **Common mistake:** Infinite retries on a 400-class error that will never succeed, hammering the API and your budget.
+
+Practice: open `examples/06_rate_limits_and_concurrency.py`, predict the output, change one line, predict again.
 
 ## 7. Cost tracking per request
 
@@ -234,6 +246,8 @@ print(with_retries(flaky))
 
 **Common mistake:** Infinite retries on a 400-class error that will never succeed, hammering the API and your budget.
 
+Practice: open `examples/07_cost_tracking_per_request.py`, predict the output, change one line, predict again.
+
 ## 8. Prompt caching for stable prefixes
 
 The Messages API takes a system prompt plus alternating user/assistant turns and returns content blocks. Put stable content (long instructions, retrieved corpora) at the front and mark it cacheable — cache hits cut both latency and cost sharply. Stream when a human is waiting.
@@ -256,6 +270,8 @@ print('Stable prefix first + cache_control -> cheaper, faster repeat calls.')
 **Remember:** Never hard-code an API key. Read it from the environment and keep it out of git.
 
 **Common mistake:** Rebuilding the prompt in a different order each call, so nothing ever hits the cache.
+
+Practice: open `examples/08_prompt_caching_for_stable_prefixes.py`, predict the output, change one line, predict again.
 
 ## 9. Structured outputs and tool schemas
 
@@ -286,6 +302,8 @@ except (json.JSONDecodeError, AssertionError) as e:
 **Remember:** Validate every model-produced payload against the schema before it reaches your database.
 
 **Common mistake:** Passing model output straight into `eval`, a shell command, or an SQL string.
+
+Practice: open `examples/09_structured_outputs_and_tool_schemas.py`, predict the output, change one line, predict again.
 
 ## 10. A resilient API client wrapper
 
@@ -321,6 +339,8 @@ print(with_retries(flaky))
 **Remember:** Jitter matters: without it, every client retries at the same instant and re-creates the outage.
 
 **Common mistake:** Infinite retries on a 400-class error that will never succeed, hammering the API and your budget.
+
+Practice: open `examples/10_a_resilient_api_client_wrapper.py`, predict the output, change one line, predict again.
 
 ---
 

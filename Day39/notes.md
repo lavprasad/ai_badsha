@@ -39,6 +39,8 @@ print(df)
 
 **Common mistake:** Building a feature from a column that is only filled in AFTER the event you are predicting.
 
+Practice: open `examples/01_features_carry_more_weight_than_algorith.py`, predict the output, change one line, predict again.
+
 ## 2. Ratios and differences
 
 Feature engineering is where domain knowledge beats compute. A ratio, a lag, a time-since-last-event, or a count over a window often adds more than switching algorithms. Selection then removes features that add variance without signal.
@@ -60,6 +62,8 @@ print(df)
 **Remember:** Every engineered feature must be computable at prediction time with data you will actually have.
 
 **Common mistake:** Building a feature from a column that is only filled in AFTER the event you are predicting.
+
+Practice: open `examples/02_ratios_and_differences.py`, predict the output, change one line, predict again.
 
 ## 3. Aggregations over groups
 
@@ -83,6 +87,8 @@ print(df)
 
 **Common mistake:** Building a feature from a column that is only filled in AFTER the event you are predicting.
 
+Practice: open `examples/03_aggregations_over_groups.py`, predict the output, change one line, predict again.
+
 ## 4. Date and time features
 
 Feature engineering is where domain knowledge beats compute. A ratio, a lag, a time-since-last-event, or a count over a window often adds more than switching algorithms. Selection then removes features that add variance without signal.
@@ -104,6 +110,8 @@ print(df)
 **Remember:** Every engineered feature must be computable at prediction time with data you will actually have.
 
 **Common mistake:** Building a feature from a column that is only filled in AFTER the event you are predicting.
+
+Practice: open `examples/04_date_and_time_features.py`, predict the output, change one line, predict again.
 
 ## 5. Lag and rolling features
 
@@ -127,6 +135,8 @@ print(df)
 
 **Common mistake:** Building a feature from a column that is only filled in AFTER the event you are predicting.
 
+Practice: open `examples/05_lag_and_rolling_features.py`, predict the output, change one line, predict again.
+
 ## 6. Binning and discretisation
 
 Feature engineering is where domain knowledge beats compute. A ratio, a lag, a time-since-last-event, or a count over a window often adds more than switching algorithms. Selection then removes features that add variance without signal.
@@ -148,6 +158,8 @@ print(df)
 **Remember:** Every engineered feature must be computable at prediction time with data you will actually have.
 
 **Common mistake:** Building a feature from a column that is only filled in AFTER the event you are predicting.
+
+Practice: open `examples/06_binning_and_discretisation.py`, predict the output, change one line, predict again.
 
 ## 7. Interaction terms
 
@@ -171,6 +183,8 @@ print(df)
 
 **Common mistake:** Building a feature from a column that is only filled in AFTER the event you are predicting.
 
+Practice: open `examples/07_interaction_terms.py`, predict the output, change one line, predict again.
+
 ## 8. Domain features from expert knowledge
 
 Feature engineering is where domain knowledge beats compute. A ratio, a lag, a time-since-last-event, or a count over a window often adds more than switching algorithms. Selection then removes features that add variance without signal.
@@ -192,6 +206,8 @@ print(df)
 **Remember:** Every engineered feature must be computable at prediction time with data you will actually have.
 
 **Common mistake:** Building a feature from a column that is only filled in AFTER the event you are predicting.
+
+Practice: open `examples/08_domain_features_from_expert_knowledge.py`, predict the output, change one line, predict again.
 
 ## 9. Text length and simple text features
 
@@ -215,6 +231,8 @@ print(df)
 
 **Common mistake:** Building a feature from a column that is only filled in AFTER the event you are predicting.
 
+Practice: open `examples/09_text_length_and_simple_text_features.py`, predict the output, change one line, predict again.
+
 ## 10. Documenting every feature's meaning
 
 The mean is pulled around by outliers; the median is not. Report both, plus a spread measure. When mean and median disagree sharply, the distribution is skewed and averages are lying to you.
@@ -235,6 +253,8 @@ print('outliers', salaries[(salaries < q1 - 1.5 * iqr) | (salaries > q3 + 1.5 * 
 **Remember:** Quote median + IQR for skewed data, mean + std only for roughly symmetric data.
 
 **Common mistake:** Removing 'outliers' automatically when they are the exact events you were hired to predict.
+
+Practice: open `examples/10_documenting_every_feature_s_meaning.py`, predict the output, change one line, predict again.
 
 ---
 

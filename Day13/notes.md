@@ -49,6 +49,8 @@ for r in rows:
 
 **Common mistake:** `SELECT *` on a wide table, then dropping 90% of the columns in pandas.
 
+Practice: open `examples/01_why_sql_is_still_where_the_data_lives.py`, predict the output, change one line, predict again.
+
 ## 2. SELECT, WHERE, ORDER BY, LIMIT
 
 Most production data lives in a database, and pulling ten million rows into pandas to compute one average is a waste of everything. Aggregate in SQL, bring back the small result. Window functions give you lag features and running totals without leaving the database.
@@ -80,6 +82,8 @@ for r in rows:
 **Remember:** Push filtering and aggregation into SQL; pull only what you will actually model on.
 
 **Common mistake:** `SELECT *` on a wide table, then dropping 90% of the columns in pandas.
+
+Practice: open `examples/02_select_where_order_by_limit.py`, predict the output, change one line, predict again.
 
 ## 3. GROUP BY and HAVING
 
@@ -113,6 +117,8 @@ for r in rows:
 
 **Common mistake:** `SELECT *` on a wide table, then dropping 90% of the columns in pandas.
 
+Practice: open `examples/03_group_by_and_having.py`, predict the output, change one line, predict again.
+
 ## 4. JOIN types and row explosions
 
 A DataFrame is a table with labelled columns and an index. Most real ML work is 80% reshaping tables: load, clean, group, join, aggregate. Learn `groupby` and `merge` well and you can answer most data questions without writing loops.
@@ -133,6 +139,8 @@ print(df.merge(lookup, on='city', how='left'))
 **Remember:** Always check `df.shape` before and after a merge — a silent row explosion means duplicate keys.
 
 **Common mistake:** Chained assignment (`df[df.a > 1]['b'] = 0`) that writes to a copy and changes nothing.
+
+Practice: open `examples/04_join_types_and_row_explosions.py`, predict the output, change one line, predict again.
 
 ## 5. Window functions for lag features
 
@@ -159,6 +167,8 @@ print('train ends', feat.index[cut - 1].date(), '| test starts', feat.index[cut]
 **Remember:** Every feature must use `.shift(1)` or later — no row may see its own future.
 
 **Common mistake:** A rolling mean that includes the current row, which leaks the target into the feature.
+
+Practice: open `examples/05_window_functions_for_lag_features.py`, predict the output, change one line, predict again.
 
 ## 6. CTEs for readable queries
 
@@ -192,6 +202,8 @@ for r in rows:
 
 **Common mistake:** `SELECT *` on a wide table, then dropping 90% of the columns in pandas.
 
+Practice: open `examples/06_ctes_for_readable_queries.py`, predict the output, change one line, predict again.
+
 ## 7. sqlite3 from Python
 
 Most production data lives in a database, and pulling ten million rows into pandas to compute one average is a waste of everything. Aggregate in SQL, bring back the small result. Window functions give you lag features and running totals without leaving the database.
@@ -224,6 +236,8 @@ for r in rows:
 
 **Common mistake:** `SELECT *` on a wide table, then dropping 90% of the columns in pandas.
 
+Practice: open `examples/07_sqlite3_from_python.py`, predict the output, change one line, predict again.
+
 ## 8. pandas read_sql and to_sql
 
 A DataFrame is a table with labelled columns and an index. Most real ML work is 80% reshaping tables: load, clean, group, join, aggregate. Learn `groupby` and `merge` well and you can answer most data questions without writing loops.
@@ -244,6 +258,8 @@ print(df.merge(lookup, on='city', how='left'))
 **Remember:** Always check `df.shape` before and after a merge — a silent row explosion means duplicate keys.
 
 **Common mistake:** Chained assignment (`df[df.a > 1]['b'] = 0`) that writes to a copy and changes nothing.
+
+Practice: open `examples/08_pandas_read_sql_and_to_sql.py`, predict the output, change one line, predict again.
 
 ## 9. Pushing aggregation to the database
 
@@ -277,6 +293,8 @@ for r in rows:
 
 **Common mistake:** `SELECT *` on a wide table, then dropping 90% of the columns in pandas.
 
+Practice: open `examples/09_pushing_aggregation_to_the_database.py`, predict the output, change one line, predict again.
+
 ## 10. Query performance basics
 
 Most production data lives in a database, and pulling ten million rows into pandas to compute one average is a waste of everything. Aggregate in SQL, bring back the small result. Window functions give you lag features and running totals without leaving the database.
@@ -308,6 +326,8 @@ for r in rows:
 **Remember:** Push filtering and aggregation into SQL; pull only what you will actually model on.
 
 **Common mistake:** `SELECT *` on a wide table, then dropping 90% of the columns in pandas.
+
+Practice: open `examples/10_query_performance_basics.py`, predict the output, change one line, predict again.
 
 ---
 

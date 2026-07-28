@@ -37,6 +37,8 @@ print('Transfer learning: freeze backbone, replace head, train head, then unfree
 
 **Common mistake:** Fine-tuning the whole network at 1e-3 and washing away everything ImageNet taught it.
 
+Practice: open `examples/01_why_pretrained_features_transfer.py`, predict the output, change one line, predict again.
+
 ## 2. Feature extraction: freeze the backbone
 
 Almost nobody trains a vision model from scratch. Take a network pretrained on millions of images, replace the last layer, and either freeze the backbone (small data) or fine-tune it at a low learning rate (more data). This is the highest-leverage trick in applied vision.
@@ -56,6 +58,8 @@ print('Transfer learning: freeze backbone, replace head, train head, then unfree
 **Remember:** Use the exact normalisation statistics the pretrained model was trained with.
 
 **Common mistake:** Fine-tuning the whole network at 1e-3 and washing away everything ImageNet taught it.
+
+Practice: open `examples/02_feature_extraction_freeze_the_backbone.py`, predict the output, change one line, predict again.
 
 ## 3. Fine-tuning: unfreeze at a low LR
 
@@ -84,6 +88,8 @@ print(search.best_params_, round(search.best_score_, 4))
 
 **Common mistake:** Tuning 40 hyperparameters on 400 rows — you are now fitting the validation set.
 
+Practice: open `examples/03_fine_tuning_unfreeze_at_a_low_lr.py`, predict the output, change one line, predict again.
+
 ## 4. Replacing the classification head
 
 Almost nobody trains a vision model from scratch. Take a network pretrained on millions of images, replace the last layer, and either freeze the backbone (small data) or fine-tune it at a low learning rate (more data). This is the highest-leverage trick in applied vision.
@@ -103,6 +109,8 @@ print('Transfer learning: freeze backbone, replace head, train head, then unfree
 **Remember:** Use the exact normalisation statistics the pretrained model was trained with.
 
 **Common mistake:** Fine-tuning the whole network at 1e-3 and washing away everything ImageNet taught it.
+
+Practice: open `examples/04_replacing_the_classification_head.py`, predict the output, change one line, predict again.
 
 ## 5. Discriminative learning rates per layer
 
@@ -130,6 +138,8 @@ print('learned', np.round(w, 3), 'target', true_w)
 
 **Common mistake:** Leaving the learning rate fixed forever instead of decaying it once the loss plateaus.
 
+Practice: open `examples/05_discriminative_learning_rates_per_layer.py`, predict the output, change one line, predict again.
+
 ## 6. How much data you need for each strategy
 
 Almost nobody trains a vision model from scratch. Take a network pretrained on millions of images, replace the last layer, and either freeze the backbone (small data) or fine-tune it at a low learning rate (more data). This is the highest-leverage trick in applied vision.
@@ -150,6 +160,8 @@ print('Transfer learning: freeze backbone, replace head, train head, then unfree
 
 **Common mistake:** Fine-tuning the whole network at 1e-3 and washing away everything ImageNet taught it.
 
+Practice: open `examples/06_how_much_data_you_need_for_each_strategy.py`, predict the output, change one line, predict again.
+
 ## 7. Domain gap and when transfer fails
 
 Almost nobody trains a vision model from scratch. Take a network pretrained on millions of images, replace the last layer, and either freeze the backbone (small data) or fine-tune it at a low learning rate (more data). This is the highest-leverage trick in applied vision.
@@ -169,6 +181,8 @@ print('Transfer learning: freeze backbone, replace head, train head, then unfree
 **Remember:** Use the exact normalisation statistics the pretrained model was trained with.
 
 **Common mistake:** Fine-tuning the whole network at 1e-3 and washing away everything ImageNet taught it.
+
+Practice: open `examples/07_domain_gap_and_when_transfer_fails.py`, predict the output, change one line, predict again.
 
 ## 8. Matching preprocessing to the pretrained model
 
@@ -191,6 +205,8 @@ print('roc auc', round(roc_auc_score(yte, m.predict_proba(Xte)[:, 1]), 4))
 **Remember:** Tune the decision threshold on validation data; 0.5 is a default, not a decision.
 
 **Common mistake:** Optimising ROC-AUC on a heavily imbalanced problem where precision-recall AUC is the honest metric.
+
+Practice: open `examples/08_matching_preprocessing_to_the_pretrained.py`, predict the output, change one line, predict again.
 
 ## 9. Timm and torchvision model zoos
 
@@ -220,6 +236,8 @@ print('final loss', round(loss.item(), 4))
 
 **Common mistake:** Calling `loss.backward()` twice without `retain_graph` and getting a confusing runtime error.
 
+Practice: open `examples/09_timm_and_torchvision_model_zoos.py`, predict the output, change one line, predict again.
+
 ## 10. Fine-tuning on a few hundred images
 
 Hyperparameters are the settings you choose, not learn. Grid search is exhaustive and wasteful; random search finds good regions faster in high dimensions; Bayesian search learns from previous trials. Always search inside cross-validation.
@@ -246,6 +264,8 @@ print(search.best_params_, round(search.best_score_, 4))
 **Remember:** Fix the random seed and log every trial, or you cannot reproduce your own best model.
 
 **Common mistake:** Tuning 40 hyperparameters on 400 rows — you are now fitting the validation set.
+
+Practice: open `examples/10_fine_tuning_on_a_few_hundred_images.py`, predict the output, change one line, predict again.
 
 ---
 

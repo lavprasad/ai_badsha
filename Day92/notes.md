@@ -42,6 +42,8 @@ print('states shape', states.shape)
 
 **Common mistake:** Feeding unsorted variable-length sequences without padding masks, so padding tokens pollute the state.
 
+Practice: open `examples/01_sequential_data_and_order.py`, predict the output, change one line, predict again.
+
 ## 2. The recurrent cell and hidden state
 
 An RNN carries a hidden state along the sequence, so order matters. Plain RNNs forget quickly because gradients vanish over long spans; LSTM and GRU add gates that let information flow unchanged across many steps. Transformers have largely replaced them, but the intuition about state and memory still matters.
@@ -66,6 +68,8 @@ print('states shape', states.shape)
 **Remember:** RNNs are inherently sequential — they cannot parallelise across time, which is why transformers won.
 
 **Common mistake:** Feeding unsorted variable-length sequences without padding masks, so padding tokens pollute the state.
+
+Practice: open `examples/02_the_recurrent_cell_and_hidden_state.py`, predict the output, change one line, predict again.
 
 ## 3. Backpropagation through time
 
@@ -93,6 +97,8 @@ print('numeric dy/dw', (((w + h) * x + b) ** 2 - ((w - h) * x + b) ** 2) / (2 * 
 
 **Common mistake:** Forgetting to zero gradients between steps, so they accumulate and the model diverges.
 
+Practice: open `examples/03_backpropagation_through_time.py`, predict the output, change one line, predict again.
+
 ## 4. Vanishing gradients over long sequences
 
 The derivative answers: if I nudge this input a little, how much does the output move? The gradient is that answer for every input at once, so it points uphill. Training walks downhill by stepping against the gradient. The chain rule is what lets you propagate that answer through a stack of layers.
@@ -114,6 +120,8 @@ print('analytic ', 2 * x + 3)   # should match to ~1e-6
 **Remember:** A central difference `(f(x+h)-f(x-h))/2h` is the cheapest way to check a hand-written gradient.
 
 **Common mistake:** Trusting a derivation you never gradient-checked; a sign error trains slowly instead of failing loudly.
+
+Practice: open `examples/04_vanishing_gradients_over_long_sequences.py`, predict the output, change one line, predict again.
 
 ## 5. LSTM gates
 
@@ -140,6 +148,8 @@ print('states shape', states.shape)
 
 **Common mistake:** Feeding unsorted variable-length sequences without padding masks, so padding tokens pollute the state.
 
+Practice: open `examples/05_lstm_gates.py`, predict the output, change one line, predict again.
+
 ## 6. GRU
 
 An RNN carries a hidden state along the sequence, so order matters. Plain RNNs forget quickly because gradients vanish over long spans; LSTM and GRU add gates that let information flow unchanged across many steps. Transformers have largely replaced them, but the intuition about state and memory still matters.
@@ -164,6 +174,8 @@ print('states shape', states.shape)
 **Remember:** RNNs are inherently sequential — they cannot parallelise across time, which is why transformers won.
 
 **Common mistake:** Feeding unsorted variable-length sequences without padding masks, so padding tokens pollute the state.
+
+Practice: open `examples/06_gru.py`, predict the output, change one line, predict again.
 
 ## 7. Bidirectional RNNs
 
@@ -190,6 +202,8 @@ print('states shape', states.shape)
 
 **Common mistake:** Feeding unsorted variable-length sequences without padding masks, so padding tokens pollute the state.
 
+Practice: open `examples/07_bidirectional_rnns.py`, predict the output, change one line, predict again.
+
 ## 8. Sequence-to-sequence architecture
 
 An RNN carries a hidden state along the sequence, so order matters. Plain RNNs forget quickly because gradients vanish over long spans; LSTM and GRU add gates that let information flow unchanged across many steps. Transformers have largely replaced them, but the intuition about state and memory still matters.
@@ -214,6 +228,8 @@ print('states shape', states.shape)
 **Remember:** RNNs are inherently sequential — they cannot parallelise across time, which is why transformers won.
 
 **Common mistake:** Feeding unsorted variable-length sequences without padding masks, so padding tokens pollute the state.
+
+Practice: open `examples/08_sequence_to_sequence_architecture.py`, predict the output, change one line, predict again.
 
 ## 9. Padding, packing and masks
 
@@ -242,6 +258,8 @@ print(out)   # the edge column lights up
 
 **Common mistake:** Forgetting the channel dimension and feeding (H,W) where the layer expects (N,C,H,W).
 
+Practice: open `examples/09_padding_packing_and_masks.py`, predict the output, change one line, predict again.
+
 ## 10. Why transformers replaced them
 
 An RNN carries a hidden state along the sequence, so order matters. Plain RNNs forget quickly because gradients vanish over long spans; LSTM and GRU add gates that let information flow unchanged across many steps. Transformers have largely replaced them, but the intuition about state and memory still matters.
@@ -266,6 +284,8 @@ print('states shape', states.shape)
 **Remember:** RNNs are inherently sequential — they cannot parallelise across time, which is why transformers won.
 
 **Common mistake:** Feeding unsorted variable-length sequences without padding masks, so padding tokens pollute the state.
+
+Practice: open `examples/10_why_transformers_replaced_them.py`, predict the output, change one line, predict again.
 
 ---
 

@@ -42,6 +42,8 @@ print('creative  (T=1.5):', sample(logits, temperature=1.5, seed=3))
 
 **Common mistake:** Running extraction at temperature 1 and debugging 'random' JSON failures for a week.
 
+Practice: open `examples/01_why_inference_cost_matters_more_than_tra.py`, predict the output, change one line, predict again.
+
 ## 2. Quantisation: int8 and int4
 
 LoRA freezes the base weights and trains two small low-rank matrices whose product is added to each target layer. You update ~0.1% of the parameters, the checkpoint is megabytes not gigabytes, and you can swap adapters per customer. QLoRA adds 4-bit base weights so a 7B model fits on one consumer GPU.
@@ -64,6 +66,8 @@ print('effective W = W + A@B, shape', (W + delta).shape)
 **Remember:** Initialise B to zeros so the adapted model starts exactly equal to the base model.
 
 **Common mistake:** Setting rank far too high — you lose the efficiency and gain the overfitting.
+
+Practice: open `examples/02_quantisation_int8_and_int4.py`, predict the output, change one line, predict again.
 
 ## 3. Post-training vs quantisation-aware training
 
@@ -88,6 +92,8 @@ print('effective W = W + A@B, shape', (W + delta).shape)
 
 **Common mistake:** Setting rank far too high — you lose the efficiency and gain the overfitting.
 
+Practice: open `examples/03_post_training_vs_quantisation_aware_trai.py`, predict the output, change one line, predict again.
+
 ## 4. Pruning: structured and unstructured
 
 A tree asks yes/no questions, splitting to make each side purer. It needs no scaling, handles mixed types, and reads like a flowchart. Left unconstrained it memorises the training set perfectly, so depth and leaf-size limits are mandatory.
@@ -104,6 +110,8 @@ print(export_text(tree, feature_names=load_iris().feature_names))
 **Remember:** A single unpruned tree is almost always worse than a small forest — but it is readable, which sometimes wins.
 
 **Common mistake:** Trusting a deep tree's feature importances; they are unstable and biased toward high-cardinality columns.
+
+Practice: open `examples/04_pruning_structured_and_unstructured.py`, predict the output, change one line, predict again.
 
 ## 5. Knowledge distillation
 
@@ -122,6 +130,8 @@ print('\nPlus KV cache and activations at runtime — budget roughly 20-30% more
 
 **Common mistake:** Shipping an int4 model because it fits, without ever measuring what accuracy it cost you.
 
+Practice: open `examples/05_knowledge_distillation.py`, predict the output, change one line, predict again.
+
 ## 6. Low-rank factorisation
 
 Training cost is paid once; inference cost is paid on every request forever. Distillation trains a small student on the large teacher's outputs, quantisation stores weights in fewer bits, and ONNX gives you one artefact that runs across runtimes. Measure the accuracy you lose against the latency you gain.
@@ -138,6 +148,8 @@ print('\nPlus KV cache and activations at runtime — budget roughly 20-30% more
 **Remember:** Quantise, measure quality on your own eval set, then decide. Published benchmarks are not your task.
 
 **Common mistake:** Shipping an int4 model because it fits, without ever measuring what accuracy it cost you.
+
+Practice: open `examples/06_low_rank_factorisation.py`, predict the output, change one line, predict again.
 
 ## 7. Operator fusion
 
@@ -156,6 +168,8 @@ print('\nPlus KV cache and activations at runtime — budget roughly 20-30% more
 
 **Common mistake:** Shipping an int4 model because it fits, without ever measuring what accuracy it cost you.
 
+Practice: open `examples/07_operator_fusion.py`, predict the output, change one line, predict again.
+
 ## 8. ONNX and runtime portability
 
 Training cost is paid once; inference cost is paid on every request forever. Distillation trains a small student on the large teacher's outputs, quantisation stores weights in fewer bits, and ONNX gives you one artefact that runs across runtimes. Measure the accuracy you lose against the latency you gain.
@@ -172,6 +186,8 @@ print('\nPlus KV cache and activations at runtime — budget roughly 20-30% more
 **Remember:** Quantise, measure quality on your own eval set, then decide. Published benchmarks are not your task.
 
 **Common mistake:** Shipping an int4 model because it fits, without ever measuring what accuracy it cost you.
+
+Practice: open `examples/08_onnx_and_runtime_portability.py`, predict the output, change one line, predict again.
 
 ## 9. Measuring the accuracy/latency trade-off
 
@@ -195,6 +211,8 @@ print('roc auc', round(roc_auc_score(yte, m.predict_proba(Xte)[:, 1]), 4))
 
 **Common mistake:** Optimising ROC-AUC on a heavily imbalanced problem where precision-recall AUC is the honest metric.
 
+Practice: open `examples/09_measuring_the_accuracy_latency_trade_off.py`, predict the output, change one line, predict again.
+
 ## 10. Shrinking a model for edge deployment
 
 A container packages code, dependencies and the interpreter so it runs identically everywhere. Pin your versions, use a slim base, and keep model weights out of the image layer if they are large — mount or download them instead.
@@ -216,6 +234,8 @@ print('Copy requirements first so the pip layer caches across code changes.')
 **Remember:** `--no-cache-dir` and a slim base keep images small; small images deploy fast.
 
 **Common mistake:** `COPY . .` before `pip install`, which busts the dependency cache on every code edit.
+
+Practice: open `examples/10_shrinking_a_model_for_edge_deployment.py`, predict the output, change one line, predict again.
 
 ---
 

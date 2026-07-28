@@ -42,6 +42,8 @@ sanity_report(X, rng.integers(0, 3, 200), 3)
 
 **Common mistake:** Tuning hyperparameters for two days on a pipeline whose labels were misaligned by one row.
 
+Practice: open `examples/01_overfit_a_single_batch_first.py`, predict the output, change one line, predict again.
+
 ## 2. Check loss at initialisation
 
 Debug in a fixed order, cheapest test first. Can the model overfit 20 rows to zero loss? If not, the bug is in the data or the wiring, not the capacity. Is the loss at step zero what random guessing predicts? If not, the labels or the output layer are wrong.
@@ -67,6 +69,8 @@ sanity_report(X, rng.integers(0, 3, 200), 3)
 
 **Common mistake:** Tuning hyperparameters for two days on a pipeline whose labels were misaligned by one row.
 
+Practice: open `examples/02_check_loss_at_initialisation.py`, predict the output, change one line, predict again.
+
 ## 3. Verify the data reaching the model
 
 Today's idea — **Verify the data reaching the model** — sits inside the theme of Debugging neural networks. Read it as a tool, not trivia: what job does it do, what does it assume about your data, and what breaks when that assumption is false?
@@ -82,6 +86,8 @@ print("practice: Verify the data reaching the model")
 **Remember:** State one assumption `Verify the data reaching the model` makes about your data before you use it.
 
 **Common mistake:** Copy-pasting `Verify the data reaching the model` from a tutorial without knowing what it assumes or when it fails.
+
+Practice: open `examples/03_verify_the_data_reaching_the_model.py`, predict the output, change one line, predict again.
 
 ## 4. Shape errors and how to read them
 
@@ -108,6 +114,8 @@ for i in np.argsort(-imp.importances_mean)[:5]:
 
 **Common mistake:** Presenting importance as causation — the model found correlation, nothing more.
 
+Practice: open `examples/04_shape_errors_and_how_to_read_them.py`, predict the output, change one line, predict again.
+
 ## 5. NaN loss: causes and fixes
 
 Missing data is information, not just noise. Before filling anything, ask *why* it is missing: a sensor that fails only under load is not missing at random. Then choose: drop rows, drop the column, fill with a statistic, or add an explicit 'was missing' indicator column.
@@ -127,6 +135,8 @@ print(df)
 **Remember:** Compute the fill statistic on the TRAIN split only, then apply it to test.
 
 **Common mistake:** Filling with the mean computed over the full dataset — that leaks test information into training.
+
+Practice: open `examples/05_nan_loss_causes_and_fixes.py`, predict the output, change one line, predict again.
 
 ## 6. Exploding and vanishing gradients
 
@@ -149,6 +159,8 @@ print('analytic ', 2 * x + 3)   # should match to ~1e-6
 **Remember:** A central difference `(f(x+h)-f(x-h))/2h` is the cheapest way to check a hand-written gradient.
 
 **Common mistake:** Trusting a derivation you never gradient-checked; a sign error trains slowly instead of failing loudly.
+
+Practice: open `examples/06_exploding_and_vanishing_gradients.py`, predict the output, change one line, predict again.
 
 ## 7. Learning rate diagnosis from the curve
 
@@ -176,6 +188,8 @@ print('learned', np.round(w, 3), 'target', true_w)
 
 **Common mistake:** Leaving the learning rate fixed forever instead of decaying it once the loss plateaus.
 
+Practice: open `examples/07_learning_rate_diagnosis_from_the_curve.py`, predict the output, change one line, predict again.
+
 ## 8. Dead ReLU detection
 
 ReLU is the default: cheap, and it does not saturate for positive inputs. Sigmoid and tanh squash into a fixed range and kill gradients at the extremes. GELU/SiLU are smoother ReLUs used in transformers. Softmax turns a vector of scores into a probability distribution.
@@ -197,6 +211,8 @@ print('relu   ', np.maximum(0, np.array([-1.0, 0.0, 2.0])))
 
 **Common mistake:** Putting a softmax on the final layer AND using a loss that applies softmax internally.
 
+Practice: open `examples/08_dead_relu_detection.py`, predict the output, change one line, predict again.
+
 ## 9. Comparing against a simple baseline
 
 Today's idea — **Comparing against a simple baseline** — sits inside the theme of Debugging neural networks. Read it as a tool, not trivia: what job does it do, what does it assume about your data, and what breaks when that assumption is false?
@@ -212,6 +228,8 @@ print("practice: Comparing against a simple baseline")
 **Remember:** State one assumption `Comparing against a simple baseline` makes about your data before you use it.
 
 **Common mistake:** Copy-pasting `Comparing against a simple baseline` from a tutorial without knowing what it assumes or when it fails.
+
+Practice: open `examples/09_comparing_against_a_simple_baseline.py`, predict the output, change one line, predict again.
 
 ## 10. A deep learning debugging checklist
 
@@ -237,6 +255,8 @@ sanity_report(X, rng.integers(0, 3, 200), 3)
 **Remember:** Expected cross-entropy at initialisation is ln(n_classes). A different value means a wiring bug.
 
 **Common mistake:** Tuning hyperparameters for two days on a pipeline whose labels were misaligned by one row.
+
+Practice: open `examples/10_a_deep_learning_debugging_checklist.py`, predict the output, change one line, predict again.
 
 ---
 

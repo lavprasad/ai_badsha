@@ -38,6 +38,8 @@ print(df.merge(lookup, on='city', how='left'))
 
 **Common mistake:** Chained assignment (`df[df.a > 1]['b'] = 0`) that writes to a copy and changes nothing.
 
+Practice: open `examples/01_what_makes_time_series_different.py`, predict the output, change one line, predict again.
+
 ## 2. Trend, seasonality, residual decomposition
 
 A DataFrame is a table with labelled columns and an index. Most real ML work is 80% reshaping tables: load, clean, group, join, aggregate. Learn `groupby` and `merge` well and you can answer most data questions without writing loops.
@@ -58,6 +60,8 @@ print(df.merge(lookup, on='city', how='left'))
 **Remember:** Always check `df.shape` before and after a merge — a silent row explosion means duplicate keys.
 
 **Common mistake:** Chained assignment (`df[df.a > 1]['b'] = 0`) that writes to a copy and changes nothing.
+
+Practice: open `examples/02_trend_seasonality_residual_decomposition.py`, predict the output, change one line, predict again.
 
 ## 3. Stationarity and differencing
 
@@ -80,6 +84,8 @@ print(df.merge(lookup, on='city', how='left'))
 
 **Common mistake:** Chained assignment (`df[df.a > 1]['b'] = 0`) that writes to a copy and changes nothing.
 
+Practice: open `examples/03_stationarity_and_differencing.py`, predict the output, change one line, predict again.
+
 ## 4. Autocorrelation and partial autocorrelation
 
 A DataFrame is a table with labelled columns and an index. Most real ML work is 80% reshaping tables: load, clean, group, join, aggregate. Learn `groupby` and `merge` well and you can answer most data questions without writing loops.
@@ -100,6 +106,8 @@ print(df.merge(lookup, on='city', how='left'))
 **Remember:** Always check `df.shape` before and after a merge — a silent row explosion means duplicate keys.
 
 **Common mistake:** Chained assignment (`df[df.a > 1]['b'] = 0`) that writes to a copy and changes nothing.
+
+Practice: open `examples/04_autocorrelation_and_partial_autocorrelat.py`, predict the output, change one line, predict again.
 
 ## 5. ARIMA family
 
@@ -122,6 +130,8 @@ print(df.merge(lookup, on='city', how='left'))
 
 **Common mistake:** Chained assignment (`df[df.a > 1]['b'] = 0`) that writes to a copy and changes nothing.
 
+Practice: open `examples/05_arima_family.py`, predict the output, change one line, predict again.
+
 ## 6. Exponential smoothing
 
 A DataFrame is a table with labelled columns and an index. Most real ML work is 80% reshaping tables: load, clean, group, join, aggregate. Learn `groupby` and `merge` well and you can answer most data questions without writing loops.
@@ -142,6 +152,8 @@ print(df.merge(lookup, on='city', how='left'))
 **Remember:** Always check `df.shape` before and after a merge — a silent row explosion means duplicate keys.
 
 **Common mistake:** Chained assignment (`df[df.a > 1]['b'] = 0`) that writes to a copy and changes nothing.
+
+Practice: open `examples/06_exponential_smoothing.py`, predict the output, change one line, predict again.
 
 ## 7. Prophet-style additive models
 
@@ -164,6 +176,8 @@ print(df.merge(lookup, on='city', how='left'))
 
 **Common mistake:** Chained assignment (`df[df.a > 1]['b'] = 0`) that writes to a copy and changes nothing.
 
+Practice: open `examples/07_prophet_style_additive_models.py`, predict the output, change one line, predict again.
+
 ## 8. Lag and rolling features for ML models
 
 A DataFrame is a table with labelled columns and an index. Most real ML work is 80% reshaping tables: load, clean, group, join, aggregate. Learn `groupby` and `merge` well and you can answer most data questions without writing loops.
@@ -184,6 +198,8 @@ print(df.merge(lookup, on='city', how='left'))
 **Remember:** Always check `df.shape` before and after a merge — a silent row explosion means duplicate keys.
 
 **Common mistake:** Chained assignment (`df[df.a > 1]['b'] = 0`) that writes to a copy and changes nothing.
+
+Practice: open `examples/08_lag_and_rolling_features_for_ml_models.py`, predict the output, change one line, predict again.
 
 ## 9. Time-based cross-validation
 
@@ -206,6 +222,8 @@ print(df.merge(lookup, on='city', how='left'))
 
 **Common mistake:** Chained assignment (`df[df.a > 1]['b'] = 0`) that writes to a copy and changes nothing.
 
+Practice: open `examples/09_time_based_cross_validation.py`, predict the output, change one line, predict again.
+
 ## 10. Forecast evaluation and backtesting
 
 A DataFrame is a table with labelled columns and an index. Most real ML work is 80% reshaping tables: load, clean, group, join, aggregate. Learn `groupby` and `merge` well and you can answer most data questions without writing loops.
@@ -226,6 +244,8 @@ print(df.merge(lookup, on='city', how='left'))
 **Remember:** Always check `df.shape` before and after a merge — a silent row explosion means duplicate keys.
 
 **Common mistake:** Chained assignment (`df[df.a > 1]['b'] = 0`) that writes to a copy and changes nothing.
+
+Practice: open `examples/10_forecast_evaluation_and_backtesting.py`, predict the output, change one line, predict again.
 
 ---
 

@@ -39,6 +39,8 @@ for s in STEPS:
 
 **Common mistake:** Six weeks of feature engineering with no baseline to prove any of it helped.
 
+Practice: open `examples/01_choosing_a_feature_worth_ai.py`, predict the output, change one line, predict again.
+
 ## 2. Designing for uncertainty in the UI
 
 Projects are where the learning sticks. Build a thin end-to-end slice first — load data, train something dumb, evaluate, serve one prediction — then improve one layer at a time. A working baseline on day one beats a perfect model that never ships.
@@ -60,6 +62,8 @@ for s in STEPS:
 **Remember:** Spend an hour looking at wrong predictions before you spend a day tuning hyperparameters.
 
 **Common mistake:** Six weeks of feature engineering with no baseline to prove any of it helped.
+
+Practice: open `examples/02_designing_for_uncertainty_in_the_ui.py`, predict the output, change one line, predict again.
 
 ## 3. Progressive disclosure of AI output
 
@@ -83,6 +87,8 @@ for s in STEPS:
 
 **Common mistake:** Six weeks of feature engineering with no baseline to prove any of it helped.
 
+Practice: open `examples/03_progressive_disclosure_of_ai_output.py`, predict the output, change one line, predict again.
+
 ## 4. Editability and user control
 
 Projects are where the learning sticks. Build a thin end-to-end slice first — load data, train something dumb, evaluate, serve one prediction — then improve one layer at a time. A working baseline on day one beats a perfect model that never ships.
@@ -104,6 +110,8 @@ for s in STEPS:
 **Remember:** Spend an hour looking at wrong predictions before you spend a day tuning hyperparameters.
 
 **Common mistake:** Six weeks of feature engineering with no baseline to prove any of it helped.
+
+Practice: open `examples/04_editability_and_user_control.py`, predict the output, change one line, predict again.
 
 ## 5. Explaining what the AI did
 
@@ -127,6 +135,8 @@ for s in STEPS:
 
 **Common mistake:** Six weeks of feature engineering with no baseline to prove any of it helped.
 
+Practice: open `examples/05_explaining_what_the_ai_did.py`, predict the output, change one line, predict again.
+
 ## 6. Handling failure gracefully
 
 Projects are where the learning sticks. Build a thin end-to-end slice first — load data, train something dumb, evaluate, serve one prediction — then improve one layer at a time. A working baseline on day one beats a perfect model that never ships.
@@ -148,6 +158,8 @@ for s in STEPS:
 **Remember:** Spend an hour looking at wrong predictions before you spend a day tuning hyperparameters.
 
 **Common mistake:** Six weeks of feature engineering with no baseline to prove any of it helped.
+
+Practice: open `examples/06_handling_failure_gracefully.py`, predict the output, change one line, predict again.
 
 ## 7. Onboarding users to a fuzzy tool
 
@@ -171,6 +183,8 @@ for s in STEPS:
 
 **Common mistake:** Six weeks of feature engineering with no baseline to prove any of it helped.
 
+Practice: open `examples/07_onboarding_users_to_a_fuzzy_tool.py`, predict the output, change one line, predict again.
+
 ## 8. Measuring feature success
 
 Projects are where the learning sticks. Build a thin end-to-end slice first — load data, train something dumb, evaluate, serve one prediction — then improve one layer at a time. A working baseline on day one beats a perfect model that never ships.
@@ -192,6 +206,8 @@ for s in STEPS:
 **Remember:** Spend an hour looking at wrong predictions before you spend a day tuning hyperparameters.
 
 **Common mistake:** Six weeks of feature engineering with no baseline to prove any of it helped.
+
+Practice: open `examples/08_measuring_feature_success.py`, predict the output, change one line, predict again.
 
 ## 9. Iterating with real usage data
 
@@ -215,6 +231,8 @@ for s in STEPS:
 
 **Common mistake:** Six weeks of feature engineering with no baseline to prove any of it helped.
 
+Practice: open `examples/09_iterating_with_real_usage_data.py`, predict the output, change one line, predict again.
+
 ## 10. Knowing when to remove the AI
 
 Projects are where the learning sticks. Build a thin end-to-end slice first — load data, train something dumb, evaluate, serve one prediction — then improve one layer at a time. A working baseline on day one beats a perfect model that never ships.
@@ -236,6 +254,8 @@ for s in STEPS:
 **Remember:** Spend an hour looking at wrong predictions before you spend a day tuning hyperparameters.
 
 **Common mistake:** Six weeks of feature engineering with no baseline to prove any of it helped.
+
+Practice: open `examples/10_knowing_when_to_remove_the_ai.py`, predict the output, change one line, predict again.
 
 ---
 

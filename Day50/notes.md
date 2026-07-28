@@ -40,6 +40,8 @@ print('predicted', knn_predict(X, y, np.array([1.5, 0.0])), 'expected 1')
 
 **Common mistake:** Using kNN on high-dimensional data where every point is roughly equidistant from every other.
 
+Practice: open `examples/01_the_idea_similarity_is_prediction.py`, predict the output, change one line, predict again.
+
 ## 2. Choosing k
 
 kNN has no training step: it stores the data and, at prediction time, votes among the k closest points. It is a great sanity baseline, and it is also literally what a vector database does for retrieval — so understanding it pays off twice.
@@ -62,6 +64,8 @@ print('predicted', knn_predict(X, y, np.array([1.5, 0.0])), 'expected 1')
 **Remember:** Scale your features first — kNN is pure distance, so units decide the answer.
 
 **Common mistake:** Using kNN on high-dimensional data where every point is roughly equidistant from every other.
+
+Practice: open `examples/02_choosing_k.py`, predict the output, change one line, predict again.
 
 ## 3. Distance metrics and weighting
 
@@ -86,6 +90,8 @@ print('predicted', knn_predict(X, y, np.array([1.5, 0.0])), 'expected 1')
 
 **Common mistake:** Using kNN on high-dimensional data where every point is roughly equidistant from every other.
 
+Practice: open `examples/03_distance_metrics_and_weighting.py`, predict the output, change one line, predict again.
+
 ## 4. Why scaling is mandatory
 
 kNN has no training step: it stores the data and, at prediction time, votes among the k closest points. It is a great sanity baseline, and it is also literally what a vector database does for retrieval — so understanding it pays off twice.
@@ -108,6 +114,8 @@ print('predicted', knn_predict(X, y, np.array([1.5, 0.0])), 'expected 1')
 **Remember:** Scale your features first — kNN is pure distance, so units decide the answer.
 
 **Common mistake:** Using kNN on high-dimensional data where every point is roughly equidistant from every other.
+
+Practice: open `examples/04_why_scaling_is_mandatory.py`, predict the output, change one line, predict again.
 
 ## 5. kNN for regression
 
@@ -132,6 +140,8 @@ print('predicted', knn_predict(X, y, np.array([1.5, 0.0])), 'expected 1')
 
 **Common mistake:** Using kNN on high-dimensional data where every point is roughly equidistant from every other.
 
+Practice: open `examples/05_knn_for_regression.py`, predict the output, change one line, predict again.
+
 ## 6. Computational cost at prediction time
 
 kNN has no training step: it stores the data and, at prediction time, votes among the k closest points. It is a great sanity baseline, and it is also literally what a vector database does for retrieval — so understanding it pays off twice.
@@ -154,6 +164,8 @@ print('predicted', knn_predict(X, y, np.array([1.5, 0.0])), 'expected 1')
 **Remember:** Scale your features first — kNN is pure distance, so units decide the answer.
 
 **Common mistake:** Using kNN on high-dimensional data where every point is roughly equidistant from every other.
+
+Practice: open `examples/06_computational_cost_at_prediction_time.py`, predict the output, change one line, predict again.
 
 ## 7. KD-trees and ball trees
 
@@ -178,6 +190,8 @@ print('predicted', knn_predict(X, y, np.array([1.5, 0.0])), 'expected 1')
 
 **Common mistake:** Using kNN on high-dimensional data where every point is roughly equidistant from every other.
 
+Practice: open `examples/07_kd_trees_and_ball_trees.py`, predict the output, change one line, predict again.
+
 ## 8. The curse of dimensionality
 
 kNN has no training step: it stores the data and, at prediction time, votes among the k closest points. It is a great sanity baseline, and it is also literally what a vector database does for retrieval — so understanding it pays off twice.
@@ -201,6 +215,8 @@ print('predicted', knn_predict(X, y, np.array([1.5, 0.0])), 'expected 1')
 
 **Common mistake:** Using kNN on high-dimensional data where every point is roughly equidistant from every other.
 
+Practice: open `examples/08_the_curse_of_dimensionality.py`, predict the output, change one line, predict again.
+
 ## 9. kNN as the ancestor of vector search
 
 A vector is a list of numbers with a direction and length. The dot product measures alignment: large and positive when two vectors point the same way, zero when perpendicular. Cosine similarity is the dot product with length divided out, which is why it compares embeddings of different magnitudes fairly.
@@ -220,6 +236,8 @@ print('cosine', cos)   # 1.0 -> same direction
 **Remember:** Cosine similarity ignores magnitude; Euclidean distance does not. Pick the one that matches your question.
 
 **Common mistake:** Comparing raw embeddings with Euclidean distance when only direction carries meaning.
+
+Practice: open `examples/09_knn_as_the_ancestor_of_vector_search.py`, predict the output, change one line, predict again.
 
 ## 10. Implementing kNN from scratch
 
@@ -243,6 +261,8 @@ print('predicted', knn_predict(X, y, np.array([1.5, 0.0])), 'expected 1')
 **Remember:** Scale your features first — kNN is pure distance, so units decide the answer.
 
 **Common mistake:** Using kNN on high-dimensional data where every point is roughly equidistant from every other.
+
+Practice: open `examples/10_implementing_knn_from_scratch.py`, predict the output, change one line, predict again.
 
 ---
 

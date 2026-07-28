@@ -43,6 +43,8 @@ agent_loop([('calc', '2 + 2'), ('calc', '(2 + 2) * 10')])
 
 **Common mistake:** Giving an agent a shell tool with no allowlist and no confirmation step.
 
+Practice: open `examples/01_agent_environment_reward.py`, predict the output, change one line, predict again.
+
 ## 2. Markov decision processes
 
 Accuracy hides everything on imbalanced data. Precision asks 'of the ones I flagged, how many were real'; recall asks 'of the real ones, how many did I catch'. You trade one for the other with the threshold, and the business decides which error hurts more.
@@ -64,6 +66,8 @@ print('roc auc', round(roc_auc_score(yte, m.predict_proba(Xte)[:, 1]), 4))
 **Remember:** Tune the decision threshold on validation data; 0.5 is a default, not a decision.
 
 **Common mistake:** Optimising ROC-AUC on a heavily imbalanced problem where precision-recall AUC is the honest metric.
+
+Practice: open `examples/02_markov_decision_processes.py`, predict the output, change one line, predict again.
 
 ## 3. Policy and value functions
 
@@ -96,6 +100,8 @@ print('learned policy:', ['left' if a == 0 else 'right' for a in Q.argmax(axis=1
 
 **Common mistake:** Rewarding a proxy metric and getting an agent that maximises the proxy while failing the real goal.
 
+Practice: open `examples/03_policy_and_value_functions.py`, predict the output, change one line, predict again.
+
 ## 4. The Bellman equation
 
 RL learns from reward instead of labels. The agent takes actions, the environment returns state and reward, and the agent learns a policy that maximises long-term return. The hard part is exploration versus exploitation and the fact that reward is delayed and sparse.
@@ -127,6 +133,8 @@ print('learned policy:', ['left' if a == 0 else 'right' for a in Q.argmax(axis=1
 
 **Common mistake:** Rewarding a proxy metric and getting an agent that maximises the proxy while failing the real goal.
 
+Practice: open `examples/04_the_bellman_equation.py`, predict the output, change one line, predict again.
+
 ## 5. Exploration vs exploitation
 
 LoRA freezes the base weights and trains two small low-rank matrices whose product is added to each target layer. You update ~0.1% of the parameters, the checkpoint is megabytes not gigabytes, and you can swap adapters per customer. QLoRA adds 4-bit base weights so a 7B model fits on one consumer GPU.
@@ -149,6 +157,8 @@ print('effective W = W + A@B, shape', (W + delta).shape)
 **Remember:** Initialise B to zeros so the adapted model starts exactly equal to the base model.
 
 **Common mistake:** Setting rank far too high — you lose the efficiency and gain the overfitting.
+
+Practice: open `examples/05_exploration_vs_exploitation.py`, predict the output, change one line, predict again.
 
 ## 6. Multi-armed bandits
 
@@ -181,6 +191,8 @@ print('learned policy:', ['left' if a == 0 else 'right' for a in Q.argmax(axis=1
 
 **Common mistake:** Rewarding a proxy metric and getting an agent that maximises the proxy while failing the real goal.
 
+Practice: open `examples/06_multi_armed_bandits.py`, predict the output, change one line, predict again.
+
 ## 7. Q-learning
 
 RL learns from reward instead of labels. The agent takes actions, the environment returns state and reward, and the agent learns a policy that maximises long-term return. The hard part is exploration versus exploitation and the fact that reward is delayed and sparse.
@@ -211,6 +223,8 @@ print('learned policy:', ['left' if a == 0 else 'right' for a in Q.argmax(axis=1
 **Remember:** Reward shaping decides what the agent actually learns — and it will exploit any loophole you leave.
 
 **Common mistake:** Rewarding a proxy metric and getting an agent that maximises the proxy while failing the real goal.
+
+Practice: open `examples/07_q_learning.py`, predict the output, change one line, predict again.
 
 ## 8. Deep Q-networks
 
@@ -243,6 +257,8 @@ print('learned policy:', ['left' if a == 0 else 'right' for a in Q.argmax(axis=1
 
 **Common mistake:** Rewarding a proxy metric and getting an agent that maximises the proxy while failing the real goal.
 
+Practice: open `examples/08_deep_q_networks.py`, predict the output, change one line, predict again.
+
 ## 9. Policy gradients and REINFORCE
 
 The derivative answers: if I nudge this input a little, how much does the output move? The gradient is that answer for every input at once, so it points uphill. Training walks downhill by stepping against the gradient. The chain rule is what lets you propagate that answer through a stack of layers.
@@ -264,6 +280,8 @@ print('analytic ', 2 * x + 3)   # should match to ~1e-6
 **Remember:** A central difference `(f(x+h)-f(x-h))/2h` is the cheapest way to check a hand-written gradient.
 
 **Common mistake:** Trusting a derivation you never gradient-checked; a sign error trains slowly instead of failing loudly.
+
+Practice: open `examples/09_policy_gradients_and_reinforce.py`, predict the output, change one line, predict again.
 
 ## 10. Reward hacking
 
@@ -295,6 +313,8 @@ print('learned policy:', ['left' if a == 0 else 'right' for a in Q.argmax(axis=1
 **Remember:** Reward shaping decides what the agent actually learns — and it will exploit any loophole you leave.
 
 **Common mistake:** Rewarding a proxy metric and getting an agent that maximises the proxy while failing the real goal.
+
+Practice: open `examples/10_reward_hacking.py`, predict the output, change one line, predict again.
 
 ---
 

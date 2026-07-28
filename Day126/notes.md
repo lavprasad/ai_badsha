@@ -44,6 +44,8 @@ print('output shape', (weights @ V).shape)
 
 **Common mistake:** Omitting the causal mask in a decoder, so the model trivially cheats by reading the next token.
 
+Practice: open `examples/01_query_key_value_projections.py`, predict the output, change one line, predict again.
+
 ## 2. Scaled dot-product attention
 
 Attention lets every token look at every other token and decide what matters. Each token emits a query, a key and a value; the query-key dot products become weights over the values. Multiple heads let the model attend to several relationships at once.
@@ -70,6 +72,8 @@ print('output shape', (weights @ V).shape)
 **Remember:** The 1/sqrt(d) scale is not cosmetic — without it softmax saturates and gradients die.
 
 **Common mistake:** Omitting the causal mask in a decoder, so the model trivially cheats by reading the next token.
+
+Practice: open `examples/02_scaled_dot_product_attention.py`, predict the output, change one line, predict again.
 
 ## 3. Causal and padding masks
 
@@ -98,6 +102,8 @@ print(out)   # the edge column lights up
 
 **Common mistake:** Forgetting the channel dimension and feeding (H,W) where the layer expects (N,C,H,W).
 
+Practice: open `examples/03_causal_and_padding_masks.py`, predict the output, change one line, predict again.
+
 ## 4. Cross-attention in encoder-decoder
 
 Attention lets every token look at every other token and decide what matters. Each token emits a query, a key and a value; the query-key dot products become weights over the values. Multiple heads let the model attend to several relationships at once.
@@ -124,6 +130,8 @@ print('output shape', (weights @ V).shape)
 **Remember:** The 1/sqrt(d) scale is not cosmetic — without it softmax saturates and gradients die.
 
 **Common mistake:** Omitting the causal mask in a decoder, so the model trivially cheats by reading the next token.
+
+Practice: open `examples/04_cross_attention_in_encoder_decoder.py`, predict the output, change one line, predict again.
 
 ## 5. Attention complexity in sequence length
 
@@ -152,6 +160,8 @@ print('output shape', (weights @ V).shape)
 
 **Common mistake:** Omitting the causal mask in a decoder, so the model trivially cheats by reading the next token.
 
+Practice: open `examples/05_attention_complexity_in_sequence_length.py`, predict the output, change one line, predict again.
+
 ## 6. Flash attention and memory-efficient kernels
 
 Notebooks keep state between cells, which is great for exploring and terrible for reproducibility. Treat the notebook as a scratchpad; once logic settles, move it into a `.py` module you can import and test.
@@ -167,6 +177,8 @@ df.head()
 **Remember:** 'Restart kernel and run all' is the only honest test that a notebook works.
 
 **Common mistake:** Shipping a notebook whose results depend on a deleted cell you ran ten minutes ago.
+
+Practice: open `examples/06_flash_attention_and_memory_efficient_ker.py`, predict the output, change one line, predict again.
 
 ## 7. Sliding window and sparse attention
 
@@ -195,6 +207,8 @@ print('output shape', (weights @ V).shape)
 
 **Common mistake:** Omitting the causal mask in a decoder, so the model trivially cheats by reading the next token.
 
+Practice: open `examples/07_sliding_window_and_sparse_attention.py`, predict the output, change one line, predict again.
+
 ## 8. Grouped-query and multi-query attention
 
 Attention lets every token look at every other token and decide what matters. Each token emits a query, a key and a value; the query-key dot products become weights over the values. Multiple heads let the model attend to several relationships at once.
@@ -221,6 +235,8 @@ print('output shape', (weights @ V).shape)
 **Remember:** The 1/sqrt(d) scale is not cosmetic — without it softmax saturates and gradients die.
 
 **Common mistake:** Omitting the causal mask in a decoder, so the model trivially cheats by reading the next token.
+
+Practice: open `examples/08_grouped_query_and_multi_query_attention.py`, predict the output, change one line, predict again.
 
 ## 9. KV cache during generation
 
@@ -249,6 +265,8 @@ print('output shape', (weights @ V).shape)
 
 **Common mistake:** Omitting the causal mask in a decoder, so the model trivially cheats by reading the next token.
 
+Practice: open `examples/09_kv_cache_during_generation.py`, predict the output, change one line, predict again.
+
 ## 10. Implementing multi-head attention
 
 Attention lets every token look at every other token and decide what matters. Each token emits a query, a key and a value; the query-key dot products become weights over the values. Multiple heads let the model attend to several relationships at once.
@@ -275,6 +293,8 @@ print('output shape', (weights @ V).shape)
 **Remember:** The 1/sqrt(d) scale is not cosmetic — without it softmax saturates and gradients die.
 
 **Common mistake:** Omitting the causal mask in a decoder, so the model trivially cheats by reading the next token.
+
+Practice: open `examples/10_implementing_multi_head_attention.py`, predict the output, change one line, predict again.
 
 ---
 

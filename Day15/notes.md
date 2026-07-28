@@ -39,6 +39,8 @@ for s in STEPS:
 
 **Common mistake:** Six weeks of feature engineering with no baseline to prove any of it helped.
 
+Practice: open `examples/01_framing_the_tool_what_question_does_it_a.py`, predict the output, change one line, predict again.
+
 ## 2. Loading any CSV robustly
 
 A DataFrame is a table with labelled columns and an index. Most real ML work is 80% reshaping tables: load, clean, group, join, aggregate. Learn `groupby` and `merge` well and you can answer most data questions without writing loops.
@@ -59,6 +61,8 @@ print(df.merge(lookup, on='city', how='left'))
 **Remember:** Always check `df.shape` before and after a merge — a silent row explosion means duplicate keys.
 
 **Common mistake:** Chained assignment (`df[df.a > 1]['b'] = 0`) that writes to a copy and changes nothing.
+
+Practice: open `examples/02_loading_any_csv_robustly.py`, predict the output, change one line, predict again.
 
 ## 3. Auto-detecting column types
 
@@ -82,6 +86,8 @@ for s in STEPS:
 
 **Common mistake:** Six weeks of feature engineering with no baseline to prove any of it helped.
 
+Practice: open `examples/03_auto_detecting_column_types.py`, predict the output, change one line, predict again.
+
 ## 4. Null and cardinality report
 
 Projects are where the learning sticks. Build a thin end-to-end slice first — load data, train something dumb, evaluate, serve one prediction — then improve one layer at a time. A working baseline on day one beats a perfect model that never ships.
@@ -103,6 +109,8 @@ for s in STEPS:
 **Remember:** Spend an hour looking at wrong predictions before you spend a day tuning hyperparameters.
 
 **Common mistake:** Six weeks of feature engineering with no baseline to prove any of it helped.
+
+Practice: open `examples/04_null_and_cardinality_report.py`, predict the output, change one line, predict again.
 
 ## 5. Summary statistics per column type
 
@@ -126,6 +134,8 @@ for s in STEPS:
 
 **Common mistake:** Six weeks of feature engineering with no baseline to prove any of it helped.
 
+Practice: open `examples/05_summary_statistics_per_column_type.py`, predict the output, change one line, predict again.
+
 ## 6. Correlation with the target column
 
 Projects are where the learning sticks. Build a thin end-to-end slice first — load data, train something dumb, evaluate, serve one prediction — then improve one layer at a time. A working baseline on day one beats a perfect model that never ships.
@@ -147,6 +157,8 @@ for s in STEPS:
 **Remember:** Spend an hour looking at wrong predictions before you spend a day tuning hyperparameters.
 
 **Common mistake:** Six weeks of feature engineering with no baseline to prove any of it helped.
+
+Practice: open `examples/06_correlation_with_the_target_column.py`, predict the output, change one line, predict again.
 
 ## 7. Generating plots to a folder
 
@@ -170,6 +182,8 @@ print('wrote hist.png')
 
 **Common mistake:** Judging a model by its accuracy number alone without ever looking at the data.
 
+Practice: open `examples/07_generating_plots_to_a_folder.py`, predict the output, change one line, predict again.
+
 ## 8. Command-line arguments with argparse
 
 Projects are where the learning sticks. Build a thin end-to-end slice first — load data, train something dumb, evaluate, serve one prediction — then improve one layer at a time. A working baseline on day one beats a perfect model that never ships.
@@ -191,6 +205,8 @@ for s in STEPS:
 **Remember:** Spend an hour looking at wrong predictions before you spend a day tuning hyperparameters.
 
 **Common mistake:** Six weeks of feature engineering with no baseline to prove any of it helped.
+
+Practice: open `examples/08_command_line_arguments_with_argparse.py`, predict the output, change one line, predict again.
 
 ## 9. Writing a markdown report file
 
@@ -214,6 +230,8 @@ for s in STEPS:
 
 **Common mistake:** Six weeks of feature engineering with no baseline to prove any of it helped.
 
+Practice: open `examples/09_writing_a_markdown_report_file.py`, predict the output, change one line, predict again.
+
 ## 10. Packaging and reusing the tool
 
 Projects are where the learning sticks. Build a thin end-to-end slice first — load data, train something dumb, evaluate, serve one prediction — then improve one layer at a time. A working baseline on day one beats a perfect model that never ships.
@@ -235,6 +253,8 @@ for s in STEPS:
 **Remember:** Spend an hour looking at wrong predictions before you spend a day tuning hyperparameters.
 
 **Common mistake:** Six weeks of feature engineering with no baseline to prove any of it helped.
+
+Practice: open `examples/10_packaging_and_reusing_the_tool.py`, predict the output, change one line, predict again.
 
 ---
 

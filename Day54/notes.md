@@ -40,6 +40,8 @@ print('stopped at iteration', model.n_iter_, 'test acc', round(model.score(Xte, 
 
 **Common mistake:** Running a fixed 1000 rounds with no early stopping and shipping an overfit ensemble.
 
+Practice: open `examples/01_sequential_error_correction.py`, predict the output, change one line, predict again.
+
 ## 2. AdaBoost intuition
 
 Boosting trains trees sequentially, each fixing the previous ensemble's errors. It usually beats random forests on tabular data and still beats deep learning there. The cost is that it genuinely needs tuning and will overfit if you let it run too long.
@@ -63,6 +65,8 @@ print('stopped at iteration', model.n_iter_, 'test acc', round(model.score(Xte, 
 
 **Common mistake:** Running a fixed 1000 rounds with no early stopping and shipping an overfit ensemble.
 
+Practice: open `examples/02_adaboost_intuition.py`, predict the output, change one line, predict again.
+
 ## 3. Gradient boosting as gradient descent in function space
 
 The derivative answers: if I nudge this input a little, how much does the output move? The gradient is that answer for every input at once, so it points uphill. Training walks downhill by stepping against the gradient. The chain rule is what lets you propagate that answer through a stack of layers.
@@ -84,6 +88,8 @@ print('analytic ', 2 * x + 3)   # should match to ~1e-6
 **Remember:** A central difference `(f(x+h)-f(x-h))/2h` is the cheapest way to check a hand-written gradient.
 
 **Common mistake:** Trusting a derivation you never gradient-checked; a sign error trains slowly instead of failing loudly.
+
+Practice: open `examples/03_gradient_boosting_as_gradient_descent_in.py`, predict the output, change one line, predict again.
 
 ## 4. Learning rate and number of trees
 
@@ -111,6 +117,8 @@ print('learned', np.round(w, 3), 'target', true_w)
 
 **Common mistake:** Leaving the learning rate fixed forever instead of decaying it once the loss plateaus.
 
+Practice: open `examples/04_learning_rate_and_number_of_trees.py`, predict the output, change one line, predict again.
+
 ## 5. Tree depth in boosting
 
 Boosting trains trees sequentially, each fixing the previous ensemble's errors. It usually beats random forests on tabular data and still beats deep learning there. The cost is that it genuinely needs tuning and will overfit if you let it run too long.
@@ -134,6 +142,8 @@ print('stopped at iteration', model.n_iter_, 'test acc', round(model.score(Xte, 
 
 **Common mistake:** Running a fixed 1000 rounds with no early stopping and shipping an overfit ensemble.
 
+Practice: open `examples/05_tree_depth_in_boosting.py`, predict the output, change one line, predict again.
+
 ## 6. Early stopping with a validation set
 
 Three splits, three jobs: train fits parameters, validation picks hyperparameters, test gives one honest final number. K-fold cross-validation reuses data by rotating the validation slice, which matters when you only have a few thousand rows.
@@ -153,6 +163,8 @@ print(f'mean {scores.mean():.3f} +/- {scores.std():.3f}')
 **Remember:** Report the spread across folds, not just the mean — high variance means you cannot trust the mean.
 
 **Common mistake:** Random K-fold on time-series or on grouped data (same patient in train and test) — both leak.
+
+Practice: open `examples/06_early_stopping_with_a_validation_set.py`, predict the output, change one line, predict again.
 
 ## 7. XGBoost, LightGBM, CatBoost compared
 
@@ -177,6 +189,8 @@ print('stopped at iteration', model.n_iter_, 'test acc', round(model.score(Xte, 
 
 **Common mistake:** Running a fixed 1000 rounds with no early stopping and shipping an overfit ensemble.
 
+Practice: open `examples/07_xgboost_lightgbm_catboost_compared.py`, predict the output, change one line, predict again.
+
 ## 8. HistGradientBoosting in scikit-learn
 
 The derivative answers: if I nudge this input a little, how much does the output move? The gradient is that answer for every input at once, so it points uphill. Training walks downhill by stepping against the gradient. The chain rule is what lets you propagate that answer through a stack of layers.
@@ -198,6 +212,8 @@ print('analytic ', 2 * x + 3)   # should match to ~1e-6
 **Remember:** A central difference `(f(x+h)-f(x-h))/2h` is the cheapest way to check a hand-written gradient.
 
 **Common mistake:** Trusting a derivation you never gradient-checked; a sign error trains slowly instead of failing loudly.
+
+Practice: open `examples/08_histgradientboosting_in_scikit_learn.py`, predict the output, change one line, predict again.
 
 ## 9. Handling categorical features natively
 
@@ -222,6 +238,8 @@ print('stopped at iteration', model.n_iter_, 'test acc', round(model.score(Xte, 
 
 **Common mistake:** Running a fixed 1000 rounds with no early stopping and shipping an overfit ensemble.
 
+Practice: open `examples/09_handling_categorical_features_natively.py`, predict the output, change one line, predict again.
+
 ## 10. Why boosting still beats deep nets on tables
 
 Boosting trains trees sequentially, each fixing the previous ensemble's errors. It usually beats random forests on tabular data and still beats deep learning there. The cost is that it genuinely needs tuning and will overfit if you let it run too long.
@@ -244,6 +262,8 @@ print('stopped at iteration', model.n_iter_, 'test acc', round(model.score(Xte, 
 **Remember:** Low learning rate + many trees + early stopping beats high learning rate + few trees.
 
 **Common mistake:** Running a fixed 1000 rounds with no early stopping and shipping an overfit ensemble.
+
+Practice: open `examples/10_why_boosting_still_beats_deep_nets_on_ta.py`, predict the output, change one line, predict again.
 
 ---
 

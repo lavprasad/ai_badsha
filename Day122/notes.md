@@ -39,6 +39,8 @@ print(X.toarray().round(2))
 
 **Common mistake:** Reaching for a 7B model to classify support tickets that TF-IDF handles at 94% for free.
 
+Practice: open `examples/01_bag_of_words_revisited.py`, predict the output, change one line, predict again.
+
 ## 2. TF-IDF for classification
 
 Before embeddings, text became numbers by counting. TF-IDF weights a word by how often it appears here and how rare it is overall, so 'the' scores near zero. It is still an excellent, near-free baseline for classification and keyword search.
@@ -60,6 +62,8 @@ print(X.toarray().round(2))
 **Remember:** TF-IDF + logistic regression is the baseline every LLM text classifier must beat to be worth its cost.
 
 **Common mistake:** Reaching for a 7B model to classify support tickets that TF-IDF handles at 94% for free.
+
+Practice: open `examples/02_tf_idf_for_classification.py`, predict the output, change one line, predict again.
 
 ## 3. N-gram language models
 
@@ -83,6 +87,8 @@ print(X.toarray().round(2))
 
 **Common mistake:** Reaching for a 7B model to classify support tickets that TF-IDF handles at 94% for free.
 
+Practice: open `examples/03_n_gram_language_models.py`, predict the output, change one line, predict again.
+
 ## 4. Naive Bayes for text
 
 Bayes' rule updates a belief with evidence: posterior = likelihood x prior / evidence. The most common mistake in applied ML is ignoring the prior — a 99%-accurate test for a 1-in-10000 disease still gives mostly false positives.
@@ -100,6 +106,8 @@ print(f'P(sick | positive) = {posterior:.4f}')   # ~0.0098
 **Remember:** Rare events make precision collapse no matter how good the classifier looks on accuracy.
 
 **Common mistake:** Reporting accuracy on an imbalanced problem where predicting 'no' always scores 99%.
+
+Practice: open `examples/04_naive_bayes_for_text.py`, predict the output, change one line, predict again.
 
 ## 5. Linear SVM for text
 
@@ -122,6 +130,8 @@ print('rbf   ', cross_val_score(rbf, X, y, cv=5).mean().round(3))
 **Remember:** SVMs scale roughly quadratically with rows — above ~100k samples reach for boosting instead.
 
 **Common mistake:** Skipping feature scaling, which silently wrecks the RBF kernel.
+
+Practice: open `examples/05_linear_svm_for_text.py`, predict the output, change one line, predict again.
 
 ## 6. Named entity recognition, classically
 
@@ -149,6 +159,8 @@ for d in docs:
 
 **Common mistake:** Fine-tuning a transformer to extract dates that `dateutil` already parses correctly.
 
+Practice: open `examples/06_named_entity_recognition_classically.py`, predict the output, change one line, predict again.
+
 ## 7. Rule-based systems that still work
 
 Not everything needs a model. Regex and a gazetteer still beat a fine-tuned model for well-formed IDs, dates and codes — with zero latency and total explainability. BM25 keyword search remains a strong retrieval baseline and is what hybrid search combines with embeddings.
@@ -174,6 +186,8 @@ for d in docs:
 **Remember:** Try the regex first. If it hits 95% with no infrastructure, the model has to justify replacing it.
 
 **Common mistake:** Fine-tuning a transformer to extract dates that `dateutil` already parses correctly.
+
+Practice: open `examples/07_rule_based_systems_that_still_work.py`, predict the output, change one line, predict again.
 
 ## 8. Keyword search and BM25
 
@@ -201,6 +215,8 @@ for d in docs:
 
 **Common mistake:** Fine-tuning a transformer to extract dates that `dateutil` already parses correctly.
 
+Practice: open `examples/08_keyword_search_and_bm25.py`, predict the output, change one line, predict again.
+
 ## 9. Measuring the baseline properly
 
 Not everything needs a model. Regex and a gazetteer still beat a fine-tuned model for well-formed IDs, dates and codes — with zero latency and total explainability. BM25 keyword search remains a strong retrieval baseline and is what hybrid search combines with embeddings.
@@ -226,6 +242,8 @@ for d in docs:
 **Remember:** Try the regex first. If it hits 95% with no infrastructure, the model has to justify replacing it.
 
 **Common mistake:** Fine-tuning a transformer to extract dates that `dateutil` already parses correctly.
+
+Practice: open `examples/09_measuring_the_baseline_properly.py`, predict the output, change one line, predict again.
 
 ## 10. Deciding whether you need an LLM at all
 
@@ -258,6 +276,8 @@ test_preprocess()
 **Remember:** Test the data contract, not just the function — bad data breaks more models than bad code.
 
 **Common mistake:** Testing only the happy path, so an all-null column silently trains a constant model.
+
+Practice: open `examples/10_deciding_whether_you_need_an_llm_at_all.py`, predict the output, change one line, predict again.
 
 ---
 

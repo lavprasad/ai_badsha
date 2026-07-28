@@ -43,6 +43,8 @@ print('unrelated views loss', round(nt_xent(base, rng.normal(size=(8, 16))), 4))
 
 **Common mistake:** Spending weeks on self-supervised pretraining when a public pretrained backbone was already better.
 
+Practice: open `examples/01_learning_without_labels.py`, predict the output, change one line, predict again.
+
 ## 2. Contrastive learning: SimCLR
 
 Self-supervised learning invents a task from the data itself — match two augmented views of the same image, or reconstruct masked patches — so you can pretrain on unlabelled data. It pays off when you have millions of unlabelled samples and few labels, and it is expensive otherwise.
@@ -68,6 +70,8 @@ print('unrelated views loss', round(nt_xent(base, rng.normal(size=(8, 16))), 4))
 **Remember:** The augmentations *are* the supervision — they define what the model learns to treat as irrelevant.
 
 **Common mistake:** Spending weeks on self-supervised pretraining when a public pretrained backbone was already better.
+
+Practice: open `examples/02_contrastive_learning_simclr.py`, predict the output, change one line, predict again.
 
 ## 3. MoCo and memory banks
 
@@ -95,6 +99,8 @@ print('unrelated views loss', round(nt_xent(base, rng.normal(size=(8, 16))), 4))
 
 **Common mistake:** Spending weeks on self-supervised pretraining when a public pretrained backbone was already better.
 
+Practice: open `examples/03_moco_and_memory_banks.py`, predict the output, change one line, predict again.
+
 ## 4. BYOL without negatives
 
 Self-supervised learning invents a task from the data itself — match two augmented views of the same image, or reconstruct masked patches — so you can pretrain on unlabelled data. It pays off when you have millions of unlabelled samples and few labels, and it is expensive otherwise.
@@ -121,6 +127,8 @@ print('unrelated views loss', round(nt_xent(base, rng.normal(size=(8, 16))), 4))
 
 **Common mistake:** Spending weeks on self-supervised pretraining when a public pretrained backbone was already better.
 
+Practice: open `examples/04_byol_without_negatives.py`, predict the output, change one line, predict again.
+
 ## 5. Masked autoencoders
 
 An autoencoder squeezes input through a narrow bottleneck and reconstructs it, forcing a compact representation. A VAE makes that bottleneck a distribution so you can sample new data from it. Both are useful for anomaly detection: high reconstruction error means 'unlike anything I trained on'.
@@ -145,6 +153,8 @@ print('anomaly      ', round(recon_error(np.full(10, 12.0)), 3))
 **Remember:** Reconstruction error is a ready-made anomaly score — no labels required.
 
 **Common mistake:** Making the bottleneck as wide as the input, so the network learns the identity function.
+
+Practice: open `examples/05_masked_autoencoders.py`, predict the output, change one line, predict again.
 
 ## 6. DINO and self-distillation
 
@@ -171,6 +181,8 @@ print('unrelated views loss', round(nt_xent(base, rng.normal(size=(8, 16))), 4))
 **Remember:** The augmentations *are* the supervision — they define what the model learns to treat as irrelevant.
 
 **Common mistake:** Spending weeks on self-supervised pretraining when a public pretrained backbone was already better.
+
+Practice: open `examples/06_dino_and_self_distillation.py`, predict the output, change one line, predict again.
 
 ## 7. Evaluating with linear probes
 
@@ -200,6 +212,8 @@ assert hits == len(GOLDEN), 'regression: fix before shipping'
 
 **Common mistake:** Changing the prompt on Friday with no eval and finding out from customers on Monday.
 
+Practice: open `examples/07_evaluating_with_linear_probes.py`, predict the output, change one line, predict again.
+
 ## 8. Pretraining on your own unlabelled data
 
 Pretraining is one absurdly simple objective at enormous scale: predict the next token. Everything else — grammar, facts, reasoning traces, style — falls out of doing that well over trillions of tokens. Scaling laws say loss falls predictably with model size, data and compute together.
@@ -225,6 +239,8 @@ print(' '.join(out))   # a 2-gram LM: same objective, 10 orders of magnitude sma
 **Remember:** A bigger model trained on too little data is a waste — compute, parameters and tokens scale together.
 
 **Common mistake:** Believing a base model will follow instructions; that behaviour comes from the tuning stages after.
+
+Practice: open `examples/08_pretraining_on_your_own_unlabelled_data.py`, predict the output, change one line, predict again.
 
 ## 9. When self-supervision pays off
 
@@ -252,6 +268,8 @@ print('unrelated views loss', round(nt_xent(base, rng.normal(size=(8, 16))), 4))
 
 **Common mistake:** Spending weeks on self-supervised pretraining when a public pretrained backbone was already better.
 
+Practice: open `examples/09_when_self_supervision_pays_off.py`, predict the output, change one line, predict again.
+
 ## 10. Compute realities
 
 Self-supervised learning invents a task from the data itself — match two augmented views of the same image, or reconstruct masked patches — so you can pretrain on unlabelled data. It pays off when you have millions of unlabelled samples and few labels, and it is expensive otherwise.
@@ -277,6 +295,8 @@ print('unrelated views loss', round(nt_xent(base, rng.normal(size=(8, 16))), 4))
 **Remember:** The augmentations *are* the supervision — they define what the model learns to treat as irrelevant.
 
 **Common mistake:** Spending weeks on self-supervised pretraining when a public pretrained backbone was already better.
+
+Practice: open `examples/10_compute_realities.py`, predict the output, change one line, predict again.
 
 ---
 
