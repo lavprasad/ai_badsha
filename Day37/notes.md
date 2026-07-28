@@ -1,6 +1,6 @@
 # Day 37 — Exploratory data analysis
 
-Today's goal: work through **exploratory data analysis** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Exploratory data analysis** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

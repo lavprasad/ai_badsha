@@ -1,6 +1,6 @@
 # Day 126 — Attention deep dive
 
-Today's goal: work through **attention deep dive** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Attention deep dive** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

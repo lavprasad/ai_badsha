@@ -1,6 +1,6 @@
 # Day 154 — RAG: chunking and parsing
 
-Today's goal: work through **rag: chunking and parsing** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **RAG: chunking and parsing** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

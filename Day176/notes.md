@@ -1,6 +1,6 @@
 # Day 176 — Testing machine learning code
 
-Today's goal: work through **testing machine learning code** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Testing machine learning code** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

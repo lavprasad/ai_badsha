@@ -1,6 +1,6 @@
 # Day 17 — Matrices and linear transformations
 
-Today's goal: work through **matrices and linear transformations** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Matrices and linear transformations** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

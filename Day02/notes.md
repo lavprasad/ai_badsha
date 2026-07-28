@@ -1,6 +1,6 @@
 # Day 02 — Python essentials refresher
 
-Today's goal: work through **python essentials refresher** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Python essentials refresher** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

@@ -1,6 +1,6 @@
 # Day 152 — Retrieval augmented generation basics
 
-Today's goal: work through **retrieval augmented generation basics** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Retrieval augmented generation basics** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

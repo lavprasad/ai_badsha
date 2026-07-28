@@ -1,6 +1,6 @@
 # Day 43 — Data validation and contracts
 
-Today's goal: work through **data validation and contracts** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Data validation and contracts** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

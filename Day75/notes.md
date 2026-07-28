@@ -1,6 +1,6 @@
 # Day 75 — Why deep learning
 
-Today's goal: work through **why deep learning** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Why deep learning** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

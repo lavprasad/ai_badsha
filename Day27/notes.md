@@ -1,6 +1,6 @@
 # Day 27 — Linear algebra in practice
 
-Today's goal: work through **linear algebra in practice** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Linear algebra in practice** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

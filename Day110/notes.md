@@ -1,6 +1,6 @@
 # Day 110 — Video understanding
 
-Today's goal: work through **video understanding** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Video understanding** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

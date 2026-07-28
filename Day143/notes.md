@@ -1,6 +1,6 @@
 # Day 143 — Reasoning and thinking models
 
-Today's goal: work through **reasoning and thinking models** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Reasoning and thinking models** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

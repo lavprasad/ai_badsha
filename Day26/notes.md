@@ -1,6 +1,6 @@
 # Day 26 — Information theory
 
-Today's goal: work through **information theory** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Information theory** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

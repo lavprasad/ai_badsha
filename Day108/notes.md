@@ -1,6 +1,6 @@
 # Day 108 — Image segmentation
 
-Today's goal: work through **image segmentation** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Image segmentation** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

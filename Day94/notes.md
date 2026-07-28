@@ -1,6 +1,6 @@
 # Day 94 — Autoencoders
 
-Today's goal: work through **autoencoders** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Autoencoders** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

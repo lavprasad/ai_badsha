@@ -1,6 +1,6 @@
 # Day 187 — Responsible AI in practice
 
-Today's goal: work through **responsible ai in practice** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Responsible AI in practice** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

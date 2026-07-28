@@ -1,6 +1,6 @@
 # Day 82 — Initialisation and normalisation
 
-Today's goal: work through **initialisation and normalisation** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Initialisation and normalisation** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

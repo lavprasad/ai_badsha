@@ -1,6 +1,6 @@
 # Day 74 — PROJECT: tabular ML competition
 
-Today's goal: work through **project: tabular ml competition** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **PROJECT: tabular ML competition** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

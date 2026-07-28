@@ -1,6 +1,6 @@
 # Day 173 — Multi-agent and orchestration
 
-Today's goal: work through **multi-agent and orchestration** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Multi-agent and orchestration** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

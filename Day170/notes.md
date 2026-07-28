@@ -1,6 +1,6 @@
 # Day 170 — Code-focused AI
 
-Today's goal: work through **code-focused ai** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Code-focused AI** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

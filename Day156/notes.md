@@ -1,6 +1,6 @@
 # Day 156 — Vector databases
 
-Today's goal: work through **vector databases** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Vector databases** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

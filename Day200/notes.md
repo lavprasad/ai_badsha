@@ -1,6 +1,6 @@
 # Day 200 — Day 200: the road ahead
 
-Today's goal: work through **day 200: the road ahead** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Day 200: the road ahead** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

@@ -1,6 +1,6 @@
 # Day 99 — Reinforcement learning foundations
 
-Today's goal: work through **reinforcement learning foundations** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Reinforcement learning foundations** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

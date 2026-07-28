@@ -1,6 +1,6 @@
 # Day 158 — Agents: tools and capabilities
 
-Today's goal: work through **agents: tools and capabilities** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Agents: tools and capabilities** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

@@ -1,6 +1,6 @@
 # Day 146 — Prompt engineering foundations
 
-Today's goal: work through **prompt engineering foundations** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Prompt engineering foundations** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

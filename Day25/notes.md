@@ -1,6 +1,6 @@
 # Day 25 — A/B testing and experiment design
 
-Today's goal: work through **a/b testing and experiment design** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **A/B testing and experiment design** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

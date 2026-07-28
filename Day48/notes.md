@@ -1,6 +1,6 @@
 # Day 48 — Classification metrics
 
-Today's goal: work through **classification metrics** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Classification metrics** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

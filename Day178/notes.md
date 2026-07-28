@@ -1,6 +1,6 @@
 # Day 178 — Containers and deployment
 
-Today's goal: work through **containers and deployment** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Containers and deployment** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

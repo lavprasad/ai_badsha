@@ -1,6 +1,6 @@
 # Day 58 — Handling imbalanced data
 
-Today's goal: work through **handling imbalanced data** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Handling imbalanced data** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

@@ -1,6 +1,6 @@
 # Day 41 — Data splitting done right
 
-Today's goal: work through **data splitting done right** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Data splitting done right** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

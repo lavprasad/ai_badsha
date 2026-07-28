@@ -1,6 +1,6 @@
 # Day 92 — Sequence models: RNNs
 
-Today's goal: work through **sequence models: rnns** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Sequence models: RNNs** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

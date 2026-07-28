@@ -1,6 +1,6 @@
 # Day 155 — RAG: generation and grounding
 
-Today's goal: work through **rag: generation and grounding** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **RAG: generation and grounding** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

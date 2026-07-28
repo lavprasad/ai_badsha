@@ -1,6 +1,6 @@
 # Day 85 — PyTorch data pipeline
 
-Today's goal: work through **pytorch data pipeline** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **PyTorch data pipeline** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

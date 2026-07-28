@@ -1,6 +1,6 @@
 # Day 169 — Working with unstructured documents
 
-Today's goal: work through **working with unstructured documents** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Working with unstructured documents** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

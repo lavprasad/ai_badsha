@@ -1,6 +1,6 @@
 # Day 03 — Pythonic data handling
 
-Today's goal: work through **pythonic data handling** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Pythonic data handling** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

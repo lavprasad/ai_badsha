@@ -1,6 +1,6 @@
 # Day 62 — Feature importance and model explanation
 
-Today's goal: work through **feature importance and model explanation** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Feature importance and model explanation** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

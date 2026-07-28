@@ -1,6 +1,6 @@
 # Day 56 — Model selection and validation strategy
 
-Today's goal: work through **model selection and validation strategy** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Model selection and validation strategy** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

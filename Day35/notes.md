@@ -1,6 +1,6 @@
 # Day 35 — The machine learning problem framing
 
-Today's goal: work through **the machine learning problem framing** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **The machine learning problem framing** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

@@ -1,6 +1,6 @@
 # Day 132 — Parameter-efficient fine-tuning
 
-Today's goal: work through **parameter-efficient fine-tuning** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Parameter-efficient fine-tuning** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

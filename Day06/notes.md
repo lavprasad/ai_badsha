@@ -1,6 +1,6 @@
 # Day 06 — NumPy foundations
 
-Today's goal: work through **numpy foundations** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **NumPy foundations** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

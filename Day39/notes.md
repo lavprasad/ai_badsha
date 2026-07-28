@@ -1,6 +1,6 @@
 # Day 39 — Feature engineering fundamentals
 
-Today's goal: work through **feature engineering fundamentals** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Feature engineering fundamentals** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

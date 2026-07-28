@@ -1,6 +1,6 @@
 # Day 167 — Latency engineering
 
-Today's goal: work through **latency engineering** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Latency engineering** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

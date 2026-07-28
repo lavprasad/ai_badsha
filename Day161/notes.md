@@ -1,6 +1,6 @@
 # Day 161 — Memory for AI applications
 
-Today's goal: work through **memory for ai applications** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Memory for AI applications** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

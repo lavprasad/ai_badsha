@@ -1,6 +1,6 @@
 # Day 166 — Cost engineering
 
-Today's goal: work through **cost engineering** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Cost engineering** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

@@ -1,6 +1,6 @@
 # Day 168 — Data flywheels
 
-Today's goal: work through **data flywheels** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Data flywheels** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

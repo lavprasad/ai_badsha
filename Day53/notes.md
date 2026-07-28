@@ -1,6 +1,6 @@
 # Day 53 — Ensembles: bagging and random forests
 
-Today's goal: work through **ensembles: bagging and random forests** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Ensembles: bagging and random forests** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

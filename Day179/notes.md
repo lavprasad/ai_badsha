@@ -1,6 +1,6 @@
 # Day 179 — CI/CD for ML
 
-Today's goal: work through **ci/cd for ml** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **CI/CD for ML** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

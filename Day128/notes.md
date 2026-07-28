@@ -1,6 +1,6 @@
 # Day 128 — Transformer families
 
-Today's goal: work through **transformer families** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Transformer families** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

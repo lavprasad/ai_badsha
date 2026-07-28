@@ -1,6 +1,6 @@
 # Day 177 — Model serving
 
-Today's goal: work through **model serving** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Model serving** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

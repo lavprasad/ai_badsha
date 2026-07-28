@@ -1,6 +1,6 @@
 # Day 67 — Survival and duration models
 
-Today's goal: work through **survival and duration models** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Survival and duration models** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

@@ -1,6 +1,6 @@
 # Day 16 — Vectors and vector spaces
 
-Today's goal: work through **vectors and vector spaces** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Vectors and vector spaces** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

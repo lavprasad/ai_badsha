@@ -1,6 +1,6 @@
 # Day 63 — Calibration and probability quality
 
-Today's goal: work through **calibration and probability quality** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Calibration and probability quality** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

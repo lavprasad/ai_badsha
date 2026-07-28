@@ -1,6 +1,6 @@
 # Day 180 — Experiment tracking and reproducibility
 
-Today's goal: work through **experiment tracking and reproducibility** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Experiment tracking and reproducibility** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

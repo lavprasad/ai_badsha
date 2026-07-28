@@ -1,6 +1,6 @@
 # Day 77 — Activation functions
 
-Today's goal: work through **activation functions** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Activation functions** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

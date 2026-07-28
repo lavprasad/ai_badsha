@@ -1,6 +1,6 @@
 # Day 157 — Agents: the loop
 
-Today's goal: work through **agents: the loop** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Agents: the loop** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

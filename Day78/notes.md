@@ -1,6 +1,6 @@
 # Day 78 — Loss functions
 
-Today's goal: work through **loss functions** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Loss functions** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

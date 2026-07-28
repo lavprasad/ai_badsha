@@ -1,6 +1,6 @@
 # Day 171 — Building AI product features
 
-Today's goal: work through **building ai product features** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Building AI product features** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

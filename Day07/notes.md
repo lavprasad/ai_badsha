@@ -1,6 +1,6 @@
 # Day 07 — NumPy for maths
 
-Today's goal: work through **numpy for maths** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **NumPy for maths** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

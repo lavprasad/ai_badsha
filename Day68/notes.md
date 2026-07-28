@@ -1,6 +1,6 @@
 # Day 68 — Causal inference basics
 
-Today's goal: work through **causal inference basics** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Causal inference basics** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

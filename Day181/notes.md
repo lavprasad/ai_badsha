@@ -1,6 +1,6 @@
 # Day 181 — Feature stores and data infrastructure
 
-Today's goal: work through **feature stores and data infrastructure** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Feature stores and data infrastructure** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

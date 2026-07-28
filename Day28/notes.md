@@ -1,6 +1,6 @@
 # Day 28 — Discrete maths for AI
 
-Today's goal: work through **discrete maths for ai** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Discrete maths for AI** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

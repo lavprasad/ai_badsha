@@ -1,6 +1,6 @@
 # Day 71 — Scaling classical ML
 
-Today's goal: work through **scaling classical ml** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Scaling classical ML** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

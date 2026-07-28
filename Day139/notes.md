@@ -1,6 +1,6 @@
 # Day 139 — Multilingual and Indic NLP
 
-Today's goal: work through **multilingual and indic nlp** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Multilingual and Indic NLP** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

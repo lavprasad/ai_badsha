@@ -1,6 +1,6 @@
 # Day 81 — Learning rate schedules
 
-Today's goal: work through **learning rate schedules** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Learning rate schedules** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

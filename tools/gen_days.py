@@ -32,7 +32,7 @@ def day_dir(n: int) -> Path:
 
 def notes_md(n: int, theme: str, concepts: list[str], lessons: list[dict]) -> str:
     out = [f"# Day {n:02d} — {theme}", ""]
-    out.append(f"Today's goal: work through **{theme.lower()}** — ten concepts, ten runnable examples, five questions.")
+    out.append(f"Today's goal: work through **{theme}** — ten concepts, ten runnable examples, five questions.")
     out.append("")
     out.append("| # | Concept |")
     out.append("|--:|---------|")

@@ -1,6 +1,6 @@
 # Day 89 — CNN architectures
 
-Today's goal: work through **cnn architectures** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **CNN architectures** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

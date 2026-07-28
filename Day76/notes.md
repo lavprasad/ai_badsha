@@ -1,6 +1,6 @@
 # Day 76 — The artificial neuron
 
-Today's goal: work through **the artificial neuron** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **The artificial neuron** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

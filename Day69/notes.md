@@ -1,6 +1,6 @@
 # Day 69 — Working with text, classically
 
-Today's goal: work through **working with text, classically** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Working with text, classically** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

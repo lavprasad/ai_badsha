@@ -1,6 +1,6 @@
 # Day 18 — Eigenvalues, SVD and decomposition
 
-Today's goal: work through **eigenvalues, svd and decomposition** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Eigenvalues, SVD and decomposition** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

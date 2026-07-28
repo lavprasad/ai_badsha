@@ -1,6 +1,6 @@
 # Day 188 — AI system architecture
 
-Today's goal: work through **ai system architecture** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **AI system architecture** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

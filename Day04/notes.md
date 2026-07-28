@@ -1,6 +1,6 @@
 # Day 04 — Files, JSON and the filesystem
 
-Today's goal: work through **files, json and the filesystem** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Files, JSON and the filesystem** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

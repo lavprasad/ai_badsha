@@ -1,6 +1,6 @@
 # Day 107 — Object detection
 
-Today's goal: work through **object detection** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Object detection** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

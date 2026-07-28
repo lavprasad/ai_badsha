@@ -1,6 +1,6 @@
 # Day 22 — Probability distributions
 
-Today's goal: work through **probability distributions** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Probability distributions** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

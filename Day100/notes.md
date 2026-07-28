@@ -1,6 +1,6 @@
 # Day 100 — Advanced reinforcement learning
 
-Today's goal: work through **advanced reinforcement learning** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Advanced reinforcement learning** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

@@ -1,6 +1,6 @@
 # Day 148 — LLM APIs in code
 
-Today's goal: work through **llm apis in code** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **LLM APIs in code** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

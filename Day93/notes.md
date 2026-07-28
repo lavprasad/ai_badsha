@@ -1,6 +1,6 @@
 # Day 93 — Attention mechanisms
 
-Today's goal: work through **attention mechanisms** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Attention mechanisms** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

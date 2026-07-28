@@ -1,6 +1,6 @@
 # Day 55 — Support vector machines
 
-Today's goal: work through **support vector machines** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Support vector machines** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

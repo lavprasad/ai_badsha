@@ -1,6 +1,6 @@
 # Day 45 — Your first model, end to end
 
-Today's goal: work through **your first model, end to end** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Your first model, end to end** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

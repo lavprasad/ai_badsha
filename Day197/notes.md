@@ -1,6 +1,6 @@
 # Day 197 — The AI job landscape
 
-Today's goal: work through **the ai job landscape** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **The AI job landscape** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

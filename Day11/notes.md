@@ -1,6 +1,6 @@
 # Day 11 — Visualisation with matplotlib
 
-Today's goal: work through **visualisation with matplotlib** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Visualisation with matplotlib** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

@@ -1,6 +1,6 @@
 # Day 118 — Vision system design
 
-Today's goal: work through **vision system design** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Vision system design** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

@@ -1,6 +1,6 @@
 # Day 134 — Serving LLMs efficiently
 
-Today's goal: work through **serving llms efficiently** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Serving LLMs efficiently** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

@@ -1,6 +1,6 @@
 # Day 46 — Linear regression in practice
 
-Today's goal: work through **linear regression in practice** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Linear regression in practice** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

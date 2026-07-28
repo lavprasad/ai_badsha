@@ -1,6 +1,6 @@
 # Day 51 — Naive Bayes
 
-Today's goal: work through **naive bayes** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Naive Bayes** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

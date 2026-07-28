@@ -1,6 +1,6 @@
 # Day 109 — Face and person understanding
 
-Today's goal: work through **face and person understanding** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Face and person understanding** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

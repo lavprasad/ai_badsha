@@ -1,6 +1,6 @@
 # Day 31 — Linear models, mathematically
 
-Today's goal: work through **linear models, mathematically** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Linear models, mathematically** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

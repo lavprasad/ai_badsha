@@ -1,6 +1,6 @@
 # Day 123 — Word embeddings
 
-Today's goal: work through **word embeddings** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Word embeddings** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

@@ -1,6 +1,6 @@
 # Day 127 — Positional information
 
-Today's goal: work through **positional information** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Positional information** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

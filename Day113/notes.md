@@ -1,6 +1,6 @@
 # Day 113 — CLIP and multimodal vision
 
-Today's goal: work through **clip and multimodal vision** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **CLIP and multimodal vision** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

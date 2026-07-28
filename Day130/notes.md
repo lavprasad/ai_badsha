@@ -1,6 +1,6 @@
 # Day 130 — Pretraining language models
 
-Today's goal: work through **pretraining language models** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Pretraining language models** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

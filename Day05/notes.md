@@ -1,6 +1,6 @@
 # Day 05 — Objects, errors and clean code
 
-Today's goal: work through **objects, errors and clean code** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Objects, errors and clean code** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

@@ -1,6 +1,6 @@
 # Day 141 — Multimodal models
 
-Today's goal: work through **multimodal models** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Multimodal models** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

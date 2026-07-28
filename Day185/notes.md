@@ -1,6 +1,6 @@
 # Day 185 — Data engineering for AI
 
-Today's goal: work through **data engineering for ai** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Data engineering for AI** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

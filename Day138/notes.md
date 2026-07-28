@@ -1,6 +1,6 @@
 # Day 138 — Conversational systems
 
-Today's goal: work through **conversational systems** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Conversational systems** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

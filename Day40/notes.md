@@ -1,6 +1,6 @@
 # Day 40 — Encoding and scaling
 
-Today's goal: work through **encoding and scaling** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Encoding and scaling** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

@@ -1,6 +1,6 @@
 # Day 21 — Probability foundations
 
-Today's goal: work through **probability foundations** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Probability foundations** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

@@ -1,6 +1,6 @@
 # Day 117 — 3D and depth
 
-Today's goal: work through **3d and depth** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **3D and depth** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

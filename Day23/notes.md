@@ -1,6 +1,6 @@
 # Day 23 — Descriptive statistics
 
-Today's goal: work through **descriptive statistics** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Descriptive statistics** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

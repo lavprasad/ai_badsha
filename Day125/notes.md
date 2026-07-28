@@ -1,6 +1,6 @@
 # Day 125 — The transformer architecture
 
-Today's goal: work through **the transformer architecture** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **The transformer architecture** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

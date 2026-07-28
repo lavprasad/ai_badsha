@@ -1,6 +1,6 @@
 # Day 183 — Incident response for AI systems
 
-Today's goal: work through **incident response for ai systems** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Incident response for AI systems** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

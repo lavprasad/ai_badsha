@@ -1,6 +1,6 @@
 # Day 186 — Privacy, security and compliance
 
-Today's goal: work through **privacy, security and compliance** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Privacy, security and compliance** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

@@ -1,6 +1,6 @@
 # Day 64 — Ensembling your own models
 
-Today's goal: work through **ensembling your own models** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Ensembling your own models** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

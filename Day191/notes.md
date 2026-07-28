@@ -1,6 +1,6 @@
 # Day 191 — Choosing a capstone
 
-Today's goal: work through **choosing a capstone** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Choosing a capstone** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

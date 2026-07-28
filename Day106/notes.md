@@ -1,6 +1,6 @@
 # Day 106 — Image preprocessing and augmentation
 
-Today's goal: work through **image preprocessing and augmentation** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Image preprocessing and augmentation** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

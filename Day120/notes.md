@@ -1,6 +1,6 @@
 # Day 120 — Text processing fundamentals
 
-Today's goal: work through **text processing fundamentals** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Text processing fundamentals** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

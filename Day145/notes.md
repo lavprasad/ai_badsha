@@ -1,6 +1,6 @@
 # Day 145 — Small models and local AI
 
-Today's goal: work through **small models and local ai** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Small models and local AI** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

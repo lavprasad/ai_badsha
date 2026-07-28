@@ -1,6 +1,6 @@
 # Day 111 — Vision transformers
 
-Today's goal: work through **vision transformers** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Vision transformers** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

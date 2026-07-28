@@ -1,6 +1,6 @@
 # Day 19 — Calculus: derivatives and gradients
 
-Today's goal: work through **calculus: derivatives and gradients** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Calculus: derivatives and gradients** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

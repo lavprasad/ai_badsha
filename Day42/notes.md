@@ -1,6 +1,6 @@
 # Day 42 — Data leakage hunting
 
-Today's goal: work through **data leakage hunting** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Data leakage hunting** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

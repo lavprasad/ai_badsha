@@ -1,6 +1,6 @@
 # Day 80 — Optimisers
 
-Today's goal: work through **optimisers** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Optimisers** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

@@ -1,6 +1,6 @@
 # Day 52 — Decision trees
 
-Today's goal: work through **decision trees** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Decision trees** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

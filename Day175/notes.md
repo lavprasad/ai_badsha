@@ -1,6 +1,6 @@
 # Day 175 — From notebook to software
 
-Today's goal: work through **from notebook to software** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **From notebook to software** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

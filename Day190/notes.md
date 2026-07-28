@@ -1,6 +1,6 @@
 # Day 190 — PROJECT: deploy and operate a model
 
-Today's goal: work through **project: deploy and operate a model** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **PROJECT: deploy and operate a model** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

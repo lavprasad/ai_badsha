@@ -1,6 +1,6 @@
 # Day 83 — Regularisation in deep nets
 
-Today's goal: work through **regularisation in deep nets** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Regularisation in deep nets** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

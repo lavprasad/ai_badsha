@@ -1,6 +1,6 @@
 # Day 12 — Statistical plotting and EDA visuals
 
-Today's goal: work through **statistical plotting and eda visuals** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Statistical plotting and EDA visuals** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

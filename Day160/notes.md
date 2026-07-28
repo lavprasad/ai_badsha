@@ -1,6 +1,6 @@
 # Day 160 — Model Context Protocol and integrations
 
-Today's goal: work through **model context protocol and integrations** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Model Context Protocol and integrations** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

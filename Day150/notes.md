@@ -1,6 +1,6 @@
 # Day 150 — Designing with LLMs
 
-Today's goal: work through **designing with llms** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Designing with LLMs** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

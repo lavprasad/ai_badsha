@@ -1,6 +1,6 @@
 # Day 136 — Text generation quality
 
-Today's goal: work through **text generation quality** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Text generation quality** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

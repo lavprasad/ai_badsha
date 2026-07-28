@@ -1,6 +1,6 @@
 # Day 162 — Prompt injection and LLM security
 
-Today's goal: work through **prompt injection and llm security** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Prompt injection and LLM security** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

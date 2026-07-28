@@ -1,6 +1,6 @@
 # Day 101 — Model compression
 
-Today's goal: work through **model compression** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Model compression** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

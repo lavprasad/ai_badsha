@@ -1,6 +1,6 @@
 # Day 36 — Getting data
 
-Today's goal: work through **getting data** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Getting data** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

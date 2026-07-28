@@ -1,6 +1,6 @@
 # Day 189 — Working on an AI team
 
-Today's goal: work through **working on an ai team** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Working on an AI team** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

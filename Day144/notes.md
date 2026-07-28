@@ -1,6 +1,6 @@
 # Day 144 — Knowledge in language models
 
-Today's goal: work through **knowledge in language models** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Knowledge in language models** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

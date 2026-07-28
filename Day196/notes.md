@@ -1,6 +1,6 @@
 # Day 196 — Reading research
 
-Today's goal: work through **reading research** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Reading research** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

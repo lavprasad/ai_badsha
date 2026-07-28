@@ -1,6 +1,6 @@
 # Day 149 — PROJECT: fine-tuned domain assistant
 
-Today's goal: work through **project: fine-tuned domain assistant** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **PROJECT: fine-tuned domain assistant** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

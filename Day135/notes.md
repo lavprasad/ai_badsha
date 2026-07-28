@@ -1,6 +1,6 @@
 # Day 135 — Embeddings and semantic search
 
-Today's goal: work through **embeddings and semantic search** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Embeddings and semantic search** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

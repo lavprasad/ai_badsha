@@ -1,6 +1,6 @@
 # Day 65 — Recommender systems
 
-Today's goal: work through **recommender systems** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Recommender systems** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

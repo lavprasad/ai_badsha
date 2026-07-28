@@ -1,6 +1,6 @@
 # Day 159 — Agents: planning and reliability
 
-Today's goal: work through **agents: planning and reliability** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Agents: planning and reliability** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

@@ -1,6 +1,6 @@
 # Day 60 — Dimensionality reduction
 
-Today's goal: work through **dimensionality reduction** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Dimensionality reduction** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

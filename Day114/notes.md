@@ -1,6 +1,6 @@
 # Day 114 — OCR and document AI
 
-Today's goal: work through **ocr and document ai** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **OCR and document AI** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

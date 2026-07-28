@@ -1,6 +1,6 @@
 # Day 57 — Hyperparameter optimisation
 
-Today's goal: work through **hyperparameter optimisation** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Hyperparameter optimisation** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

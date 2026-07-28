@@ -1,6 +1,6 @@
 # Day 142 — Model evaluation for LLMs
 
-Today's goal: work through **model evaluation for llms** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Model evaluation for LLMs** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

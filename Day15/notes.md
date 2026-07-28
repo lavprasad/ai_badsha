@@ -1,6 +1,6 @@
 # Day 15 — PROJECT: dataset explorer CLI
 
-Today's goal: work through **project: dataset explorer cli** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **PROJECT: dataset explorer CLI** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

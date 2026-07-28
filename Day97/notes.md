@@ -1,6 +1,6 @@
 # Day 97 — Embeddings and representation learning
 
-Today's goal: work through **embeddings and representation learning** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Embeddings and representation learning** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

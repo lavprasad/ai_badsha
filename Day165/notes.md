@@ -1,6 +1,6 @@
 # Day 165 — Observability for AI systems
 
-Today's goal: work through **observability for ai systems** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Observability for AI systems** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

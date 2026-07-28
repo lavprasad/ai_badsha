@@ -1,6 +1,6 @@
 # Day 140 — Speech and audio
 
-Today's goal: work through **speech and audio** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Speech and audio** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

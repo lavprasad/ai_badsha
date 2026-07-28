@@ -1,6 +1,6 @@
 # Day 90 — Training a CNN properly
 
-Today's goal: work through **training a cnn properly** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Training a CNN properly** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

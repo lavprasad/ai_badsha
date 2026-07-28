@@ -1,6 +1,6 @@
 # Day 29 — Numerical computing pitfalls
 
-Today's goal: work through **numerical computing pitfalls** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Numerical computing pitfalls** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

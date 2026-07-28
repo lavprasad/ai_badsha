@@ -1,6 +1,6 @@
 # Day 32 — Logistic regression, mathematically
 
-Today's goal: work through **logistic regression, mathematically** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Logistic regression, mathematically** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

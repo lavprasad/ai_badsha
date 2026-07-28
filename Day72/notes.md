@@ -1,6 +1,6 @@
 # Day 72 — Debugging a model that will not learn
 
-Today's goal: work through **debugging a model that will not learn** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Debugging a model that will not learn** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

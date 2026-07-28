@@ -1,6 +1,6 @@
 # Day 10 — Working with time and text in pandas
 
-Today's goal: work through **working with time and text in pandas** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Working with time and text in pandas** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

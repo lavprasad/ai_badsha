@@ -1,6 +1,6 @@
 # Day 88 — Convolutional neural networks
 
-Today's goal: work through **convolutional neural networks** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Convolutional neural networks** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

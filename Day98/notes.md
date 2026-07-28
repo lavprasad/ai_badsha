@@ -1,6 +1,6 @@
 # Day 98 — Graph neural networks
 
-Today's goal: work through **graph neural networks** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Graph neural networks** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

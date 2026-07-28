@@ -1,6 +1,6 @@
 # Day 91 — Transfer learning
 
-Today's goal: work through **transfer learning** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Transfer learning** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

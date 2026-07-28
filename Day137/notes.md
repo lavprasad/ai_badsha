@@ -1,6 +1,6 @@
 # Day 137 — Summarisation and extraction
 
-Today's goal: work through **summarisation and extraction** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Summarisation and extraction** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

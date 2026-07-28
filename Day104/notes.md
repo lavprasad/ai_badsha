@@ -1,6 +1,6 @@
 # Day 104 — PROJECT: deep learning image classifier
 
-Today's goal: work through **project: deep learning image classifier** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **PROJECT: deep learning image classifier** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

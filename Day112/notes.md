@@ -1,6 +1,6 @@
 # Day 112 — Self-supervised vision
 
-Today's goal: work through **self-supervised vision** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Self-supervised vision** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

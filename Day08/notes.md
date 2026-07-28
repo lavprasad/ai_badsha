@@ -1,6 +1,6 @@
 # Day 08 — pandas: Series and DataFrame
 
-Today's goal: work through **pandas: series and dataframe** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **pandas: Series and DataFrame** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

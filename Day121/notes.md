@@ -1,6 +1,6 @@
 # Day 121 — Tokenisation
 
-Today's goal: work through **tokenisation** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Tokenisation** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

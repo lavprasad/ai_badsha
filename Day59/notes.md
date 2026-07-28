@@ -1,6 +1,6 @@
 # Day 59 — Unsupervised learning: clustering
 
-Today's goal: work through **unsupervised learning: clustering** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Unsupervised learning: clustering** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

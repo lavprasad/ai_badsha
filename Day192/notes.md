@@ -1,6 +1,6 @@
 # Day 192 — CAPSTONE 1: predictive system
 
-Today's goal: work through **capstone 1: predictive system** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **CAPSTONE 1: predictive system** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

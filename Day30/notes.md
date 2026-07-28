@@ -1,6 +1,6 @@
 # Day 30 — Bayesian thinking
 
-Today's goal: work through **bayesian thinking** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Bayesian thinking** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

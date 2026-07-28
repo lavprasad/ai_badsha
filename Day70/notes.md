@@ -1,6 +1,6 @@
 # Day 70 — Working with images, classically
 
-Today's goal: work through **working with images, classically** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Working with images, classically** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

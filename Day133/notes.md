@@ -1,6 +1,6 @@
 # Day 133 — Inference and decoding
 
-Today's goal: work through **inference and decoding** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Inference and decoding** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

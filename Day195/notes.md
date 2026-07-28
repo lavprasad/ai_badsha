@@ -1,6 +1,6 @@
 # Day 195 — Writing about your work
 
-Today's goal: work through **writing about your work** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Writing about your work** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

@@ -1,6 +1,6 @@
 # Day 131 — Post-training: SFT and alignment
 
-Today's goal: work through **post-training: sft and alignment** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Post-training: SFT and alignment** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

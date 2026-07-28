@@ -1,6 +1,6 @@
 # Day 172 — Open source and self-hosting
 
-Today's goal: work through **open source and self-hosting** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Open source and self-hosting** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

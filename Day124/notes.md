@@ -1,6 +1,6 @@
 # Day 124 — Sequence models for NLP
 
-Today's goal: work through **sequence models for nlp** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Sequence models for NLP** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

@@ -1,6 +1,6 @@
 # Day 153 — RAG: retrieval quality
 
-Today's goal: work through **rag: retrieval quality** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **RAG: retrieval quality** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

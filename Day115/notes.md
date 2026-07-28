@@ -1,6 +1,6 @@
 # Day 115 — Image generation in practice
 
-Today's goal: work through **image generation in practice** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Image generation in practice** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

@@ -1,6 +1,6 @@
 # Day 199 — Continuous learning system
 
-Today's goal: work through **continuous learning system** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Continuous learning system** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

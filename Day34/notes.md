@@ -1,6 +1,6 @@
 # Day 34 — PROJECT: maths engine from scratch
 
-Today's goal: work through **project: maths engine from scratch** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **PROJECT: maths engine from scratch** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

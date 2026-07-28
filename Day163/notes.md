@@ -1,6 +1,6 @@
 # Day 163 — Safety, moderation and refusals
 
-Today's goal: work through **safety, moderation and refusals** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Safety, moderation and refusals** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

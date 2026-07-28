@@ -1,6 +1,6 @@
 # Day 102 — Hardware and performance
 
-Today's goal: work through **hardware and performance** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Hardware and performance** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

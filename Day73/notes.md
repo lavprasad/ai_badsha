@@ -1,6 +1,6 @@
 # Day 73 — Error analysis
 
-Today's goal: work through **error analysis** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Error analysis** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

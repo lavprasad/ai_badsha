@@ -1,6 +1,6 @@
 # Day 193 — CAPSTONE 2: LLM application
 
-Today's goal: work through **capstone 2: llm application** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **CAPSTONE 2: LLM application** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

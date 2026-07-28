@@ -1,6 +1,6 @@
 # Day 182 — Monitoring models in production
 
-Today's goal: work through **monitoring models in production** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Monitoring models in production** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

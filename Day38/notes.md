@@ -1,6 +1,6 @@
 # Day 38 — Data cleaning
 
-Today's goal: work through **data cleaning** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Data cleaning** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

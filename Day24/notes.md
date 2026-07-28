@@ -1,6 +1,6 @@
 # Day 24 — Inferential statistics
 
-Today's goal: work through **inferential statistics** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Inferential statistics** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

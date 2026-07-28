@@ -1,6 +1,6 @@
 # Day 44 — PROJECT: end-to-end data pipeline
 
-Today's goal: work through **project: end-to-end data pipeline** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **PROJECT: end-to-end data pipeline** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

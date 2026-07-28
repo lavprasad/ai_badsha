@@ -1,6 +1,6 @@
 # Day 122 — Classical NLP baselines
 
-Today's goal: work through **classical nlp baselines** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Classical NLP baselines** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

@@ -1,6 +1,6 @@
 # Day 87 — Debugging neural networks
 
-Today's goal: work through **debugging neural networks** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Debugging neural networks** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

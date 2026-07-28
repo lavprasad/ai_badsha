@@ -1,6 +1,6 @@
 # Day 54 — Boosting
 
-Today's goal: work through **boosting** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Boosting** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

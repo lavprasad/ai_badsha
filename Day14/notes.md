@@ -1,6 +1,6 @@
 # Day 14 — Git, environments and reproducibility
 
-Today's goal: work through **git, environments and reproducibility** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Git, environments and reproducibility** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

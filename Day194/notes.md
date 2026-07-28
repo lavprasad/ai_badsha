@@ -1,6 +1,6 @@
 # Day 194 — CAPSTONE 3: research replication
 
-Today's goal: work through **capstone 3: research replication** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **CAPSTONE 3: research replication** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

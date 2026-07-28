@@ -1,6 +1,6 @@
 # Day 151 — Structured output
 
-Today's goal: work through **structured output** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Structured output** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

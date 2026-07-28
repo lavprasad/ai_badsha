@@ -1,6 +1,6 @@
 # Day 20 — Optimisation theory
 
-Today's goal: work through **optimisation theory** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Optimisation theory** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

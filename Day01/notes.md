@@ -1,6 +1,6 @@
 # Day 01 — Setting up your AI workbench
 
-Today's goal: work through **setting up your ai workbench** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Setting up your AI workbench** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

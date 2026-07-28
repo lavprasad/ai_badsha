@@ -1,6 +1,6 @@
 # Day 33 — Distance, similarity and geometry
 
-Today's goal: work through **distance, similarity and geometry** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Distance, similarity and geometry** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

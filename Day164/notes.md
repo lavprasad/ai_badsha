@@ -1,6 +1,6 @@
 # Day 164 — Evaluation for LLM applications
 
-Today's goal: work through **evaluation for llm applications** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Evaluation for LLM applications** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

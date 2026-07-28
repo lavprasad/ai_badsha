@@ -1,6 +1,6 @@
 # Day 13 — SQL for AI practitioners
 
-Today's goal: work through **sql for ai practitioners** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **SQL for AI practitioners** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

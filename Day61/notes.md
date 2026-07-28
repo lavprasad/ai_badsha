@@ -1,6 +1,6 @@
 # Day 61 — Anomaly detection
 
-Today's goal: work through **anomaly detection** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Anomaly detection** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

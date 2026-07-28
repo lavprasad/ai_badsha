@@ -1,6 +1,6 @@
 # Day 147 — Advanced prompting patterns
 
-Today's goal: work through **advanced prompting patterns** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Advanced prompting patterns** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

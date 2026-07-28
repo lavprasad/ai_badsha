@@ -1,6 +1,6 @@
 # Day 184 — Scaling training
 
-Today's goal: work through **scaling training** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Scaling training** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

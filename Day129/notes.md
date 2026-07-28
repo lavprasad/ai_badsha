@@ -1,6 +1,6 @@
 # Day 129 — Fine-tuning encoder models
 
-Today's goal: work through **fine-tuning encoder models** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Fine-tuning encoder models** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

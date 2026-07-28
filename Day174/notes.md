@@ -1,6 +1,6 @@
 # Day 174 — PROJECT: production RAG assistant
 
-Today's goal: work through **project: production rag assistant** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **PROJECT: production RAG assistant** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

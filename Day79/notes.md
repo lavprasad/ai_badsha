@@ -1,6 +1,6 @@
 # Day 79 — Backpropagation from scratch
 
-Today's goal: work through **backpropagation from scratch** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Backpropagation from scratch** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

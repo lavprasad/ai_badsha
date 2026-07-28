@@ -1,6 +1,6 @@
 # Day 105 — Image fundamentals
 
-Today's goal: work through **image fundamentals** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Image fundamentals** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

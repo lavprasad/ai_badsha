@@ -1,6 +1,6 @@
 # Day 49 — Regression metrics and residuals
 
-Today's goal: work through **regression metrics and residuals** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Regression metrics and residuals** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

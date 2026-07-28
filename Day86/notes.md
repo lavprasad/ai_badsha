@@ -1,6 +1,6 @@
 # Day 86 — Training loop engineering
 
-Today's goal: work through **training loop engineering** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Training loop engineering** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

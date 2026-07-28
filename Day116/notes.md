@@ -1,6 +1,6 @@
 # Day 116 — Edge and mobile vision
 
-Today's goal: work through **edge and mobile vision** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Edge and mobile vision** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

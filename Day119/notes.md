@@ -1,6 +1,6 @@
 # Day 119 — PROJECT: computer vision application
 
-Today's goal: work through **project: computer vision application** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **PROJECT: computer vision application** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

@@ -1,6 +1,6 @@
 # Day 84 — PyTorch fundamentals
 
-Today's goal: work through **pytorch fundamentals** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **PyTorch fundamentals** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

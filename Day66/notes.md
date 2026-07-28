@@ -1,6 +1,6 @@
 # Day 66 — Time series analysis
 
-Today's goal: work through **time series analysis** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Time series analysis** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

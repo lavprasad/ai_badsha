@@ -1,6 +1,6 @@
 # Day 96 — Diffusion models
 
-Today's goal: work through **diffusion models** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Diffusion models** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

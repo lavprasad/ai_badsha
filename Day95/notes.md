@@ -1,6 +1,6 @@
 # Day 95 — Generative adversarial networks
 
-Today's goal: work through **generative adversarial networks** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Generative adversarial networks** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

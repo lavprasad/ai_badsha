@@ -1,6 +1,6 @@
 # Day 198 — Interview preparation
 
-Today's goal: work through **interview preparation** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Interview preparation** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|

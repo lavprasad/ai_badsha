@@ -1,6 +1,6 @@
 # Day 103 — Neural network design decisions
 
-Today's goal: work through **neural network design decisions** — ten concepts, ten runnable examples, five questions.
+Today's goal: work through **Neural network design decisions** — ten concepts, ten runnable examples, five questions.
 
 | # | Concept |
 |--:|---------|
