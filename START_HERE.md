@@ -1,5 +1,9 @@
 # Start here
 
+> **Hinglish me padhna hai?** Har din ka Hinglish version `hinglish/DayNN/` me hai.
+> Website par header ka **EN English / हिं Hinglish** button dabao — notes, sawaal aur
+> jawab sab Hinglish me aa jaate hain. Code examples dono taraf English hi rehte hain.
+
 ## The daily loop (about 2 hours)
 
 1. **Read `notes.md`** — ten concepts. Do not skim the "Common mistake" lines; those are

@@ -2,6 +2,7 @@
 (() => {
   const STORAGE_KEY = "ai_badsha_progress_v1";
   const LAST_KEY = "ai_badsha_last_day";
+  const LANG_KEY = "ai_badsha_lang";
   const PYODIDE_URL = "https://cdn.jsdelivr.net/pyodide/v0.26.4/full/pyodide.js";
 
   /** Base path for project Pages (e.g. /ai_badsha/) or ./ for local static. */
@@ -35,6 +36,7 @@
     searchDocs: null,
     pyodide: null,
     pyodideLoading: null,
+    lang: localStorage.getItem(LANG_KEY) === "hi" ? "hi" : "en",
   };
 
   const $ = (sel) => document.querySelector(sel);
@@ -230,7 +232,13 @@
   async function loadDayStatic(n) {
     const id = dayFolder(n);
     const meta = state.days.find((d) => d.n === n) || { theme: id, examples: [] };
-    const doc = (file) => fetchText(joinUrl(BASE, id, file)).catch(() => "");
+    // Hinglish mirror lives in hinglish/DayNN/*.md; fall back to English if absent.
+    const doc = (file) =>
+      state.lang === "hi"
+        ? fetchText(joinUrl(BASE, "hinglish", id, file)).catch(() =>
+            fetchText(joinUrl(BASE, id, file)).catch(() => "")
+          )
+        : fetchText(joinUrl(BASE, id, file)).catch(() => "");
     const [notes, questions, answers, project] = await Promise.all([
       doc("notes.md"),
       doc("questions.md"),
@@ -537,7 +545,19 @@ sys.stdout, sys.stderr = _stdout, _stderr
     }
   }
 
+  function setLang(lang) {
+    state.lang = lang;
+    localStorage.setItem(LANG_KEY, lang);
+    $("#btnLang").textContent = lang === "hi" ? "हिं Hinglish" : "EN English";
+    if (state.current) openDay(state.current);
+  }
+
   function wire() {
+    $("#btnLang").addEventListener("click", () =>
+      setLang(state.lang === "hi" ? "en" : "hi")
+    );
+    $("#btnLang").textContent =
+      state.lang === "hi" ? "हिं Hinglish" : "EN English";
     $("#brandHome").addEventListener("click", (e) => {
       e.preventDefault();
       showWorkspace(false);
